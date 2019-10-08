@@ -22,11 +22,13 @@ The main features of the Tizen.Account.AccountManager namespace include:
 
     You can [query the account details](#queries) with database queries, [retrieve the account type](#type), and [update the account information](#update). For a list of modifiable account properties, see [Account and Account Provider Properties](#account_and_provider_properties).
 
-> **Note**   
-> Account providers, such as Google and Facebook, represent specific service provider-related information or protocol that provides the user accounts. To add, update, or remove an account, you must register a specific account provider for all your applications belonging to the same package.
+> **Note**
+>
+> Account providers, such as Google and Facebook, represent specific service provider-related information or protocol that provides the user accounts. To add, update, or remove an account, you must register a specific account provider for all your applications belonging to the same package.  
+>
 > To register an account provider, define the [account provider information](#provider_prop) in the `Account` tab of the manifest editor, and implement the account application control.
-
-If the application has defined the account provider information and implements the [appcontrol for the account provider](#appcontrol), the account provider is automatically registered when the application is installed.
+>
+> If the application has defined the account provider information and implements the [appcontrol for the account provider](#appcontrol), the account provider is automatically registered when the application is installed.
 
 <a name="appcontrol"></a>
 ## Account Application Control
@@ -66,7 +68,7 @@ In **Settings &gt; Accounts**, if the specific account is clicked for setting th
 
 To enable your application to use the account management functionality:
 
-1.  To use the [Tizen.Account.AccountManager](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Account.AccountManager.html) namespace, the application has to request permission by adding the following privileges to the `tizen-manifest.xml` file:
+1.  To use the [Tizen.Account.AccountManager](https://samsung.github.io/TizenFX/latest/api/Tizen.Account.AccountManager.html) namespace, the application has to request permission by adding the following privileges to the `tizen-manifest.xml` file:
 
     ```
     <privileges>
@@ -86,7 +88,7 @@ To enable your application to use the account management functionality:
 
 To create an account, set its properties, and add it to the account database:
 
-1.  Create an account using the `CreateAccount()` method of the [Tizen.Account.AccountManager.Account](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Account.AccountManager.Account.html) class:
+1.  Create an account using the `CreateAccount()` method of the [Tizen.Account.AccountManager.Account](https://samsung.github.io/TizenFX/latest/api/Tizen.Account.AccountManager.Account.html) class:
 
     ```
     Account account = Account.CreateAccount();
@@ -108,7 +110,7 @@ To create an account, set its properties, and add it to the account database:
     account.IconPath = iconPath;
     ```
 
-3. When the account properties are set, use the `AddAccount()` method of the [Tizen.Account.AccountManager.AccountService](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Account.AccountManager.AccountService.html) class to insert the account into the account database:
+3. When the account properties are set, use the `AddAccount()` method of the [Tizen.Account.AccountManager.AccountService](https://samsung.github.io/TizenFX/latest/api/Tizen.Account.AccountManager.AccountService.html) class to insert the account into the account database:
 
     ```
     int account_id = AccountService.AddAccount(account);
@@ -121,7 +123,7 @@ To create an account, set its properties, and add it to the account database:
 
 To get account information, such as user name, display name, domain name, and email ID:
 
-1.  Use the `GetAccountsCount()` method of the [Tizen.Account.AccountManager.AccountService](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Account.AccountManager.AccountService.html) class to get the total number of records in the account database.
+1.  Use the `GetAccountsCount()` method of the [Tizen.Account.AccountManager.AccountService](https://samsung.github.io/TizenFX/latest/api/Tizen.Account.AccountManager.AccountService.html) class to get the total number of records in the account database.
 
     To get individual records, use the `GetAccountsAsync()` method, which iterates through all the records and invokes an event handler for each account.
 
@@ -130,7 +132,7 @@ To get account information, such as user name, display name, domain name, and em
     IEnumerable<Account> accounts = AccountService.GetAccountsAsync();
     ```
 
-2. To get more details, use the `AccountId`, `UserName`, `DisplayName`, and `IconPath` properties of the [Tizen.Account.AccountManager.Account](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Account.AccountManager.Account.html) class instance returned in the event handler:
+2. To get more details, use the `AccountId`, `UserName`, `DisplayName`, and `IconPath` properties of the [Tizen.Account.AccountManager.Account](https://samsung.github.io/TizenFX/latest/api/Tizen.Account.AccountManager.Account.html) class instance returned in the event handler:
 
     ```
     Account account = Account.CreateAccount();
@@ -155,7 +157,7 @@ To get account information, such as user name, display name, domain name, and em
 <a name="retrieve"></a>
 ## Retrieving Accounts by Package Name
 
-To retrieve accounts by a specific account provider, use the `GetAccountsByPackageName()` method of the [Tizen.Account.AccountManager.AccountService](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Account.AccountManager.AccountService.html) class with the package name of the account provider:
+To retrieve accounts by a specific account provider, use the `GetAccountsByPackageName()` method of the [Tizen.Account.AccountManager.AccountService](https://samsung.github.io/TizenFX/latest/api/Tizen.Account.AccountManager.AccountService.html) class with the package name of the account provider:
 
 ```
 IEnumerable<Account> accounts = null;
@@ -166,7 +168,7 @@ accounts = AccountService.GetAccountsByPackageName(packageName);
 <a name="capability"></a>
 ## Retrieving Account Providers by Capability
 
-To retrieve account providers by a specific capability, use the `GetAccountProvidersByFeature()` method of the [Tizen.Account.AccountManager.AccountService](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Account.AccountManager.AccountService.html) class:
+To retrieve account providers by a specific capability, use the `GetAccountProvidersByFeature()` method of the [Tizen.Account.AccountManager.AccountService](https://samsung.github.io/TizenFX/latest/api/Tizen.Account.AccountManager.AccountService.html) class:
 
 ```
 string capability = "http://tizen.org/account/capability/contact";
@@ -178,7 +180,7 @@ IEnumerable<AccountProvider> providers = AccountService.GetAccountProvidersByFea
 
 Accounts to be removed can be identified by the account ID, user name, package name.
 
-To remove an account, use the `DeleteAccount()` method of the [Tizen.Account.AccountManager.AccountService](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Account.AccountManager.AccountService.html) class:
+To remove an account, use the `DeleteAccount()` method of the [Tizen.Account.AccountManager.AccountService](https://samsung.github.io/TizenFX/latest/api/Tizen.Account.AccountManager.AccountService.html) class:
 
 -   Remove an account using an account ID:
 
@@ -214,7 +216,7 @@ To perform database queries:
 
     To create new content and add it to the database:
 
-    1.  The `Create_Account()` method takes a new [Tizen.Account.AccountManager.Account](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Account.AccountManager.Account.html) instance and gives it some account details (name, display name, domain, email):
+    1.  The `Create_Account()` method takes a new [Tizen.Account.AccountManager.Account](https://samsung.github.io/TizenFX/latest/api/Tizen.Account.AccountManager.Account.html) instance and gives it some account details (name, display name, domain, email):
 
         ```
         void Create_Account(Account account, string userName, string displayName, string domainName, string emailId)
@@ -284,7 +286,7 @@ To perform database queries:
 
     - Query by package name.
 
-        By default, the accounts created in the application context have a package name set to the application name. Change it using the `PackageName` property of the [Tizen.Account.AccountManager.Account](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Account.AccountManager.Account.html) instance. To list accounts by package name, the user can provide a name by themselves or obtain it through the `PackageName` property.
+        By default, the accounts created in the application context have a package name set to the application name. Change it using the `PackageName` property of the [Tizen.Account.AccountManager.Account](https://samsung.github.io/TizenFX/latest/api/Tizen.Account.AccountManager.Account.html) instance. To list accounts by package name, the user can provide a name by themselves or obtain it through the `PackageName` property.
 
         ```
         IEnumerable<Account> accounts = null;
@@ -295,7 +297,7 @@ To perform database queries:
 
     - Query by capability.
 
-        The `GetAccountsByCapabilityType()` method of the [Tizen.Account.AccountManager.AccountService](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Account.AccountManager.AccountService.html) class allows the user to find all accounts with a specified capability type.
+        The `GetAccountsByCapabilityType()` method of the [Tizen.Account.AccountManager.AccountService](https://samsung.github.io/TizenFX/latest/api/Tizen.Account.AccountManager.AccountService.html) class allows the user to find all accounts with a specified capability type.
 
         ```
         IEnumerable<Account> accounts = null;
@@ -321,7 +323,7 @@ To perform database queries:
 
 To manage account secrecy:
 
-1.  The secrecy state of an account is set and fetched using the `SecrecyState` property of the [Tizen.Account.AccountManager.Account](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Account.AccountManager.Account.html) class, which uses values from the [Tizen.Account.AccountManager.AccountSecrecyState](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Account.AccountManager.AccountSecrecyState.html) enumeration:
+1.  The secrecy state of an account is set and fetched using the `SecrecyState` property of the [Tizen.Account.AccountManager.Account](https://samsung.github.io/TizenFX/latest/api/Tizen.Account.AccountManager.Account.html) class, which uses values from the [Tizen.Account.AccountManager.AccountSecrecyState](https://samsung.github.io/TizenFX/latest/api/Tizen.Account.AccountManager.AccountSecrecyState.html) enumeration:
 
     ```
     int account1_id = 0, account2_id = 0, account3_id = 0;
@@ -378,7 +380,7 @@ To update and track account data:
     };
     ```
 
-    Register the event handler for the `AccountUpdated` event of the [Tizen.Account.AccountManager.AccountService](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Account.AccountManager.AccountService.html) class:
+    Register the event handler for the `AccountUpdated` event of the [Tizen.Account.AccountManager.AccountService](https://samsung.github.io/TizenFX/latest/api/Tizen.Account.AccountManager.AccountService.html) class:
 
     ```
     AccountService.AccountUpdated += handler;
@@ -424,7 +426,7 @@ To retrieve account types:
 
 -   Get the type information.
 
-    If the account type with a specified ID exists, you can get it from the database with the `GetAccountProviderByAppId()` method of the [Tizen.Account.AccountManager.AccountService](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Account.AccountManager.AccountService.html) class.
+    If the account type with a specified ID exists, you can get it from the database with the `GetAccountProviderByAppId()` method of the [Tizen.Account.AccountManager.AccountService](https://samsung.github.io/TizenFX/latest/api/Tizen.Account.AccountManager.AccountService.html) class.
 
     It is possible to set, for example:
 
@@ -463,22 +465,22 @@ The following table lists the account properties that can be modified.
 
 | Account property    | Data type                          | Mandatory | Description                              |
 |-------------------|----------------------------------|---------|----------------------------------------|
-| User name           | `String`                           | Yes       | Identity of an account.If the display name and email ID are not set for an account, the user name is shown for the account on the Accounts screen in the Setting application. |
-| Display name        | `String`                           | No        | Display name of an account.Display name is shown for the account on the Accounts screen in the Setting application. |
-| Email ID            | `String`                           | No        | Email ID of an account.If the display name is not set for an account, the email ID is shown for the account on the Accounts screen in the Setting application. |
-| Package name        | `String`                           | No        | One of an account package IDs, like the app ID.If the package name is not set for an account, the app ID is used as a package name. |
-| Icon path           | `String`                           | No        | Icon path of an account.The icon is shown through the registered icon path as an account icon on the Accounts screen in the Setting application. |
-| Domain name         | `String`                           | No        | Domain name of an account.               |
-| Access token        | `String`                           | No        | Access token of an account.              |
-| Auth type           | `Integer`                          | No        | Authentication type, such as oauth or xauth. |
-| Capability          | Key-value `string`-`integer` pairs | No        | Capability of an account.                |
-| Secret              | `Integer`                          | No        | The secret value is used to decide whether the account is shown on the Accounts screen in the Setting application. |
-| Sync support        | `Integer`                          | No        | Current synchronization status.          |
-| Source              | `String`                           | No        | Source of an account.                    |
-| User text           | `String`                           | No        | String array, which you can use freely.  |
-| User int            | `Integer`                          | No        | Integer array, which you can use freely. |
-| Custom              | Key-value `string` pairs           | No        | Key-value pairs, which you can use freely. |
-| Safe account handle | `SafeAccountHandle`                | No        | Read-only account handle of an account.  |
+| User name           | String                           | Yes       | Identity of an account.<br>If the display name and email ID are not set for an account, the user name is shown for the account on the Accounts screen in the Setting application. |
+| Display name        | String                           | No        | Display name of an account.<br>Display name is shown for the account on the Accounts screen in the Setting application. |
+| Email ID            | String                           | No        | Email ID of an account.<br>If the display name is not set for an account, the email ID is shown for the account on the Accounts screen in the Setting application. |
+| Package name        | String                           | No        | One of an account package IDs, like the app ID.<br>If the package name is not set for an account, the app ID is used as a package name. |
+| Icon path           | String                           | No        | Icon path of an account.<br>The icon is shown through the registered icon path as an account icon on the Accounts screen in the Setting application. |
+| Domain name         | String                           | No        | Domain name of an account.               |
+| Access token        | String                           | No        | Access token of an account.              |
+| Auth type           | Integer                          | No        | Authentication type, such as oauth or xauth. |
+| Capability          | Key-value string-integer pairs | No        | Capability of an account.                |
+| Secret              | Integer                          | No        | The secret value is used to decide whether the account is shown on the Accounts screen in the Setting application. |
+| Sync support        | Integer                          | No        | Current synchronization status.          |
+| Source              | String                           | No        | Source of an account.                    |
+| User text           | String                           | No        | String array, which you can use freely.  |
+| User int            | Integer                          | No        | Integer array, which you can use freely. |
+| Custom              | Key-value string pairs           | No        | Key-value pairs, which you can use freely. |
+| Safe account handle | SafeAccountHandle                | No        | Read-only account handle of an account.  |
 
 The following table lists the properties that can be defined for each account provider.
 
@@ -487,11 +489,11 @@ The following table lists the properties that can be defined for each account pr
 
 | Account property          | Data type | Mandatory | Description                              |
 |-------------------------|---------|---------|----------------------------------------|
-| Multiple accounts support | `bool`    | Yes       | Indicates whether multiple accounts are supported. |
-| Icon                      | `String`  | Yes       | File path of the account provider icon.  <br>    The icon size is:<br> - 72 x 72 for Xhigh (HD) <br> - 48 x 48 for High (WVGA) <br> Since the icon is used in **Settings > Accounts**, place the icon in a shared directory. |
-| Small icon                | `String`  | Yes       | File path of the account provider icon.    <br>  The icon size is:<br> - 45 x 45 for Xhigh (HD)<br> - 30 x 30 for High (WVGA)<br> Since the small icon is used in other applications, place the icon in a shared directory. |
-| Display name              | `String`  | Yes       | Display name of the account provider.    |
-| Capabilities              | `String`  | No        | Capability of the account provider.   <br>       Capability can be a liaison between an account application and another application. If an account application registers a capability in the manifest file, other applications know that the account application has the capability. And if an account application gives an account a capability, other applications know that the account has the capability. <br> Several service-specific capabilities are defined for the [Tizen.Account.AccountManager.AccountService](https://developer.tizen.org/dev-guide/csapi/classTizen_1_1Account_1_1AccountManager_1_1AccountService.html) class: Contact capability:	<br>-    `ContactCapability` or `"http://tizen.org/account/capability/contact"`If you register this capability in the manifest file, the user using the contact application can see a list of accounts with the account of your service in the contact application. <br>-Calendar capability:	    `CalendarCapability` or `"http://tizen.org/account/capability/calendar"`If you register this capability in the manifest file, the user using the calendar application can see a list of accounts with the account of your service in the calendar application.<br>-Email capability:	    `EmailCapability` or `"http://tizen.org/account/capability/email"`<br>-Photo capability:	    `PhotoCapability` or `"http://tizen.org/account/capability/photo"`<br>-Video capability:	    `VideoCapability` or `"http://tizen.org/account/capability/video"`<br>-Music capability:	    `MusicCapability` or `"http://tizen.org/account/capability/music" ` <br>-Document capability:	    `DocumentCapability` or `"http://tizen.org/account/capability/document"` <br>-Message capability:	    `MessageCapability` or `"http://tizen.org/account/capability/message"` <br>-Game capability:	    `GameCapability` or `"http://tizen.org/account/capability/game"` |
+| Multiple accounts support | bool    | Yes       | Indicates whether multiple accounts are supported. |
+| Icon                      | String  | Yes       | File path of the account provider icon.  <br>    The icon size is:<br> - 72 x 72 for Xhigh (HD) <br> - 48 x 48 for High (WVGA) <br> Since the icon is used in **Settings > Accounts**, place the icon in a shared directory. |
+| Small icon                | String  | Yes       | File path of the account provider icon.    <br>  The icon size is:<br> - 45 x 45 for Xhigh (HD)<br> - 30 x 30 for High (WVGA)<br> Since the small icon is used in other applications, place the icon in a shared directory. |
+| Display name              | String  | Yes       | Display name of the account provider.    |
+| Capabilities              | String  | No        | Capability of the account provider.<br>       Capability can be a liaison between an account application and another application. If an account application registers a capability in the manifest file, other applications know that the account application has the capability. And if an account application gives an account a capability, other applications know that the account has the capability.<br> Several service-specific capabilities are defined for the [Tizen.Account.AccountManager.AccountService](https://samsung.github.io/TizenFX/latest/api/Tizen.Account.AccountManager.AccountService.html) class:<br>- Contact capability:<br>    `ContactCapability` or `"http://tizen.org/account/capability/contact"`<br>If you register this capability in the manifest file, the user using the contact application can see a list of accounts with the account of your service in the contact application. <br>-Calendar capability:<br>	    `CalendarCapability` or `"http://tizen.org/account/capability/calendar"`<br>If you register this capability in the manifest file, the user using the calendar application can see a list of accounts with the account of your service in the calendar application.<br>-Email capability:<br>	    `EmailCapability` or `"http://tizen.org/account/capability/email"`<br>-Photo capability:<br>	    `PhotoCapability` or `"http://tizen.org/account/capability/photo"`<br>-Video capability:<br>	    `VideoCapability` or `"http://tizen.org/account/capability/video"`<br>-Music capability:<br>	    `MusicCapability` or `"http://tizen.org/account/capability/music" ` <br>-Document capability:<br>	    `DocumentCapability` or `"http://tizen.org/account/capability/document"` <br>-Message capability:<br>	    `MessageCapability` or `"http://tizen.org/account/capability/message"` <br>-Game capability:<br>	    `GameCapability` or `"http://tizen.org/account/capability/game"` |
 
 
 

@@ -35,7 +35,7 @@ The TAU Globalize utility uses the CLDR 26 release, and when you create a Tizen 
 
 To use the TAU Globalize utility in your application:
 
-1. Download the following dependency files for your application:            
+1. Download the following dependency files for your application:
 
    - [Cldr](https://github.com/rxaviers/cldrjs)  (v0.4.0)
    - [Globalize](https://github.com/jquery/globalize) (v1.0.0-alpha.17)
@@ -47,17 +47,17 @@ To use the TAU Globalize utility in your application:
 
 <table>
   <tr><th colspan="2">Folder structure</th>
-  <th> Description</th></tr>
-  <tr><td rowspan="7">![Globalize folder structure](./media/globalize_folder_structure.png) </td>
-  <td rowspan="7"> ![Globalize main folder](./media/globalize_folder_structure_main.png)</td>
-  <td> `cldr/`: Copy the cldr.js library in this folder. </td>
+  <th>Description</th></tr>
+  <tr><td rowspan="7"> <img alt="Globalize folder structure" src="./media/globalize_folder_structure.png" /> </td>
+  <td rowspan="7"> <img alt="Globalize main folder" src="./media/globalize_folder_structure_main.png" > </td>
+  <td> <code>cldr/</code>: Copy the cldr.js library in this folder. </td>
   </tr>
-  <tr><td> `cldr-data/`: Copy the cldr-data files in this folder.<br>`cldr-data/main`: Copy the languages to be supported in this folder.<br><br> **Note**<br>	Do not copy all languages; copy only the ones you need. </td></tr>
-  <tr><td> `globalize/`: Copy the Globalize library in this folder.</td></tr>
-  <tr><td>`locale/`: Make the custom locale string in this folder.  </td></tr>
-  <tr><td> `script/`: JavaScript files.      </td></tr>
-  <tr><td> `style/`: CSS, image, and other style related files.</td></tr>
-  <tr><td> `view/`: HTML files           </td></tr>
+  <tr><td> <code>cldr-data/</code>: Copy the cldr-data files in this folder.<br><code>cldr-data/main</code>: Copy the languages to be supported in this folder.<br><br> <strong>Note</strong><br>	Do not copy all languages; copy only the ones you need. </td></tr>
+  <tr><td> <code>globalize/</code>: Copy the Globalize library in this folder.</td></tr>
+  <tr><td> <code>locale/</code>: Make the custom locale string in this folder. </td></tr>
+  <tr><td> <code>script/</code>: JavaScript files.  </td></tr>
+  <tr><td> <code>style/</code>: CSS, image, and other style related files.</td></tr>
+  <tr><td> <code>view/</code>: HTML files </td></tr>
 </table>
 
 3. Set the locale using the following example code:
@@ -87,14 +87,14 @@ To use the TAU Globalize utility in your application:
 
    **Table: Locale setting methods**
 
-| Order | Locale setting methods      |
- | ----- | --------------------------- |
- | 1     | `setLocale(LocaleId)`       |
- | 2     | `<body lang="ko-KR">`       |
- | 3     | `window.navigator.language` |
- | 4     | Default locale "en"         |
+   | Order | Locale setting methods      |
+   | ----- | --------------------------- |
+   | 1     | `setLocale(LocaleId)`       |
+   | 2     | `<body lang="ko-KR">`       |
+   | 3     | `window.navigator.language` |
+   | 4     | Default locale "en"         |
 
-4. Make sure that you have all required CLDR files.            
+4. Make sure that you have all required CLDR files.
 
    The `setLocale()` method automatically loads the basic CLDR data files which are match the given locale by local AJAX. During the method call, the Globalize utility also loads the basic CLDR JSON files:
 
@@ -113,12 +113,12 @@ To use the TAU Globalize utility in your application:
 
    **Table: CLDR requirements**
 
-| Module        | Required CLDR JSON files                 |
+   | Module        | Required CLDR JSON files                 |
    | ------------- | ---------------------------------------- |
    | Core module   | `cldr/supplemental/likelySubtags.json`   |
-   | Date module   | `cldr/main/locale/ca-gregorian.json`<br>                          `cldr/main/locale/timeZoneNames.json`   <br>                     `cldr/supplemental/timeData.json`     <br>             `cldr/supplemental/weekData.json`     <br>         CLDR JSON files from the number module |
-   | Number module | `cldr/main/locale/numbers.json`   <br>         `cldr/supplemental/numberingSystems.json` |
-   | Plural module | `cldr/supplemental/plurals.json` (for cardinals) <br>      `cldr/supplemental/ordinals.json` (for ordinals) |
+   | Date module   | `cldr/main/locale/ca-gregorian.json`<br>`cldr/main/locale/timeZoneNames.json`<br>`cldr/supplemental/timeData.json`<br>`cldr/supplemental/weekData.json`<br>CLDR JSON files from the number module |
+   | Number module | `cldr/main/locale/numbers.json`<br>`cldr/supplemental/numberingSystems.json` |
+   | Plural module | `cldr/supplemental/plurals.json` (for cardinals)<br>`cldr/supplemental/ordinals.json` (for ordinals) |
 
 ## Using the Globalize Utility Methods
 
@@ -135,10 +135,10 @@ The following code snippets show how to use the TAU Globalize utility methods:
       globalize.setLocale(localeId).done(function(ko) {
           console.log(ko.formatCurrency(69000, currency_unit)); /* ₩69,900 */
       });
-  });           
+  });
   ```
 
-   For more information, see the [currency unit standard in ISO 4217](http://en.wikipedia.org/wiki/ISO_4217).        
+   For more information, see the [currency unit standard in ISO 4217](http://en.wikipedia.org/wiki/ISO_4217).
 
 - `formatDate()`:
 
@@ -151,10 +151,10 @@ The following code snippets show how to use the TAU Globalize utility methods:
       globalize.setLocale(localeId).done(function(ko) {
           console.log(ko.formatDate(new Date(), {datetime:'medium'});
       });
-  });         
+  });
   ```
 
-  For more information, see [date-formatter](https://github.com/jquery/globalize/blob/master/doc/api/date/date-formatter.md).        
+  For more information, see [date-formatter](https://github.com/jquery/globalize/blob/master/doc/api/date/date-formatter.md).
 
 - `getCalendar()`:
 
@@ -166,14 +166,14 @@ The following code snippets show how to use the TAU Globalize utility methods:
       globalize.setLocale(localeId).done(function(ko) {
           console.log(ko.getCalendar().months.format.wide, undefined, 4));
       });
-  });         
+  });
   ```
 
-  The calendar format is specified in the `gregorian.json` file in the CLDR data.        
+  The calendar format is specified in the `gregorian.json` file in the CLDR data.
 
-- `formatMessage()`:            
+- `formatMessage()`:
 
-  This method supports custom locale data.                            
+  This method supports custom locale data.
 
   1. Create a directory for each locale that has localized content under the locales directory in the project root. The locale names are defined in the [W3C IANA Language Subtag Registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
 
@@ -181,7 +181,7 @@ The following code snippets show how to use the TAU Globalize utility methods:
      index.html
      locale
         en.json
-        ko.json                            
+        ko.json
      ```
 
   2. Create a JSON file for the `formatMessage` strings (custom locale strings) in locales paths:
@@ -208,7 +208,7 @@ The following code snippets show how to use the TAU Globalize utility methods:
               "Voluptatum ducimus voluptates voluptas?"
            ]
         }
-     }                               
+     }
      ```
 
   3. Call the `setLocale()` method to load the custom locale files automatically:
@@ -223,10 +223,11 @@ The following code snippets show how to use the TAU Globalize utility methods:
              console.log(ko.formatMessage('greeting/bye'));
              console.log(ko.formatMessage('longText'));
          });
-     });                                  
+     });
      ```
 
-- `messageFormatter()`:            This method returns a function that formats a message using the ICU message format pattern. For more information, see [message-formatter](https://github.com/jquery/globalize/blob/master/doc/api/message/message-formatter.md).                            
+- `messageFormatter()`:  
+   This method returns a function that formats a message using the ICU message format pattern. For more information, see [message-formatter](https://github.com/jquery/globalize/blob/master/doc/api/message/message-formatter.md).
 
   1. Create a locale resource in the locales path:
 
@@ -238,7 +239,7 @@ The following code snippets show how to use the TAU Globalize utility methods:
               "thankyou":"Bye Mr. {custom}."
            }
         }
-     }                              
+     }
      ```
 
   2. Use the `messageFormatter()` method:
@@ -257,7 +258,7 @@ The following code snippets show how to use the TAU Globalize utility methods:
              console.log(welcomeFormatter(welcomeMessageList));
              console.log(thankyouFormatter(thankyouMessageList));
          });
-     });                                 
+     });
      ```
 
 ## Right-to-left (RTL) Language Support
@@ -284,7 +285,10 @@ The following examples show how to use the locale-specific CSS:
   });
   ```
 
-- The following example has a DOM of body with a locale-specific CSS named `ui-script-direction-rtl`:`<body class="ui-script-direction-rtl">`        
+- The following example has a DOM of body with a locale-specific CSS named `ui-script-direction-rtl`:
+  ```
+  <body class="ui-script-direction-rtl">
+  ```
 
 - The following example uses the locale-specific CSS to switch on the RTL feature for a UI component:
 

@@ -14,8 +14,9 @@ The media files are updated using an application (by calling the Content API) or
 
 You can only use the Media Content API to manage files located in specific paths. You can get the paths by using the `storage_get_directory()` function. For more information, see the Storage API (in [mobile](../../api/mobile/latest/group__CAPI__SYSTEM__STORAGE__MODULE.html) and [wearable](../../api/wearable/latest/group__CAPI__SYSTEM__STORAGE__MODULE.html) applications).
 
-**Note**  
-To obtain information from the media database, you must first [connect to it](#prerequisites). When the connection is no longer needed, remember to disconnect from the media database.
+> **Note**
+>
+> To obtain information from the media database, you must first [connect to it](#prerequisites). When the connection is no longer needed, remember to disconnect from the media database.
 
 The main media content features include:
 
@@ -55,9 +56,6 @@ The main media content features include:
 
   You can manage a collection of media items as a group, when the items have the same value of a given property. You can, for example, [search for groups](#find_groups) and [read group information](#read_group).
 
-- Media storages
-
-  You can [retrieve information about the media storages](#storage_list).
 
 <a name="prerequisites"></a>
 ## Prerequisites
@@ -68,10 +66,10 @@ To enable your application to use the media content functionality:
 
    ```
    <privileges>
-      <!--To insert content-->
-      <privilege>http://tizen.org/privilege/content.write</privilege>
-      <!--To access a storage to insert content-->
-      <privilege>http://tizen.org/privilege/mediastorage</privilege>
+       <!--To insert content-->
+       <privilege>http://tizen.org/privilege/content.write</privilege>
+       <!--To access a storage to insert content-->
+       <privilege>http://tizen.org/privilege/mediastorage</privilege>
    </privileges>
    ```
 
@@ -206,7 +204,9 @@ To retrieve a list of media items:
     }
     ```
 
-2. To find the items satisfying certain criteria, or modify the results in a specific way, create a filter and set its properties. For a detailed list of condition fields (such as `MEDIA_TYPE`) and their values (such as `MEDIA_CONTENT_TYPE_IMAGE` and `MEDIA_CONTENT_TYPE_VIDEO`), see the `media_content_type.h` header file.The following example filters media items so that only image and video files are included in the result. The filter is case-insensitive, and the results are sorted in descending order by item display name. For more information on the filter properties, see [Setting up a Filter](#filter).
+2. To find the items satisfying certain criteria, or modify the results in a specific way, create a filter and set its properties. For a detailed list of condition fields (such as `MEDIA_TYPE`) and their values (such as `MEDIA_CONTENT_TYPE_IMAGE` and `MEDIA_CONTENT_TYPE_VIDEO`), see the `media_content_type.h` header file.
+
+   The following example filters media items so that only image and video files are included in the result. The filter is case-insensitive, and the results are sorted in descending order by item display name. For more information on the filter properties, see [Setting up a Filter](#filter).
 
     ```
     #define BUFLEN 200
@@ -220,7 +220,7 @@ To retrieve a list of media items:
     ret = media_filter_create(&filter);
 
     snprintf(buf, BUFLEN, "%s = %d OR %s = %d", MEDIA_TYPE, MEDIA_CONTENT_TYPE_IMAGE,
-             MEDIA_TYPE, MEDIA_CONTENT_TYPE_VIDEO);
+            MEDIA_TYPE, MEDIA_CONTENT_TYPE_VIDEO);
     ret = media_filter_set_condition(filter, buf, collate_type);
     if (ret != MEDIA_CONTENT_ERROR_NONE) {
         media_filter_destroy(filter);
@@ -238,7 +238,9 @@ To retrieve a list of media items:
     }
     ```
 
-3. To find the media items, use the `media_info_foreach_media_from_db()` function with the defined callback. The function is synchronous, and it blocks until the callback has been called for all items or the callback returns `false`.To find only a subset of the items, use a filter. If you want to find all items, set the filter parameter to `NULL`.
+3. To find the media items, use the `media_info_foreach_media_from_db()` function with the defined callback. The function is synchronous, and it blocks until the callback has been called for all items or the callback returns `false`.
+
+   To find only a subset of the items, use a filter. If you want to find all items, set the filter parameter to `NULL`.
 
     ```
     ret = media_info_foreach_media_from_db(filter, gallery_media_item_cb, &all_item_list);
@@ -269,10 +271,10 @@ To get notifications of database changes, register a callback. You can only set 
    ```
    void
    _noti_cb(media_content_error_e error, int pid,
-            media_content_db_update_item_type_e update_item,
-            media_content_db_update_type_e update_type,
-            media_content_type_e media_type,
-            char *uuid, char *path, char *mime_type, void *user_data)
+           media_content_db_update_item_type_e update_item,
+           media_content_db_update_type_e update_type,
+           media_content_type_e media_type,
+           char *uuid, char *path, char *mime_type, void *user_data)
    {
        if (error == MEDIA_CONTENT_ERROR_NONE)
            dlog_print(DLOG_DEBUG, LOG_TAG, "noti success! %d\n", error);
@@ -314,14 +316,16 @@ To get notifications of database changes, register a callback. You can only set 
    int ret = MEDIA_CONTENT_ERROR_NONE;
 
    /* Subscribe notifications */
+   media_content_noti_h noti = NULL;
    char *user_str = strdup("hi");
-   media_content_set_db_updated_cb(_noti_cb, (void*)user_str);
+
+   media_content_add_db_updated_cb(_noti_cb, (void*)user_str, &noti);
    ```
 
-3. When you no longer want to receive notifications, deregister the callback:
+3. When you no longer want to receive notifications, deregister the callback using the generated `noti` handle:
 
    ```
-   media_content_unset_db_updated_cb();
+   media_content_remove_db_updated_cb(noti);
    ```
 
 <a name="findingall"></a>
@@ -351,7 +355,9 @@ To find albums in the system and filter the results:
    media_filter_destroy(filter);
    ```
 
-2. To find the albums, use the `media_album_foreach_album_from_db()` function.To find only a subset of the albums, use a filter. If you want to find all albums, set the filter parameter to `NULL`.
+2. To find the albums, use the `media_album_foreach_album_from_db()` function.
+
+   To find only a subset of the albums, use a filter. If you want to find all albums, set the filter parameter to `NULL`.
 
     ```
     /* Find all albums */
@@ -361,7 +367,9 @@ To find albums in the system and filter the results:
     media_album_foreach_album_from_db(filter, media_album_list_cb, NULL);
     ```
 
-	You can also use the `media_album_get_album_count_from_db()` function to get the number of albums available.The `media_album_foreach_album_from_db()` function requires a callback, which is called for every found album. The function is synchronous, and it blocks until the callback has been called for all albums or the callback returns `false`. For information on how to implement the callback, see [Reading Album Information](#read_album).
+	You can also use the `media_album_get_album_count_from_db()` function to get the number of albums available.
+
+    The `media_album_foreach_album_from_db()` function requires a callback, which is called for every found album. The function is synchronous, and it blocks until the callback has been called for all albums or the callback returns `false`. For information on how to implement the callback, see [Reading Album Information](#read_album).
 
 3. Destroy the filter:
 
@@ -384,57 +392,64 @@ To read album information, define a callback for the `media_album_foreach_album_
 
    A handle to the record is passed as a parameter. The return value determines whether the iterative calls of the callback continue (`true`) or are stopped (`false`).
 
-2. Once you have the album handle (`media_album_h`), you can read the album information:Use the `media_album_get_album_id()`, `media_album_get_name()`, and `media_album_get_artist()` functions to read the album ID, name, and artist:
+2. Once you have the album handle (`media_album_h`), you can read the album information:
 
-    ```
-      media_content_error_e ret = MEDIA_CONTENT_ERROR_NONE;
+   - Use the `media_album_get_album_id()`, `media_album_get_name()`, and `media_album_get_artist()` functions to read the album ID, name, and artist:
 
-        int id = -1;
-        char *name = NULL;
-        char *artist = NULL;
-        int count = -1;
+     ```
+         media_content_error_e ret = MEDIA_CONTENT_ERROR_NONE;
 
-        /* Get the ID of the album */
-        ret = media_album_get_album_id(album, &id);
-        if (ret != MEDIA_CONTENT_ERROR_NONE)
-            /* Error handling */
-        else
-            dlog_print(DLOG_DEBUG, LOG_TAG, "Album id: %d\n", id);
+         int id = -1;
+         char *name = NULL;
+         char *artist = NULL;
+         int count = -1;
 
-        /* Get name of the album */
-        ret = media_album_get_name(album, &name);
-        if (ret != MEDIA_CONTENT_ERROR_NONE) {
-            /* Error handling */
-        } else {
-            dlog_print(DLOG_DEBUG, LOG_TAG, "Album name: %s\n", name);
-            free(name);
-        }
+         /* Get the ID of the album */
+         ret = media_album_get_album_id(album, &id);
+         if (ret != MEDIA_CONTENT_ERROR_NONE)
+             /* Error handling */
+         else
+             dlog_print(DLOG_DEBUG, LOG_TAG, "Album id: %d\n", id);
 
-        /* Get the artist name */
-        ret = media_album_get_artist(album, &artist);
-        if (ret != MEDIA_CONTENT_ERROR_NONE) {
-            /* Error handling */
-        } else {
-            dlog_print(DLOG_DEBUG, LOG_TAG, "Artist: %s\n", artist);
-            free(artist);
-        }
-    ```
+         /* Get name of the album */
+         ret = media_album_get_name(album, &name);
+         if (ret != MEDIA_CONTENT_ERROR_NONE) {
+             /* Error handling */
+         } else {
+             dlog_print(DLOG_DEBUG, LOG_TAG, "Album name: %s\n", name);
+             free(name);
+         }
 
-    **Note**  
-    Free the `name` and `artist` variables after use.Get the media item count in the album with the `media_album_get_media_count_from_db()` function.The second parameter is the filter. If it is set to `NULL`, all media is counted.
+         /* Get the artist name */
+         ret = media_album_get_artist(album, &artist);
+         if (ret != MEDIA_CONTENT_ERROR_NONE) {
+             /* Error handling */
+         } else {
+             dlog_print(DLOG_DEBUG, LOG_TAG, "Artist: %s\n", artist);
+             free(artist);
+         }
+     ```
 
-    ```
-       /* Get media count in the album */
-        /* Filter is NULL - all media items are counted */
-        ret = media_album_get_media_count_from_db(id, NULL, &count);
-        if (ret != MEDIA_CONTENT_ERROR_NONE)
-            /* Error handling */
-        else
-            dlog_print(DLOG_DEBUG, LOG_TAG, "Media count in this album: %d\n", count);
+      > **Note**
+      >
+      > Free the `name` and `artist` variables after use.
 
-        return true;
-    }
-    ```
+    - Get the media item count in the album with the `media_album_get_media_count_from_db()` function.
+
+      The second parameter is the filter. If it is set to `NULL`, all media is counted.
+
+      ```
+          /* Get media count in the album */
+          /* Filter is NULL - all media items are counted */
+          ret = media_album_get_media_count_from_db(id, NULL, &count);
+          if (ret != MEDIA_CONTENT_ERROR_NONE)
+              /* Error handling */
+          else
+              dlog_print(DLOG_DEBUG, LOG_TAG, "Media count in this album: %d\n", count);
+
+          return true;
+      }
+      ```
 
 <a name="findinginfo"></a>
 ## Retrieving Album Content
@@ -508,8 +523,9 @@ To access information about the media items in a given album:
    }
    ```
 
-   **Note**  
-   Free the `title` and `mime_type` variables after use.
+   > **Note**
+   >
+   > Free the `title` and `mime_type` variables after use.
 
 <a name="inserting"></a>
 ## Inserting Bookmarks
@@ -594,29 +610,30 @@ To read bookmark information, define a callback for the `media_info_foreach_book
 2. Once you have the bookmark handle (`media_bookmark_h`), you can read the bookmark information:
 	- Use the `media_bookmark_get_thumbnail_path()` function to get the thumbnail path of the bookmark:
 
-    ```
-        char *thumb = NULL;
+      ```
+          char *thumb = NULL;
 
-        if (bookmark != NULL) {
-            media_bookmark_get_thumbnail_path(bookmark, &thumb);
-            dlog_print(DLOG_DEBUG, LOG_TAG, "Thumbnail path: %s\n", thumb);
-            free(thumb);
-    ```
-    **Note**  
-    Free the thumbnail path after use.
+          if (bookmark != NULL) {
+              media_bookmark_get_thumbnail_path(bookmark, &thumb);
+              dlog_print(DLOG_DEBUG, LOG_TAG, "Thumbnail path: %s\n", thumb);
+              free(thumb);
+      ```
+      > **Note**
+      >
+      > Free the thumbnail path after use.
 
 	- Use the `media_bookmark_get_marked_time()` function to get the marked time of the bookmark:
 
-    ```
-            time_t time;
+      ```
+              time_t time;
 
-            media_bookmark_get_marked_time(bookmark, &time);
-            dlog_print(DLOG_DEBUG, LOG_TAG, "Marked time [s]: %d\n", (int) time);
-        }
+              media_bookmark_get_marked_time(bookmark, &time);
+              dlog_print(DLOG_DEBUG, LOG_TAG, "Marked time [s]: %d\n", (int) time);
+          }
 
-        return true;
-    }
-    ```
+          return true;
+      }
+      ```
 
 <a name="removing"></a>
 ## Removing Bookmarks
@@ -708,10 +725,10 @@ To use a filter to find media items that satisfy certain criteria or to modify t
 
    ```
    media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, MEDIA_ARTIST,
-                          MEDIA_CONTENT_COLLATE_DEFAULT);
+                       MEDIA_CONTENT_COLLATE_DEFAULT);
    ```
 
-   The second and fourth parameters determine the order and collation types, and the available types are defined in the enumerators `media_content_order_e` (in [mobile](../../api/mobile/latest/group__CAPI__MEDIA__CONTENT__MODULE.html#gaa4e5eece5a509c7414afb96e7a2c3fa2) and [wearable](../../api/wearable/latest/group__CAPI__MEDIA__CONTENT__MODULE.html#gaa4e5eece5a509c7414afb96e7a2c3fa2) applications) and `media_content_collation_e` (in [mobile](../../api/mobile/latest/group__CAPI__MEDIA__CONTENT__MODULE.html#ga31a20f732fe262e81f112416bfefe13c) and [wearable](../../api/wearable/latest/group__CAPI__MEDIA__CONTENT__MODULE.html#ga31a20f732fe262e81f112416bfefe13c)applications).
+   The second and fourth parameters determine the order and collation types, and the available types are defined in the enumerators `media_content_order_e` (in [mobile](../../api/mobile/latest/group__CAPI__MEDIA__CONTENT__MODULE.html#gaa4e5eece5a509c7414afb96e7a2c3fa2) and [wearable](../../api/wearable/latest/group__CAPI__MEDIA__CONTENT__MODULE.html#gaa4e5eece5a509c7414afb96e7a2c3fa2) applications) and `media_content_collation_e` (in [mobile](../../api/mobile/latest/group__CAPI__MEDIA__CONTENT__MODULE.html#ga31a20f732fe262e81f112416bfefe13c) and [wearable](../../api/wearable/latest/group__CAPI__MEDIA__CONTENT__MODULE.html#ga31a20f732fe262e81f112416bfefe13c) applications).
 
    To read the order settings of an existing filter, use the `media_filter_get_order()` function:
 
@@ -721,23 +738,27 @@ To use a filter to find media items that satisfy certain criteria or to modify t
    media_content_collation_e check_order_collate_type = MEDIA_CONTENT_COLLATE_DEFAULT;
 
    media_filter_get_order(filter, &check_order_type, &check_order_keyword,
-                          &check_order_collate_type);
+                       &check_order_collate_type);
    ```
 
-4. Set an offset using the `media_filter_set_offset()` function.The offset allows you to limit the results to a specific subset. For example, if you sort the items by size in an ascending order and set the offset to 10, the 10 smallest items are not included in the results.The following example sets an offset that returns results starting from the beginning (offset 0), and returns a maximum of 5 results:
+4. Set an offset using the `media_filter_set_offset()` function.
 
-    ```
-    media_filter_set_offset(filter, 0, 5);
-    ```
+   The offset allows you to limit the results to a specific subset. For example, if you sort the items by size in an ascending order and set the offset to 10, the 10 smallest items are not included in the results.
 
-    To read the offset settings of an existing filter, use the `media_filter_get_offset()` function:
+   The following example sets an offset that returns results starting from the beginning (offset 0), and returns a maximum of 5 results:
 
-    ```
-    int check_offset = 0;
-    int check_count = 0;
+   ```
+   media_filter_set_offset(filter, 0, 5);
+   ```
 
-    media_filter_get_offset(filter, &check_offset, &check_count);
-    ```
+   To read the offset settings of an existing filter, use the `media_filter_get_offset()` function:
+
+   ```
+   int check_offset = 0;
+   int check_count = 0;
+
+   media_filter_get_offset(filter, &check_offset, &check_count);
+   ```
 
 5. When the filter is ready and its properties defined, you can use it in various media foreach functions to find different media items.
 
@@ -760,7 +781,7 @@ To find media folders and filter the results:
 
 1. To find only folders satisfying certain criteria, or modify the results in a specific way, create a filter and set its properties.
 
-   The following example filters media folders so that only folders named "Downloads" found in the internal storage are included in the result. The filter is case-insensitive, and the results are sorted in ascending order by modified time. For more information on the filter properties, see [Setting up a Filter](#filter).
+   The following example filters media folders so that only folders named "Downloads" found are included in the result. The filter is case-insensitive, and the results are sorted in ascending order by modified time. For more information on the filter properties, see [Setting up a Filter](#filter).
 
    ```
    filter_h filter = NULL;
@@ -770,11 +791,10 @@ To find media folders and filter the results:
    #define BUFLEN 200
    char buf[BUFLEN] = {'\0'};
    snprintf(buf, BUFLEN, "%s = 'Downloads'", FOLDER_NAME);
-   snprintf(buf, BUFLEN, "%s = %d", FOLDER_STORAGE_TYPE, MEDIA_CONTENT_STORAGE_INTERNAL);
 
    media_filter_set_condition(filter, buf, MEDIA_CONTENT_COLLATE_NOCASE);
    media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, FOLDER_MODIFIED_TIME,
-                          MEDIA_CONTENT_COLLATE_DEFAULT);
+                       MEDIA_CONTENT_COLLATE_DEFAULT);
    media_folder_foreach_folder_from_db(filter, folder_cb, NULL);
    ```
 
@@ -800,7 +820,7 @@ To find media folders and filter the results:
 <a name="read_folder"></a>
 ## Reading Folder Information
 
-To read media folder information, define a callback for the `media_folder_foreach_folder_from_db()` function and retrieve the basic folder information (folder ID, name, path, storage type, last modified time, and number of media items in the folder) in the callback:
+To read media folder information, define a callback for the `media_folder_foreach_folder_from_db()` function and retrieve the basic folder information (folder ID, name, path, last modified time, and number of media items in the folder) in the callback:
 
 1. Read the folder details within the callback:
 
@@ -844,37 +864,31 @@ To read media folder information, define a callback for the `media_folder_foreac
          }
      ```
 
-     **Note**  
-     Free the `name` and `path` variables at the end. The `folder_id` variable is freed later, since it is still needed.
+     > **Note**
+     >
+     > Free the `name` and `path` variables at the end. The `folder_id` variable is freed later, since it is still needed.
 
-   - Read the folder storage type using the `media_folder_get_storage_type()` function:
+   - Get the media item count in the folder with the `media_folder_get_media_count_from_db()` function.
+
+     The second parameter is the filter. If it is set to `NULL`, all media is counted.
 
      ```
-         media_content_storage_e storage_type = MEDIA_CONTENT_STORAGE_INTERNAL;
-
-         ret = media_folder_get_storage_type(folder, &storage_type);
-         if (ret != MEDIA_CONTENT_ERROR_NONE) {
+         int item_count = -1;
+         ret = media_folder_get_media_count_from_db(folder_id, NULL, &item_count);
+         if (MEDIA_CONTENT_ERROR_NONE != ret)
              /* Error handling */
-         } else {
-             switch (storage_type) {
-             case MEDIA_CONTENT_STORAGE_INTERNAL:
-                 dlog_print(DLOG_DEBUG, LOG_TAG, "Folder storage type: Internal\n");
-                 break;
-             case MEDIA_CONTENT_STORAGE_EXTERNAL:
-                 dlog_print(DLOG_DEBUG, LOG_TAG, "Folder storage type: External\n");
-                 break;
-             default:
-                 dlog_print(DLOG_DEBUG, LOG_TAG, "Folder storage type: Unknown\n");
-                 break;
-             }
-         }
+         else
+             dlog_print(DLOG_DEBUG, LOG_TAG,
+                 "Number of media contents: %d\n", item_count);
+         free(folder_id);
+
+         return true;
+     }
      ```
 
-
-   - Get the media item count in the folder with the `media_folder_get_media_count_from_db()` function.The second parameter is the filter. If it is set to `NULL`, all media is counted.`    int item_count = -1;    ret = media_folder_get_media_count_from_db(folder_id, NULL, &item_count);    if (MEDIA_CONTENT_ERROR_NONE != ret)        /* Error handling */    else        dlog_print(DLOG_DEBUG, LOG_TAG,                   "Number of media contents: %d\n", item_count);    free(folder_id);    return true;}`
-
-	**Note**  
-    Free the `folder_id` value after it is used for the `media_folder_get_media_count_from_db()` function.
+      > **Note**
+      >
+      > Free the `folder_id` value after it is used for the `media_folder_get_media_count_from_db()` function.
 
 <a name="folder_content"></a>
 ## Retrieving Folder Content
@@ -958,7 +972,7 @@ To access media item information:
 
    /* Set the condition */
    snprintf(buf, BUFLEN, "%s = %d OR %s = %d", MEDIA_TYPE,
-            MEDIA_CONTENT_TYPE_IMAGE, MEDIA_TYPE, MEDIA_CONTENT_TYPE_VIDEO);
+           MEDIA_CONTENT_TYPE_IMAGE, MEDIA_TYPE, MEDIA_CONTENT_TYPE_VIDEO);
 
    ret = media_filter_set_condition(filter, buf, collate_type);
    if (ret != MEDIA_CONTENT_ERROR_NONE) {
@@ -986,7 +1000,7 @@ To access media item information:
    ret = media_info_foreach_media_from_db(filter, gallery_media_item_cb, &all_item_list);
    if (ret != MEDIA_CONTENT_ERROR_NONE) {
        dlog_print(DLOG_ERROR, LOG_TAG,
-                  "media_info_foreach_media_from_db failed: %d", ret);
+               "media_info_foreach_media_from_db failed: %d", ret);
        media_filter_destroy(filter);
 
        return ret;
@@ -1019,8 +1033,8 @@ To access media item information:
 
                    dlog_print(DLOG_DEBUG, LOG_TAG, "This is an image");
                    dlog_print(DLOG_DEBUG, LOG_TAG,
-                              "Width: %d, Height: %d, Orientation: %d, Date taken: %s",
-                              width, height, orientation, datetaken);
+                               "Width: %d, Height: %d, Orientation: %d, Date taken: %s",
+                               width, height, orientation, datetaken);
                }
 
                if (datetaken)
@@ -1049,9 +1063,9 @@ To access media item information:
 
                    dlog_print(DLOG_DEBUG, LOG_TAG, "This is a video");
                    dlog_print(DLOG_DEBUG, LOG_TAG,
-                              "Title: %s, Album: %s, Artist: %s, Album_artist: %s \n
+                               "Title: %s, Album: %s, Artist: %s, Album_artist: %s \n
                                Duration: %d, Played time: %d",
-                              title, album, artist, album_artist, duration, time_played);
+                               title, album, artist, album_artist, duration, time_played);
                }
 
                free(artist);
@@ -1126,21 +1140,21 @@ To use newly created media files, insert them into the database:
 
    - `media_content_scan_file()` function:
 
-    ```
-    int ret = MEDIA_CONTENT_ERROR_NONE;
-    char *image_file = "Default.jpg";
-    char *directory = NULL;
-    char *file_path = NULL;
+     ```
+     int ret = MEDIA_CONTENT_ERROR_NONE;
+     char *image_file = "Default.jpg";
+     char *directory = NULL;
+     char *file_path = NULL;
 
-    storage_get_directory(0, STORAGE_DIRECTORY_IMAGES, &directory);
-    file_path = (char*)malloc(strlen(directory) + strlen(image_file) + 1);
-    memset(file_path, 0x00, strlen(directory) + strlen(image_file) + 1);
-    sprintf(file_path, "%s/%s", directory, image_file);
+     storage_get_directory(0, STORAGE_DIRECTORY_IMAGES, &directory);
+     file_path = (char*)malloc(strlen(directory) + strlen(image_file) + 1);
+     memset(file_path, 0x00, strlen(directory) + strlen(image_file) + 1);
+     sprintf(file_path, "%s/%s", directory, image_file);
 
-    ret = media_content_scan_file(file_path);
-    if (ret != MEDIA_CONTENT_ERROR_NONE)
-        /* Error handling */
-    ```
+     ret = media_content_scan_file(file_path);
+     if (ret != MEDIA_CONTENT_ERROR_NONE)
+         /* Error handling */
+     ```
 
    The difference between the 2 options is that the `media_info_insert_to_db()` function automatically gets the `media_info_h` handle of the media file after inserting the file in the database, whereas the `media_content_scan_file()` function only inserts the file.
 
@@ -1163,7 +1177,9 @@ To insert a media folder, and optionally any subfolders, in the database:
    }
    ```
 
-2. Insert (scan) a folder to the database using the `media_content_scan_folder()` function.Since the second parameter is set to `TRUE`, the subfolders are scanned and inserted too.
+2. Insert (scan) a folder to the database using the `media_content_scan_folder()` function.
+
+   Since the second parameter is set to `TRUE`, the subfolders are scanned and inserted too.
 
     ```
     int ret = MEDIA_CONTENT_ERROR_NONE;
@@ -1310,53 +1326,53 @@ To read playlist information, define a callback for the `media_playlist_foreach_
 
 2. Once you have the playlist handle (`media_playlist_h`), you can read the playlist information:
 	- Use the `media_playlist_get_name()` and `media_playlist_get_playlist_id()` functions to read the playlist name and ID:
-	-
-    ```
-        media_playlist_get_name(playlist, &name);
-        media_playlist_get_playlist_id(playlist, &playlist_id);
-    ```
+      ```
+          media_playlist_get_name(playlist, &name);
+          media_playlist_get_playlist_id(playlist, &playlist_id);
+      ```
 
-	- Access the records within the playlist using the playlist ID.In the following example, 2 searches are executed for the records. The first search operates on all records on the playlist and retrieves the record count. The second search retrieves the first 10 records. Destroy the filters after all operations.
+	- Access the records within the playlist using the playlist ID.
 
-    ```
-        filter_h temp_filter = NULL;
-        media_filter_create(&temp_filter);
+      In the following example, 2 searches are executed for the records. The first search operates on all records on the playlist and retrieves the record count. The second search retrieves the first 10 records. Destroy the filters after all operations.
+      ```
+          filter_h temp_filter = NULL;
+          media_filter_create(&temp_filter);
 
-        media_filter_set_offset(temp_filter, -1, -1);
+          media_filter_set_offset(temp_filter, -1, -1);
 
-        media_playlist_get_media_count_from_db(playlist_id, temp_filter, &count);
-        filter_h audio_fltr;
+          media_playlist_get_media_count_from_db(playlist_id, temp_filter, &count);
+          filter_h audio_fltr;
 
-        media_filter_create(&audio_fltr);
+          media_filter_create(&audio_fltr);
 
-        media_filter_set_offset(audio_fltr, 0, 10);
+          media_filter_set_offset(audio_fltr, 0, 10);
 
-        media_playlist_foreach_media_from_db(playlist_id, audio_fltr,
-                                             audio_list_cb, NULL);
+          media_playlist_foreach_media_from_db(playlist_id, audio_fltr,
+                                              audio_list_cb, NULL);
 
-        media_filter_destroy(audio_fltr);
-        media_filter_destroy(temp_filter);
+          media_filter_destroy(audio_fltr);
+          media_filter_destroy(temp_filter);
 
-        return true;
-    }
-    ```
+          return true;
+      }
+      ```
 	- The search results are returned in a callback that is triggered for each record matching the filter. To get the media info, use the following functions in the callback:
 		- `media_info_get_audio()`
 		- `media_info_get_media_id()`
 		- `media_info_get_size()`
 
-    ```
-    static bool
-    audio_list_cb(int playlist_member_id, media_info_h media_hndl, void *user_data)
-    {
-        char * id;
-        media_info_get_media_id(media_hndl, &id);
-        dlog_print(DLOG_DEBUG, LOG_TAG, "Media on the playlist: %s\n", id);
-        free(id);
+      ```
+      static bool
+      audio_list_cb(int playlist_member_id, media_info_h media_hndl, void *user_data)
+      {
+          char * id;
+          media_info_get_media_id(media_hndl, &id);
+          dlog_print(DLOG_DEBUG, LOG_TAG, "Media on the playlist: %s\n", id);
+          free(id);
 
-        return true;
-    }
-    ```
+          return true;
+      }
+      ```
 
 3. When no longer needed, destroy the playlist:
 
@@ -1458,7 +1474,11 @@ To access information first about the tags and then about the media items relate
     }
     ```
 
-2. To find the tags and related media items, use the `media_tag_foreach_tag_from_db()` and `media_tag_foreach_media_from_db()` functions with the defined callbacks. The functions are synchronous, and they block until the callbacks have been called for all items or the callbacks return `false`.To find only a subset of the items, use a filter. If you want to find all items, set the filter parameter to `NULL`.After the callbacks have created the lists, you can access the tag details with various `media_tag_get_XXX()` functions, and the media item details with various `media_info_get_XXX()` functions.
+2. To find the tags and related media items, use the `media_tag_foreach_tag_from_db()` and `media_tag_foreach_media_from_db()` functions with the defined callbacks. The functions are synchronous, and they block until the callbacks have been called for all items or the callbacks return `false`.
+
+    To find only a subset of the items, use a filter. If you want to find all items, set the filter parameter to `NULL`.
+
+    After the callbacks have created the lists, you can access the tag details with various `media_tag_get_XXX()` functions, and the media item details with various `media_info_get_XXX()` functions.
 
     ```
     media_tag_h tag_handle = NULL;
@@ -1482,15 +1502,15 @@ To access information first about the tags and then about the media items relate
             media_tag_get_name(tag_handle, &tag_name);
 
             ret = media_tag_foreach_media_from_db(tag_id, NULL, gallery_media_item_cb,
-                                                  &media_list_in_tag);
+                                                &media_list_in_tag);
             if (ret != MEDIA_CONTENT_ERROR_NONE) {
                 dlog_print(DLOG_ERROR, LOG_TAG,
-                           "media_tag_foreach_media_from_db() failed: %d", ret);
+                            "media_tag_foreach_media_from_db() failed: %d", ret);
 
                 return ret;
             } else {
                 dlog_print(DLOG_DEBUG, LOG_TAG,
-                           "media_tag_foreach_media_from_db() successful");
+                            "media_tag_foreach_media_from_db() successful");
                 int j = 0;
                 media_info_h tag_media_handle;
                 char *media_id = NULL;
@@ -1509,13 +1529,13 @@ To access information first about the tags and then about the media items relate
                     ret = media_info_get_media_type(tag_media_handle, &media_type);
 
                     dlog_print(DLOG_DEBUG, LOG_TAG,
-                               "[%s] media_id [%d]: %s", tag_name, j, media_id);
+                                "[%s] media_id [%d]: %s", tag_name, j, media_id);
                     dlog_print(DLOG_DEBUG, LOG_TAG,
-                               "[%s] media_type [%d]: %d", tag_name, j, media_type);
+                                "[%s] media_type [%d]: %d", tag_name, j, media_type);
                     dlog_print(DLOG_DEBUG, LOG_TAG,
-                               "[%s] media_name [%d]: %s", tag_name, j, media_name);
+                                "[%s] media_name [%d]: %s", tag_name, j, media_name);
                     dlog_print(DLOG_DEBUG, LOG_TAG,
-                               "[%s] media_path [%d]: %s", tag_name, j, media_path);
+                                "[%s] media_path [%d]: %s", tag_name, j, media_path);
 
                     free(media_name);
                     free(media_path);
@@ -1579,57 +1599,6 @@ To delete a tag:
    g_list_free(tag_list);
    tag_list = NULL;
    ```
-<a name="storage_list"></a>
-## Retrieving Storage Information
-
-To access information about the storages:
-
-1. Define a callback function for the `media_storage_foreach_storage_from_db()` function, called for each available storage. Use the callback to create a list of storages.
-
-    ```
-    void
-    storage_cb(media_storage_h storage, void *user_data)
-    {
-        media_storage_h new_storage = NULL;
-        media_storage_clone(&new_storage, storage);
-
-        GList **list = (GList**)user_data;
-        *list = g_list_append(*list, new_media);
-    }
-    ```
-
-2. To find the storages, call the `media_storage_foreach_storage_from_db()` function with the defined callback. After the callback has created the storage list, you can access the storage details with various `media_storage_get_XXX()` functions.
-
-    ```
-    char *id = NULL;
-    char *name = NULL;
-    char *path = NULL;
-    GList *storage_list = NULL; /* Include glib.h */
-    media_storage_h storage = NULL;
-
-    ret = media_storage_foreach_storage_from_db(NULL, storage_cb, &storage_list);
-    if (ret != MEDIA_CONTENT_ERROR_NONE) {
-        dlog_print(DLOG_ERROR, LOG_TAG,
-                   "media_storage_foreach_storage_from_db failed: %d", ret);
-
-        return ret;
-    } else {
-        int i;
-
-        for (i = 0; i < g_list_length(storage_list); i++) {
-            storage = (media_storage_h)g_list_nth_data(storage_list, i);
-            media_storage_get_id(new_storage, &id);
-            media_storage_get_name(new_storage, &name);
-            media_storage_get_path(new_storage, &path);
-
-            dlog_print(DLOG_DEBUG, LOG_TAG, "id:[%s] name:[%s] path:[%s]", id, name, path);
-
-            free(id);
-            free(name);
-            free(storage);
-        }
-    }
-    ```
 
 <a name="find_groups"></a>
 ## Finding Media Item Groups
@@ -1705,43 +1674,45 @@ To read media item group information, define a callback for the `media_group_for
    The callback return value determines whether the iterative calls of the callback continue (`true`) or are stopped (`false`).
 
 2. Once you have the group name and identifier (passed in `user_data`), you can read the group information:
-	- Get the number of items in the group using the `media_group_get_media_count_from_db()` function.The third parameter is the filter. If it is set to `NULL`, all items in the group are counted.
+   - Get the number of items in the group using the `media_group_get_media_count_from_db()` function.
 
-    ```
-        media_content_error_e ret = MEDIA_CONTENT_ERROR_NONE;
-        media_group_e group = (media_group_e) user_data;
+     The third parameter is the filter. If it is set to `NULL`, all items in the group are counted.
 
-        dlog_print(DLOG_DEBUG, LOG_TAG, "\n");
-        dlog_print(DLOG_DEBUG, LOG_TAG, "Group name: %s\n", name);
+     ```
+         media_content_error_e ret = MEDIA_CONTENT_ERROR_NONE;
+         media_group_e group = (media_group_e) user_data;
 
-        int count = -1;
-        media_group_get_media_count_from_db(name, group, NULL, &count);
-        dlog_print(DLOG_DEBUG, LOG_TAG, "Media count in group: %d\n", count);
-    ```
+         dlog_print(DLOG_DEBUG, LOG_TAG, "\n");
+         dlog_print(DLOG_DEBUG, LOG_TAG, "Group name: %s\n", name);
+
+         int count = -1;
+         media_group_get_media_count_from_db(name, group, NULL, &count);
+         dlog_print(DLOG_DEBUG, LOG_TAG, "Media count in group: %d\n", count);
+     ```
 
 	- Get all items in the group using the `media_group_foreach_media_from_db()` function. Define a callback (`media_cb()`) for the function to be triggered for each found item.
 
-    ```
-        media_group_foreach_media_from_db(name, group, NULL, media_cb, NULL);
+      ```
+          media_group_foreach_media_from_db(name, group, NULL, media_cb, NULL);
 
-        return true;
-    }
+          return true;
+      }
 
-    bool
-    media_cb(media_info_h media, void *user_data)
-    {
-        media_content_error_e ret = MEDIA_CONTENT_ERROR_NONE;
-        char *name = NULL;
+      bool
+      media_cb(media_info_h media, void *user_data)
+      {
+          media_content_error_e ret = MEDIA_CONTENT_ERROR_NONE;
+          char *name = NULL;
 
-        media_info_get_display_name(media, &name);
-        if (name != NULL) {
-            dlog_print(DLOG_DEBUG, LOG_TAG, "Name: %s\n", name);
-            free(name);
-        }
+          media_info_get_display_name(media, &name);
+          if (name != NULL) {
+              dlog_print(DLOG_DEBUG, LOG_TAG, "Name: %s\n", name);
+              free(name);
+          }
 
-        return true;
-    }
-    ```
+          return true;
+      }
+      ```
 
 <a name="media_info"></a>
 ## Media Information
@@ -1762,28 +1733,16 @@ The following tables list the information available about the media files.
 | `Size`            | File size of the media content           |
 | `Added time`      | Time the media content was added to the database |
 | `Modified time`   | Last modification time of the media content |
-| `Timeline`        | Time the media content was createdYou can use this value to sort the content. |
+| `Timeline`        | Time the media content was created<br> You can use this value to sort the content. |
 | `Thumbnail path`  | Path of the stored thumbnail image of the media content |
 | `Description`     | Description of the media content         |
 | `Longitude`       | Longitude of the media content           |
 | `Latitude`        | Latitude of the media content            |
 | `Altitude`        | Altitude of the media content            |
-| `Weather`         | Weather information for the media content |
 | `Rating`          | Rating of the media content              |
 | `Favorite`        | Favorite status of the media content     |
-| `Author`          | Author of the media content              |
-| `Provider`        | Provider of the media content            |
-| `Content name`    | Content name of the media content        |
 | `Title`           | Title of the media content               |
-| `Category`        | Category of the media content            |
-| `Location tag`    | Location tag of the media content        |
-| `Age rating`      | Age rating of the media content          |
-| `Keyword`         | Keyword of the media content             |
 | `Is DRM`          | Check flag for DRM content               |
-| `Storage type`    | Storage type of the media content        |
-| `Played count`    | Played count of the media content        |
-| `Played time`     | Last played time of the media content    |
-| `Played position` | Last played position of the media content |
 
 For metadata of an audio file, call the `media_info_get_audio()` function with the media handle.
 
@@ -1791,10 +1750,10 @@ For metadata of an audio file, call the `media_info_get_audio()` function with t
 
 | Metadata name    | Description                              |
 |------------------|------------------------------------------|
-| `Media ID`       | Media ID of the audio contentThis value is same as the media ID in general information. |
+| `Media ID`       | Media ID of the audio content<br> This value is same as the media ID in general information. |
 | `Album`          | Album information for the audio content  |
 | `Artist`         | Artist of the audio content              |
-| `Album Artist`   | Album artist of the audio contentThe artist and album artist can be the same. |
+| `Album Artist`   | Album artist of the audio content<br> The artist and album artist can be the same. |
 | `Genre`          | Genre of the audio content               |
 | `Composer`       | Composer of the audio content            |
 | `Year`           | Year the audio content was created       |
@@ -1802,7 +1761,7 @@ For metadata of an audio file, call the `media_info_get_audio()` function with t
 | `Copyright`      | Copyright information for the audio content |
 | `Track number`   | Track number of the audio content        |
 | `Bit rate`       | Bit rate of the audio content            |
-| `Bit per sample` | Bit per sample of the audio contentThe bit per sample is the same as the sample format. The sample format is the number of digits in the digital representation of each sample. |
+| `Bit per sample` | Bit per sample of the audio content<br> The bit per sample is the same as the sample format. The sample format is the number of digits in the digital representation of each sample. |
 | `Sample rate`    | Sample rate of the audio content         |
 | `Channel`        | Channel information for the audio content |
 | `Duration`       | Duration of the audio content            |
@@ -1813,7 +1772,7 @@ For metadata of an image file, call the `media_info_get_image()` function with t
 
 | Metadata name   | Description                              |
 |-----------------|------------------------------------------|
-| `Media ID`      | Media ID of the imageThis value is the same as the media ID in the general information. |
+| `Media ID`      | Media ID of the image<br> This value is the same as the media ID in the general information. |
 | `Width`         | Width of the image                       |
 | `Height`        | Height of the image                      |
 | `Exposure time` | Exposure time of the image               |
@@ -1821,9 +1780,7 @@ For metadata of an image file, call the `media_info_get_image()` function with t
 | `ISO`           | ISO of the image                         |
 | `Model`         | Model name of the camera that created the image |
 | `Orientation`   | Orientation of the image                 |
-| `Date taken`    | Time the image was createdYou can get this information from the EXIF tag. If there is no EXIF tag for the image, set the created time in the file system. |
-| `Is burstshot`  | Check flag for a burst shot of the imageThe burst shot is a continuous shooting mode. |
-| `Burstshot ID`  | ID of a burst shot imageAssign the same ID to the burst shooting mode. |
+| `Date taken`    | Time the image was created<br> You can get this information from the EXIF tag. If there is no EXIF tag for the image, set the created time in the file system. |
 
 For metadata of a video file, call `withmedia_info_get_video()` function with the media handle.
 
@@ -1831,7 +1788,7 @@ For metadata of a video file, call `withmedia_info_get_video()` function with th
 
 | Metadata name   | Description                              |
 |-----------------|------------------------------------------|
-| `Media ID`      | Media ID of the video contentThis value is same as the media ID in the general information. |
+| `Media ID`      | Media ID of the video content<br> This value is same as the media ID in the general information. |
 | `Album`         | Album information for the video content  |
 | `Artist`        | Artist of the video content              |
 | `Album artist`  | Album artist of the video content        |
@@ -1845,6 +1802,7 @@ For metadata of a video file, call `withmedia_info_get_video()` function with th
 | `Duration`      | Duration of the video content            |
 | `Width`         | Width of the video content               |
 | `Height`        | Height of the video content              |
+| `rotation`      | The clockwise rotation angle of the video content in degrees |
 
 ## Related Information
 - Dependencies

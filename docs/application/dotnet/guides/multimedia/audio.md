@@ -28,7 +28,7 @@ To control volume levels, the application has to request permission by adding th
 
 You can manage the volume level of a specific audio type. You can set and get a volume level and a maximum volume level of a particular audio type.
 
-Normally, if there is an active output stream, the `VolumeController.CurrentPlaybackType` property of the [Tizen.Multimedia.AudioManager](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Multimedia.AudioManager.html) class returns the stream audio type, and if not, it returns `AudioVolumeType.None`.
+Normally, if there is an active output stream, the `VolumeController.CurrentPlaybackType` property of the [Tizen.Multimedia.AudioManager](https://samsung.github.io/TizenFX/latest/api/Tizen.Multimedia.AudioManager.html) class returns the stream audio type, and if not, it returns `AudioVolumeType.None`.
 
 To control the volume of your application:
 
@@ -77,20 +77,20 @@ The audio behavior of your application must change depending on the audio device
 To query audio device information:
 
 -   To access device information:
-    1.  Retrieve the list of the currently connected audio devices with the `GetConnectedDevices()` method of the [Tizen.Multimedia.AudioManager](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Multimedia.AudioManager.html) class:
+    1.  Retrieve the list of the currently connected audio devices with the `GetConnectedDevices()` method of the [Tizen.Multimedia.AudioManager](https://samsung.github.io/TizenFX/latest/api/Tizen.Multimedia.AudioManager.html) class:
 
         ```
         IEnumerable<AudioDevice> connectedDevices = AudioManager.GetConnectedDevices();
         ```
 
-    2.  Retrieve the device information from the [Tizen.Multimedia.AudioDevice](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Multimedia.AudioDevice.html) class, which has the following properties:
+    2.  Retrieve the device information from the [Tizen.Multimedia.AudioDevice](https://samsung.github.io/TizenFX/latest/api/Tizen.Multimedia.AudioDevice.html) class, which has the following properties:
         -   `Type`: Device type
         -   `IoDirection`: Device IO direction
         -   `Id`: Device ID
         -   `Name`: Device name
-        -   `State`: Device state
+        -   `IsRunning`: Device running state
 
--   To get a notification when the audio device connection or state changes, add event handlers for the `DeviceConnectionChanged` and `DeviceStateChanged` events of the `Tizen.Multimedia.AudioManager` class:
+-   To get a notification when the audio device connection or state changes, add event handlers for the `DeviceConnectionChanged` and `DeviceRunningChanged` events of the `Tizen.Multimedia.AudioManager` class:
     -   To receive a notification whenever the device connection state changes:
 
         ```
@@ -118,12 +118,12 @@ To query audio device information:
     -   To receive a notification whenever the device state changes:
 
         ```
-        void OnDeviceStateChanged(object sender, AudioDeviceStateChangedEventArgs args)
+        void OnDeviceRunningChanged(object sender, AudioDeviceRunningChangedEventArgs args)
         {
             if (args.Device.Type == AudioDeviceType.BluetoothMedia)
             {
-                if (args.Device.State == AudioDeviceState.Deactivated)
-                    /// Bluetooth device has been deactivated, handle accordingly
+                if (args.Device.IsRunning == false)
+                    /// Bluetooth device is not running, handle accordingly
                 else
                     /// Handle accordingly
             }
@@ -133,12 +133,12 @@ To query audio device information:
             }
         }
 
-        AudioManager.DeviceStateChanged += OnDeviceStateChanged;
+        AudioManager.DeviceRunningChanged += OnDeviceRunningChanged;
         ```
 
 
         > **Note**   
-		> The initial state of the connected device is `Deactivated`.
+		> The initial running state of the connected device is `false`, which means the connected device is not running.
 
 
 

@@ -39,9 +39,9 @@ To enable your application to use the IoT functionality:
 2. To make your application visible in the Tizen Store only for devices that support Iotcon, the application must specify the following feature in the `config.xml` file:
 
    ```
-    <widget>
+   <widget>
        <feature name="http://tizen.org/feature/iot.ocf"/>
-    </widget>
+   </widget>
    ```
 
    Additionally, to double-check the for Iotcon API support while the application is running, use the `tizen.systeminfo.getCapability()` method and enable or disable the code that needs the API, as needed:
@@ -70,7 +70,7 @@ To create a new resource:
       var cborPath = 'path_to_my_app_storage/iotcon-server-test.dat';
       ```
 
-   2. Initialize Iotcon and set a human friendly name:
+   2. Initialize Iotcon and set a human-friendly name:
 
       ```
       tizen.iotcon.initialize(cborPath);
@@ -162,7 +162,7 @@ To find remote resources:
       var cborPath = 'path_to_my_app_storage/iotcon-client-test.dat';
       ```
 
-   2. Initialize Iotcon and set a human friendly name:
+   2. Initialize Iotcon and set a human-friendly name:
 
       ```
       tizen.iotcon.initialize(cborPath);

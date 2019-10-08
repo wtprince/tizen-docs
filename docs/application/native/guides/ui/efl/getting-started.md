@@ -1,10 +1,10 @@
 # Getting Started with EFL UI Programming
 
-This topic explains how to start EFL UI programming. If you first want to learn what EFL is and how it works, see [Introduction](./index.md). If you want to create a first application step by step, see [Creating Your First Tizen Mobile Native Application](../../../getting-started/mobile/first-app.md) or [Creating Your First Tizen Wearable Native Application](../../../getting-started/wearable/first-app.md).
+This topic explains how to start EFL UI programming. If you first want to learn what EFL is and how it works, see [Introduction](./index.md). If you want to create a first application step by step, see [Creating Your First Tizen Mobile Native Application](../../../get-started/mobile/first-app.md) or [Creating Your First Tizen Wearable Native Application](../../../get-started/wearable/first-app.md).
 
 ## Running EFL Applications
 
-The first thing you need to do for EFL UI programming is to set the application to a basic condition, in which you can use EFL libraries and run the application life-cycle. In Tizen, managing the application life-cycle is supported by the [Application framework](../../app-management/applications.md), and it handles the basic steps of running EFL as well. It enables you to configure application properties, and manage application data, runtime environment, and behavior.
+The first thing you need to do for EFL UI programming is to set the application to a basic condition, in which you can use EFL libraries and run the application life-cycle. In Tizen, managing the application life-cycle is supported by the [Application framework](../../applications/overview.md), and it handles the basic steps of running EFL as well. It enables you to configure application properties, and manage application data, runtime environment, and behavior.
 
 The following code snippet shows what the EFL UI application looks like in Tizen:
 
