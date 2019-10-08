@@ -25,25 +25,26 @@ The main features of the Sensor API include:
   - Sensing interval
   - Measurement range
 
+- Sensor types
+
   A device can have various physical and virtual sensors. The following table lists the sensors supported by Tizen.
 
-  > **Note**  
+  > **Note**
+  >
   > Not all devices support all sensors, so each sensor is not necessarily available on all devices. You can [check whether a sensor is supported](#sensorlistener). For more information, see [System Information](../device/system.md).
 
+  **Table: Supported sensor types**
 
-
-**Table: Supported sensor types**
-
-| Supported sensor types                   |                                          |                                          |
-|------------------------------------------|------------------------------------------|------------------------------------------|
-| [Accelerometer](#accelerometer)          | [Heart Rate Monitor Sensor](#hrm)        | [Proximity Sensor](#proximity)           |
-| [Geomagnetic Rotation Vector Sensor](#mag_rotation) | [Humidity Sensor](#humidity)             | [Rotation Vector Sensor](#rotation)      |
-| [Gravity Sensor](#gravity)               | [Light Sensor](#light)                   | [Significant Motion Sensor](#significant_motion) |
-| [Gyroscope](#gyro)                       | [Linear Acceleration Sensor](#lin_accelerometer) | [Sleep Monitor](#sleep_monitor)          |
-| [Gyroscope Rotation Vector Sensor](#gyro_rotation) | [Magnetic Sensor](#magnetic)             | [Temperature Sensor](#temperature)       |
-| [Heart Rate Monitor LED Green Sensor](#hrm_green) | [Orientation Sensor](#orientation)       | [Ultraviolet Sensor](#ultraviolet)       |
-| [Heart Rate Monitor LED IR Sensor](#hrm_ir) | [Pedometer](#pedometer)                  | [Uncalibrated Gyroscope](#uncal_gyro)    |
-| [Heart Rate Monitor LED Red Sensor](#hrm_red) | [Pressure Sensor](#pressure)             | [Uncalibrated Magnetic Sensor](#uncal_magnetic) |
+  | Supported sensor types                   |                                          |                                          |
+  |------------------------------------------|------------------------------------------|------------------------------------------|
+  | [Accelerometer](#accelerometer)          | [Heart Rate Monitor Sensor](#hrm)        | [Proximity Sensor](#proximity)           |
+  | [Geomagnetic Rotation Vector Sensor](#mag_rotation) | [Humidity Sensor](#humidity)             | [Rotation Vector Sensor](#rotation)      |
+  | [Gravity Sensor](#gravity)               | [Light Sensor](#light)                   | [Significant Motion Sensor](#significant_motion) |
+  | [Gyroscope](#gyro)                       | [Linear Acceleration Sensor](#lin_accelerometer) | [Sleep Monitor](#sleep_monitor)          |
+  | [Gyroscope Rotation Vector Sensor](#gyro_rotation) | [Magnetic Sensor](#magnetic)             | [Temperature Sensor](#temperature)       |
+  | [Heart Rate Monitor LED Green Sensor](#hrm_green) | [Orientation Sensor](#orientation)       | [Ultraviolet Sensor](#ultraviolet)       |
+  | [Heart Rate Monitor LED IR Sensor](#hrm_ir) | [Pedometer](#pedometer)                  | [Uncalibrated Gyroscope](#uncal_gyro)    |
+  | [Heart Rate Monitor LED Red Sensor](#hrm_red) | [Pressure Sensor](#pressure)             | [Uncalibrated Magnetic Sensor](#uncal_magnetic) |
 
 -   Sensor URI
 
@@ -157,7 +158,7 @@ If a listener is created successfully, it is able to observe sensor data changes
      sensor_listener_set_attribute_int(listener, SENSOR_ATTRIBUTE_PAUSE_POLICY, SENSOR_PAUSE_NONE);
      ```
 
-     The above example makes the listener listen for the sensor data regardless of the display state and the power-save mode. However, it does not prevent the device from going to sleep mode. To listen for the sensor data, the device must be awake anyway.
+     The above example makes the listener listen for the sensor data regardless of the display state and the power-save mode. However, it does not prevent the device from going to the sleep mode. To listen for the sensor data, the device must be awake anyway.
 
 4. When the sensor data is no more necessary, stop the listener:
 
@@ -290,9 +291,9 @@ The following table lists the measurement data that the accelerometer provides.
 | Measurement  | Type                 | Range                               | Unit         |
 |--------------|----------------------|-------------------------------------|--------------|
 | Timestamp    | `unsigned long long` | -                                   | Microseconds |
-| values[0]: X | `float`              | Min. value = -19.6Max. value = 19.6 | m/s<sup>2</sup>         |
-| values[1]: Y | `float`              | Min. value = -19.6Max. value = 19.6 | m/s<sup>2</sup>         |
-| values[2]: Z | `float`              | Min. value = -19.6Max. value = 19.6 | m/s<sup>2</sup>         |
+| values[0]: X | `float`              | Min. value = -19.6<br>Max. value = 19.6 | m/s<sup>2</sup>         |
+| values[1]: Y | `float`              | Min. value = -19.6<br>Max. value = 19.6 | m/s<sup>2</sup>         |
+| values[2]: Z | `float`              | Min. value = -19.6<br>Max. value = 19.6 | m/s<sup>2</sup>         |
 
 The following table provides information about the accelerometer output for a device at rest.
 
@@ -545,7 +546,7 @@ The following table lists the measurement data that the orientation sensor provi
 | values[1]: Pitch   | `float`              | Min. value = -180<br> Max. value = 180 | Degrees (&deg;)  |
 | values[2]: Roll    | `float`              | Min. value = -90<br> Max. value = 90   | Degrees (&deg;)  |
 
-The angular positions are measured using a fixed frame reference ((X<sub>E</sub>, Y<sub>E</sub>, Z<sub>E</sub>)).
+The angular positions are measured using a fixed frame reference (X<sub>E</sub>, Y<sub>E</sub>, Z<sub>E</sub>).
 
 **Figure: Angular positions and the fixed frame reference**
 
@@ -670,7 +671,7 @@ The following table lists the measurement data that the temperature sensor provi
 | Measurement            | Type                 | Range                            | Unit         |
 |------------------------|----------------------|----------------------------------|--------------|
 | Timestamp              | `unsigned long long` | -                                | Microseconds |
-| values[0]: temperature | `float`              | Min. value = -30Max. value = 100 | &deg;C           |
+| values[0]: temperature | `float`              | Min. value = -30<br>Max. value = 100 | &deg;C           |
 
 <a name="ultraviolet"></a>
 ## Ultraviolet Sensor

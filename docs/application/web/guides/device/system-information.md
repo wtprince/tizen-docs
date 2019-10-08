@@ -2,7 +2,7 @@
 
 You can access and monitor the [device and system properties](#system-information-properties) (both hardware and capability), such as the battery level, available device storage, version number, model name, and the cellular network being used.
 
-The System Information API is mandatory for Tizen mobile, wearable, and TV profiles, which means that it is supported in all mobile and wearable devices. All mandatory APIs are supported on the Tizen Emulators.
+The System Information API is mandatory for Tizen mobile, wearable, and TV profiles, which means that it is supported on all mobile, wearable, and TV devices. All mandatory APIs are supported on the Tizen Emulators.
 
 The main features of the System Information API include:
 
@@ -123,10 +123,44 @@ When a device is in its natural position, it is considered to be in the `PORTRAI
 
 **Table: Device orientations**
 
-| LANDSCAPE_PRIMARY                        | PORTRAIT_PRIMARY                         | LANDSCAPE_SECONDARY                      | PORTRAIT_SECONDARY                       |
-| ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| ![img](./media/emulator-screenshot.png) | ![img](./media/emulator-screenshot.png) | ![img](./media/emulator-screenshot.png) | ![img](./media/emulator-screenshot.png) |
-| ![img](./media/emulator-screenshot.png) | ![img](./media/emulator-screenshot.png) | ![img](./media/emulator-screenshot.png) | ![img](./media/emulator-screenshot.png) |
+<table>
+<tbody>
+<tr>
+<th>LANDSCAPE_PRIMARY</th>
+<th>PORTRAIT_PRIMARY</th>
+<th>LANDSCAPE_SECONDARY</th>
+<th>PORTRAIT_SECONDARY</th>
+</tr>
+<tr>
+<td>
+<img src="./media/emulator-screenshot_l90.png" width="278" />
+</td>
+<td>
+<img src="./media/emulator-screenshot.png"  width="160"  >
+</td>
+<td>
+<img src="./media/emulator-screenshot_r90.png" width="278" >
+</td>
+<td>
+<img src="./media/emulator-screenshot_180.png"  width="160" >
+</td>
+</tr>
+<tr>
+<td>
+<img src="./media/emulator-screenshot.png" width="300" height="180" />
+</td>
+<td>
+<img src="./media/emulator-screenshot_r90.png" width="180" height="300"  >
+</td>
+<td>
+<img src="./media/emulator-screenshot_180.png"width="300" height="180"  >
+</td>
+<td>
+<img src="./media/emulator-screenshot_l90.png" width="180" height="300" >
+</td>
+</tr>
+</tbody>
+</table>
 
 To retrieve information about the device orientation:
 
@@ -199,6 +233,29 @@ To receive notifications on property value changes:
 
    var id = tizen.systeminfo.addPropertyValueArrayChangeListener('SIM', successCallback);
    ```
+
+
+> **Note**  
+> In case of `WIFI_NETWORK` property, value change listener is triggered on `ipAddress` and `ip6Address` properties change in the network layer. These changes are not consistent with the `status` or `signalStrength` properties of a physical adapter in physical layer.  
+According to the previous constraints, in a specific situation, the listener could be triggered just before network adapter shutdown. In this case, the value of `status` returned by the listener will be outdated.
+
+To ensure receiving proper values, use the following code example:
+
+```
+function errorCallback(err) {
+    console.log('Error occurred ' + err.code)
+};
+
+function successCallback() {
+    setTimeout(function() {
+        tizen.systeminfo.getPropertyValue('WIFI_NETWORK', function(wifi) {
+            console.log("Wi-Fi status: " + wifi.status);
+        }, errorCallback);
+    }, 500);
+};
+
+tizen.systeminfo.addPropertyValueChangeListener('WIFI_NETWORK', successCallback, errorCallback);
+```
 
 <a name="property"></a>
 ## System Information Properties

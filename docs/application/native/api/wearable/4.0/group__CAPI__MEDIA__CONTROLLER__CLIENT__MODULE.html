@@ -36,7 +36,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">Tizen Native API
-   
+   &#160;<span id="projectnumber">4.0</span>
    </div>
    
   </td>
@@ -100,33 +100,34 @@ Required Header</h2>
 <p>#include &lt;media_controller_client.h&gt;</p>
 <h2><a class="anchor" id="CAPI_MEDIA_CONTROLLER_CLIENT_MODULE_OVERVIEW"></a>
 Overview</h2>
-<p>The <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html">Media Controller Client</a> API allows you to check the activated server status(<a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaedbe3f3e6c82f71ff1cc24395ec35bb9" title="Sets the callback for monitoring status of the media controller server.">mc_client_set_server_update_cb()</a>), the playback info(<a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gabf3b85ade9c212c80873b65ea2d78b46" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a>), or the metadata(<a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga93a340cdb43633e9b969eb9173e7b29e" title="Sets the callback for monitoring metadata status of the media controller server.">mc_client_set_metadata_update_cb()</a>). to send the custom command(<a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga4a7d3b623f8cf426a974b6d78fc3dde8" title="Sends the custom command to server.">mc_client_send_custom_command()</a>), to create/destroy the handle(<a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga9da7f1ab103ed4bcda2453a8005d07c9" title="Creates a media controller client.">mc_client_create()</a>/<a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga17982b30df83659216d9ed9ad9b36705" title="Destroys client.">mc_client_destroy()</a>). <br/>
- If there is no the activated server, you can get the latest server information by using <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaedb77a0863a1015fea16c5848c5d9a1a" title="Gets the latest media controller server info.">mc_client_get_latest_server_info()</a>. </p>
+<p>The <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html">Media Controller Client</a> API allows you to check the activated server status (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga07598bffeeada179b66803e59852d341" title="Sets the callback for monitoring status of the media controller server.">mc_client_set_server_update_cb()</a>), the playback info (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga12cba30e19175dacd05a0374e3e1aede" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a>), the metadata (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaf5c8207454ab67f1d429c575613b7507" title="Sets the callback for monitoring metadata status of the media controller server.">mc_client_set_metadata_update_cb()</a>)). <br/>
+ And client can send the custom command to server(<a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga5bb8f85187dccf555e95b15197e7e4ea" title="Sends the custom command to server.">mc_client_send_custom_command()</a>). <br/>
+ Before doing those things you should create handle(<a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga9da7f1ab103ed4bcda2453a8005d07c9" title="Creates a media controller client.">mc_client_create()</a>). And if you don't use handle anymore, you have to destroy it(<a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga17982b30df83659216d9ed9ad9b36705" title="Destroys client.">mc_client_destroy()</a>). If there is no the activated server, you can get the latest server information by using <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaedb77a0863a1015fea16c5848c5d9a1a" title="Gets the latest media controller server info.">mc_client_get_latest_server_info()</a>. </p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga9da7f1ab103ed4bcda2453a8005d07c9">mc_client_create</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> *client)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a media controller client.  <a href="#ga9da7f1ab103ed4bcda2453a8005d07c9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaedbe3f3e6c82f71ff1cc24395ec35bb9">mc_client_set_server_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gabe6a76975e4787abce1b1ec9191eeade">mc_server_state_updated_cb</a> callback, void *user_data)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the callback for monitoring status of the media controller server.  <a href="#gaedbe3f3e6c82f71ff1cc24395ec35bb9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga6e92343ab0132a729f5ac8ed1bc81787">mc_client_unset_server_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsets the callback for monitoring status of the media controller server.  <a href="#ga6e92343ab0132a729f5ac8ed1bc81787"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gabf3b85ade9c212c80873b65ea2d78b46">mc_client_set_playback_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaa9baf18fbee6eba601270d8130ed1da3">mc_playback_updated_cb</a> callback, void *user_data)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the callback for monitoring playback status of the media controller server.  <a href="#gabf3b85ade9c212c80873b65ea2d78b46"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gacf80846cf00215e9a11b2994b42045de">mc_client_unset_playback_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsets the callback for monitoring playback status of the media controller server.  <a href="#gacf80846cf00215e9a11b2994b42045de"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga93a340cdb43633e9b969eb9173e7b29e">mc_client_set_metadata_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga2749d625a9fd9e3d1050e528d205bc96">mc_metadata_updated_cb</a> callback, void *user_data)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the callback for monitoring metadata status of the media controller server.  <a href="#ga93a340cdb43633e9b969eb9173e7b29e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga96678a1343f487281d430ac20122996b">mc_client_unset_metadata_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsets the callback for monitoring metadata status of the media controller server.  <a href="#ga96678a1343f487281d430ac20122996b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gae4f4733359ba6a1e4046853d56511e38">mc_client_set_shuffle_mode_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gafcf153b8816388075e66ee6a2c2b2b56">mc_shuffle_mode_changed_cb</a> callback, void *user_data)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the callback for monitoring shuffle mode of the media controller server.  <a href="#gae4f4733359ba6a1e4046853d56511e38"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga20cf1fd8574b5cc184e719a194b8fdeb">mc_client_unset_shuffle_mode_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsets the callback for monitoring shuffle mode of the media controller server.  <a href="#ga20cf1fd8574b5cc184e719a194b8fdeb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga0bc2f6fc96099180e09fdbd8ba5d36dc">mc_client_set_repeat_mode_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gab56f729d58bccee19e74774425656c4d">mc_repeat_mode_changed_cb</a> callback, void *user_data)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the callback for monitoring repeat mode of the media controller server.  <a href="#ga0bc2f6fc96099180e09fdbd8ba5d36dc"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gadf600df429c50b708941deb90af18d4d">mc_client_unset_repeat_mode_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsets the callback for monitoring repeat mode of the media controller server.  <a href="#gadf600df429c50b708941deb90af18d4d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga07598bffeeada179b66803e59852d341">mc_client_set_server_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gabe6a76975e4787abce1b1ec9191eeade">mc_server_state_updated_cb</a> callback, void *user_data) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the callback for monitoring status of the media controller server.  <a href="#ga07598bffeeada179b66803e59852d341"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac1072455b846ac6b827882acdd4ac302">mc_client_unset_server_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsets the callback for monitoring status of the media controller server.  <a href="#gac1072455b846ac6b827882acdd4ac302"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga12cba30e19175dacd05a0374e3e1aede">mc_client_set_playback_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaa9baf18fbee6eba601270d8130ed1da3">mc_playback_updated_cb</a> callback, void *user_data) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the callback for monitoring playback status of the media controller server.  <a href="#ga12cba30e19175dacd05a0374e3e1aede"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga353cf9e2466b41c8c9cfce0754a1a880">mc_client_unset_playback_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsets the callback for monitoring playback status of the media controller server.  <a href="#ga353cf9e2466b41c8c9cfce0754a1a880"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaf5c8207454ab67f1d429c575613b7507">mc_client_set_metadata_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga2749d625a9fd9e3d1050e528d205bc96">mc_metadata_updated_cb</a> callback, void *user_data) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the callback for monitoring metadata status of the media controller server.  <a href="#gaf5c8207454ab67f1d429c575613b7507"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac50d13fae3d329e6829e762ef47502f8">mc_client_unset_metadata_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsets the callback for monitoring metadata status of the media controller server.  <a href="#gac50d13fae3d329e6829e762ef47502f8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga61ef005f55cc5bfd06555ebfeb9b431d">mc_client_set_shuffle_mode_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga0233927dac2a5c1baa5f8ea45375fbd8">mc_shuffle_mode_changed_cb</a> callback, void *user_data) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the callback for monitoring shuffle mode of the media controller server.  <a href="#ga61ef005f55cc5bfd06555ebfeb9b431d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga14d662710b3778b658638986713e71e9">mc_client_unset_shuffle_mode_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsets the callback for monitoring shuffle mode of the media controller server.  <a href="#ga14d662710b3778b658638986713e71e9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga6c5d90f988ce55ee3107bfb10a7c7657">mc_client_set_repeat_mode_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac78157f2cf022a85b98efe6e0bd2c15b">mc_repeat_mode_changed_cb</a> callback, void *user_data) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the callback for monitoring repeat mode of the media controller server.  <a href="#ga6c5d90f988ce55ee3107bfb10a7c7657"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaf0ef900cf5028820a4c1be43f342c776">mc_client_unset_repeat_mode_update_cb</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsets the callback for monitoring repeat mode of the media controller server.  <a href="#gaf0ef900cf5028820a4c1be43f342c776"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac447d7f29fe87150b97338ef5217b4da">mc_client_subscribe</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gaa3ae52172988df333a6288cf305f8c6b">mc_subscription_type_e</a> subscription_type, const char *server_name)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribes media controller server for monitoring status.  <a href="#gac447d7f29fe87150b97338ef5217b4da"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga4bbe0d6af1d459e284ac52b1f51a6b96">mc_client_unsubscribe</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gaa3ae52172988df333a6288cf305f8c6b">mc_subscription_type_e</a> subscription_type, const char *server_name)</td></tr>
@@ -139,10 +140,10 @@ Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the playback position.  <a href="#ga330d976aee1c93cf0ae01832b288df7c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga6938218bb61df42139aa5c3a749b53e3">mc_client_destroy_playback</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga79c7942e2eacc7bac72d784201f1f115">mc_playback_h</a> playback)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys playback.  <a href="#ga6938218bb61df42139aa5c3a749b53e3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga986ded67f53aa8664832452caec77f07">mc_client_get_metadata</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gae9101e67ce04bc94bdecfe3dafd199e1">mc_metadata_h</a> metadata, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga4f807702ed8b326a4f51ffb19448884f">mc_meta_e</a> attribute, char **value)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the metadata.  <a href="#ga986ded67f53aa8664832452caec77f07"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga9dbc76e04f7b355608416988d17c2b3d">mc_client_destroy_metadata</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gae9101e67ce04bc94bdecfe3dafd199e1">mc_metadata_h</a> metadata)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys metadata.  <a href="#ga9dbc76e04f7b355608416988d17c2b3d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac6b36865d04f4f5c5faebe2df2259ee3">mc_client_get_metadata</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gae9101e67ce04bc94bdecfe3dafd199e1">mc_metadata_h</a> metadata, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga4f807702ed8b326a4f51ffb19448884f">mc_meta_e</a> attribute, char **value) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the metadata.  <a href="#gac6b36865d04f4f5c5faebe2df2259ee3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga5eb346756f1571dfeb3914020c4e0ac8">mc_client_destroy_metadata</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gae9101e67ce04bc94bdecfe3dafd199e1">mc_metadata_h</a> metadata) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys metadata.  <a href="#ga5eb346756f1571dfeb3914020c4e0ac8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaedb77a0863a1015fea16c5848c5d9a1a">mc_client_get_latest_server_info</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, char **server_name, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga13ddb28a62b4483fe05cb8f4f04e677c">mc_server_state_e</a> *server_state)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the latest media controller server info.  <a href="#gaedb77a0863a1015fea16c5848c5d9a1a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaccb868e026407540b9a3dd895ab1276e">mc_client_get_server_playback_info</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, const char *server_name, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga79c7942e2eacc7bac72d784201f1f115">mc_playback_h</a> *playback)</td></tr>
@@ -154,11 +155,11 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga8c0c00b4dc5f7c306fc611160c2cb05d">mc_client_get_server_repeat_mode</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, const char *server_name, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga98da6ccbf8db2e7c5cf513617fa634bf">mc_repeat_mode_e</a> *mode)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the latest repeat mode.  <a href="#ga8c0c00b4dc5f7c306fc611160c2cb05d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga8c60e76a6d0c5004e4fbb09c36e1498b">mc_client_foreach_server</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gacd79cb871969c3a9c961a0d206eaa751">mc_activated_server_cb</a> callback, void *user_data)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves all activated Server.  <a href="#ga8c60e76a6d0c5004e4fbb09c36e1498b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga46ad31af9b20bd721e100c11ff8d9221">mc_client_send_playback_state_command</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, const char *server_name, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gad123e313a0c0f0b5ada1c361a25f8827">mc_playback_states_e</a> state)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the playback state command to server.  <a href="#ga46ad31af9b20bd721e100c11ff8d9221"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga4a7d3b623f8cf426a974b6d78fc3dde8">mc_client_send_custom_command</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, const char *server_name, const char *command, <a class="el" href="group__CORE__LIB__BUNDLE__MODULE.html#gae6bcd5be7bb61f5fa47341d34f5e61c0">bundle</a> *data, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac5338d5e2252ba961f52c364c0fd1cb9">mc_command_reply_received_cb</a> callback, void *user_data)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the custom command to server.  <a href="#ga4a7d3b623f8cf426a974b6d78fc3dde8"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves all created servers.  <a href="#ga8c60e76a6d0c5004e4fbb09c36e1498b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga7ebd61ab31d19315f09604eec209cc38">mc_client_send_playback_state_command</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, const char *server_name, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gad123e313a0c0f0b5ada1c361a25f8827">mc_playback_states_e</a> state) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the playback state command to server.  <a href="#ga7ebd61ab31d19315f09604eec209cc38"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga5bb8f85187dccf555e95b15197e7e4ea">mc_client_send_custom_command</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client, const char *server_name, const char *command, <a class="el" href="group__CORE__LIB__BUNDLE__MODULE.html#gae6bcd5be7bb61f5fa47341d34f5e61c0">bundle</a> *data, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga1ac698b2b90d08def825662f8e0c3702">mc_command_reply_received_cb</a> callback, void *user_data) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the custom command to server.  <a href="#ga5bb8f85187dccf555e95b15197e7e4ea"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga17982b30df83659216d9ed9ad9b36705">mc_client_destroy</a> (<a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a> client)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys client.  <a href="#ga17982b30df83659216d9ed9ad9b36705"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="typedef-members"></a>
@@ -169,14 +170,14 @@ Typedefs</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when updating the playback information of the media controller server.  <a href="#gaa9baf18fbee6eba601270d8130ed1da3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga2749d625a9fd9e3d1050e528d205bc96">mc_metadata_updated_cb</a> )(const char *server_name, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gae9101e67ce04bc94bdecfe3dafd199e1">mc_metadata_h</a> metadata, void *user_data)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when updating the metadata of the media controller server.  <a href="#ga2749d625a9fd9e3d1050e528d205bc96"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gafcf153b8816388075e66ee6a2c2b2b56">mc_shuffle_mode_changed_cb</a> )(const char *server_name, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga518863c48d51a023d13d36567e6077af">mc_shuffle_mode_e</a> mode, void *user_data)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when updating the shuffle mode of the media controller server.  <a href="#gafcf153b8816388075e66ee6a2c2b2b56"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gab56f729d58bccee19e74774425656c4d">mc_repeat_mode_changed_cb</a> )(const char *server_name, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga98da6ccbf8db2e7c5cf513617fa634bf">mc_repeat_mode_e</a> mode, void *user_data)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when updating the repeat mode of the media controller server.  <a href="#gab56f729d58bccee19e74774425656c4d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga0233927dac2a5c1baa5f8ea45375fbd8">mc_shuffle_mode_changed_cb</a> )(const char *server_name, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga518863c48d51a023d13d36567e6077af">mc_shuffle_mode_e</a> mode, void *user_data) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when updating the shuffle mode of the media controller server.  <a href="#ga0233927dac2a5c1baa5f8ea45375fbd8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac78157f2cf022a85b98efe6e0bd2c15b">mc_repeat_mode_changed_cb</a> )(const char *server_name, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga98da6ccbf8db2e7c5cf513617fa634bf">mc_repeat_mode_e</a> mode, void *user_data) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when updating the repeat mode of the media controller server.  <a href="#gac78157f2cf022a85b98efe6e0bd2c15b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gacd79cb871969c3a9c961a0d206eaa751">mc_activated_server_cb</a> )(const char *server_name, void *user_data)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when requesting the list of activated servers.  <a href="#gacd79cb871969c3a9c961a0d206eaa751"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac5338d5e2252ba961f52c364c0fd1cb9">mc_command_reply_received_cb</a> )(const char *server_name, int result_code, <a class="el" href="group__CORE__LIB__BUNDLE__MODULE.html#gae6bcd5be7bb61f5fa47341d34f5e61c0">bundle</a> *data, void *user_data)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when receiving the command processing result from the server.  <a href="#gac5338d5e2252ba961f52c364c0fd1cb9"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when requesting the list of created servers.  <a href="#gacd79cb871969c3a9c961a0d206eaa751"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga1ac698b2b90d08def825662f8e0c3702">mc_command_reply_received_cb</a> )(const char *server_name, int result_code, <a class="el" href="group__CORE__LIB__BUNDLE__MODULE.html#gae6bcd5be7bb61f5fa47341d34f5e61c0">bundle</a> *data, void *user_data) TIZEN_DEPRECATED_API</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when receiving the command processing result from the server.  <a href="#ga1ac698b2b90d08def825662f8e0c3702"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga4a1439347b3b3549045048b7604dcc34">mc_subscribed_server_cb</a> )(const char *server_name, void *user_data)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when requesting the list of subscribed servers.  <a href="#ga4a1439347b3b3549045048b7604dcc34"></a><br/></td></tr>
 </table>
@@ -192,47 +193,49 @@ Typedefs</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Called when requesting the list of activated servers. </p>
+<p>Called when requesting the list of created servers. </p>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
-<dl class="remark"><dt><b>Remarks:</b></dt><dd>The callback is called in the dbus event loop.</dd></dl>
+<dl class="remark"><dt><b>Remarks:</b></dt><dd>The callback is called in the main loop. The <em>server_name</em> should not be released by the application. <br/>
+ The <em>server_name</em> can be used only in the callback. To use outside, make a copy.</dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the activated media controller server, it can be used only in the callback. To use outside, make a copy. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data passed from the <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga8c60e76a6d0c5004e4fbb09c36e1498b" title="Retrieves all activated Server.">mc_client_foreach_server()</a> fuction</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the created media controller server. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data passed from the <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga8c60e76a6d0c5004e4fbb09c36e1498b" title="Retrieves all created servers.">mc_client_foreach_server()</a> function</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><code>true</code> to continue with the next iteration of the loop, otherwise <code>false</code> to break out of the loop</dd></dl>
-<dl class="pre"><dt><b>Precondition:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga8c60e76a6d0c5004e4fbb09c36e1498b" title="Retrieves all activated Server.">mc_client_foreach_server()</a></dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga8c60e76a6d0c5004e4fbb09c36e1498b" title="Retrieves all activated Server.">mc_client_foreach_server()</a> </dd></dl>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga8c60e76a6d0c5004e4fbb09c36e1498b" title="Retrieves all created servers.">mc_client_foreach_server()</a></dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga8c60e76a6d0c5004e4fbb09c36e1498b" title="Retrieves all created servers.">mc_client_foreach_server()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gac5338d5e2252ba961f52c364c0fd1cb9"></a><!-- doxytag: member="media_controller_client.h::mc_command_reply_received_cb" ref="gac5338d5e2252ba961f52c364c0fd1cb9" args=")(const char *server_name, int result_code, bundle *data, void *user_data)" -->
+<a class="anchor" id="ga1ac698b2b90d08def825662f8e0c3702"></a><!-- doxytag: member="media_controller_client.h::mc_command_reply_received_cb" ref="ga1ac698b2b90d08def825662f8e0c3702" args=")(const char *server_name, int result_code, bundle *data, void *user_data) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac5338d5e2252ba961f52c364c0fd1cb9">mc_command_reply_received_cb</a>)(const char *server_name, int result_code, <a class="el" href="group__CORE__LIB__BUNDLE__MODULE.html#gae6bcd5be7bb61f5fa47341d34f5e61c0">bundle</a> *data, void *user_data)</td>
+          <td class="memname">typedef void(* <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga1ac698b2b90d08def825662f8e0c3702">mc_command_reply_received_cb</a>)(const char *server_name, int result_code, <a class="el" href="group__CORE__LIB__BUNDLE__MODULE.html#gae6bcd5be7bb61f5fa47341d34f5e61c0">bundle</a> *data, void *user_data) TIZEN_DEPRECATED_API</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>Called when receiving the command processing result from the server. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000831">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
-<dl class="remark"><dt><b>Remarks:</b></dt><dd>The callback is called in the dbus event loop.</dd></dl>
+<dl class="remark"><dt><b>Remarks:</b></dt><dd>The callback is called in the dbus event loop. <em>data</em> should be released using <a class="el" href="group__CORE__LIB__BUNDLE__MODULE.html#ga21054ad876bff896d38a08ebdc14a1b1" title="Frees the given bundle object with key-value pairs in it.">bundle_free()</a>.</dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the updated media controller server, it can be used only in the callback. To use outside, make a copy. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the media controller server which sent the reply, It can be used only in the callback. To use outside, make a copy. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">result_code</td><td>The result code of custom command </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>The extra data </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data passed from the <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga4a7d3b623f8cf426a974b6d78fc3dde8" title="Sends the custom command to server.">mc_client_send_custom_command()</a> fuction</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data passed from the <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga5bb8f85187dccf555e95b15197e7e4ea" title="Sends the custom command to server.">mc_client_send_custom_command()</a> function</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="pre"><dt><b>Precondition:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga4a7d3b623f8cf426a974b6d78fc3dde8" title="Sends the custom command to server.">mc_client_send_custom_command()</a></dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga4a7d3b623f8cf426a974b6d78fc3dde8" title="Sends the custom command to server.">mc_client_send_custom_command()</a> </dd></dl>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga5bb8f85187dccf555e95b15197e7e4ea" title="Sends the custom command to server.">mc_client_send_custom_command()</a></dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga5bb8f85187dccf555e95b15197e7e4ea" title="Sends the custom command to server.">mc_client_send_custom_command()</a> </dd></dl>
 
 </div>
 </div>
@@ -249,17 +252,21 @@ Typedefs</h2></td></tr>
 
 <p>Called when updating the metadata of the media controller server. </p>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
-<dl class="remark"><dt><b>Remarks:</b></dt><dd>The callback is called in the dbus event loop.</dd></dl>
+<dl class="remark"><dt><b>Remarks:</b></dt><dd>The callback is called in the dbus event loop. The <em>server_name</em> and <em>metadata</em> should not be released by the application. <br/>
+ The <em>server_name</em> can be used only in the callback. To use outside, make a copy. And <em>metadata</em> also can be used only in the callback.<br/>
+</dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the updated media controller server, it can be used only in the callback. To use outside, make a copy. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">metadata</td><td>the metadata of the updated media controller server </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data passed from the <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga93a340cdb43633e9b969eb9173e7b29e" title="Sets the callback for monitoring metadata status of the media controller server.">mc_client_set_metadata_update_cb()</a> fuction</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the media controller server which sent the notification. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">metadata</td><td>the metadata of the updated media controller server. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data passed from the <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaf5c8207454ab67f1d429c575613b7507" title="Sets the callback for monitoring metadata status of the media controller server.">mc_client_set_metadata_update_cb()</a> function </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="pre"><dt><b>Precondition:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga93a340cdb43633e9b969eb9173e7b29e" title="Sets the callback for monitoring metadata status of the media controller server.">mc_client_set_metadata_update_cb()</a></dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga93a340cdb43633e9b969eb9173e7b29e" title="Sets the callback for monitoring metadata status of the media controller server.">mc_client_set_metadata_update_cb()</a> </dd></dl>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaf5c8207454ab67f1d429c575613b7507" title="Sets the callback for monitoring metadata status of the media controller server.">mc_client_set_metadata_update_cb()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaf5c8207454ab67f1d429c575613b7507" title="Sets the callback for monitoring metadata status of the media controller server.">mc_client_set_metadata_update_cb()</a> </dd>
+<dd>
+<a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac6b36865d04f4f5c5faebe2df2259ee3" title="Gets the metadata.">mc_client_get_metadata()</a> </dd></dl>
 
 </div>
 </div>
@@ -276,44 +283,51 @@ Typedefs</h2></td></tr>
 
 <p>Called when updating the playback information of the media controller server. </p>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
-<dl class="remark"><dt><b>Remarks:</b></dt><dd>The callback is called in the dbus event loop.</dd></dl>
+<dl class="remark"><dt><b>Remarks:</b></dt><dd>The callback is called in the dbus event loop. The <em>server_name</em> and <em>playback</em> should not be released by the application. <br/>
+ The <em>server_name</em> can be used only in the callback. To use outside, make a copy. And <em>playback</em> also can be used only in the callback. <br/>
+</dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the updated media controller server, it can be used only in the callback. To use outside, make a copy. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">playback</td><td>The playback information of the updated media controller server </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data passed from the <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gabf3b85ade9c212c80873b65ea2d78b46" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a> fuction</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the media controller server which sent the notification. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">playback</td><td>The playback information of the updated media controller server. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data passed from the <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga12cba30e19175dacd05a0374e3e1aede" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a> function </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="pre"><dt><b>Precondition:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gabf3b85ade9c212c80873b65ea2d78b46" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a></dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gabf3b85ade9c212c80873b65ea2d78b46" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a> </dd></dl>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga12cba30e19175dacd05a0374e3e1aede" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga12cba30e19175dacd05a0374e3e1aede" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a> </dd>
+<dd>
+<a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaf142e94ef1d46011dc94c556491cb59d" title="Gets the playback state.">mc_client_get_playback_state()</a> </dd>
+<dd>
+<a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga330d976aee1c93cf0ae01832b288df7c" title="Gets the playback position.">mc_client_get_playback_position()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gab56f729d58bccee19e74774425656c4d"></a><!-- doxytag: member="media_controller_client.h::mc_repeat_mode_changed_cb" ref="gab56f729d58bccee19e74774425656c4d" args=")(const char *server_name, mc_repeat_mode_e mode, void *user_data)" -->
+<a class="anchor" id="gac78157f2cf022a85b98efe6e0bd2c15b"></a><!-- doxytag: member="media_controller_client.h::mc_repeat_mode_changed_cb" ref="gac78157f2cf022a85b98efe6e0bd2c15b" args=")(const char *server_name, mc_repeat_mode_e mode, void *user_data) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gab56f729d58bccee19e74774425656c4d">mc_repeat_mode_changed_cb</a>)(const char *server_name, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga98da6ccbf8db2e7c5cf513617fa634bf">mc_repeat_mode_e</a> mode, void *user_data)</td>
+          <td class="memname">typedef void(* <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac78157f2cf022a85b98efe6e0bd2c15b">mc_repeat_mode_changed_cb</a>)(const char *server_name, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga98da6ccbf8db2e7c5cf513617fa634bf">mc_repeat_mode_e</a> mode, void *user_data) TIZEN_DEPRECATED_API</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>Called when updating the repeat mode of the media controller server. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000830">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="remark"><dt><b>Remarks:</b></dt><dd>The callback is called in the dbus event loop.</dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the updated media controller server, it can be used only in the callback. To use outside, make a copy. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the media controller server which sent the notification. It can be used only in the callback. To use outside, make a copy. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>The repeat mode of the updated media controller server </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data passed from the <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga0bc2f6fc96099180e09fdbd8ba5d36dc" title="Sets the callback for monitoring repeat mode of the media controller server.">mc_client_set_repeat_mode_update_cb()</a> fuction</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data passed from the <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga6c5d90f988ce55ee3107bfb10a7c7657" title="Sets the callback for monitoring repeat mode of the media controller server.">mc_client_set_repeat_mode_update_cb()</a> function</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="pre"><dt><b>Precondition:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga0bc2f6fc96099180e09fdbd8ba5d36dc" title="Sets the callback for monitoring repeat mode of the media controller server.">mc_client_set_repeat_mode_update_cb()</a></dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga0bc2f6fc96099180e09fdbd8ba5d36dc" title="Sets the callback for monitoring repeat mode of the media controller server.">mc_client_set_repeat_mode_update_cb()</a> </dd></dl>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga6c5d90f988ce55ee3107bfb10a7c7657" title="Sets the callback for monitoring repeat mode of the media controller server.">mc_client_set_repeat_mode_update_cb()</a></dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga6c5d90f988ce55ee3107bfb10a7c7657" title="Sets the callback for monitoring repeat mode of the media controller server.">mc_client_set_repeat_mode_update_cb()</a> </dd></dl>
 
 </div>
 </div>
@@ -330,44 +344,46 @@ Typedefs</h2></td></tr>
 
 <p>Called when updating status of the media controller server. </p>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
-<dl class="remark"><dt><b>Remarks:</b></dt><dd>The callback is called in the dbus event loop.</dd></dl>
+<dl class="remark"><dt><b>Remarks:</b></dt><dd>The callback is called in the dbus event loop. The <em>server_name</em> should not be released by the application. <br/>
+ The <em>server_name</em> can be used only in the callback. To use outside, make a copy.</dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the updated media controller server, it can be used only in the callback. To use outside, make a copy. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the media controller server which sent the notification. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td>The state of the updated media controller server </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data passed from the <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaedbe3f3e6c82f71ff1cc24395ec35bb9" title="Sets the callback for monitoring status of the media controller server.">mc_client_set_server_update_cb()</a> fuction</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data passed from the <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga07598bffeeada179b66803e59852d341" title="Sets the callback for monitoring status of the media controller server.">mc_client_set_server_update_cb()</a> function </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="pre"><dt><b>Precondition:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaedbe3f3e6c82f71ff1cc24395ec35bb9" title="Sets the callback for monitoring status of the media controller server.">mc_client_set_server_update_cb()</a></dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaedbe3f3e6c82f71ff1cc24395ec35bb9" title="Sets the callback for monitoring status of the media controller server.">mc_client_set_server_update_cb()</a> </dd></dl>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga07598bffeeada179b66803e59852d341" title="Sets the callback for monitoring status of the media controller server.">mc_client_set_server_update_cb()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga07598bffeeada179b66803e59852d341" title="Sets the callback for monitoring status of the media controller server.">mc_client_set_server_update_cb()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gafcf153b8816388075e66ee6a2c2b2b56"></a><!-- doxytag: member="media_controller_client.h::mc_shuffle_mode_changed_cb" ref="gafcf153b8816388075e66ee6a2c2b2b56" args=")(const char *server_name, mc_shuffle_mode_e mode, void *user_data)" -->
+<a class="anchor" id="ga0233927dac2a5c1baa5f8ea45375fbd8"></a><!-- doxytag: member="media_controller_client.h::mc_shuffle_mode_changed_cb" ref="ga0233927dac2a5c1baa5f8ea45375fbd8" args=")(const char *server_name, mc_shuffle_mode_e mode, void *user_data) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gafcf153b8816388075e66ee6a2c2b2b56">mc_shuffle_mode_changed_cb</a>)(const char *server_name, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga518863c48d51a023d13d36567e6077af">mc_shuffle_mode_e</a> mode, void *user_data)</td>
+          <td class="memname">typedef void(* <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga0233927dac2a5c1baa5f8ea45375fbd8">mc_shuffle_mode_changed_cb</a>)(const char *server_name, <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga518863c48d51a023d13d36567e6077af">mc_shuffle_mode_e</a> mode, void *user_data) TIZEN_DEPRECATED_API</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>Called when updating the shuffle mode of the media controller server. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000829">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="remark"><dt><b>Remarks:</b></dt><dd>The callback is called in the dbus event loop.</dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the updated media controller server, it can be used only in the callback. To use outside, make a copy. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the media controller server which sent the notification. It can be used only in the callback. To use outside, make a copy. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>The shuffle mode of the updated media controller server </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data passed from the <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gae4f4733359ba6a1e4046853d56511e38" title="Sets the callback for monitoring shuffle mode of the media controller server.">mc_client_set_shuffle_mode_update_cb()</a> fuction</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data passed from the <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga61ef005f55cc5bfd06555ebfeb9b431d" title="Sets the callback for monitoring shuffle mode of the media controller server.">mc_client_set_shuffle_mode_update_cb()</a> function</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="pre"><dt><b>Precondition:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gae4f4733359ba6a1e4046853d56511e38" title="Sets the callback for monitoring shuffle mode of the media controller server.">mc_client_set_shuffle_mode_update_cb()</a></dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gae4f4733359ba6a1e4046853d56511e38" title="Sets the callback for monitoring shuffle mode of the media controller server.">mc_client_set_shuffle_mode_update_cb()</a> </dd></dl>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga61ef005f55cc5bfd06555ebfeb9b431d" title="Sets the callback for monitoring shuffle mode of the media controller server.">mc_client_set_shuffle_mode_update_cb()</a></dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga61ef005f55cc5bfd06555ebfeb9b431d" title="Sets the callback for monitoring shuffle mode of the media controller server.">mc_client_set_shuffle_mode_update_cb()</a> </dd></dl>
 
 </div>
 </div>
@@ -384,11 +400,12 @@ Typedefs</h2></td></tr>
 
 <p>Called when requesting the list of subscribed servers. </p>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
-<dl class="remark"><dt><b>Remarks:</b></dt><dd>The callback is called in the dbus event loop.</dd></dl>
+<dl class="remark"><dt><b>Remarks:</b></dt><dd>The callback is called in the dbus event loop. The <em>server_name</em> should not be released by the application. <br/>
+ The <em>server_name</em> can be used only in the callback. To use outside, make a copy.</dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the subscribed media controller server, it can be used only in the callback. To use outside, make a copy. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data passed from the <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gafe5edd67718cfd60fb6b340f92f324b3" title="Retrieves all subscribed Server.">mc_client_foreach_server_subscribed()</a> fuction</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the subscribed media controller server.. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data passed from the <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gafe5edd67718cfd60fb6b340f92f324b3" title="Retrieves all subscribed Server.">mc_client_foreach_server_subscribed()</a> function</td></tr>
   </table>
   </dd>
 </dl>
@@ -419,7 +436,7 @@ Typedefs</h2></td></tr>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
-<dl class="remark"><dt><b>Remarks:</b></dt><dd>The <em>client</em> should be released using <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga17982b30df83659216d9ed9ad9b36705" title="Destroys client.">mc_client_destroy()</a>.</dd></dl>
+<dl class="remark"><dt><b>Remarks:</b></dt><dd>The <em>client</em> should be released using <code><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga17982b30df83659216d9ed9ad9b36705" title="Destroys client.">mc_client_destroy()</a></code>. You can create only one client handle for each process.</dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">client</td><td>The handle to the media controller client </td></tr>
@@ -431,7 +448,7 @@ Typedefs</h2></td></tr>
   <table class="retval">
     <tr><td class="paramname"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gga03ecf911890df61d5764b6d9e2712a30aeb206013b558538817cfc8f315c06b81">MEDIA_CONTROLLER_ERROR_NONE</a></td><td>Successful </td></tr>
     <tr><td class="paramname"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gga03ecf911890df61d5764b6d9e2712a30addfdaa86e3b9af908ec7cbb08ffd7889">MEDIA_CONTROLLER_ERROR_INVALID_PARAMETER</a></td><td>Invalid parameter </td></tr>
-    <tr><td class="paramname"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gga03ecf911890df61d5764b6d9e2712a30a8e52527a482bfe48d525205ed9e558cc">MEDIA_CONTROLLER_ERROR_OUT_OF_MEMORY</a></td><td>Not enough memory is available </td></tr>
+    <tr><td class="paramname"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gga03ecf911890df61d5764b6d9e2712a30a8e52527a482bfe48d525205ed9e558cc">MEDIA_CONTROLLER_ERROR_OUT_OF_MEMORY</a></td><td>Out of memory </td></tr>
     <tr><td class="paramname"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gga03ecf911890df61d5764b6d9e2712a30ae91422d5a86c007977be7868b03166d6">MEDIA_CONTROLLER_ERROR_PERMISSION_DENIED</a></td><td>Permission denied </td></tr>
   </table>
   </dd>
@@ -476,12 +493,12 @@ Typedefs</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga9dbc76e04f7b355608416988d17c2b3d"></a><!-- doxytag: member="media_controller_client.h::mc_client_destroy_metadata" ref="ga9dbc76e04f7b355608416988d17c2b3d" args="(mc_metadata_h metadata)" -->
+<a class="anchor" id="ga5eb346756f1571dfeb3914020c4e0ac8"></a><!-- doxytag: member="media_controller_client.h::mc_client_destroy_metadata" ref="ga5eb346756f1571dfeb3914020c4e0ac8" args="(mc_metadata_h metadata) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga9dbc76e04f7b355608416988d17c2b3d">mc_client_destroy_metadata</a> </td>
+          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga5eb346756f1571dfeb3914020c4e0ac8">mc_client_destroy_metadata</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gae9101e67ce04bc94bdecfe3dafd199e1">mc_metadata_h</a>&#160;</td>
           <td class="paramname"><em>metadata</em></td><td>)</td>
@@ -492,6 +509,7 @@ Typedefs</h2></td></tr>
 <div class="memdoc">
 
 <p>Destroys metadata. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000843">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -507,8 +525,8 @@ Typedefs</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="pre"><dt><b>Precondition:</b></dt><dd>Sets <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga93a340cdb43633e9b969eb9173e7b29e" title="Sets the callback for monitoring metadata status of the media controller server.">mc_client_set_metadata_update_cb()</a> function to create metadata </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga93a340cdb43633e9b969eb9173e7b29e" title="Sets the callback for monitoring metadata status of the media controller server.">mc_client_set_metadata_update_cb()</a> </dd></dl>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd>Sets <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaf5c8207454ab67f1d429c575613b7507" title="Sets the callback for monitoring metadata status of the media controller server.">mc_client_set_metadata_update_cb()</a> function to create metadata </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaf5c8207454ab67f1d429c575613b7507" title="Sets the callback for monitoring metadata status of the media controller server.">mc_client_set_metadata_update_cb()</a> </dd></dl>
 
 </div>
 </div>
@@ -543,8 +561,9 @@ Typedefs</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="pre"><dt><b>Precondition:</b></dt><dd>Sets <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gabf3b85ade9c212c80873b65ea2d78b46" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a> function to create playback </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gabf3b85ade9c212c80873b65ea2d78b46" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga12cba30e19175dacd05a0374e3e1aede" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a> </dd>
+<dd>
+<a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaccb868e026407540b9a3dd895ab1276e" title="Gets the latest playback info.">mc_client_get_server_playback_info()</a> </dd></dl>
 
 </div>
 </div>
@@ -579,14 +598,15 @@ Typedefs</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Retrieves all activated Server. </p>
+<p>Retrieves all created servers. </p>
+<p>This function gets all created media controller servers. The callback function will be invoked for every created media controller server. If there are no media controller servers, the callback will not be invoked. </p>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">client</td><td>The handle to the media controller client </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>The callback to be invoked when the list of the registered media controller server created completely. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>The callback function to be invoked, will be called for each server </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>The user data to be passed to the callback function </td></tr>
   </table>
   </dd>
@@ -711,7 +731,7 @@ Subscribe the media controller server for monitoring status by calling <a class=
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
 <dl class="remark"><dt><b>Remarks:</b></dt><dd>The <em>server_name</em> should be released using free(). <br/>
  If there is no activated media controller server, return value of the server name is NULL. <br/>
-</dd></dl>
+ Before a media controller server sets the playback state to <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ggad123e313a0c0f0b5ada1c361a25f8827a4322df5ae563fd62b8ed458cf2895379">MC_PLAYBACK_STATE_PLAYING</a>, the <em>server_state</em> is <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gga13ddb28a62b4483fe05cb8f4f04e677ca4273aa33b1d9a5d444d78822d35bd941">MC_SERVER_STATE_NONE</a>. After a media controller server sets the playback state to <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ggad123e313a0c0f0b5ada1c361a25f8827a4322df5ae563fd62b8ed458cf2895379">MC_PLAYBACK_STATE_PLAYING</a>, the <em>server_state</em> is <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gga13ddb28a62b4483fe05cb8f4f04e677caa9e03f21303ca257c6e49c4916e10948">MC_SERVER_STATE_ACTIVATE</a>. After a media controller server is destroyed, <em>server_state</em> is <a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gga13ddb28a62b4483fe05cb8f4f04e677cabef6104b3effbffe6b9599273905ffb3">MC_SERVER_STATE_DEACTIVATE</a>.</dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">client</td><td>The handle to the media controller client </td></tr>
@@ -732,12 +752,12 @@ Subscribe the media controller server for monitoring status by calling <a class=
 
 </div>
 </div>
-<a class="anchor" id="ga986ded67f53aa8664832452caec77f07"></a><!-- doxytag: member="media_controller_client.h::mc_client_get_metadata" ref="ga986ded67f53aa8664832452caec77f07" args="(mc_metadata_h metadata, mc_meta_e attribute, char **value)" -->
+<a class="anchor" id="gac6b36865d04f4f5c5faebe2df2259ee3"></a><!-- doxytag: member="media_controller_client.h::mc_client_get_metadata" ref="gac6b36865d04f4f5c5faebe2df2259ee3" args="(mc_metadata_h metadata, mc_meta_e attribute, char **value) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga986ded67f53aa8664832452caec77f07">mc_client_get_metadata</a> </td>
+          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac6b36865d04f4f5c5faebe2df2259ee3">mc_client_get_metadata</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#gae9101e67ce04bc94bdecfe3dafd199e1">mc_metadata_h</a>&#160;</td>
           <td class="paramname"><em>metadata</em>, </td>
@@ -764,8 +784,9 @@ Subscribe the media controller server for monitoring status by calling <a class=
 <div class="memdoc">
 
 <p>Gets the metadata. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000842">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
-<dl class="remark"><dt><b>Remarks:</b></dt><dd>The <em>metadata</em> should be released using <code><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga9dbc76e04f7b355608416988d17c2b3d" title="Destroys metadata.">mc_client_destroy_metadata()</a></code>. <br/>
+<dl class="remark"><dt><b>Remarks:</b></dt><dd>The <em>metadata</em> should be released using <code><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga5eb346756f1571dfeb3914020c4e0ac8" title="Destroys metadata.">mc_client_destroy_metadata()</a></code>. <br/>
  And also The <em>value</em> should be released using free(). If the attribute value of the metadata is empty, return value is NULL.</dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -783,8 +804,8 @@ Subscribe the media controller server for monitoring status by calling <a class=
   </table>
   </dd>
 </dl>
-<dl class="pre"><dt><b>Precondition:</b></dt><dd>Sets <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga93a340cdb43633e9b969eb9173e7b29e" title="Sets the callback for monitoring metadata status of the media controller server.">mc_client_set_metadata_update_cb()</a> function to get the metadata </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga93a340cdb43633e9b969eb9173e7b29e" title="Sets the callback for monitoring metadata status of the media controller server.">mc_client_set_metadata_update_cb()</a> </dd></dl>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd>Sets <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaf5c8207454ab67f1d429c575613b7507" title="Sets the callback for monitoring metadata status of the media controller server.">mc_client_set_metadata_update_cb()</a> function to get the metadata </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaf5c8207454ab67f1d429c575613b7507" title="Sets the callback for monitoring metadata status of the media controller server.">mc_client_set_metadata_update_cb()</a> </dd></dl>
 
 </div>
 </div>
@@ -817,7 +838,6 @@ Subscribe the media controller server for monitoring status by calling <a class=
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
-<dl class="remark"><dt><b>Remarks:</b></dt><dd>The <em>playback</em> should be released using <code><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga6938218bb61df42139aa5c3a749b53e3" title="Destroys playback.">mc_client_destroy_playback()</a></code>.</dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">playback</td><td>The handle to playback </td></tr>
@@ -834,8 +854,8 @@ Subscribe the media controller server for monitoring status by calling <a class=
   </table>
   </dd>
 </dl>
-<dl class="pre"><dt><b>Precondition:</b></dt><dd>Sets <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gabf3b85ade9c212c80873b65ea2d78b46" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a> function to get the position </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gabf3b85ade9c212c80873b65ea2d78b46" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a> </dd></dl>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd>The playback update callback should be set with <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga12cba30e19175dacd05a0374e3e1aede" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga12cba30e19175dacd05a0374e3e1aede" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a> </dd></dl>
 
 </div>
 </div>
@@ -868,7 +888,6 @@ Subscribe the media controller server for monitoring status by calling <a class=
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
-<dl class="remark"><dt><b>Remarks:</b></dt><dd>The <em>playback</em> should be released using <code><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga6938218bb61df42139aa5c3a749b53e3" title="Destroys playback.">mc_client_destroy_playback()</a></code>.</dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">playback</td><td>The handle to playback </td></tr>
@@ -885,8 +904,8 @@ Subscribe the media controller server for monitoring status by calling <a class=
   </table>
   </dd>
 </dl>
-<dl class="pre"><dt><b>Precondition:</b></dt><dd>Sets <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gabf3b85ade9c212c80873b65ea2d78b46" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a> function to get the state </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gabf3b85ade9c212c80873b65ea2d78b46" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a> </dd></dl>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd>The playback update callback should be set with <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga12cba30e19175dacd05a0374e3e1aede" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga12cba30e19175dacd05a0374e3e1aede" title="Sets the callback for monitoring playback status of the media controller server.">mc_client_set_playback_update_cb()</a> </dd></dl>
 
 </div>
 </div>
@@ -926,12 +945,11 @@ Subscribe the media controller server for monitoring status by calling <a class=
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
-<dl class="remark"><dt><b>Remarks:</b></dt><dd>The <em>metadata</em> should be released using <code><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga9dbc76e04f7b355608416988d17c2b3d" title="Destroys metadata.">mc_client_destroy_metadata()</a></code>. <br/>
- If there is no metadata, return value of the metadata is NULL.</dd></dl>
+<dl class="remark"><dt><b>Remarks:</b></dt><dd>The <em>metadata</em> should be released using \n If there is no metadata, return value of the metadata is NULL.</dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">client</td><td>The handle to the media controller client </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the server to requesting </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the media controller server </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">metadata</td><td>The handle to metadata </td></tr>
   </table>
   </dd>
@@ -989,7 +1007,7 @@ Subscribe the media controller server for monitoring status by calling <a class=
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">client</td><td>The handle to the media controller client </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the server to requesting </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the media controller server </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">playback</td><td>The handle to playback </td></tr>
   </table>
   </dd>
@@ -1046,7 +1064,7 @@ Subscribe the media controller server for monitoring status by calling <a class=
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">client</td><td>The handle to the media controller client </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the server to requesting </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the media controller server </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">mode</td><td>The info of the latest shuffle mode </td></tr>
   </table>
   </dd>
@@ -1103,7 +1121,7 @@ Subscribe the media controller server for monitoring status by calling <a class=
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">client</td><td>The handle to the media controller client </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the server to requesting </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>The app_id of the media controller server </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">mode</td><td>The info of the latest shuffle mode </td></tr>
   </table>
   </dd>
@@ -1120,12 +1138,12 @@ Subscribe the media controller server for monitoring status by calling <a class=
 
 </div>
 </div>
-<a class="anchor" id="ga4a7d3b623f8cf426a974b6d78fc3dde8"></a><!-- doxytag: member="media_controller_client.h::mc_client_send_custom_command" ref="ga4a7d3b623f8cf426a974b6d78fc3dde8" args="(mc_client_h client, const char *server_name, const char *command, bundle *data, mc_command_reply_received_cb callback, void *user_data)" -->
+<a class="anchor" id="ga5bb8f85187dccf555e95b15197e7e4ea"></a><!-- doxytag: member="media_controller_client.h::mc_client_send_custom_command" ref="ga5bb8f85187dccf555e95b15197e7e4ea" args="(mc_client_h client, const char *server_name, const char *command, bundle *data, mc_command_reply_received_cb callback, void *user_data) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga4a7d3b623f8cf426a974b6d78fc3dde8">mc_client_send_custom_command</a> </td>
+          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga5bb8f85187dccf555e95b15197e7e4ea">mc_client_send_custom_command</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a>&#160;</td>
           <td class="paramname"><em>client</em>, </td>
@@ -1151,7 +1169,7 @@ Subscribe the media controller server for monitoring status by calling <a class=
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac5338d5e2252ba961f52c364c0fd1cb9">mc_command_reply_received_cb</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga1ac698b2b90d08def825662f8e0c3702">mc_command_reply_received_cb</a>&#160;</td>
           <td class="paramname"><em>callback</em>, </td>
         </tr>
         <tr>
@@ -1170,7 +1188,8 @@ Subscribe the media controller server for monitoring status by calling <a class=
 <div class="memdoc">
 
 <p>Sends the custom command to server. </p>
-<p>If there is the result for comand from server, the media controller client will get the result of the custom command by <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac5338d5e2252ba961f52c364c0fd1cb9" title="Called when receiving the command processing result from the server.">mc_command_reply_received_cb()</a> callback. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000845">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
+<p>If there is the result for command from server, the media controller client will get the result of the custom command by <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga1ac698b2b90d08def825662f8e0c3702" title="Called when receiving the command processing result from the server.">mc_command_reply_received_cb()</a> callback. </p>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
@@ -1199,12 +1218,12 @@ Subscribe the media controller server for monitoring status by calling <a class=
 
 </div>
 </div>
-<a class="anchor" id="ga46ad31af9b20bd721e100c11ff8d9221"></a><!-- doxytag: member="media_controller_client.h::mc_client_send_playback_state_command" ref="ga46ad31af9b20bd721e100c11ff8d9221" args="(mc_client_h client, const char *server_name, mc_playback_states_e state)" -->
+<a class="anchor" id="ga7ebd61ab31d19315f09604eec209cc38"></a><!-- doxytag: member="media_controller_client.h::mc_client_send_playback_state_command" ref="ga7ebd61ab31d19315f09604eec209cc38" args="(mc_client_h client, const char *server_name, mc_playback_states_e state) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga46ad31af9b20bd721e100c11ff8d9221">mc_client_send_playback_state_command</a> </td>
+          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga7ebd61ab31d19315f09604eec209cc38">mc_client_send_playback_state_command</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a>&#160;</td>
           <td class="paramname"><em>client</em>, </td>
@@ -1231,6 +1250,7 @@ Subscribe the media controller server for monitoring status by calling <a class=
 <div class="memdoc">
 
 <p>Sends the playback state command to server. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000844">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
@@ -1258,12 +1278,12 @@ Subscribe the media controller server for monitoring status by calling <a class=
 
 </div>
 </div>
-<a class="anchor" id="ga93a340cdb43633e9b969eb9173e7b29e"></a><!-- doxytag: member="media_controller_client.h::mc_client_set_metadata_update_cb" ref="ga93a340cdb43633e9b969eb9173e7b29e" args="(mc_client_h client, mc_metadata_updated_cb callback, void *user_data)" -->
+<a class="anchor" id="gaf5c8207454ab67f1d429c575613b7507"></a><!-- doxytag: member="media_controller_client.h::mc_client_set_metadata_update_cb" ref="gaf5c8207454ab67f1d429c575613b7507" args="(mc_client_h client, mc_metadata_updated_cb callback, void *user_data) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga93a340cdb43633e9b969eb9173e7b29e">mc_client_set_metadata_update_cb</a> </td>
+          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaf5c8207454ab67f1d429c575613b7507">mc_client_set_metadata_update_cb</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a>&#160;</td>
           <td class="paramname"><em>client</em>, </td>
@@ -1290,7 +1310,8 @@ Subscribe the media controller server for monitoring status by calling <a class=
 <div class="memdoc">
 
 <p>Sets the callback for monitoring metadata status of the media controller server. </p>
-<p>If media controller client call this function, basically the media controller client recieve the callback from all media controller servers. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000836">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
+<p>The media controller client which calls this function will receive notifications from all media controller servers. </p>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
@@ -1318,12 +1339,12 @@ Subscribe the media controller server for monitoring status by calling <a class=
 
 </div>
 </div>
-<a class="anchor" id="gabf3b85ade9c212c80873b65ea2d78b46"></a><!-- doxytag: member="media_controller_client.h::mc_client_set_playback_update_cb" ref="gabf3b85ade9c212c80873b65ea2d78b46" args="(mc_client_h client, mc_playback_updated_cb callback, void *user_data)" -->
+<a class="anchor" id="ga12cba30e19175dacd05a0374e3e1aede"></a><!-- doxytag: member="media_controller_client.h::mc_client_set_playback_update_cb" ref="ga12cba30e19175dacd05a0374e3e1aede" args="(mc_client_h client, mc_playback_updated_cb callback, void *user_data) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gabf3b85ade9c212c80873b65ea2d78b46">mc_client_set_playback_update_cb</a> </td>
+          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga12cba30e19175dacd05a0374e3e1aede">mc_client_set_playback_update_cb</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a>&#160;</td>
           <td class="paramname"><em>client</em>, </td>
@@ -1350,7 +1371,8 @@ Subscribe the media controller server for monitoring status by calling <a class=
 <div class="memdoc">
 
 <p>Sets the callback for monitoring playback status of the media controller server. </p>
-<p>If media controller client call this function, basically the media controller client recieve the callback from all media controller servers. <br/>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000834">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
+<p>The media controller client which calls this function will receive notifications from all media controller servers. <br/>
  </p>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
@@ -1379,12 +1401,12 @@ Subscribe the media controller server for monitoring status by calling <a class=
 
 </div>
 </div>
-<a class="anchor" id="ga0bc2f6fc96099180e09fdbd8ba5d36dc"></a><!-- doxytag: member="media_controller_client.h::mc_client_set_repeat_mode_update_cb" ref="ga0bc2f6fc96099180e09fdbd8ba5d36dc" args="(mc_client_h client, mc_repeat_mode_changed_cb callback, void *user_data)" -->
+<a class="anchor" id="ga6c5d90f988ce55ee3107bfb10a7c7657"></a><!-- doxytag: member="media_controller_client.h::mc_client_set_repeat_mode_update_cb" ref="ga6c5d90f988ce55ee3107bfb10a7c7657" args="(mc_client_h client, mc_repeat_mode_changed_cb callback, void *user_data) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga0bc2f6fc96099180e09fdbd8ba5d36dc">mc_client_set_repeat_mode_update_cb</a> </td>
+          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga6c5d90f988ce55ee3107bfb10a7c7657">mc_client_set_repeat_mode_update_cb</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a>&#160;</td>
           <td class="paramname"><em>client</em>, </td>
@@ -1392,7 +1414,7 @@ Subscribe the media controller server for monitoring status by calling <a class=
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gab56f729d58bccee19e74774425656c4d">mc_repeat_mode_changed_cb</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac78157f2cf022a85b98efe6e0bd2c15b">mc_repeat_mode_changed_cb</a>&#160;</td>
           <td class="paramname"><em>callback</em>, </td>
         </tr>
         <tr>
@@ -1411,7 +1433,8 @@ Subscribe the media controller server for monitoring status by calling <a class=
 <div class="memdoc">
 
 <p>Sets the callback for monitoring repeat mode of the media controller server. </p>
-<p>If media controller client call this function, basically the media controller client recieve the callback from all media controller servers. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000840">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
+<p>The media controller client which calls this function will receive notifications from all media controller servers. </p>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
@@ -1439,12 +1462,12 @@ Subscribe the media controller server for monitoring status by calling <a class=
 
 </div>
 </div>
-<a class="anchor" id="gaedbe3f3e6c82f71ff1cc24395ec35bb9"></a><!-- doxytag: member="media_controller_client.h::mc_client_set_server_update_cb" ref="gaedbe3f3e6c82f71ff1cc24395ec35bb9" args="(mc_client_h client, mc_server_state_updated_cb callback, void *user_data)" -->
+<a class="anchor" id="ga07598bffeeada179b66803e59852d341"></a><!-- doxytag: member="media_controller_client.h::mc_client_set_server_update_cb" ref="ga07598bffeeada179b66803e59852d341" args="(mc_client_h client, mc_server_state_updated_cb callback, void *user_data) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaedbe3f3e6c82f71ff1cc24395ec35bb9">mc_client_set_server_update_cb</a> </td>
+          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga07598bffeeada179b66803e59852d341">mc_client_set_server_update_cb</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a>&#160;</td>
           <td class="paramname"><em>client</em>, </td>
@@ -1471,7 +1494,8 @@ Subscribe the media controller server for monitoring status by calling <a class=
 <div class="memdoc">
 
 <p>Sets the callback for monitoring status of the media controller server. </p>
-<p>If media controller client call this function, basically the media controller client recieve the callback from all media controller servers. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000832">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
+<p>The media controller client which calls this function will receive notifications from all media controller servers. </p>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
@@ -1499,12 +1523,12 @@ Subscribe the media controller server for monitoring status by calling <a class=
 
 </div>
 </div>
-<a class="anchor" id="gae4f4733359ba6a1e4046853d56511e38"></a><!-- doxytag: member="media_controller_client.h::mc_client_set_shuffle_mode_update_cb" ref="gae4f4733359ba6a1e4046853d56511e38" args="(mc_client_h client, mc_shuffle_mode_changed_cb callback, void *user_data)" -->
+<a class="anchor" id="ga61ef005f55cc5bfd06555ebfeb9b431d"></a><!-- doxytag: member="media_controller_client.h::mc_client_set_shuffle_mode_update_cb" ref="ga61ef005f55cc5bfd06555ebfeb9b431d" args="(mc_client_h client, mc_shuffle_mode_changed_cb callback, void *user_data) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gae4f4733359ba6a1e4046853d56511e38">mc_client_set_shuffle_mode_update_cb</a> </td>
+          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga61ef005f55cc5bfd06555ebfeb9b431d">mc_client_set_shuffle_mode_update_cb</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a>&#160;</td>
           <td class="paramname"><em>client</em>, </td>
@@ -1512,7 +1536,7 @@ Subscribe the media controller server for monitoring status by calling <a class=
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gafcf153b8816388075e66ee6a2c2b2b56">mc_shuffle_mode_changed_cb</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga0233927dac2a5c1baa5f8ea45375fbd8">mc_shuffle_mode_changed_cb</a>&#160;</td>
           <td class="paramname"><em>callback</em>, </td>
         </tr>
         <tr>
@@ -1531,7 +1555,8 @@ Subscribe the media controller server for monitoring status by calling <a class=
 <div class="memdoc">
 
 <p>Sets the callback for monitoring shuffle mode of the media controller server. </p>
-<p>If media controller client call this function, basically the media controller client recieve the callback from all media controller servers. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000838">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
+<p>The media controller client which calls this function will receive notifications from all media controller servers. </p>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
@@ -1592,9 +1617,9 @@ Subscribe the media controller server for monitoring status by calling <a class=
 
 <p>Subscribes media controller server for monitoring status. </p>
 <p>If media controller client subscribe media controller server, <br/>
- the media controller client recieve callback from subscribed media controller server. <br/>
+ the media controller client receive callback from subscribed media controller server. <br/>
  If media controller client subscribe media controller server one or more, <br/>
- the media controller client can recieve callback from only subscribed media controller server. <br/>
+ the media controller client can receive callback from only subscribed media controller server. <br/>
  If you want to subscribe for the all media controller server again, <br/>
  unset mode update callback and set the callback for the monitoring status again. <br/>
  </p>
@@ -1628,12 +1653,12 @@ Set the callback for monitoring status of the media controller server </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga96678a1343f487281d430ac20122996b"></a><!-- doxytag: member="media_controller_client.h::mc_client_unset_metadata_update_cb" ref="ga96678a1343f487281d430ac20122996b" args="(mc_client_h client)" -->
+<a class="anchor" id="gac50d13fae3d329e6829e762ef47502f8"></a><!-- doxytag: member="media_controller_client.h::mc_client_unset_metadata_update_cb" ref="gac50d13fae3d329e6829e762ef47502f8" args="(mc_client_h client) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga96678a1343f487281d430ac20122996b">mc_client_unset_metadata_update_cb</a> </td>
+          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac50d13fae3d329e6829e762ef47502f8">mc_client_unset_metadata_update_cb</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a>&#160;</td>
           <td class="paramname"><em>client</em></td><td>)</td>
@@ -1644,6 +1669,7 @@ Set the callback for monitoring status of the media controller server </dd></dl>
 <div class="memdoc">
 
 <p>Unsets the callback for monitoring metadata status of the media controller server. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000837">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
@@ -1669,12 +1695,12 @@ Set the callback for monitoring status of the media controller server </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gacf80846cf00215e9a11b2994b42045de"></a><!-- doxytag: member="media_controller_client.h::mc_client_unset_playback_update_cb" ref="gacf80846cf00215e9a11b2994b42045de" args="(mc_client_h client)" -->
+<a class="anchor" id="ga353cf9e2466b41c8c9cfce0754a1a880"></a><!-- doxytag: member="media_controller_client.h::mc_client_unset_playback_update_cb" ref="ga353cf9e2466b41c8c9cfce0754a1a880" args="(mc_client_h client) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gacf80846cf00215e9a11b2994b42045de">mc_client_unset_playback_update_cb</a> </td>
+          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga353cf9e2466b41c8c9cfce0754a1a880">mc_client_unset_playback_update_cb</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a>&#160;</td>
           <td class="paramname"><em>client</em></td><td>)</td>
@@ -1685,6 +1711,7 @@ Set the callback for monitoring status of the media controller server </dd></dl>
 <div class="memdoc">
 
 <p>Unsets the callback for monitoring playback status of the media controller server. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000835">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
@@ -1710,12 +1737,12 @@ Set the callback for monitoring status of the media controller server </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gadf600df429c50b708941deb90af18d4d"></a><!-- doxytag: member="media_controller_client.h::mc_client_unset_repeat_mode_update_cb" ref="gadf600df429c50b708941deb90af18d4d" args="(mc_client_h client)" -->
+<a class="anchor" id="gaf0ef900cf5028820a4c1be43f342c776"></a><!-- doxytag: member="media_controller_client.h::mc_client_unset_repeat_mode_update_cb" ref="gaf0ef900cf5028820a4c1be43f342c776" args="(mc_client_h client) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gadf600df429c50b708941deb90af18d4d">mc_client_unset_repeat_mode_update_cb</a> </td>
+          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gaf0ef900cf5028820a4c1be43f342c776">mc_client_unset_repeat_mode_update_cb</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a>&#160;</td>
           <td class="paramname"><em>client</em></td><td>)</td>
@@ -1726,6 +1753,7 @@ Set the callback for monitoring status of the media controller server </dd></dl>
 <div class="memdoc">
 
 <p>Unsets the callback for monitoring repeat mode of the media controller server. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000841">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
@@ -1751,12 +1779,12 @@ Set the callback for monitoring status of the media controller server </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga6e92343ab0132a729f5ac8ed1bc81787"></a><!-- doxytag: member="media_controller_client.h::mc_client_unset_server_update_cb" ref="ga6e92343ab0132a729f5ac8ed1bc81787" args="(mc_client_h client)" -->
+<a class="anchor" id="gac1072455b846ac6b827882acdd4ac302"></a><!-- doxytag: member="media_controller_client.h::mc_client_unset_server_update_cb" ref="gac1072455b846ac6b827882acdd4ac302" args="(mc_client_h client) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga6e92343ab0132a729f5ac8ed1bc81787">mc_client_unset_server_update_cb</a> </td>
+          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#gac1072455b846ac6b827882acdd4ac302">mc_client_unset_server_update_cb</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a>&#160;</td>
           <td class="paramname"><em>client</em></td><td>)</td>
@@ -1767,6 +1795,7 @@ Set the callback for monitoring status of the media controller server </dd></dl>
 <div class="memdoc">
 
 <p>Unsets the callback for monitoring status of the media controller server. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000833">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
@@ -1792,12 +1821,12 @@ Set the callback for monitoring status of the media controller server </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga20cf1fd8574b5cc184e719a194b8fdeb"></a><!-- doxytag: member="media_controller_client.h::mc_client_unset_shuffle_mode_update_cb" ref="ga20cf1fd8574b5cc184e719a194b8fdeb" args="(mc_client_h client)" -->
+<a class="anchor" id="ga14d662710b3778b658638986713e71e9"></a><!-- doxytag: member="media_controller_client.h::mc_client_unset_shuffle_mode_update_cb" ref="ga14d662710b3778b658638986713e71e9" args="(mc_client_h client) TIZEN_DEPRECATED_API" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga20cf1fd8574b5cc184e719a194b8fdeb">mc_client_unset_shuffle_mode_update_cb</a> </td>
+          <td class="memname">int <a class="el" href="group__CAPI__MEDIA__CONTROLLER__CLIENT__MODULE.html#ga14d662710b3778b658638986713e71e9">mc_client_unset_shuffle_mode_update_cb</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__CAPI__MEDIA__CONTROLLER__MODULE.html#ga845142c24ba548a76008b1aa719a5cea">mc_client_h</a>&#160;</td>
           <td class="paramname"><em>client</em></td><td>)</td>
@@ -1808,6 +1837,7 @@ Set the callback for monitoring status of the media controller server </dd></dl>
 <div class="memdoc">
 
 <p>Unsets the callback for monitoring shuffle mode of the media controller server. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000839">Deprecated:</a></b></dt><dd>Deprecated since 4.0.</dd></dl>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>
 <dl class="user"><dt><b>Privilege:</b></dt><dd>http://tizen.org/privilege/mediacontroller.client</dd></dl>
@@ -1866,10 +1896,10 @@ Set the callback for monitoring status of the media controller server </dd></dl>
 
 <p>Unsubscribes media controller server for monitoring status. </p>
 <p>If media controller client unsubscribe media controller server, <br/>
- the media controller client don't recieve callback from unsubscribed media controller server. <br/>
- If media controller client unsubscribe all subscibed media controller server, <br/>
- the media controller client don't recieve callback from all media controller server. <br/>
- After unset and set update callback function is called again, the media controller client can recieve callback from all media controller servers. <br/>
+ the media controller client don't receive callback from unsubscribed media controller server. <br/>
+ If media controller client unsubscribe all subscribed media controller server, <br/>
+ the media controller client don't receive callback from all media controller server. <br/>
+ After unset and set update callback function is called again, the media controller client can receive callback from all media controller servers. <br/>
  </p>
 <dl class="user"><dt><b>Since :</b></dt><dd>3.0 </dd></dl>
 <dl class="user"><dt><b>Privilege Level:</b></dt><dd>public </dd></dl>

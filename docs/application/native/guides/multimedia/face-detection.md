@@ -38,50 +38,50 @@ To enable your application to use the media vision face functionality:
 
    - For face detection, use the following `facedata_s` structure:
 
-    ```
-    struct _facedata_s {
-        mv_source_h g_source;
-        mv_engine_config_h g_engine_config;
-    };
-    typedef struct _facedata_s facedata_s;
-    static facedata_s facedata;
-    ```
+     ```
+     struct _facedata_s {
+         mv_source_h g_source;
+         mv_engine_config_h g_engine_config;
+     };
+     typedef struct _facedata_s facedata_s;
+     static facedata_s facedata;
+     ```
 
    - For face recognition, use the following `facedata_s` structure:
 
-    ```
-    struct _facedata_s {
-        mv_source_h g_source;
-        mv_engine_config_h g_engine_config;
-        mv_face_recognition_model g_face_recog_model;
-    };
-    typedef struct _facedata_s facedata_s;
-    static facedata_s facedata;
-    ```
+     ```
+     struct _facedata_s {
+         mv_source_h g_source;
+         mv_engine_config_h g_engine_config;
+         mv_face_recognition_model g_face_recog_model;
+     };
+     typedef struct _facedata_s facedata_s;
+     static facedata_s facedata;
+     ```
 
    - For face tracking, use the following `facedata_s` structure:
 
-    ```
-    struct _facedata_s {
-        /* Variable for camera display */
-        Evas_Object *win;
-        Evas_Object *rect;
-        Evas *evas;
+     ```
+     struct _facedata_s {
+         /* Variable for camera display */
+         Evas_Object *win;
+         Evas_Object *rect;
+         Evas *evas;
 
-        int preview_width;
-        int preview_height;
+         int preview_width;
+         int preview_height;
 
-        camera_h g_camera;
+         camera_h g_camera;
 
-        mv_source_h g_source;
-        mv_engine_config_h g_engine_config;
+         mv_source_h g_source;
+         mv_engine_config_h g_engine_config;
 
-        mv_quadrangle_s face_roi;
-        mv_face_tracking_model_h g_face_track_model;
-    };
-    typedef struct _facedata_s facedata_s;
-    static facedata_s facedata;
-    ```
+         mv_quadrangle_s face_roi;
+         mv_face_tracking_model_h g_face_track_model;
+     };
+     typedef struct _facedata_s facedata_s;
+     static facedata_s facedata;
+     ```
 
 <a name="detect"></a>
 ## Detecting Faces
@@ -100,23 +100,45 @@ To detect faces:
 
 	The source stores the face to be detected and all related data. You manage the source through the source handle.
 
-2. Decode the image file from which the face is to be detected, and fill the `g_source` handle with the decoded raw data.In the following example, the face of the NASA astronaut is to be detected (the image file can be downloaded from [NASA-AstronautGroup18](https://commons.wikimedia.org/wiki/File%3ANASA_Astronaut_Group_18.jpg) and it is saved to `<OwnDataPath>/NasaAstronaut.jpg` where `<OwnDataPath>` refers to your own data path).
+2. Decode the image file from which the face is to be detected, and fill the `g_source` handle with the decoded raw data.
+
+   In the following example, the face of the NASA astronaut is to be detected (the image file can be downloaded from [NASA-AstronautGroup18](https://commons.wikimedia.org/wiki/File%3ANASA_Astronaut_Group_18.jpg) and it is saved to `<OwnDataPath>/NasaAstronaut.jpg` where `<OwnDataPath>` refers to your own data path).
 
     ```
     /* For details, see the Image Util API Reference */
     unsigned char *dataBuffer = NULL;
-    unsigned int bufferSize = 0;
-    int width = 0;
-    int height = 0;
+    unsigned long long bufferSize = 0;
+    unsigned long width = 0;
+    unsigned long height = 0;
+    image_util_decode_h imageDecoder = NULL;
 
-    error_code = image_util_decode_jpeg("/mydir/NasaAstronaut.jpg", IMAGE_UTIL_COLORSPACE_RGB888,
-                                        &dataBuffer, &height, &bufferSize);
+    error_code = image_util_decode_create(&imageDecoder);
+    if (error_code != IMAGE_UTIL_ERROR_NONE)
+        dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
+
+    error_code = image_util_decode_set_input_path(imageDecoder, "/mydir/NasaAstronaut.jpg");
+    if (error_code != IMAGE_UTIL_ERROR_NONE)
+        dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
+
+    error_code = image_util_decode_set_colorspace(imageDecoder, IMAGE_UTIL_COLORSPACE_RGB888);
+    if (error_code != IMAGE_UTIL_ERROR_NONE)
+        dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
+
+    error_code = image_util_decode_set_output_buffer(imageDecoder, &dataBuffer);
+    if (error_code != IMAGE_UTIL_ERROR_NONE)
+        dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
+
+    error_code = image_util_decode_run(imageDecoder, &width, &height, &bufferSize);
+    if (error_code != IMAGE_UTIL_ERROR_NONE)
+        dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
+
+    error_code = image_util_decode_destroy(imageDecoder);
     if (error_code != IMAGE_UTIL_ERROR_NONE)
         dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
 
     /* Fill the dataBuffer to g_source */
-    error_code = mv_source_fill_by_buffer(facedata.g_source, dataBuffer, bufferSize,
-                                          width, height, MEDIA_VISION_COLORSPACE_RGB888);
+    error_code = mv_source_fill_by_buffer(facedata.g_source, dataBuffer, (unsigned int)bufferSize,
+                                          (unsigned int)width, (unsigned int)height, MEDIA_VISION_COLORSPACE_RGB888);
     if (error_code != MEDIA_VISION_ERROR_NONE)
         dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
 
@@ -151,7 +173,9 @@ To detect faces:
         dlog_print(DLOG_ERROR, LOG_TAG, "error code= %d", error_code);
     ```
 
-5. The `mv_face_detect()` function invokes the `_on_face_detected_cb()` callback.The following callback example prints the number of detected faces with their location.
+5. The `mv_face_detect()` function invokes the `_on_face_detected_cb()` callback.
+
+   The following callback example prints the number of detected faces with their location.
 
     ```
     static void
@@ -217,16 +241,32 @@ To recognize faces:
 
    char filePath[1024];
    unsigned char *dataBuffer = NULL;
-   unsigned int bufferSize = 0;
-   int width = 0;
-   int height = 0;
+   unsigned long long bufferSize = 0;
+   unsigned long width = 0;
+   unsigned long height = 0;
+   image_util_decode_h imageDecoder = NULL;
+
+    error_code = image_util_decode_create(&imageDecoder);
+    if (error_code != IMAGE_UTIL_ERROR_NONE)
+        dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
+
+    error_code = image_util_decode_set_colorspace(imageDecoder, IMAGE_UTIL_COLORSPACE_RGB888);
+    if (error_code != IMAGE_UTIL_ERROR_NONE)
+        dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
 
    for (example_index = 1; example_index <= 10; ++example_index) {
        /* Decode image and fill the image data to g_source handle */
        snprintf(filePath, 1024, "%s/face_sample_%d.jpg", mydir, example_index);
-       error_code = image_util_decode_jpeg(filePath, IMAGE_UTIL_COLORSPACE_RGB888,
-                                           &dataBuffer, &width, &height, &bufferSize);
-       if (error_code != MEDIA_VISION_ERROR_NONE)
+       error_code = image_util_decode_set_input_path(imageDecoder, filePath);
+       if (error_code != IMAGE_UTIL_ERROR_NONE)
+           dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
+
+       error_code = image_util_decode_set_output_buffer(imageDecoder, &dataBuffer);
+       if (error_code != IMAGE_UTIL_ERROR_NONE)
+           dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
+
+       error_code = image_util_decode_run(imageDecoder, &width, &height, &bufferSize);
+       if (error_code != IMAGE_UTIL_ERROR_NONE)
            dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
 
        roi.x = roi.y = 0;
@@ -236,8 +276,8 @@ To recognize faces:
        if (error_code != MEDIA_VISION_ERROR_NONE)
            dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
 
-       error_code = mv_source_fill_by_buffer(facedata.g_source, &dataBuffer,
-                                             &bufferSize, &width, &height, MEDIA_VISION_COLORSPACE_RGB888);
+       error_code = mv_source_fill_by_buffer(facedata.g_source, dataBuffer, (unsigned int)bufferSize,
+                                             (unsigned int)width, (unsigned int)height, MEDIA_VISION_COLORSPACE_RGB888);
        if (error_code != MEDIA_VISION_ERROR_NONE)
            dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
 
@@ -249,6 +289,10 @@ To recognize faces:
        if (error_code != MEDIA_VISION_ERROR_NONE)
            dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
    }
+
+   error_code = image_util_decode_destroy(imageDecoder);
+   if (error_code != IMAGE_UTIL_ERROR_NONE)
+       dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
    ```
 
 4. Use the `mv_face_recognition_model_learn()` function to train the face recognition model with the added examples:
@@ -260,22 +304,45 @@ To recognize faces:
         dlog_print(DLOG_ERROR, LOG_TAG, "error code= %d", error_code);
     ```
 
-5. When the face recognition model handle is ready, use the `mv_face_recognize()` function to recognize the face.The following example assumes that there is a `whos_face.jpg` face image in the `OwnDataPath` folder, and this image is different from the samples. In addition, the `whos_face.jpg` image includes a face which fits to the image resolution. Thus, in this example, a `NULL` parameter is given as the `face_location` parameter of the `mv_face_recognize()` function. Normally, define the parameter with the correct input image face location.
+5. When the face recognition model handle is ready, use the `mv_face_recognize()` function to recognize the face.
+
+   The following example assumes that there is a `whos_face.jpg` face image in the `OwnDataPath` folder, and this image is different from the samples. In addition, the `whos_face.jpg` image includes a face which fits to the image resolution. Thus, in this example, a `NULL` parameter is given as the `face_location` parameter of the `mv_face_recognize()` function. Normally, define the parameter with the correct input image face location.
 
     ```
     /* Decode the image and fill the image data to g_source handle */
     snprintf(filePath, 1024, "%s/whos_face.jpg", mydir);
-    error_code = image_util_decode_jpeg(filePath, IMAGE_UTIL_COLORSPACE_RGB888,
-                                        &dataBuffer, &width, &height, &bufferSize);
-    if (error_code != MEDIA_VISION_ERROR_NONE)
-        dlog_print(DLOG_ERROR, LOG_TAG, "error code= %d", error_code);
+    image_util_decode_h imageDecoder = NULL;
+
+    error_code = image_util_decode_create(&imageDecoder);
+    if (error_code != IMAGE_UTIL_ERROR_NONE)
+        dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
+
+    error_code = image_util_decode_set_input_path(imageDecoder, filePath);
+    if (error_code != IMAGE_UTIL_ERROR_NONE)
+        dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
+
+    error_code = image_util_decode_set_colorspace(imageDecoder, IMAGE_UTIL_COLORSPACE_RGB888);
+    if (error_code != IMAGE_UTIL_ERROR_NONE)
+        dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
+
+    error_code = image_util_decode_set_output_buffer(imageDecoder, &dataBuffer);
+    if (error_code != IMAGE_UTIL_ERROR_NONE)
+        dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
+
+    error_code = image_util_decode_run(imageDecoder, &width, &height, &bufferSize);
+    if (error_code != IMAGE_UTIL_ERROR_NONE)
+        dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
+
+    error_code = image_util_decode_destroy(imageDecoder);
+    if (error_code != IMAGE_UTIL_ERROR_NONE)
+        dlog_print(DLOG_ERROR, LOG_TAG, "error code = %d", error_code);
 
     error_code = mv_source_clear(facedata.g_source);
     if (error_code != MEDIA_VISION_ERROR_NONE)
         dlog_print(DLOG_ERROR, LOG_TAG, "error code= %d", error_code);
 
-    error_code = mv_source_fill_by_buffer(facedata.g_source, &dataBuffer, &bufferSize,
-                                          &width, &height, MEDIA_VISION_COLORSPACE_RGB888);
+    error_code = mv_source_fill_by_buffer(facedata.g_source, dataBuffer, (unsigned int)bufferSize,
+                                          (unsigned int)width, (unsigned int)height, MEDIA_VISION_COLORSPACE_RGB888);
     if (error_code != MEDIA_VISION_ERROR_NONE)
         dlog_print(DLOG_ERROR, LOG_TAG, "error code= %d", error_code);
 
@@ -288,7 +355,9 @@ To recognize faces:
         dlog_print(DLOG_ERROR, LOG_TAG, "error code= %d", error_code);
     ```
 
-6. The `mv_face_recognize()` function invokes the `_on_face_recognized_cb()` callback.The following callback example prints the recognized face label with a confidence value.
+6. The `mv_face_recognize()` function invokes the `_on_face_recognized_cb()` callback.
+
+   The following callback example prints the recognized face label with a confidence value.
 
     ```
     static void
@@ -431,11 +500,11 @@ To track faces:
 
    1. Create the `g_face_track_model` media vision face tracking model handle:
 
-    ```
-    error_code = mv_face_tracking_model_create(&facedata.g_face_track_model);
-    if (error_code != MEDIA_VISION_ERROR_NONE)
-        dlog_print(DLOG_ERROR, LOG_TAG, "error code= %d", error_code);
-    ```
+      ```
+      error_code = mv_face_tracking_model_create(&facedata.g_face_track_model);
+      if (error_code != MEDIA_VISION_ERROR_NONE)
+          dlog_print(DLOG_ERROR, LOG_TAG, "error code= %d", error_code);
+      ```
 
    2. Prepare the face tracking model handle with the initial location (detected earlier):
 
@@ -448,31 +517,34 @@ To track faces:
 
    3. Use the `mv_face_track()` function to track the face.
 
-	> **Note**  
-    > Control the `g_source` handle carefully. Do not update it to the next preview image while the `mv_face_track()` function processes the `g_source` handle with the current preview image.
+  	  > **Note**
+      >
+      > Control the `g_source` handle carefully. Do not update it to the next preview image while the `mv_face_track()` function processes the `g_source` handle with the current preview image.
 
-    ```
-    error_code = mv_face_track(facedata.g_source, facedata.g_face_track_model,
-                               facedata.g_engine_config, _on_face_tracked_cb, false, NULL);
-    if (error_code != MEDIA_VISION_ERROR_NONE)
-        dlog_print(DLOG_ERROR, LOG_TAG, "error code= %d", error_code);
-    ```    
+      ```
+      error_code = mv_face_track(facedata.g_source, facedata.g_face_track_model,
+                                 facedata.g_engine_config, _on_face_tracked_cb, false, NULL);
+      if (error_code != MEDIA_VISION_ERROR_NONE)
+          dlog_print(DLOG_ERROR, LOG_TAG, "error code= %d", error_code);
+      ```
 
-   4. The `mv_face_track()` function invokes the `_on_face_tracked_cb()` callback.The following callback example prints the current location of the tracked face.
+   4. The `mv_face_track()` function invokes the `_on_face_tracked_cb()` callback.
 
-    ```
-    static void
-    _on_face_tracked_cb(mv_source_h source, mv_face_tracking_model_h tracking_model,
-                        mv_engine_config_h engine_config, mv_quadrangle_s *location,
-                        double confidence, void *user_data)
-    {
-        dlog_print(DLOG_INFO, LOG_TAG, "Location: (%d,%d) -> (%d,%d) -> (%d,%d) -> (%d,%d)\n",
-                   location->points[0].x, location->point[0].y,
-                   location->points[1].x, location->point[1].y,
-                   location->points[2].x, location->point[2].y,
-                   location->points[3].x, location->point[3].y)
-    }
-    ```
+      The following callback example prints the current location of the tracked face.
+
+      ```
+      static void
+      _on_face_tracked_cb(mv_source_h source, mv_face_tracking_model_h tracking_model,
+                          mv_engine_config_h engine_config, mv_quadrangle_s *location,
+                          double confidence, void *user_data)
+      {
+          dlog_print(DLOG_INFO, LOG_TAG, "Location: (%d,%d) -> (%d,%d) -> (%d,%d) -> (%d,%d)\n",
+                     location->points[0].x, location->point[0].y,
+                     location->points[1].x, location->point[1].y,
+                     location->points[2].x, location->point[2].y,
+                     location->points[3].x, location->point[3].y)
+      }
+      ```
 
 3. After the face tracking is complete, stop the camera preview, unset the preview callback, and destroy the camera handle:
 

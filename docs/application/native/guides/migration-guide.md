@@ -8,7 +8,7 @@ Since Tizen 2.4, an application in the background goes into a suspended state.
 
 In the suspended state, the application process is executed with limited CPU resources. In other words, the platform does not allow the running of the background applications, except for some exceptional applications (such as Media and Download) that necessarily work in the background. In this case, the application can designate their background category as an allowed category to avoid going into the suspended state.
 
-For more information, and a list of background categories that allow the application to run in the background, see [Background Categories](app-management/efl-ui-app.md#allow_bg).
+For more information, and a list of background categories that allow the application to run in the background, see [Background Categories](applications/efl-ui-app.md#allow_bg).
 
 You can receive an event when the background application goes to the suspended state. Pass `APP_EVENT_SUSPENDED_STATE_CHANGED` as `event_type` to the `ui_app_add_event_handler()` or `service_app_add_event_handler()` function to handle the suspended event. You must release the resources properly when your application goes to the suspended state.
 
@@ -28,7 +28,7 @@ When you migrate your application from Tizen 2.3 to Tizen 2.4, check the changes
 
 Tizen 2.4 introduces new Tizen Application Event APIs for subscribing system events and publishing and subscribing application events to other applications.
 
-Using the Tizen Application Event APIs, you can register your service application to be launched when a specified event is published. You can specify the event name through the `<app-control>` element in the application manifest file. This launch-on-event allows your service application to only run after receiving an event from the platform or other application. Note that UI applications cannot be launched using the launch-on-event mechanism. For more information, see the [Event](../../api/mobile/latest/group__CAPI__EVENT__MODULE.html) API.
+Using the Tizen Application Event APIs, you can register your service application to be launched when a specified event is published. You can specify the event name through the `<app-control>` element in the application manifest file. This launch-on-event allows your service application to only run after receiving an event from the platform or other application. Note that UI applications cannot be launched using the launch-on-event mechanism. For more information, see the [Event](../api/mobile/latest/group__CAPI__EVENT__MODULE.html) API.
 
 ## Application Group Launching Management
 
