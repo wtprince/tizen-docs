@@ -41,8 +41,9 @@ The following figure illustrates the general media muxer state changes.
 
 ![Media muxer state changes](./media/muxer.png)
 
-**Note**  
-All file types and container formats are not guaranteed to support the Media Muxer API.
+> **Note**
+>
+> All file types and container formats are not guaranteed to support the Media Muxer API.
 
 <a name="demuxer"></a>
 ## Media Demuxer
@@ -79,7 +80,7 @@ The following figure illustrates the general media demuxer state changes.
 
 ![Media demuxer state changes](./media/demuxer.png)
 
-> **Note**  
+> **Note**
 > All file types and container formats are not guaranteed to support the Media Demuxer API.
 
 <a name="prerequisites"></a>
@@ -165,7 +166,7 @@ To prepare the media muxer:
 
 5. After a successful muxer start, call a write sample until all the samples of the respective track are written.
 
-   The write sample is a specific track. It is your responsibility to use the appropriate `track_index` to choose the correct track, and to add the corresponding data to the muxer through the write sample. Repeat the same for the rest of the tracks. Before calling this function, create a valid handle for the `media_packet_h` handle to get the input samples. For more information, see [Media Handle Management](media-handle-n.md).
+   The write sample is a specific track. It is your responsibility to use the appropriate `track_index` to choose the correct track, and to add the corresponding data to the muxer through the write sample. Repeat the same for the rest of the tracks. Before calling this function, create a valid handle for the `media_packet_h` handle to get the input samples. For more information, see [Media Handle Management](media-handle.md).
 
    ```
    if (mediamuxer_write_sample(muxer, track_index, in_buf) != MEDIAMUXER_ERROR_NONE)
@@ -232,7 +233,9 @@ To manage the media muxer, the `mediamuxer_write_sample()` function is called in
     }
     ```
 
-2. After you have finished work with the media muxer handle, reset the media muxer and destroy the handle by using the `mediamuxer_stop()` and `mediamuxer_destroy()` functions.The media muxer state changes to `MEDIAMUXER_STATE_NONE`.
+2. After you have finished work with the media muxer handle, reset the media muxer and destroy the handle by using the `mediamuxer_stop()` and `mediamuxer_destroy()` functions.
+
+    The media muxer state changes to `MEDIAMUXER_STATE_NONE`.
 
     ```
     ret = mediamuxer_stop(muxer);
@@ -273,28 +276,30 @@ To prepare the media demuxer:
 
 4. Once the media demuxer is in the ready state, get the total number of individual elementary streams present:
 
-   ```
-   if (mediademuxer_get_track_count(demuxer, &num_tracks) != MEDIADEMUXER_ERROR_NONE)
-       printf("mediademuxer_get_track_count API failed\n");
-   ```
+    ```
+    if (mediademuxer_get_track_count(demuxer, &num_tracks) != MEDIADEMUXER_ERROR_NONE)
+        printf("mediademuxer_get_track_count API failed\n");
+    ```
 
 5. Select all the tracks to be extracted:
 
-   ```
-   for (track = 0; track < num_tracks; track++) {
-       if (mediademuxer_select_track(demuxer, track))
-           g_print("mediademuxer_select track %d failed\n", track);
-   }
-   ```
+    ```
+    for (track = 0; track < num_tracks; track++) {
+        if (mediademuxer_select_track(demuxer, track))
+            g_print("mediademuxer_select track %d failed\n", track);
+    }
+    ```
 
 6. Start the media demuxer:
 
-   ```
-   if (mediademuxer_start(demuxer))
-       g_print("mediademuxer_start failed\n");
-   ```
+    ```
+    if (mediademuxer_start(demuxer))
+        g_print("mediademuxer_start failed\n");
+    ```
 
-7. Once the total track counts are known, the media format for each track must be identified. Before calling the `media_format_create()` function, you must define and create a valid `media_format_h` handle (the `format` parameter in the given function).The following example retrieves the media format for each track:
+7. Once the total track counts are known, the media format for each track must be identified. Before calling the `media_format_create()` function, you must define and create a valid `media_format_h` handle (the `format` parameter in the given function).
+
+    The following example retrieves the media format for each track:
 
     ```
     media_format_h *g_media_format = NULL;
@@ -330,6 +335,7 @@ To manage the media demuxer process:
 
 1. You can create individual threads to manage each track simultaneously, but it is not mandatory. The following sample code explains how to extract the video track in a new thread:
 
+
    ```
    int
    test_mediademuxer_read_sample()
@@ -355,44 +361,23 @@ To manage the media demuxer process:
        *status = -1;
        g_print("Video Data function\n");
        int count = 0;
+       bool is_eos = false;
        media_packet_h vidbuf;
-       media_format_h vidfmt;
-       if (media_format_create(&vidfmt)) {
-           g_print("media_format_create failed\n");
-
-           return (void *)status;
-       }
-       if (media_format_set_video_mime(vidfmt, MEDIA_FORMAT_H264_SP)) {
-           g_print("media_format_set_video_mime failed\n");
-
-           return (void *)status;
-       }
-       if (media_format_set_video_width(vidfmt, 760)) {
-           g_print("media_format_set_video_width failed\n");
-
-           return (void *)status;
-       }
-       if (media_format_set_video_height(vidfmt, 480)) {
-           g_print("media_format_set_video_height failed\n");
-
-           return (void *)status;
-       }
-       if (media_packet_create_alloc(vidfmt, NULL, NULL, &vidbuf)) {
-           g_print("media_packet_create_alloc failed\n");
-       }
        while (1) {
-           int EOS = mediademuxer_read_sample(demuxer, vid_track, &vidbuf);
-           if (EOS == MD_EOS || EOS != MD_ERROR_NONE)
+           int ret = mediademuxer_read_sample(demuxer, vid_track, &vidbuf);
+           if (ret != MD_ERROR_NONE)
                pthread_exit(NULL);
+
+           /* Check that EOS has been reached. */
+           media_packet_is_end_of_stream(vidbuf, &is_eos);
+           if (is_eos) {
+               media_packet_destroy(vidbuf);
+               pthread_exit(NULL);
+           }
            count++;
            g_print("Read::[%d] video sample\n", count);
            /* Use the media packet and release the packet here */
            media_packet_destroy(vidbuf);
-           /* Create a new packet for getting next frame of data */
-           if (media_packet_create_alloc(vidfmt, NULL, NULL, &vidbuf)) {
-               g_print("media_packet_create_alloc failed\n");
-               break;
-           }
        }
        *status = 0;
 
@@ -400,7 +385,9 @@ To manage the media demuxer process:
    }
    ```
 
-2. After you have finished work with the media demuxer, reset the media demuxer and destroy the handle by using the `mediademuxer_unprepare()` and `mediademuxer_destroy()` functions.The media demuxer state changes to `MEDIADEMUXER_STATE_NONE`.
+2. After you have finished work with the media demuxer, reset the media demuxer and destroy the handle by using the `mediademuxer_unprepare()` and `mediademuxer_destroy()` functions.
+
+    The media demuxer state changes to `MEDIADEMUXER_STATE_NONE`.
 
     ```
     ret = mediademuxer_unprepare(demuxer);

@@ -65,7 +65,7 @@ The following steps illustrate a typical scenario for using the push messaging s
 
 To enable your application to use the push functionality:
 
-1.  To use the [Tizen.Messaging.Push](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Messaging.Push.html) namespace, the application has to request permission by adding the following privilege to the `tizen-manifest.xml` file:
+1.  To use the [Tizen.Messaging.Push](https://samsung.github.io/TizenFX/latest/api/Tizen.Messaging.Push.html) namespace, the application has to request permission by adding the following privilege to the `tizen-manifest.xml` file:
 
     ```
     <privileges>
@@ -125,7 +125,7 @@ To manage push service connections:
     };
     ```
 
-2. Register the event handlers for the `StateChanged` and `NotificationReceived` events of the [Tizen.Messaging.Push.PushClient](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Messaging.Push.PushClient.html) class and connect to the push service with the `PushServiceConnect()` method:
+2.  Register the event handlers for the `StateChanged` and `NotificationReceived` events of the [Tizen.Messaging.Push.PushClient](https://samsung.github.io/TizenFX/latest/api/Tizen.Messaging.Push.PushClient.html) class and connect to the push service with the `PushServiceConnect()` method:
 
     ```
     try
@@ -153,7 +153,7 @@ To manage push service connections:
 
     Establish a connection to the push service when the application is launched and disconnect from the service when it terminates. The application can be resumed after being paused. To ensure that push notifications are handled fluently, the `PushServiceConnect()` method must be called when the application is resumed.
 
-3. Disconnect from the push service.
+3.  Disconnect from the push service.
 
     When the application terminates or no longer uses the push service, close the connection using the `PushServiceDisconnect()` method.
 
@@ -170,7 +170,8 @@ To manage push service connections:
     The application can be paused by pressing the **Home** or **Back** key. For a proper push operation, the `PushServiceDisconnect()` method must be called when the application is paused.
 
 <a name="state"></a>
-4. Handle state transitions.
+
+4.  Handle state transitions.
 
     After the connection to the service is made, the application is notified whenever the connection state changes. This notification is conducted through the `EventHandlerStateChanged()` event handler. The following figure illustrates the possible states of the push service.
 
@@ -221,7 +222,7 @@ To register with the push server:
 
 1.  Request registration.
 
-    After connecting to the push service, request registration using the `PushServerRegister()` method of the [Tizen.Messaging.Push.PushClient](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Messaging.Push.PushClient.html) class.
+    After connecting to the push service, request registration using the `PushServerRegister()` method of the [Tizen.Messaging.Push.PushClient](https://samsung.github.io/TizenFX/latest/api/Tizen.Messaging.Push.PushClient.html) class.
 
     ```
     public static void OnStateUnregistered()
@@ -283,9 +284,11 @@ To register with the push server:
     }
     ```
 
-    > **Note**   
-	> The `PushServiceUnregister()` method is not used if the application is intended to receive push notifications continuously while it is installed on the device. When the application is uninstalled, the push service detects the event and deregisters the application automatically.
-    > On the other hand, if the application wants to receive push notifications only when a user logs in, the `PushServiceUnregister()` method must be called whenever the user logs out.
+    >**Note**
+    >
+    >The `PushServiceUnregister()` method is not used if the application is intended to receive push notifications continuously while it is installed on the device. When the application is uninstalled, the push service detects the event and deregisters the application automatically.  
+    >
+    >On the other hand, if the application wants to receive push notifications only when a user logs in, the `PushServiceUnregister()` method must be called whenever the user logs out.
 
 
 <a name="security"></a>
