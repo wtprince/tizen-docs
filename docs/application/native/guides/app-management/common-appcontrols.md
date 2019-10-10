@@ -2164,7 +2164,11 @@ location_setting(void)
 }
 ```
 
+<<<<<<< HEAD
 ## Settings for NFC <a name="settings_nfc"></a>
+=======
+## Settings for NFC
+>>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4
 
 The NFC settings application control is supported only in mobile applications.
 

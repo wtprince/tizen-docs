@@ -399,7 +399,11 @@ You can search and manage multimedia content locally, manipulate EXIF data in JP
   [Connectivity and Wireless](connectivity/connectivity.md)<br>
   [Data Storage and Management](data/data.md)<br>
   [Media and Camera](multimedia/overview.md)
+<<<<<<< HEAD
 - API Reference: [Content](../api/latest/device_api/tv/index.html#Content)
+=======
+- API Reference: [Content](../api/latest/device_api/tv/index.html#Contents)
+>>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4
 </td>
 </tr>
 <tr>

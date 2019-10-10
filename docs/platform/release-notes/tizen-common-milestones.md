@@ -15,9 +15,17 @@ This milestone marks feature completion for the common subset of Tizen 3.0 profi
 - Security: three-domain rule system for SMACK and Cynara as authorization framework
 - Wayland display server
 
+<<<<<<< HEAD
 All Git repositories part of this release have been tagged with tag "tizen_common_2014.Q2". To build this release, please refer to the [developer guide](../developing/setting-up.md).
+=======
+All Git repositories part of this release have been tagged with tag "tizen_common_2014.Q2". To build this release, please refer to the [developer guide](../developing/).
+>>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4
 
 Pre-built images for this milestone can be downloaded from [here](http://download.tizen.org/releases/milestone/tizen/common-3.0.2014.Q3/). Please see the documentation page on [flashing a device](../developing/flashing.md) for information on installing this image. It has been tested on the following device types:
 
 - [Intel Atom E3815-based NUC Kit](https://www-ssl.intel.com/content/www/us/en/nuc/nuc-kit-de3815tykhe.html)
+<<<<<<< HEAD
 - Intel Atom E3825-based NEXCOM VTC1010
+=======
+- [Intel Atom E3825-based NEXCOM VTC1010](http://www.nexcom.com/Products/mobile-computing-solutions/tizen-ivi-platform/tizen-ivi-platform/vtc-1010-ivi)
+>>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4

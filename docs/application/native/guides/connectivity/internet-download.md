@@ -6,10 +6,17 @@ The Internet and content download features introduce how you can connect to the 
 You can use the following Internet and content download features in your native applications:
 
 - [Connection Management](connection.md)
+<<<<<<< HEAD
 
   You can get information about the connected network, and set up and configure network and socket connections. You can also track connection information, such as the size of the sent and received data.
 
 - [Download](download.md) **in mobile applications only**
+=======
+
+  You can get information about the connected network, and set up and configure network and socket connections. You can also track connection information, such as the size of the sent and received data.
+
+- [Download](download-n.md) **in mobile applications only**
+>>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4
 
   You can download files from the Internet by creating a download process, configuring the download URL or destination, and launching the process. You can manage and monitor 1 or more downloads at the same time.
 

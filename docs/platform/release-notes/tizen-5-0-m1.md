@@ -317,8 +317,13 @@ Release date: May. 31, 2018
     - “capi-media-camera-tool” must be installed to use “camera_test”.
 - Recorder
   - A related feature is changed.
+<<<<<<< HEAD
     - As-Is: `<http://tizen.org/feature/camera>`, `<http://tizen.org/feature/microphone>`
     - To-Be: `<http://tizen.org/feature/media.audio_recording>`, `<http://tizen.org/feature/media.video_recording>`
+=======
+    - As-Is: <http://tizen.org/feature/camera>, <http://tizen.org/feature/microphone>
+    - To-Be: <http://tizen.org/feature/media.audio_recording>, <http://tizen.org/feature/media.video_recording>
+>>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4
   - New package is added to separate recorder API test program from capi-media-recorder package.
     - “capi-media-recorder-tool” must be installed to use “recorder_test”.
 - Media Content
