@@ -222,6 +222,18 @@
             </Subnodes>
            </Node>
            <Node>
+            <Name>RPC Port</Name>
+            <Path>group__CAPI__RPC__PORT__MODULE.html</Path>
+            <Subnodes>
+             <Node>
+              <Name>RPC Port Parcel</Name>
+              <Path>group__CAPI__RPC__PORT__PARCEL__MODULE.html</Path>
+              <Subnodes>
+              </Subnodes>
+             </Node>
+            </Subnodes>
+           </Node>
+           <Node>
             <Name>Service Application</Name>
             <Path>group__CAPI__SERVICE__APP__MODULE.html</Path>
             <Subnodes>
@@ -970,6 +982,18 @@
               </Subnodes>
              </Node>
              <Node>
+              <Name>Media Controller Metadata</Name>
+              <Path>group__CAPI__MEDIA__CONTROLLER__METADATA__MODULE.html</Path>
+              <Subnodes>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>Media Controller Playlist</Name>
+              <Path>group__CAPI__MEDIA__CONTROLLER__PLAYLIST__MODULE.html</Path>
+              <Subnodes>
+              </Subnodes>
+             </Node>
+             <Node>
               <Name>Media Controller Server</Name>
               <Path>group__CAPI__MEDIA__CONTROLLER__SERVER__MODULE.html</Path>
               <Subnodes>
@@ -1642,12 +1666,6 @@
               </Subnodes>
              </Node>
              <Node>
-              <Name>STC Restriction</Name>
-              <Path>group__CAPI__NETWORK__STC__RESTRICTION__MODULE.html</Path>
-              <Subnodes>
-              </Subnodes>
-             </Node>
-             <Node>
               <Name>STC Statistics</Name>
               <Path>group__CAPI__NETWORK__STC__STATISTICS__MODULE.html</Path>
               <Subnodes>
@@ -2190,6 +2208,12 @@
             </Subnodes>
            </Node>
            <Node>
+            <Name>Dlog</Name>
+            <Path>group__CAPI__SYSTEM__DLOG.html</Path>
+            <Subnodes>
+            </Subnodes>
+           </Node>
+           <Node>
             <Name>Feedback</Name>
             <Path>group__CAPI__SYSTEM__FEEDBACK__MODULE.html</Path>
             <Subnodes>
@@ -2301,12 +2325,6 @@
               <Subnodes>
               </Subnodes>
              </Node>
-            </Subnodes>
-           </Node>
-           <Node>
-            <Name>dlog</Name>
-            <Path>group__CAPI__SYSTEM__DLOG.html</Path>
-            <Subnodes>
             </Subnodes>
            </Node>
           </Subnodes>
@@ -2443,6 +2461,12 @@
                 <Subnodes>
                 </Subnodes>
                </Node>
+               <Node>
+                <Name>Size Negotiation</Name>
+                <Path>group__dali__core__size__negotiation.html</Path>
+                <Subnodes>
+                </Subnodes>
+               </Node>
               </Subnodes>
              </Node>
              <Node>
@@ -2480,6 +2504,12 @@
                  <Node>
                   <Name>Image View</Name>
                   <Path>group__dali__toolkit__controls__image__view.html</Path>
+                  <Subnodes>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>Model3dView</Name>
+                  <Path>group__dali__toolkit__controls__model3d__view.html</Path>
                   <Subnodes>
                   </Subnodes>
                  </Node>
@@ -2537,6 +2567,12 @@
                   <Subnodes>
                   </Subnodes>
                  </Node>
+                </Subnodes>
+               </Node>
+               <Node>
+                <Name>Image Loader</Name>
+                <Path>group__dali__toolkit__image__loader.html</Path>
+                <Subnodes>
                 </Subnodes>
                </Node>
                <Node>
@@ -3639,6 +3675,12 @@
                     <Subnodes>
                     </Subnodes>
                    </Node>
+                   <Node>
+                    <Name>Atspi Text</Name>
+                    <Path>group__Elm__Interface__Atspi__Text.html</Path>
+                    <Subnodes>
+                    </Subnodes>
+                   </Node>
                   </Subnodes>
                  </Node>
                  <Node>
@@ -3738,6 +3780,12 @@
                   </Subnodes>
                  </Node>
                  <Node>
+                  <Name>Longpress</Name>
+                  <Path>group__longpress__group.html</Path>
+                  <Subnodes>
+                  </Subnodes>
+                 </Node>
+                 <Node>
                   <Name>Mirroring</Name>
                   <Path>group__Elm__Mirroring.html</Path>
                   <Subnodes>
@@ -3752,6 +3800,12 @@
                  <Node>
                   <Name>Scrollhints</Name>
                   <Path>group__Elm__Scrollhints.html</Path>
+                  <Subnodes>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>Sotfcursor</Name>
+                  <Path>group__softcursor__group.html</Path>
                   <Subnodes>
                   </Subnodes>
                  </Node>
@@ -3942,7 +3996,7 @@
                  </Node>
                  <Node>
                   <Name>Multibuttonentry</Name>
-                  <Path>group__Multibuttonentry.html</Path>
+                  <Path>group__Elm__Multibuttonentry.html</Path>
                   <Subnodes>
                   </Subnodes>
                  </Node>
@@ -3978,7 +4032,7 @@
                  </Node>
                  <Node>
                   <Name>Plug</Name>
-                  <Path>group__Plug.html</Path>
+                  <Path>group__Elm__Plug.html</Path>
                   <Subnodes>
                   </Subnodes>
                  </Node>
@@ -4008,7 +4062,7 @@
                  </Node>
                  <Node>
                   <Name>SegmentControl</Name>
-                  <Path>group__Elm__SegmentControl.html</Path>
+                  <Path>group__Elm__Segment__Control.html</Path>
                   <Subnodes>
                   </Subnodes>
                  </Node>
@@ -4621,6 +4675,12 @@
            <Node>
             <Name>Voice control elementary</Name>
             <Path>group__VOICE__CONTROL__ELEMENTARY__MODULE.html</Path>
+            <Subnodes>
+            </Subnodes>
+           </Node>
+           <Node>
+            <Name>Voice control engine</Name>
+            <Path>group__CAPI__UIX__VOICE__CONTROL__ENGINE__MODULE.html</Path>
             <Subnodes>
             </Subnodes>
            </Node>

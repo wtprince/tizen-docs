@@ -1,6 +1,6 @@
 # HTML Priorities
 
-The HTML markup is not as important as before, because JavaScript APIs can be used to create various functionalities. For example, graphics APIs (in [mobile](../../../api/latest/w3c_api/w3c_api_m.html#graphics) or [wearable](../../../api/latest/w3c_api/w3c_api_w.html#graphics) applications) can be used for making games, media APIs (in [mobile](../../../api/latest/w3c_api/w3c_api_m.html#media) or [wearable](../../../api/latest/w3c_api/w3c_api_w.html#media) applications) for creating video chats, and communication APIs (in [mobile](../../../api/latest/w3c_api/w3c_api_m.html#communication) or [wearable](../../../api/latest/w3c_api/w3c_api_w.html#communication) applications) for various types of messaging. However, HTML remains the basis of Web applications, and it is useful to be familiar with its behavior.
+The HTML markup is not as important as before, because JavaScript APIs can be used to create various functionalities. For example, graphics APIs (in [mobile](../../../api/latest/w3c_api/w3c_api_m.html#graphics), [wearable](../../../api/latest/w3c_api/w3c_api_w.html#graphics), and [TV](../../../api/latest/w3c_api/w3c_api_tv.html#graphics) applications) can be used for making games, media APIs (in [mobile](../../../api/latest/w3c_api/w3c_api_m.html#media), [wearable](../../../api/latest/w3c_api/w3c_api_w.html#media), and [TV](../../../api/latest/w3c_api/w3c_api_tv.html#media) applications) for creating video chats, and communication APIs (in [mobile](../../../api/latest/w3c_api/w3c_api_m.html#communication), [wearable](../../../api/latest/w3c_api/w3c_api_w.html#communication), and [TV](../../../api/latest/w3c_api/w3c_api_tv.html#communication) applications) for various types of messaging. However, HTML remains the basis of Web applications, and it is useful to be familiar with its behavior.
 
 The structure of the HTML document can be classified into DOCTYPE and HTML DOM (Document Object Model). When an HTML document is loaded, the browser renders the contents in its screen as follows:
 
@@ -65,7 +65,8 @@ The `<head>` contains the following subelements:
 - `<title>`: Defines the title of the document.
 - `<meta>`: Defines information, such as encoding, creator, and keywords of the document.
   > **Note**  
-  > The [viewport element](http://www.w3.org/TR/css-device-adapt/#the-viewport-rule), which sets the screen area, is included in the meta information.
+  > The [viewport element](https://www.w3.org/TR/css-device-adapt/#atviewport-rule), which sets the screen area, is included in the meta information.
+
 - `<style>`, `<link>`: Sets the styles of the document.
 - `<script>`, `<noscript>`: Adds functions to the document.
 

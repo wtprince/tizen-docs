@@ -129,7 +129,7 @@ Using the shader objects, create the **program object**:
 3. Link the program object using the `glLinkProgram()` function.
 4. Invoke the `glUseProgram()` function to use the program object for rendering.
 
-## Uniforms and Attributes in OpenGL&reg; ES
+## Uniforms and Attributes in OpenGL&reg; ES <a name="uniforms_attributes"></a>
 
 Consider a dynamic environment, where the scene objects continuously move. In the example vertex shader, worldMat must be updated per frame. On the other hand, `viewProjMat` must be updated if the eye moves. The OpenGL&reg; ES program must update and provide them for the vertex shader. For this purpose, first find the uniform locations that have been determined during the link phase. Given a uniform name in the shader, the `glGetUniformLocation()` function returns its location (denoted by an integer) in the program.
 
@@ -230,11 +230,11 @@ glDrawElements(GL_TRIANGLES, /* Mode */
 The following example code presents how to use OpenGL&reg; ES APIs in the callbacks of the GLView. In the `init_glview()` callback function, compile and link the shaders, and create VBOs.
 
 ```
-/* OpenGL&reg; ES initialization callback */
+/* OpenGL ES initialization callback */
 static void
 init_glview(Evas_Object *glview)
 {
-    /* Set OpenGL&reg; ES state color to black */
+    /* Set OpenGL ES state color to black */
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
     appdata_s *ad = (appdata_s *)evas_object_data_get(glview, "ad");
@@ -313,7 +313,7 @@ create_vbo(appdata_s *ad)
 In the `draw_glview()` callback, calculate the world, view, and projection matrices and then pass the combined matrix to the vertex shader through the `glUniformXXX()` function. When all uniforms are passed to the shader, the OpenGL&reg; ES drawcall is made.
 
 ```
-/* OpenGL&reg; ES drawing callback */
+/* OpenGL ES drawing callback */
 static void
 draw_glview(Evas_Object *glview)
 {

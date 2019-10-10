@@ -6,6 +6,10 @@ The Tizen platform supports hybrid applications (1 Web application and 1 or more
 
 Tizen provides a wide range of Web API modules that allow you to take full advantage of various Tizen features.
 
+> **Note**
+>
+> The feature support differs depending on the application profile (mobile, wearable, or TV).
+
 The following table lists the features provided by the [Mobile Web Device API Reference](../api/latest/device_api/mobile/index.html).
 
 **Table: Device API features provided for mobile applications**
@@ -51,9 +55,10 @@ You can schedule an application to be run at a specific time, retrieve informati
 
 - Guides:<br>
   [Alarms](alarm/alarms.md) <br>
-  [Application Management](app-management/applications.md) <br>
+  [Applications](applications/overview.md) <br>
+  [Application Management](app-management/overview.md) <br>
   [Notifications](notification/notification.md)<br>
-- API Reference: [Application Framework](../api/latest/device_api/mobile/index.html#Application)
+- API Reference: [Application Framework](../api/latest/device_api/mobile/index.html#Application%20Framework)
 
 </td>
 </tr>
@@ -67,7 +72,7 @@ You can search and manage multimedia content locally, download files from the In
 - Guides:<br>
   [Connectivity and Wireless](connectivity/connectivity.md)<br>
   [Data Storage and Management](data/data.md)   <br>
-- API Reference: [Content](../api/latest/device_api/mobile/index.html#Contents)
+- API Reference: [Content](../api/latest/device_api/mobile/index.html#Content)
 
 </td>
 </tr>
@@ -78,7 +83,7 @@ You can send and receive messages, and receive push notifications from a push se
 </td>
 <td>
 
-- Guides: [Messaging](messaging/messaging.md)
+- Guides: [Messaging](messaging/overview.md)
 - API Reference: [Messaging](../api/latest/device_api/mobile/index.html#Messaging)
 
 </td>
@@ -90,7 +95,7 @@ You can change and monitor playback volume level, and listen to the FM radio.
 </td>
 <td>
 
-- Guides: [Media and Camera](multimedia/media.md)
+- Guides: [Media and Camera](multimedia/overview.md)
 - API Reference: [Multimedia](../api/latest/device_api/mobile/index.html#Multimedia)
 </td>
 </tr>
@@ -136,7 +141,7 @@ You can access the state of the device power resource, device system information
 
 - Guides:<br>
   [Device Settings and Systems](device/device.md) <br>
-  [Media and Camera](multimedia/media.md) <br>
+  [Media and Camera](multimedia/overview.md) <br>
   [Sensors](sensors/sensors.md)<br>
 - API Reference: [System](../api/latest/device_api/mobile/index.html#System)
 </td>
@@ -221,9 +226,10 @@ You can schedule an application to be run at a specific time, retrieve informati
 
 - Guides:<br>
   [Alarms](alarm/alarms.md) <br>
-  [Application Management](app-management/applications.md) <br>
+  [Applications](applications/overview.md) <br>
+  [Application Management](app-management/overview.md) <br>
   [Notifications](notification/notification.md)<br>
-- API Reference: [Application Framework](../api/latest/device_api/wearable/index.html#Application)
+- API Reference: [Application Framework](../api/latest/device_api/wearable/index.html#Application%20Framework)
 </td>
 </tr>
 <tr>
@@ -236,7 +242,7 @@ You can search and manage multimedia content locally, download files from the In
 - Guides:<br>
   [Connectivity and Wireless](connectivity/connectivity.md)<br>
   [Data Storage and Management](data/data.md)
-- API Reference:  [Content](../api/latest/device_api/wearable/index.html#Contents)
+- API Reference:  [Content](../api/latest/device_api/wearable/index.html#Content)
 </td>
 </tr>
 <tr>
@@ -246,7 +252,7 @@ You can receive push notifications from a push server.
 </td>
 <td>
 
-- Guides: [Messaging](messaging/messaging.md)
+- Guides: [Messaging](messaging/overview.md)
 - API Reference: [Messaging](../api/latest/device_api/wearable/index.html#Messaging)
 </td>
 </tr>
@@ -257,7 +263,7 @@ You can change and monitor playback volume level, and listen to the FM radio.
 </td>
 <td>
 
-- Guides: [Media and Camera](multimedia/media.md)
+- Guides: [Media and Camera](multimedia/overview.md)
 - API Reference: [Multimedia](../api/latest/device_api/wearable/index.html#Multimedia)
 </td>
 </tr>
@@ -303,7 +309,7 @@ You can access the state of the device power resource, device system information
 
 - Guides:<br>
   [Device Settings and Systems](device/device.md) <br>
-  [Media and Camera](multimedia/media.md)<br>
+  [Media and Camera](multimedia/overview.md)<br>
   [Sensors](sensors/sensors.md)<br>
 - API Reference: [System](../api/latest/device_api/wearable/index.html#System)
 </td>
@@ -364,7 +370,7 @@ You can manage common files and ZIP archive files, and define filters and sortin
 - Guides:<br>
   [Data Storage and Management](data/data.md)<br>
   [Error Handling](error/error.md)
-- API Reference: [Base](../api/latest/device_api/tv/index.html#Tizen)
+- API Reference: [Base](../api/latest/device_api/tv/index.html#Base)
 </td>
 </tr>
 <tr>
@@ -376,9 +382,10 @@ You can schedule an application to be run at a specific time, retrieve informati
 
 - Guides:<br>
   [Alarms](alarm/alarms.md) <br>
-  [Application Management](app-management/applications.md)
+  [Applications](applications/overview.md)
+  [Application Management](app-management/overview.md) <br>
 
-- API Reference: [Application Framework](../api/latest/device_api/tv/index.html#Application)
+- API Reference: [Application Framework](../api/latest/device_api/tv/index.html#Application%20Framework)
 </td>
 </tr>
 <tr>
@@ -391,8 +398,8 @@ You can search and manage multimedia content locally, manipulate EXIF data in JP
 - Guides:<br>
   [Connectivity and Wireless](connectivity/connectivity.md)<br>
   [Data Storage and Management](data/data.md)<br>
-  [Media and Camera](multimedia/media.md)
-- API Reference: [Content](../api/latest/device_api/tv/index.html#Contents)
+  [Media and Camera](multimedia/overview.md)
+- API Reference: [Content](../api/latest/device_api/tv/index.html#Content)
 </td>
 </tr>
 <tr>
@@ -402,7 +409,7 @@ You can receive push notifications from a push server.
 </td>
 <td>
 
-- Guides: [Messaging](messaging/messaging.md)
+- Guides: [Messaging](messaging/overview.md)
 - API Reference: [Messaging](../api/latest/device_api/tv/index.html#Messaging)
 </td>
 </tr>
@@ -468,7 +475,7 @@ You can modify the volume level, switch TV channels, get program guide informati
 </td>
 <td>
 
-- API Reference: [TV Controls](../api/latest/device_api/tv/index.html#TV%20Control)
+- API Reference: [TV Controls](../api/latest/device_api/tv/index.html#TV%20Controls)
 </td>
 </tr>
 
@@ -692,3 +699,16 @@ The following table lists the features provided by the [Wearable Web W3C/HTML5 a
 </tr>
 </table>
 -->
+
+> **Note**
+>
+> In Tizen Web Device APIs, there are two types of APIs: mandatory and optional.
+>
+> The mandatory APIs are always available on all Tizen devices. The optional APIs provide functionality that depends on the available device hardware or software capabilities, and they may not be available on all Tizen devices. For example, the Bluetooth and NFC API hardware features are optional, and not supported on all devices.
+>
+> To determine the availability of optional APIs, use the `tizen.systeminfo.getCapability()` method of the System Information API (in [mobile](../api/latest/device_api/mobile/tizen/systeminfo.html), [wearable](../api/latest/device_api/wearable/tizen/systeminfo.html), and [TV](../api/latest/device_api/tv/tizen/systeminfo.html) applications).
+>
+> Note that all mandatory APIs are supported on the Tizen Emulators, while the optional APIs may or may not be supported. For more information on support for each API, see [Tizen Web Device API Reference](../api/latest/device_api/mobile/index.html).
+>
+> To compare API support between Web Device API modules and native API modules, see [Tizen 3.0 Native and Web API Modules](media/tizen-3.0-native-web-api-modules.pdf).
+

@@ -69,7 +69,12 @@ To manage the entry component content:
     elm_entry_select_all(entry);
     ```
 
-  - Select a part of the text with the `elm_entry_select_region_set()` function.The following example selects the first 20 characters of the entry content:`elm_entry_select_region_set(entry, 0, 20);`
+  - Select a part of the text with the `elm_entry_select_region_set()` function.
+
+    The following example selects the first 20 characters of the entry content:
+    ```
+    elm_entry_select_region_set(entry, 0, 20);
+    ```
 
   - Clear the current selection:
 
@@ -122,7 +127,9 @@ To manage the entry component content:
     elm_entry_markup_filter_append(entry, elm_entry_filter_limit_size, &limit_size);
     ```
 
-  - To define a list of accepted or rejected characters, append the filter with the `Elm_Entry_Filter_Accept_Set` structure.The following example shows how to reject the '+', '-', '*', and '/' characters:  
+  - To define a list of accepted or rejected characters, append the filter with the `Elm_Entry_Filter_Accept_Set` structure.
+
+    The following example shows how to reject the '+', '-', '*', and '/' characters:
 
     ```
     static Elm_Entry_Filter_Accept_Set
@@ -185,7 +192,10 @@ To manage the cursor position:
   elm_entry_cursor_next(entry);
   ```
 
-- Set the cursor at a specific position (15th character, for example):`elm_entry_cursor_pos_set(entry, 15);`
+- Set the cursor at a specific position (15th character, for example):
+  ```
+  elm_entry_cursor_pos_set(entry, 15);
+  ```
 
 - Make a text selection while moving the cursor.
 
@@ -212,7 +222,8 @@ To configure the entry functionality:
   elm_entry_editable_set(entry, EINA_FALSE);
   ```
 
-  > **Note**  
+  > **Note**
+  >
   > Even when the entry component is set to be uneditable by the user, you can still use the `elm_entry_entry_append()` and `elm_entry_entry_insert()` functions to modify its text programmatically.
 
 - Set the password mode.
@@ -263,10 +274,12 @@ You can format the entry text in many ways:
 
 - Add special markups within the entry text:
 
-  - Anchors: `<a href = ..>...</a>`  
+  - Anchors: `<a href = ..>...</a>`
+
     The anchors generate an `anchor,clicked` signal when the user clicks them. The `href` attribute is used to identify the anchor. The anchor also reacts to the `anchor,in` (mouse in), `anchor,out` (mouse out), `anchor,down` (mouse down), and `anchor,up` (mouse up) events.
 
-  - Items: `<item size = .. vsize = .. href = ..>...</item>`  
+  - Items: `<item size = .. vsize = .. href = ..>...</item>`
+
     The items provide a way to insert any `Evas_Object` in the text. The `Evas_Object` name must be specified in the `href` attribute.
 
     The `elm_entry_item_provider_append()` function appends a custom item provider to the list for that entry. You can also prepend a custom item provider to the list with the `elm_entry_item_provider_prepend()` function. The `elm_entry_item_provider_remove()` function removes a custom item provider from the list.
@@ -306,7 +319,7 @@ You can format the entry text in many ways:
   elm_entry_text_style_user_push(entry, "DEFAULT='font=Tizen:style=Light font_size=50 color=#00f align=center'");
   ```
 
-  The `DEFAULT` element sets the style properties to a default style that is applied to the complete text. For more information on style properties, such as font, font size, and color, see [Textblock Objects](evas-objects.md#textblock-objects).
+  The `DEFAULT` element sets the style properties to a default style that is applied to the complete text. For more information on style properties, such as font, font size, and color, see [Textblock Objects](../evas-objects.md#textblock-objects).
 
   **Figure: Overriding style**
 
@@ -314,7 +327,9 @@ You can format the entry text in many ways:
 
 - Modify the content and text parts of the default theme:
 
-  - You can modify 2 content parts of the default theme: `icon` and `end`.The following example shows how to set an icon in the `end` content part:
+  - You can modify 2 content parts of the default theme: `icon` and `end`.
+
+    The following example shows how to set an icon in the `end` content part:
 
     ```
     Evas_Object *icon;
@@ -324,7 +339,9 @@ You can format the entry text in many ways:
     elm_object_part_content_set(entry, "end", icon);
     ```
 
-  - You can modify 2 text parts of the default theme: `default` (entry text) and `guide` (entry placeholder).The following example shows how to set the placeholder text to `Hello World`:
+  - You can modify 2 text parts of the default theme: `default` (entry text) and `guide` (entry placeholder).
+
+    The following example shows how to set the placeholder text to `Hello World`:
 
     ```
     elm_object_part_text_set(entry, "guide", "Hello World");
@@ -332,7 +349,7 @@ You can format the entry text in many ways:
 
 ## Setting the Input Panel Layout and Return Key Type
 
-The input panel has different input types, such as number, date, URL, and emoticon. You can specify the keyboard layout type you want for the entry component with the [Elm\_Input\_Panel\_Layout](../../../../api/mobile/latest/group__Elm__Entry.html#gabf2a52ba5bbfc9bd40f367c42b1a6619) enumerator, which defines the available input types.
+The input panel has different input types, such as number, date, URL, and emoticon. You can specify the keyboard layout type you want for the entry component with the [Elm\_Input\_Panel\_Layout](../../../../api/mobile/latest/group__Elm__Entry.html) enumerator, which defines the available input types.
 
 To set the input panel layout to the phone number layout:
 
@@ -352,7 +369,7 @@ elm_entry_input_panel_layout_set(entry, ELM_INPUT_PANEL_LAYOUT_PHONENUMBER);
 
 ![DATETIME](./media/input_panel_DATETIME.png) ![EMOTICON](./media/input_panel_EMOTICON.png)
 
-You can change the return key type in the input panel layout. You can specify the return key type you want for the entry component with the [Elm\_Input\_Panel\_Return\_Key\_Type](../../../../api/mobile/latest/group__Elm__Entry.html#ga24d4dcdebc49e633b8039f73b8aec3c3) enumerator, which defines the available return key types.
+You can change the return key type in the input panel layout. You can specify the return key type you want for the entry component with the [Elm\_Input\_Panel\_Return\_Key\_Type](../../../../api/mobile/latest/group__Elm__Entry.html) enumerator, which defines the available return key types.
 
 To set the return key type to the join key:
 
@@ -369,8 +386,8 @@ The following component styles are available.
 **Table: Entry styles**
 
 | Style                    | Sample                                   | Text part                                | Notes                                    |
-|------------------------|----------------------------------------|----------------------------------------|----------------------------------------|
-| `elm/entry/base/default` | ![elm/entry/base/default](./media/entry_default.png) | `elm.guide`: for the guide text`elm.text`: for the main text | The guide text is automatically erased when the main text is entered. |
+|--------------------------|------------------------------------------|------------------------------------------|------------------------------------------|
+| `elm/entry/base/default` | ![elm/entry/base/default](./media/entry_default.png) | `elm.guide`: for the guide text<br> `elm.text`: for the main text | The guide text is automatically erased when the main text is entered. |
 
 ## Callbacks
 
@@ -379,7 +396,7 @@ You can register callback functions connected to the following signals for an en
 **Table: Entry callback signals**
 
 | Signal                  | Description                              | `event_info`                    |
-|-----------------------|----------------------------------------|-------------------------------|
+|-------------------------|------------------------------------------|---------------------------------|
 | `aborted`               | The **Escape** key is pressed on a single line entry. | `NULL`                          |
 | `activated`             | The **Enter** key is pressed on a single line entry. | `NULL`                          |
 | `anchor,clicked`        | An anchor is clicked.                    | `Elm_Entry_Anchor_Info` object  |
@@ -413,7 +430,8 @@ You can register callback functions connected to the following signals for an en
 | `theme,changed`         | The theme is changed.                    | `NULL`                          |
 | `undo,request`          | The request is undone.                   | `NULL`                          |
 
-> **Note**  
+> **Note**
+>
 > The signal list in the API reference can be more extensive, but only the above signals are actually supported in Tizen.
 
 The following example shows how to define and register a callback for the `focused` signal:
@@ -430,7 +448,8 @@ focused_cb(void *data, Evas_Object *obj, void *event_info)
 }
 ```
 
-> **Note**  
+> **Note**
+>
 > Except as noted, this content is licensed under [LGPLv2.1+](http://opensource.org/licenses/LGPL-2.1).
 
 ## Related Information

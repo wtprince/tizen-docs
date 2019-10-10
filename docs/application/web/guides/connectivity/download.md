@@ -32,7 +32,7 @@ To provide the user access to Internet resources, you must learn how to manage d
    var downloadRequest = new tizen.DownloadRequest('http://download.tizen.org/tools/README.txt', 'downloads');
    ```
 
-   The final parameter (`downloads`) defines the folder where the downloaded content is stored. The parameter uses a relative folder location defined in the Filesystem API (in [mobile](../../api/latest/device_api/mobile/tizen/filesystem.html), [wearable](../../api/latest/device_api/wearable/tizen/filesystem.html), and [TV](../../api/latest/device_api/tv/tizen/filesystem.html) applications). The folder is not an absolute folder location, but instead uses a [virtual root location](../data/file-system.md#roots) (`downloads` is the default download location in the virtual root).
+   The final parameter (`downloads`) defines the folder where the downloaded content is stored. The parameter uses a relative folder location defined in the Filesystem API (in [mobile](../../api/latest/device_api/mobile/tizen/filesystem.html), [wearable](../../api/latest/device_api/wearable/tizen/filesystem.html), and [TV](../../api/latest/device_api/tv/tizen/filesystem.html) applications). The folder is not an absolute folder location, but instead uses a [virtual root location](../data/file-system.md#supported-virtual-roots) (`downloads` is the default download location in the virtual root).
 
 2. It is not possible to download anything when the device is not connected to a network. To check whether any connection is available, use the `getPropertyValue()` method of the `SystemInfo` interface (in [mobile](../../api/latest/device_api/mobile/tizen/systeminfo.html#SystemInfo), [wearable](../../api/latest/device_api/wearable/tizen/systeminfo.html#SystemInfo), and [TV](../../api/latest/device_api/tv/tizen/systeminfo.html#SystemInfo) applications):
 
@@ -117,11 +117,11 @@ To provide the user access to Internet resources, you must learn how to check th
 
 2.  Use the `getState()` method with the download ID as a parameter to get the current state:
 
-   ```
-   var state = tizen.download.getState(downloadId);
-   ```
+    ```
+    var state = tizen.download.getState(downloadId);
+    ```
 
-   The method returns a `DownloadState` enumerator value (in [mobile](../../api/latest/device_api/mobile/tizen/download.html#DownloadState), [wearable](../../api/latest/device_api/wearable/tizen/download.html#DownloadState), and [TV](../../api/latest/device_api/tv/tizen/download.html#DownloadState) applications).
+    The method returns a `DownloadState` enumerator value (in [mobile](../../api/latest/device_api/mobile/tizen/download.html#DownloadState), [wearable](../../api/latest/device_api/wearable/tizen/download.html#DownloadState), and [TV](../../api/latest/device_api/tv/tizen/download.html#DownloadState) applications).
 
 3. Use the `getDownloadRequest()` method with the download ID as a parameter to get the download request details that the user has previously set:
 
