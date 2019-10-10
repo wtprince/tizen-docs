@@ -12,11 +12,7 @@ With Tizen:
 
 The Tizen project is a part of the [Linux Foundation](https://www.linuxfoundation.org/projects/) and is governed by a Technical Steering Group, which is the primary decision-making body for the open source project, with a focus on platform development and delivery, along with the formation of working groups to support device verticals.
 
-<<<<<<< HEAD
 The Tizen Association has been formed to guide the industry role of Tizen, including gathering of requirements, identification and facilitation of service models, and overall industry marketing and education.
-=======
-The [Tizen Association](http://www.tizenassociation.org/) has been formed to guide the industry role of Tizen, including gathering of requirements, identification and facilitation of service models, and overall industry marketing and education.
->>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4
 
 
 ## Get Started with Tizen

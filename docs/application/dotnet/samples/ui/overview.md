@@ -180,13 +180,6 @@ for TD:
 			<td>
                         <p><a href="https://github.com/Samsung/Tizen-CSharp-Samples/tree/master/Wearable/XUIComponents" target="_blank"><strong>(W) XUIComponents</strong></a></p>
 			<p>This sample application demonstrates how to use various kinds of Tizen Wearable UI controls using the Xamarin.Forms and <a href="https://samsung.github.io/Tizen.CircularUI/api/index.html" target="_blank">Tizen.Wearable.CircularUI</a>.</p>
-<<<<<<< HEAD
-=======
-			<p>In addition, there is similar native sample application.<br>
-			<ul>
-				<li><a href="https://developer.tizen.org/development/sample/native/UI/%28Circle%29_UI_Components" target="_blank">Native version</a></li>
-			</ul></p>
->>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4
 			</td>
 		</tr>
 		<tr>
