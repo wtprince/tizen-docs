@@ -41,7 +41,7 @@ Release Date: Oct. 31, 2019
   - OS Upgrade from Tizen 4.0 to Tizen 5.5 has been supported.
 - System Reliability
   - Web-based Callstack Analyzer Tool has been added for convenient coredump analysis.
-  - Ability to create coredump from live process has been added to examine the status of live process.
+  - Ability to create coredump from live process has been added to examine the status of live process, and an interface to create crash-manager reports with live coredump has been added.
   - Stability Monitor has been added to monitor and control resource utilization of CPU, IO, Memory, number of open fds, and so on. 
     - According to pre-determine peak (max) and average limits configuration, actions for system stability (like live-coredump, notification, terminating process) can be executed.
     - Flexible configuration allows applying limits based on various process characteristics.
