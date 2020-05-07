@@ -1,10 +1,17 @@
 # Tizen 4.0 Public M2
 
+<<<<<<< HEAD
 Release date: Nov. 01, 2017
 
 The Tizen 4.0 Public M2 release provides developers with the Tizen kernel, device drivers, middleware subsystems, and Web/Native API set.
 
 
+=======
+Release Date: 01 Nov, 2017
+
+The Tizen 4.0 Public M2 release provides developers with the Tizen kernel, device drivers, middleware subsystems, and Web/Native API set.
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 ## Release Details
 
 - [Getting source code](http://review.tizen.org/git/) (Tizen 4.0 M2 source codes are under **tizen_4.0** branch.)
@@ -106,7 +113,11 @@ The Tizen 4.0 Public M2 release provides developers with the Tizen kernel, devic
 - The capi-system-settings API set has been expanded:
   - SYSTEM_SETTINGS_KEY_ACCESSIBILITY
   - SYSTEM_SETTINGS_KEY_VIBRATION
+<<<<<<< HEAD
 - The capi-system-settings API now returns 'not supported' error codes depending on the current feature type (mobile, TV, or wearable).
+=======
+- The capi-system-settings API now returns ‘not supported’ error codes depending on the current feature type (mobile, tv, or wearable).
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 #### Fixes
 
@@ -350,7 +361,11 @@ The Tizen 4.0 Public M2 release provides developers with the Tizen kernel, devic
   - New features and API set:
     - In the TV profile, support for voice recognition on IME has been added.
     - Support for smart reply in inputdelegator and IME has been added.
+<<<<<<< HEAD
     - In Mobile and TV profiles, support for inputdelegator has been added.
+=======
+    - In mobile and TV profiles, support for inputdelegator has been added.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     - Support for the floating keyboard type has been added.
     - An Ecore_IMF API for getting the keyboard mode has been added.
     - An Ecore_IMF API for setting a prediction hint has been added.
@@ -378,7 +393,11 @@ The Tizen 4.0 Public M2 release provides developers with the Tizen kernel, devic
 - View Manager
   - The View Manager has not been fully tested.
 - Customization API
+<<<<<<< HEAD
   - In the Wearable profile, the theme is not ready for customization.
+=======
+  - In the wearable profile, the theme is not ready for customization.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 - Focused UI has not been fully tested.
 - UI mirroring has not been fully tested.
 - The Tizen 4.0 UX is not yet finalized (the UI control and theme can change later).
@@ -436,7 +455,11 @@ The Tizen 4.0 Public M2 release provides developers with the Tizen kernel, devic
 #### New and Changed Features
 
 - Data Network
+<<<<<<< HEAD
   - New features and API set in Mobile, Wearable, and TV profiles:
+=======
+  - New features and API set in mobile, wearable, and TV profiles:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     - A wifi-manager API for getting the Wi-Fi module state has been added.
     - A wifi-manager API to get the Wi-Fi scan results for WPS (Wi-Fi Positioning System) has been added.
     - A wifi-manager API for getting the raw SSID has been added.
@@ -457,11 +480,19 @@ The Tizen 4.0 Public M2 release provides developers with the Tizen kernel, devic
     - The C# Public OPP Server API has been added.
 - Telephony
   - New features and API set:
+<<<<<<< HEAD
     - In Mobile, Wearable and TV profiles, the is_metered field is now provided through profile data.
     - In Mobile and Wearable profiles, support for the call blocking feature in the call manager has been added.
     - In Mobile and Wearable profiles, support for unknown call blocking in the call manager has been added.
     - In Mobile and Wearable profiles, support for the cool-down feature in the call manager has been added.
     - In Mobile and Wearable profiles, support for call parameters update to stream-manager in the call manager has been added.
+=======
+    - In mobile, wearable and TV profiles, the is_metered field is now provided through profile data.
+    - In mobile and wearable profiles, support for the call blocking feature in the call manager has been added.
+    - In mobile and wearable profiles, support for unknown call blocking in the call manager has been added.
+    - In mobile and wearable profiles, support for the cool-down feature in the call manager has been added.
+    - In mobile and wearable profiles, support for call parameters update to stream-manager in the call manager has been added.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 #### Fixes
 
@@ -495,7 +526,11 @@ The Tizen 4.0 Public M2 release provides developers with the Tizen kernel, devic
 - Privacy Privilege Manager API
   - New third-party API set for privacy privilege usage have been added for native and C#.
 - Privilege List
+<<<<<<< HEAD
   - In the Wearable profile, the following privileges have been added:
+=======
+  - In the wearable profile, the following privileges have been added:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     - Native
       - apphistory.read
     - Web
@@ -505,12 +540,20 @@ The Tizen 4.0 Public M2 release provides developers with the Tizen kernel, devic
       - calendar.write
       - contact.read
       - contact.write
+<<<<<<< HEAD
   - In Mobile, Wearable and TV profiles, the following privileges have been added:
+=======
+  - In mobile, wearable and TV profiles, the following privileges have been added:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     - Web
       - appmanager.launch
       - datasharing
       - wifidirect
+<<<<<<< HEAD
   - In Mobile and Wearable profiles, the following privileges have been added:
+=======
+  - In mobile and wearable profiles, the following privileges have been added:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     - Native
       - blocknumber.read
       - blocknumber.write
@@ -520,11 +563,19 @@ The Tizen 4.0 Public M2 release provides developers with the Tizen kernel, devic
   - In the TV profile, the following privilege has been removed:
     - Web
       - bluetooth
+<<<<<<< HEAD
   - In Mobile, Wearable and TV profiles, the following privilege has been removed:
     - Native and Web:
       - d2d.datasharing
 - Data Loss Prevention (DLP)
   - In the Mobile profile, a new feature detecting data loss through HTTP and HTTPS has been added.
+=======
+  - In mobile, wearable and TV profiles, the following privilege has been removed:
+    - Native and Web:
+      - d2d.datasharing
+- Data Loss Prevention (DLP)
+  - In the mobile profile, a new feature detecting data loss through HTTP and HTTPS has been added.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ### Service Framework
 
@@ -532,7 +583,11 @@ The Tizen 4.0 Public M2 release provides developers with the Tizen kernel, devic
 
 - PIMS
   - Phonenumber Utils
+<<<<<<< HEAD
     - In Mobile and Wearable profiles, new API set for number blocking have been added.
+=======
+    - In mobile and wearable profiles, new API set for number blocking have been added.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 - Location
   - Fused Location
     - New API set for fused location have been added.
@@ -540,19 +595,34 @@ The Tizen 4.0 Public M2 release provides developers with the Tizen kernel, devic
   - A new API for the significant motion sensor has been added.
 - Context
   - Contextual History
+<<<<<<< HEAD
     - In the Mobile profile, several history data type enumerations have been deprecated.
     - In the Wearable profile, Contextual History API set have been added.
     - In Mobile and Wearable profiles, an API for checking history data type support has been added.
   - Contextual Trigger
     - In the Mobile profile, several trigger event and condition type enumerations have been deprecated.
+=======
+    - In the mobile profile, several history data type enumerations have been deprecated.
+    - In the wearable profile, Contextual History API set have been added.
+    - In mobile and wearable profiles, an API for checking history data type support has been added.
+  - Contextual Trigger
+    - In the mobile profile, several trigger event and condition type enumerations have been deprecated.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 - Push
   - Support for the Chinese infrastructure has been added.
   - Support for multi-user application install/uninstall has been added.
 - Sync Manager
+<<<<<<< HEAD
   - In Mobile and Wearable profiles, multi-user support has been implemented.
   - In Mobile and Wearable profiles, the sync-service logic for use by other services has been added.
   - In Mobile and Wearable profiles, a Bluetooth connected callback has been added.
   - In Mobile and Wearable profiles, a new sync-manager feature and error enumeration have been added.
+=======
+  - In mobile and wearable profiles, multi-user support has been implemented.
+  - In mobile and wearable profiles, the sync-service logic for use by other services has been added.
+  - In mobile and wearable profiles, a Bluetooth connected callback has been added.
+  - In mobile and wearable profiles, a new sync-manager feature and error enumeration have been added.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 #### Fixes
 
@@ -574,8 +644,13 @@ The Tizen 4.0 Public M2 release provides developers with the Tizen kernel, devic
   - fido-asm.service has been changed to use on-demand D-Bus activation.
   - Coding rules and memory leaks have been fixed.
 - Sync Manager
+<<<<<<< HEAD
   - In Mobile and Wearable profiles, sync data storage has changed from XML to DB.
   - In the Wearable profile, the calendar capability has been added.
+=======
+  - In mobile and wearable profiles, sync data storage has changed from XML to DB.
+  - In the wearable profile, the calendar capability has been added.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ### Web Framework
 
@@ -622,7 +697,11 @@ The Tizen 4.0 Public M2 release provides developers with the Tizen kernel, devic
 - Xamarin.Forms
   - Xamarin.Forms version 2.4.0 Service Release 1 is supported.
   - Uses Tizen40 (tizen40) as a TargetFramework.
+<<<<<<< HEAD
   - Now supports Tizen Wearable profile (Preview).
+=======
+  - Now supports Tizen wearable profile (Preview).
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 - TizenFX
   - Included in the official release of Tizen API Version 4.
   - New API set based on native API set have been added:

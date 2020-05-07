@@ -417,7 +417,11 @@ You can utilize additional features for application development and debugging by
 
 > **Note**
 >
+<<<<<<< HEAD
 > The developer options are currently supported on the Tizen 2.3.2 Wearable Emulator only.
+=======
+> The developer options are currently supported on the Tizen 2.3.2 wearable emulator only.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 The developer options allow you to make the pixel ratio visible on the screen:
 

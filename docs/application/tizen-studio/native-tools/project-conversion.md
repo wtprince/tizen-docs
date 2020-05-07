@@ -46,9 +46,15 @@ The `project_def.prop` file describes the project properties, such as project ty
 | `USER_CPP_INC_FILES`   | List of `.h` file paths for C++.</br>The list must be used without the `-include` characters. An absolute path can be available. |
 | `USER_LIB_DIRS`        | List of reference paths for the library linking.</br>The list must be used without the `-L` characters. An absolute path can be available. |
 | `USER_EDCS`            | List of `.edc` file paths.</br>The list can be used with wildcard characters, such as *.</br>If there are more than 2 files, a white-space character separator is used.</br>For example: `USER_EDCS = res/edje/*.edc` |
+<<<<<<< HEAD
 | `USER_EDCS_IMAGE_DIRS` | List of EDC reference paths for compiling, such as the `-id` option of Tizen Studio. </br>An absolute path can be available. |
 | `USER_EDCS_SOUND_DIRS` | List of EDC reference paths for compiling, such as the `-sd` option of Tizen Studio. </br>An absolute path can be available. |
 | `USER_EDCS_FONT_DIRS`  | List of EDC reference paths for compiling, such as the `-fd` option of Tizen Studio. </br>An absolute path can be available. |
+=======
+| `USER_EDCS_IMAGE_DIRS` | List of EDC reference paths for compiling, such as the `-id` option of the Tizen Studio. </br>An absolute path can be available. |
+| `USER_EDCS_SOUND_DIRS` | List of EDC reference paths for compiling, such as the `-sd` option of the Tizen Studio. </br>An absolute path can be available. |
+| `USER_EDCS_FONT_DIRS`  | List of EDC reference paths for compiling, such as the `-fd` option of the Tizen Studio. </br>An absolute path can be available. |
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 | `USER_POS`             | List of `.po` file paths.</br>The list can be used with wildcard characters, such as *.</br>If there are more than 2 files, a white-space character separator is used.</br>For example: `USER_POS = res/po/*.po` |
 
 ## About the build_def.prop File

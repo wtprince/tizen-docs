@@ -44,8 +44,11 @@ To enable your application to use the system setting functionality:
     |----------------------------------------|----------------------------------------|----------------------------------------|
     | `http://tizen.org/feature/network.wifi`  | `NetworkWifiNotificationEnabled`         | `NetworkWifiNotificationSettingChanged`  |
     | `http://tizen.org/feature/network.telephony` | `UltraDataSave`, `AutomaticTimeUpdate`  | `UltraDataSaveChanged`, `UltraDataSavePackageListChanged`, `AutomaticTimeUpdateChangedEventArgs` |
+<<<<<<< HEAD
     | `http://tizen.org/feature/accessibility.grayscale` | `AccessibilityGrayscale`                     | `AccessibilityGrayscaleChanged`              |
     | `http://tizen.org/feature/accessibility.negative` | `AccessibilityNegativeColor`                     | `AccessibilityNegativeColorChanged`              |
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     | `http://tizen.org/feature/systemsetting.font` | `DefaultFontType`, `FontType`, `FontSize` | `FontSizeChanged`, `FontTypeChanged`     |
     | `http://tizen.org/feature/systemsetting.home_screen` | `WallpaperHomeScreen`                    | `WallpaperHomeScreenChanged`             |
     | `http://tizen.org/feature/systemsetting.incoming_call` | `IncomingCallRingtone`, `SoundNotification` | `IncomingCallRingtoneChanged`, `SoundNotificationChanged` |

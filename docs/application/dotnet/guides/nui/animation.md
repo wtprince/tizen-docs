@@ -29,9 +29,13 @@ To animate a property in NUI, you can use two distinct methods:
     animation.Play();
     ```
 
+<<<<<<< HEAD
 -   `AnimateBy()`: Animates a property by the specified amount during a given time.
     ```csharp
     // Animates PositionX to x + 50
+=======
+The controls class is derived from the [Tizen.NUI.BaseComponents.CustomView](https://samsung.github.io/TizenFX/latest/api/Tizen.NUI.BaseComponents.CustomView.html) class and set the property to be *animatable*. For standard controls, you can query whether a property is animatable (using the `IsPropertyAnimatable()` method of the [Tizen.NUI.Animatable](https://samsung.github.io/TizenFX/latest/api/Tizen.NUI.Animatable.html) class), but cannot change the animatable state.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     var animation = new Animation(2000/*duration*/);
 
@@ -131,7 +135,38 @@ During the playback, you can receive notifications at various stages of the anim
 <a name="alphafunctions"></a>
 ## Alpha Functions
 
+<<<<<<< HEAD
 In animations, alpha functions are used to specify an animation progresses over time. The alpha function allows the animation to be accelerated, decelerated, repeated, or bounced.
+=======
+In animations, alpha functions are used to specify the animation parameter's rate of change over time. This allows the animation to be, for example, accelerated, decelerated, repeated, or bounced. The [Tizen.NUI.AlphaFunction.BuiltinFunctions](https://samsung.github.io/TizenFX/latest/api/Tizen.NUI.AlphaFunction.BuiltinFunctions.html) enumeration lists the built-in alpha functions.
+
+You can specify a different alpha function for each animator in an animation object:
+
+```
+animation.AnimateTo(view1, "Position", Vector3(10.0f, 50.0f, 0.0f), new AlphaFunction.BuiltinFunctions.Linear);
+```
+
+You can also create your own alpha function in two ways:
+
+-   By setting the default alpha function:
+
+    ```
+    float alphafunc(float progress)
+    {
+        if ((progress > 0.2f) && (progress < 0.7f))
+        {
+            return progress + 0.8f;
+        }
+
+        return progress;
+    }
+
+    AlphaFunction af(alphafunc);
+    animation.SetDefaultAlphaFunction(af);
+    ```
+
+- By using delegates:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ### Built-in Alpha Function
 

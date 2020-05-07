@@ -2,6 +2,7 @@
 
 When you create your first Tizen .NET application, you can select from the following options that uses C# as the programming language:
 
+<<<<<<< HEAD
 -   [Wearable .NET application](wearable/first-app.md)
 
     A wearable application is targeted to run on a smart watch. The application can be optimized for the smaller screen.
@@ -14,10 +15,13 @@ When you create your first Tizen .NET application, you can select from the follo
 
     A TV application is targeted to run on a smart TV. The applications can be optimized for larger screens and remote control.
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 -   [Mobile .NET application](mobile/first-app.md)
 
     A mobile application is targeted to run on a smart phone. The applications can take advantage of a wide variety of functionalities available on smart phones.
 
+<<<<<<< HEAD
 -   [NUI .NET application](nui/quickstart.md)
 
     NUI is a rich GUI library used for creating two-dimensional or three-dimensional applications.
@@ -28,3 +32,12 @@ When you create your first Tizen .NET application, you can select from the follo
 
 
 
+=======
+-   [Wearable .NET application](wearable/first-app.md)
+
+    A wearable application is targeted to run on a smart watch. The applications can be optimized for the smaller screen.
+
+-   [TV .NET application](tv/first-app.md)
+
+    A TV application is targeted to run on a smart TV. The applications can be optimized for larger screens and remote control.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5

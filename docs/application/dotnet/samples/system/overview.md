@@ -100,6 +100,7 @@ for TD:
 			</td>
 		</tr>
 		<tr>
+<<<<<<< HEAD
 			<td><img alt="" height="180" src="media/w78level.png" width="180"/></td>
 			<td>
 			<p><a href="https://github.com/Samsung/Tizen-CSharp-Samples/tree/master/Wearable/Level" target="_blank"><strong>(W) Level</strong></a></p>
@@ -107,6 +108,8 @@ for TD:
 			</td>
 		</tr>
 		<tr>
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 			<td><img alt="" height="180" src="media/metaldetector.png" width="180"/></td>
 			<td>
                         <p><a href="https://github.com/Samsung/Tizen-CSharp-Samples/tree/master/Wearable/MetalDetector" target="_blank"><strong>(W) MetalDetector</strong></a></p>
@@ -114,6 +117,7 @@ for TD:
 			</td>
 		</tr>
 		<tr>
+<<<<<<< HEAD
 			<td><img alt="" height="180" src="media/w79pedometer.png" width="180"/></td>
 			<td>
 			<p><a href="https://github.com/Samsung/Tizen-CSharp-Samples/tree/master/Wearable/Pedometer" target="_blank"><strong>(W) Pedometer</strong></a></p>
@@ -128,6 +132,8 @@ for TD:
 			</td>
 		</tr>
 		<tr>
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 			<td><img alt="" height="180" src="media/w54storageapp.png" width="180"/></td>
 			<td>
 			<p><a href="https://github.com/Samsung/Tizen-CSharp-Samples/tree/master/Wearable/StorageApp" target="_blank"><strong>(W) StorageApp</strong></a></p>

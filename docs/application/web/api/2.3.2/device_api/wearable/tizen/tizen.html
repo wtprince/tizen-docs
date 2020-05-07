@@ -4,11 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>Tizen API</title>
+<<<<<<< HEAD
 <meta data-version="2.3.2" data-profile="wearable">
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::Tizen">
 <div class="supported-platforms"><img class="wearable-mandatory emulator" title="Mandatory, Supported by Tizen Wearable emulator" src="wearable_s_w.png"></div>
+=======
+</head>
+<body id="page-content" onload="prettyPrint()">
+<div class="api" id="::Tizen">
+ <div class="supported-platforms"><img class="wearable-mandatory emulator" title="Mandatory, Supported by Tizen Wearable emulator" src="wearable_s_w.png"></div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="title"><h1>Tizen API</h1></div>
 <div class="brief">
  This API provides common Tizen functionality.
@@ -25,7 +32,11 @@ Additionally, this API specifies the location in the ECMAScript hierarchy in whi
 the Tizen Web Device API is instantiated (<em>window.tizen</em>).
         </p>
         <p>
+<<<<<<< HEAD
 For more information on the Tizen features, see <a href="/application/web/guides/index">Tizen Guide</a>.
+=======
+For more information on the Tizen features, see <a href="https://developer.tizen.org/development/training/web-application/understanding-tizen-programming/tizen-apis">Tizen Guide</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         </p>
        </div>
 <p><span class="version">Since: </span>
@@ -518,6 +529,8 @@ var offset = 0;
 var artistFilter = new tizen.AttributeFilter("artists", "EXACTLY", "U2");
 var albumFilter = new tizen.AttributeFilter("album", "EXACTLY", "The Joshua Tree");
 var filter = new tizen.CompositeFilter("INTERSECTION", [albumFilter, artistFilter]);
+<<<<<<< HEAD
+=======
 
 function errorCB(err)
 {
@@ -539,6 +552,33 @@ var offset = 0;
 var artistFilter = new tizen.AttributeFilter("artists", "EXACTLY", "Rush");
 var albumFilter = new tizen.AttributeFilter("album", "EXACTLY", "Tormato");
 var filter = new tizen.CompositeFilter("UNION", [albumFilter, artistFilter]);
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
+
+function errorCB(err)
+{
+  console.log("Following error occurred: " + err.name);
+}
+
+function findCB(contents)
+{
+<<<<<<< HEAD
+  console.log("The Joshua Tree by U2: " + contents.length);
+=======
+  console.log("Songs found: " + contents.length);
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
+}
+
+tizen.content.find(findCB, errorCB, null, filter, null, count, offset);
+</pre>
+<<<<<<< HEAD
+</div>
+<div class="example">
+<span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">/* Following example retrieves all songs from the album "Tormato" and all songs by artist "Rush". */
+var count = 100;
+var offset = 0;
+var artistFilter = new tizen.AttributeFilter("artists", "EXACTLY", "Rush");
+var albumFilter = new tizen.AttributeFilter("album", "EXACTLY", "Tormato");
+var filter = new tizen.CompositeFilter("UNION", [albumFilter, artistFilter]);
 
 function errorCB(err)
 {
@@ -552,6 +592,8 @@ function findCB(contents)
 
 tizen.content.find(findCB, errorCB, null, filter, null, count, offset);
 </pre>
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
         
       <div class="constructors">
@@ -1240,6 +1282,7 @@ it silently fails and there is no further action.
 <div class="example">
 <span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">/* This example assumes that the application "NonexistentApp" */
 /* has not been installed and can not be launched. */
+<<<<<<< HEAD
 
 /* Define the error callback. */
 function onError(error)
@@ -1254,6 +1297,22 @@ function onSuccess()
 /* The ID of non-existing application. */
 var bogusAppID = "NonexistentApp.main";
 
+=======
+
+/* Define the error callback. */
+function onError(error)
+{
+  console.log(error.message);
+}
+function onSuccess()
+{
+  console.log("The application has launched successfully");
+}
+
+/* The ID of non-existing application. */
+var bogusAppID = "NonexistentApp.main";
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 tizen.application.launch(bogusAppID, onSuccess, onError);
 </pre>
 </div>

@@ -229,7 +229,11 @@ applications:
 
 Tizen application privileges are loosely bound to APIs, so most of the
 privileges can be identified by the APIs that the application calls.
+<<<<<<< HEAD
 However, there are some privileges that are not coupled with Tizen
+=======
+However, there are some privileges that are not coupled with the Tizen
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 APIs. To allow easy identification, those privileges are mapped to
 corresponding system resources that are similar to other privileges.
 

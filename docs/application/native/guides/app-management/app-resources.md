@@ -13,7 +13,11 @@ The main features of the Resource Manager API include:
   >
   > The Resource Manager tool is supported since Tizen 2.4.
   >
+<<<<<<< HEAD
   > If you cannot access the `Resource Manager` view in Tizen Studio, check the version and API version attributes in the `<manifest>` element of the application manifest file.
+=======
+  > If you cannot access the `Resource Manager` view in the Tizen Studio, check the version and API version attributes in the `<manifest>` element of the application manifest file.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   >
   > For more information on the Resource Manager tool, see [Providing Resources for Multiple Device Types](../../../tizen-studio/native-tools/resource-manager.md).
 
@@ -45,7 +49,11 @@ To use the functions and resource types of the Resource Manager API (in [mobile]
 
 To set the resources:
 
+<<<<<<< HEAD
 1. To activate the **Resource Manager** view content in Tizen Studio, select the project in the **Project Explorer** view.
+=======
+1. To activate the **Resource Manager** view content in the Tizen Studio, select the project in the **Project Explorer** view.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ![Show view](./media/resource_manager_show_view2.png)
 
@@ -72,7 +80,11 @@ To set the resources:
 
 5. To view the resource directories, use the `res.xml` file.
 
+<<<<<<< HEAD
    Tizen Studio creates the `res.xml` file automatically when you build the application package.
+=======
+   The Tizen Studio creates the `res.xml` file automatically when you build the application package.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ![res.xml file](./media/resource_manager_res_xml.png)
 

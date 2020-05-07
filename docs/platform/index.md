@@ -12,7 +12,11 @@ With Tizen:
 
 The Tizen project is a part of the [Linux Foundation](https://www.linuxfoundation.org/projects/) and is governed by a Technical Steering Group, which is the primary decision-making body for the open source project, with a focus on platform development and delivery, along with the formation of working groups to support device verticals.
 
+<<<<<<< HEAD
 The Tizen Association has been formed to guide the industry role of Tizen, including gathering of requirements, identification and facilitation of service models, and overall industry marketing and education.
+=======
+The [Tizen Association](http://www.tizenassociation.org/) has been formed to guide the industry role of Tizen, including gathering of requirements, identification and facilitation of service models, and overall industry marketing and education.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 
 ## Get Started with Tizen
@@ -27,4 +31,8 @@ To get started with Tizen development:
 
   Tizen developers use the Git and [GBS command-line tools](reference/gbs/gbs-overview.md) for most of their work. Tizen source code is managed by [Gerrit](reference/gerrit-usage.md), a code review system for Git-based projects. Source code cloning, development, and review are done under ACL (Access Control Lists). Make sure you have access rights to them.
 
+<<<<<<< HEAD
 Start by reading the [Development Workflow](get-started/work-flow.md) page.
+=======
+Start by reading the [Development Workflow](about/work-flow.md) page.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5

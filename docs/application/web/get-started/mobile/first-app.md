@@ -1,16 +1,28 @@
 # Create Your First Tizen Mobile Web Application
 
+<<<<<<< HEAD
 **Welcome to Tizen Mobile Web application development!**
 
 A mobile Web application is basically a Web site stored on a mobile device. You can create it using Web-native languages, such as HTML5, CSS, and JavaScript.
 
 Study the following instructions to help familiarize yourself with the Tizen [Web application development process](../../tutorials/process/app-dev-process.md) as well as using Tizen Studio and installing the created application on the emulator or target device. With the instructions, you can create and run a basic mobile Web application, which displays some text on the screen and changes the text when the user clicks it:
+=======
+**Welcome to Tizen mobile Web application development!**
+
+A mobile Web application is basically a Web site stored on a mobile device. You can create it using Web-native languages, such as HTML5, CSS, and JavaScript.
+
+Study the following instructions to help familiarize yourself with the Tizen [Web application development process](../../tutorials/process/app-dev-process.md) as well as using the Tizen Studio and installing the created application on the emulator or target device. With the instructions, you can create and run a basic mobile Web application, which displays some text on the screen and changes the text when the user clicks it:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 1.  Before you get started with developing Tizen applications, download and install the [Tizen Studio](../../../tizen-studio/index.md).
 
     For more information on the installation process, see the [installation guide](../../../tizen-studio/setup/install-sdk.md).
 
+<<<<<<< HEAD
 2.  [Create a mobile Web project](#create) using Tizen Studio.
+=======
+2.  [Create a mobile Web project](#create) using the Tizen Studio.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     This step shows how you can use a predesigned project template that creates all the basic files and folders required for your project.
 
@@ -26,12 +38,20 @@ Study the following instructions to help familiarize yourself with the Tizen [We
 
     This step shows how you can create the application UI and make small alterations to it to improve the usability of your application.
 
+<<<<<<< HEAD
 When you are developing a more complex application, you can take advantage of the [Web tools included in Tizen Studio](../../../tizen-studio/web-tools/index.md) to ease the tasks of creating functionality and designing the application UI.
+=======
+When you are developing a more complex application, you can take advantage of the [Web tools included in the Tizen Studio](../../../tizen-studio/web-tools/index.md) to ease the tasks of creating functionality and designing the application UI.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 <a name="create"></a>
 ## Creating a Project
 
+<<<<<<< HEAD
 The following example shows you how to create and configure a basic mobile Web application project in Tizen Studio. An application project contains all the files that make up an application.
+=======
+The following example shows you how to create and configure a basic mobile Web application project in the Tizen Studio. An application project contains all the files that make up an application.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 The following figure illustrates the application to be created:
 
@@ -45,7 +65,11 @@ The following figure illustrates the application to be created:
 
 To create the application project:
 
+<<<<<<< HEAD
 1.  Launch Tizen Studio.
+=======
+1.  Launch the Tizen Studio.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 2.  In the Tizen Studio menu, select **File \> New \> Tizen Project**.
 
@@ -99,7 +123,12 @@ You can see the created project in the **Project Explorer** view. The most impor
 
 ![Application in the Project Explorer](media/basic_app_project_explorer_mw.png)
 
+<<<<<<< HEAD
 > [!NOTE]
+=======
+> **Note**
+>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 > You can [view and modify the application configuration](#configuration) in the Web application configuration editor. In this example, no configuration changes are required.
 
 Your application project is now ready for further actions. Next, build the application.
@@ -109,7 +138,11 @@ Your application project is now ready for further actions. Next, build the appli
 
 To view and modify the application configuration:
 
+<<<<<<< HEAD
 1.  In the **Project Explorer** view, double-click the `config.xml` file of the application. Tizen Studio opens the file in the Web application configuration editor.
+=======
+1.  In the **Project Explorer** view, double-click the `config.xml` file of the application. The Tizen Studio opens the file in the Web application configuration editor.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 2.  In the configuration editor, view and modify the configuration details using the various tabs:
 
@@ -117,7 +150,11 @@ To view and modify the application configuration:
 
     -   **Overview**: Define general information, such as the name and icon of the application.
 
+<<<<<<< HEAD
     -   **Features**: Define required software and hardware features. This information is used for application filtering in Tizen Store.
+=======
+    -   **Features**: Define required software and hardware features. This information is used for application filtering in the Tizen Store.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     -   **Privileges**: Define the security-sensitive APIs or API groups accessed and used by the application.
 
@@ -131,7 +168,12 @@ To view and modify the application configuration:
 
     -   **Source**: View and edit the source code of the `config.xml` file. Changes made and saved on the other tabs are reflected in the source code and vice versa.
 
+<<<<<<< HEAD
        > [!NOTE]
+=======
+       > **Note**
+       >
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
        > The `config.xml` file must conform to both the XML file format and the W3C specification requirements. Editing the file in the **Source** tab is intended for advanced users only.
 
 3.  To save any changes, in the Tizen Studio menu, select **File \> Save All**.
@@ -149,7 +191,11 @@ You can build the application in the following ways:
 
 -   **Automatically**
 
+<<<<<<< HEAD
     The automatic build means that Tizen Studio automatically rebuilds the application whenever you change a source or resource file and save the application project.
+=======
+    The automatic build means that the Tizen Studio automatically rebuilds the application whenever you change a source or resource file and save the application project.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     To use the automatic build:
 
@@ -170,7 +216,11 @@ You can build the application in the following ways:
 
     **Figure: Manually building the application**
 
+<<<<<<< HEAD
     ![Manually building the application](media/build_manual_w.png)
+=======
+    ![Manually building the application](media/build_manual_mw.png)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     Alternatively, you can also select the project in the **Project Explorer** view and do one of the following:
 
@@ -202,7 +252,11 @@ To run the application on the emulator:
 
         The emulator is launched in its own window. You can also see the new emulator instance and its folder structure in the **Device Manager**.
 
+<<<<<<< HEAD
         ![Emulator](media/emulator_window_m.png)
+=======
+        ![Emulator](media/emulator_window_mobile.png)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 2.  Generate a security profile.
 
@@ -220,13 +274,22 @@ To run the application on the emulator:
 
         If you have created multiple emulator instances, select the instance you want from the combo box in the toolbar before selecting to run the application. If you select an offline emulator, it is automatically launched when you select to run the application.
 
+<<<<<<< HEAD
         ![Selecting the emulator to use](media/app_run_multiple_emulators_m.png)
+=======
+        ![Selecting the emulator to use](media/app_run_multiple_emulators.png)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     2.  Confirm that the application launches on the emulator.
 
         ![Application running in the emulator](media/emulator_running_mw.png)
 
+<<<<<<< HEAD
         > [!NOTE]
+=======
+        > **Note**
+        >
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         > If the emulator display has switched off, you cannot see the application launch. To see the application on the emulator screen:
         > 1. To switch the display on, in the key window next to the emulator screen, click `Power`.
         > 2. On the home screen, swipe left.
@@ -279,7 +342,12 @@ To run the application on a target device:
 
     3.  Confirm that the application launches on the target device.
 
+<<<<<<< HEAD
     > [!NOTE]
+=======
+    > **Note**
+    >
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 	> The application is launched using the default debug run configuration. To create and use another configuration:
     > 1. In the `Project Explorer` view, right-click the project and select `Run As > Run Configurations`.
     > 2.  In the `Run Configurations` window, click the `New Launch Configuration` icon (![New Launch Configuration icon](media/run_new_config_wn.png)), define the configuration details, and launch the application by clicking `Run`.
@@ -438,7 +506,11 @@ To create a Web application and design its UI with TAU:
     To create a project with a **TAU SinglePage** template:
 
     1.  Go to **File \> New \> Tizen Project**.
+<<<<<<< HEAD
     2.  Select **Template \> Mobile v5.5 \> Web Application \> TAU SinglePage**.
+=======
+    2.  Select **Template \> Mobile v5.0 \> Web Application \> TAU SinglePage**.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
         ![Creating a new project](media/simple_ui_tau_create_mw.png)
 

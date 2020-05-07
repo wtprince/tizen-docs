@@ -1,20 +1,36 @@
 # Installing Tizen Studio for RT
 
+<<<<<<< HEAD
 To install Tizen Studio for RT:
 
 1. Accept the software license.
 
    The license contains important legal notices for using Tizen Studio. Read the complete agreement, and click **Accept** only if you agree with the license statement:
+=======
+To install the Tizen Studio for RT:
+
+1. Accept the software license.
+
+   The license contains important legal notices for using the Tizen Studio. Read the complete agreement, and click **Accept** only if you agree with the license statement:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ![Software license agreement](./media/rt_install_license.png)
 
 2. Configure the installation directory.
 
+<<<<<<< HEAD
    Tizen Studio for RT and its data directory are installed in the location specified in the Installation Settings step. To change the directory, click the **...** button and specify a new directory. If the new directory is valid, click **Install**:
 
    ![Installation settings](./media/rt_install_settings.png)
 
 3. Install ssssnhe Tizen Studio for RT.
+=======
+   The Tizen Studio for RT and its data directory are installed in the location specified in the Installation Settings step. To change the directory, click the **...** button and specify a new directory. If the new directory is valid, click **Install**:
+
+   ![Installation settings](./media/rt_install_settings.png)
+
+3. Install the Tizen Studio for RT.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    After you click **Install**, the installer installs the required packages and tools in the specified directory. You can monitor the installation process or cancel the installation. The installation process is completed in a few minutes, unless you cancel it.
 
@@ -30,6 +46,7 @@ To install Tizen Studio for RT:
 
    ![Package Manager](./media/rt_install_package.png)
 
+<<<<<<< HEAD
 5. Launch Tizen Studio for RT.
 
    After launching Tizen Studio for RT from the application shortcut, select a workspace for your development:
@@ -39,6 +56,17 @@ To install Tizen Studio for RT:
 The following figure illustrates on launching Tizen Studio for RT:
 
 ![Launching Tizen Studio for RT](./media/rt_running_studio.png)
+=======
+5. Launch the Tizen Studio for RT.
+
+   After launching the Tizen Studio for RT from the application shortcut, select a workspace for your development:
+
+   ![Launch the IDE](./media/rt_install_launch.png)
+
+The following figure illustrates on launching the Tizen Studio for RT:
+
+![Launching the Tizen Studio for RT](./media/rt_running_studio.png)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ## Related information
 * Dependencies

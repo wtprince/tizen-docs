@@ -1,8 +1,14 @@
 # Get Started
 
+<<<<<<< HEAD
 Tizen Studio for RT allows you to easily develop and test your RT application:
 
 1. [Install Tizen Studio for RT](install.md) on your computer.
+=======
+The Tizen Studio for RT allows you to easily develop and test your RT application:
+
+1. [Install the Tizen Studio for RT](install.md) on your computer.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 2. [Manage the project](create.md), including creating a new Tizen Studio for RT project, creating application resources, and building the project.
 3. [Flash the project](flash.md) on the board.
 4. [Use the serial terminal](terminal.md) to communicate with the board.
@@ -11,18 +17,30 @@ Tizen Studio for RT allows you to easily develop and test your RT application:
 
 ## Prerequisites
 
+<<<<<<< HEAD
 Check the following prerequisites before installing Tizen Studio for RT:
 
 - Java Development Kit (JDK) requirements
 
   You must install a JDK 8 to use Tizen Studio. Do not install OpenJDK.
+=======
+Check the following prerequisites before installing the Tizen Studio for RT:
+
+- Java Development Kit (JDK) requirements
+
+  You must install a JDK 8 to use the Tizen Studio. Do not install OpenJDK.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
   To install the appropriate JDK version for your Ubuntu system, go to the Ubuntu Web site and follow the detailed instructions for installing the Oracle&reg; JDK version 8.
 
 
 - Operating system and hardware requirements
 
+<<<<<<< HEAD
   The following table lists the supported operating systems and hardware requirements for Tizen Studio for RT.
+=======
+  The following table lists the supported operating systems and hardware requirements for the Tizen Studio for RT.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
   **Table: Operating system and hardware requirements**
 

@@ -4,11 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../../scripts/snippet.js"></script><title>File API</title>
+<<<<<<< HEAD
 <meta data-version="5.0" data-profile="mobile">
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::File">
 <div class="supported-platforms"><img class="mobile-mandatory emulator" title="Mandatory, Supported by Tizen Mobile emulator" src="../mobile_s_w.png"></div>
+=======
+</head>
+<body id="page-content" onload="prettyPrint()">
+<div class="api" id="::File">
+ <div class="supported-platforms"><img class="mobile-mandatory emulator" title="Mandatory, Supported by Tizen Mobile emulator" src="../mobile_s_w.png"></div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="title"><h1>File API</h1></div>
 <div class="brief">
  This plugin implements a File API allowing read/write access to files residing on the device.
@@ -31,7 +38,15 @@ for accessing only external storage using this API, a privilege <a href="http://
           <li>
 for accessing internal and external storage using this API, privileges (<a href="http://tizen.org/privilege/mediastorage">http://tizen.org/privilege/mediastorage</a> and <a href="http://tizen.org/privilege/externalstorage">http://tizen.org/privilege/externalstorage</a>) must be provided.          </li>
           <li>
+<<<<<<< HEAD
 Storage privileges are privacy-related privileges and there is a need of asking user directly with proper pop-up. Please refer to <a href="../ppm.html">Privacy Privilege API</a> for more details.          </li>
+=======
+<<<<<<< HEAD
+Storage privileges are privacy-related privileges and there is a need of asking user directly with proper pop-up. Please refer to <a href="../ppm.html">Privacy Privilege API</a> for more details.          </li>
+=======
+Storage privileges are privacy-related privileges and there is a need of asking user directly with proper pop-up. Please refer to <a href="ppm.html">Privacy Privilege API</a> for more details.          </li>
+>>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         </ul>
        </div>
 <p><span class="version">Since: </span>
@@ -256,9 +271,12 @@ Storage privileges are privacy-related privileges and there is a need of asking 
 See <a href="https://www.w3.org/TR/FileAPI/#blob-section">The Blob Interface and Binary Data</a>.
           </div>
 <pre class="webidl prettyprint">  typedef <a href="#Blob">Blob</a> Blob;</pre>
+<<<<<<< HEAD
 <p><span class="version">Since: </span>
  3.0
           </p>
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <div class="typedef" id="WriteData">
 <a class="backward-compatibility-anchor" name="::File::WriteData"></a><h3>1.2. WriteData</h3>
@@ -365,12 +383,16 @@ var event = new ProgressEvent("submit", eventInit);
 </div>
 <div class="constructors">
 <h4 id="ProgressEvent::constructor">Constructors</h4>
+<<<<<<< HEAD
 <dl>
 <dt class="method" id="">
 <a class="backward-compatibility-anchor" name=""></a><code><b><span class="methodName">Constructor (DOMString, <a href="#ProgressEventInit">ProgressEventInit</a>)</span></b></code>
 </dt>
 <pre class="webidl prettyprint">ProgressEvent(DOMString type, optional <a href="#ProgressEventInit">ProgressEventInit</a> eventInitDict);</pre>
 </dl>
+=======
+<dl><pre class="webidl prettyprint">ProgressEvent(DOMString type, optional <a href="#ProgressEventInit">ProgressEventInit</a> eventInitDict);</pre></dl>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <div class="attributes">
 <h4>Attributes</h4>
@@ -1756,7 +1778,15 @@ requestFileSystem(TEMPORARY, 100, function(fs)
 <p><span class="version">Since: </span>
  3.0
           </p>
+<<<<<<< HEAD
         
+=======
+<<<<<<< HEAD
+
+=======
+        
+>>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
       <div class="methods">
 <h4>Methods</h4>
 <dl>
@@ -2018,9 +2048,12 @@ Otherwise, if no other error occurs, getFile must return a FileEntry correspondi
 <pre class="webidl prettyprint">  [NoInterfaceObject] interface DirectoryReader {
     void readEntries(<a href="#EntriesCallback">EntriesCallback</a> onsuccess, optional <a href="#ErrorCallback">ErrorCallback</a>? onerror) raises(FileException);
   };</pre>
+<<<<<<< HEAD
 <p><span class="version">Since: </span>
  3.0
           </p>
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <p><span class="privilegelevel">Privilege level: </span>
  public
           </p>
@@ -2095,16 +2128,27 @@ Otherwise, if no other error occurs, getFile must return a FileEntry correspondi
     void createWriter(<a href="#FileWriterCallback">FileWriterCallback</a> onsuccess, optional <a href="#ErrorCallback">ErrorCallback</a>? onerror);
     void file(<a href="#FileCallback">FileCallback</a> onsuccess, optional <a href="#ErrorCallback">ErrorCallback</a> onerror);
   };</pre>
+<<<<<<< HEAD
 <p><span class="version">Since: </span>
  3.0
           </p>
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <p><span class="privilegelevel">Privilege level: </span>
  public
           </p>
 <p><span class="privilege">Privilege: </span>
  http://tizen.org/privilege/filesystem.read
           </p>
+<<<<<<< HEAD
         
+=======
+<<<<<<< HEAD
+
+=======
+        
+>>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
       <div class="methods">
 <h4>Methods</h4>
 <dl>
@@ -2262,12 +2306,16 @@ document.addEventListener("deviceready", deviceReady, true);
 </div>
 <div class="constructors">
 <h4 id="FileReader::constructor">Constructors</h4>
+<<<<<<< HEAD
 <dl>
 <dt class="method" id="">
 <a class="backward-compatibility-anchor" name=""></a><code><b><span class="methodName">Constructor ()</span></b></code>
 </dt>
 <pre class="webidl prettyprint">FileReader();</pre>
 </dl>
+=======
+<dl><pre class="webidl prettyprint">FileReader();</pre></dl>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <div class="consts">
 <h4>Constants</h4>
@@ -2728,9 +2776,12 @@ ByteLength: 3
 <a class="backward-compatibility-anchor" name="::File::FileWriter::DONE"></a><span class="name">DONE</span><div class="brief">
  Above constants describe current state of FileWriter object.
             </div>
+<<<<<<< HEAD
 <p><span class="version">Since: </span>
  3.0
             </p>
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <br><br>
 </li>
 </dl>
@@ -3124,9 +3175,12 @@ entry.createWriter(successCallback, errorCallback);
 <pre class="webidl prettyprint">  [Callback=FunctionOnly, NoInterfaceObject] interface ProgressCallback {
     void onsuccess(<a href="#ProgressEvent">ProgressEvent</a> event);
   };</pre>
+<<<<<<< HEAD
 <p><span class="version">Since: </span>
  3.0
           </p>
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="methods">
 <h4>Methods</h4>
 <dl>
@@ -3384,9 +3438,12 @@ entry.createWriter(successCallback, errorCallback);
  Used to supply a File as a response to a user query.
             </div>
 <div class="synopsis"><pre class="signature prettyprint">void handleEvent(<a href="#File">File</a> file);</pre></div>
+<<<<<<< HEAD
 <p><span class="version">Since: </span>
  3.0
             </p>
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="parameters">
 <p><span class="param">Parameters:</span></p>
 <ul>

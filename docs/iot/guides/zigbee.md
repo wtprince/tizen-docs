@@ -15,13 +15,21 @@ Following is the list of supported hardware and chipset combinations:
 - CEL's MeshConnect™ EM357 (external USB stick)
 
 > **Note**
+<<<<<<< HEAD
 > - This feature is supported in Tizen IoT.
+=======
+> - This feature is supported in the Tizen IoT.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 > - You can test the Zigbee functionality only on a target device. The [Emulator](../../application/tizen-studio/common-tools/emulator.md) does not support this feature.
 > - All callbacks in this module are called in the main loop context.
 
 ## Prerequisites
 
+<<<<<<< HEAD
 1. To make your application visible in Tizen Store only for devices that support the Zigbee feature, the application must specify the following feature in the `tizen-manifest.xml` file:
+=======
+1. To make your application visible in the Tizen Store only for devices that support the Zigbee feature, the application must specify the following feature in the `tizen-manifest.xml` file:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
     <feature name="http://tizen.org/feature/network.zigbee">true</feature>

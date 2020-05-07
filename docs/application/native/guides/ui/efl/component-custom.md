@@ -54,7 +54,11 @@ To customize a UI component:
 
 2. Create an EDJ file in the `/res/edje/` directory.
 
+<<<<<<< HEAD
    If you add the `custom.edc` file, Tizen Studio calls Edje tools automatically to build the final `custom.edj` file when building the project.
+=======
+   If you add the `custom.edc` file, the Tizen Studio calls Edje tools automatically to build the final `custom.edj` file when building the project.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    The EDJ file is installed under the application data path. You can get the full path of where the EDJ file is installed using the `app_get_resource()` function.
 

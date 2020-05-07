@@ -399,7 +399,15 @@ You can search and manage multimedia content locally, manipulate EXIF data in JP
   [Connectivity and Wireless](connectivity/connectivity.md)<br>
   [Data Storage and Management](data/data.md)<br>
   [Media and Camera](multimedia/overview.md)
+<<<<<<< HEAD
 - API Reference: [Content](../api/latest/device_api/tv/index.html#Content)
+=======
+<<<<<<< HEAD
+- API Reference: [Content](../api/latest/device_api/tv/index.html#Content)
+=======
+- API Reference: [Content](../api/latest/device_api/tv/index.html#Contents)
+>>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </td>
 </tr>
 <tr>
@@ -708,7 +716,11 @@ The following table lists the features provided by the [Wearable Web W3C/HTML5 a
 >
 > To determine the availability of optional APIs, use the `tizen.systeminfo.getCapability()` method of the System Information API (in [mobile](../api/latest/device_api/mobile/tizen/systeminfo.html), [wearable](../api/latest/device_api/wearable/tizen/systeminfo.html), and [TV](../api/latest/device_api/tv/tizen/systeminfo.html) applications).
 >
+<<<<<<< HEAD
 > Note that all mandatory APIs are supported on the Tizen emulators, while the optional APIs may or may not be supported. For more information on support for each API, see [Tizen Web Device API Reference](../api/latest/device_api/mobile/index.html).
+=======
+> Note that all mandatory APIs are supported on the Tizen Emulators, while the optional APIs may or may not be supported. For more information on support for each API, see [Tizen Web Device API Reference](../api/latest/device_api/mobile/index.html).
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 >
 > To compare API support between Web Device API modules and native API modules, see [Tizen 3.0 Native and Web API Modules](media/tizen-3.0-native-web-api-modules.pdf).
 

@@ -2,7 +2,11 @@
 
 You can use locale-specific calendar features by retrieving date and time information. You can also change the date, time, and time zone, and make some date- and time-related calculations. The Time API overcomes several limitations of the JavaScript `Date` object.
 
+<<<<<<< HEAD
 The Time API is mandatory for Tizen Mobile, Wearable, and TV profiles, which means that it is supported on all mobile, wearable, and TV devices. All mandatory APIs are supported on the Tizen emulators.
+=======
+The Time API is mandatory for Tizen mobile, wearable, and TV profiles, which means that it is supported on all mobile, wearable, and TV devices. All mandatory APIs are supported on the Tizen Emulators.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 Locale refers to the set of information that is specific to a language and a country. It affects the numeric formats (decimal and list separators), date formats, and the character sorting order. It determines how a locale-specific functionality behaves; for example, how numbers are displayed or strings converted to dates.
 

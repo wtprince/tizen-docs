@@ -1,5 +1,6 @@
 # Create Your First Tizen Mobile Native Application
 
+<<<<<<< HEAD
 **Welcome to Tizen Mobile Native application development!**
 
 A mobile native application is created using the C language, and can be run on Tizen mobile devices. The application uses the native API, which provides various interfaces to the device hardware allowing you to take advantage of numerous capabilities tailored to run with limited device resources.
@@ -11,6 +12,19 @@ Study the following instructions to help familiarize yourself with the Tizen [Na
     For more information on the installation process, see the [installation guide](../../../tizen-studio/setup/install-sdk.md).
 
 2. [Create a mobile native project](#create) using Tizen Studio.
+=======
+**Welcome to Tizen mobile native application development!**
+
+A mobile native application is created using the C language, and can be run on Tizen mobile devices. The application uses the native API, which provides various interfaces to the device hardware allowing you to take advantage of numerous capabilities tailored to run with limited device resources.
+
+Study the following instructions to help familiarize yourself with the Tizen [native application development process](../../tutorials/process/app-dev-process.md) as well as using the Tizen Studio and installing the created application on the emulator or target device. With the instructions, you can create and run a basic mobile native application, which displays some text on the screen with no user interaction:
+
+1.  Before you get started with developing Tizen applications, download and install the [Tizen Studio](../../../tizen-studio/index.md).
+
+    For more information on the installation process, see the [installation guide](../../../tizen-studio/setup/install-sdk.md).
+
+2. [Create a mobile native project](#create) using the Tizen Studio.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     This step shows how you can use a predesigned project template that creates all the basic files and folders required for your project.
 
@@ -26,12 +40,20 @@ Study the following instructions to help familiarize yourself with the Tizen [Na
 
     This step shows how you can create the application UI and make small alterations to it to improve the usability of your application.
 
+<<<<<<< HEAD
 When you are developing a more complex application, you can take advantage of the [native tools included in Tizen Studio](../../../tizen-studio/native-tools/index.md) to ease the tasks of creating functionality and designing the application UI.
+=======
+When you are developing a more complex application, you can take advantage of the [native tools included in the Tizen Studio](../../../tizen-studio/native-tools/index.md) to ease the tasks of creating functionality and designing the application UI.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 <a name="create"></a>
 ## Creating a Project
 
+<<<<<<< HEAD
 The following example shows you how to create and configure a basic mobile native application project in Tizen Studio. An application project contains all the files that make up an application.
+=======
+The following example shows you how to create and configure a basic mobile native application project in the Tizen Studio. An application project contains all the files that make up an application.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 The following figure illustrates the application to be created. The application screen displays the **Hello Tizen** text and no user interaction is provided. If you click the **Back** key on the device, the application moves to the background.
 
@@ -41,7 +63,11 @@ The following figure illustrates the application to be created. The application 
 
 To create the application project:
 
+<<<<<<< HEAD
 1.  Launch Tizen Studio.
+=======
+1.  Launch the Tizen Studio.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 2. In the Tizen Studio menu, select **File \> New \> Tizen Project**.
 
@@ -97,7 +123,12 @@ You can see the created project in the **Project Explorer** view. The most impor
 
 ![Application in the Project Explorer](media/basic_app_project_explorer_mn.png)
 
+<<<<<<< HEAD
 > [!NOTE]
+=======
+> **Note**
+>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 > You can [view and modify the application configuration](#configuration) in the manifest editor. In this example, no configuration changes are required.
 
 Your application project is now ready for further actions. Next, build the application.
@@ -107,7 +138,11 @@ Your application project is now ready for further actions. Next, build the appli
 
 To view and modify the application configuration:
 
+<<<<<<< HEAD
 1.  In the **Project Explorer** view, double-click the `tizen-manifest.xml` file of the application. Tizen Studio opens the file in the manifest editor.
+=======
+1.  In the **Project Explorer** view, double-click the `tizen-manifest.xml` file of the application. The Tizen Studio opens the file in the manifest editor.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 2. In the manifest editor, view and modify the configuration details using the various tabs:
 
@@ -115,7 +150,11 @@ To view and modify the application configuration:
 
     - **Overview**: Define general information, such as the package, label, and icon of the application.
 
+<<<<<<< HEAD
     - **Features**: Define required software and hardware features. This information is used for application filtering in Tizen Store.
+=======
+    - **Features**: Define required software and hardware features. This information is used for application filtering in the Tizen Store.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     - **Privileges**: Define the security-sensitive APIs or API groups accessed and used by the application.
 
@@ -125,8 +164,14 @@ To view and modify the application configuration:
 
     - **Source**: View and edit the source code of the `tizen-manifest.xml` file. Changes made and saved on the other tabs are reflected in the source code and vice versa.
 
+<<<<<<< HEAD
         > [!NOTE]
         > The `tizen-manifest.xml` file must conform to both the XML file format and the Tizen Native application specification requirements. Editing the file in the **Source** tab is intended for advanced users only.
+=======
+        > **Note**
+        >
+        > The `tizen-manifest.xml` file must conform to both the XML file format and the Tizen native application specification requirements. Editing the file in the **Source** tab is intended for advanced users only.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 3. To save any changes, in the Tizen Studio menu, select **File > Save All**.
 
@@ -189,7 +234,11 @@ You can build the application in the following ways:
 
 -   **Automatically**
 
+<<<<<<< HEAD
     The automatic build means that Tizen Studio automatically rebuilds the application whenever you change a source or resource file and save the application project.
+=======
+    The automatic build means that the Tizen Studio automatically rebuilds the application whenever you change a source or resource file and save the application project.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     To use the automatic build:
 
@@ -262,18 +311,31 @@ To run the application on the emulator:
 
         If you have created multiple emulator instances, select the instance you want from the combo box in the toolbar before selecting to run the application. If you select an offline emulator, it is automatically launched when you select to run the application.
 
+<<<<<<< HEAD
         ![Selecting the emulator to use](media/app_run_multiple_emulators_m.png)
+=======
+        ![Selecting the emulator to use](media/app_run_multiple_emulators.png)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     2. Confirm that the application launches on the emulator.
 
         ![Application running in the emulator](media/emulator_running_mn.png)
 
+<<<<<<< HEAD
         > [!NOTE]
+=======
+        > **Note**
+        >
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         > If the emulator display has switched off, you cannot see the application launch. To see the application on the emulator screen:
         > 1.  To switch the display on, in the key window next to the emulator screen, click `Power`.
         > 2.  On the home screen, swipe left.
 
+<<<<<<< HEAD
         While the application is running, the **Log** view in Tizen Studio shows the log, debug, and exception messages from the methods defined in the log macros. To see the view, in the Tizen Studio menu, go to **Window \> Show View \> Log**.
+=======
+        While the application is running, the **Log** view in the Tizen Studio shows the log, debug, and exception messages from the methods defined in the log macros. To see the view, in the Tizen Studio menu, go to **Window \> Show View \> Log**.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 For more information on using the emulator features, see [Using Emulator Control Keys, Menu, and Panel](../../../tizen-studio/common-tools/emulator-control-panel.md) and [Using Extended Emulator Features](../../../tizen-studio/common-tools/emulator-features.md).
 
@@ -285,7 +347,11 @@ To run the application on a target device:
 1.  Connect the mobile target device to your computer using a USB cable.
 2. Generate an author certificate.
 
+<<<<<<< HEAD
     Before you run the application, you must [sign your application package with a certificate profile](../../../tizen-studio/common-tools/certificate-registration.md) in Tizen Studio.
+=======
+    Before you run the application, you must [sign your application package with a certificate profile](../../../tizen-studio/common-tools/certificate-registration.md) in the Tizen Studio.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 3. Run the application:
     1.  In the **Device Manager**, select the device.
@@ -300,9 +366,18 @@ To run the application on a target device:
 
         If you have both a connected device and existing emulator instances, select the device from the combo box in the toolbar before selecting to run the application.
 
+<<<<<<< HEAD
     3. Confirm that the application launches on the target device.
 
     > [!NOTE]
+=======
+        ![Selecting the device to use](media/app_run_multiple_emulators.png)
+
+    3. Confirm that the application launches on the target device.
+
+    > **Note**
+    >
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     > The application is launched using the default debug run configuration. To create and use another configuration:
     > 1.  In the `Project Explorer` view, right-click the project and select `Run As > Run Configurations`.
     > 2.  In the `Run Configurations` window, click the `New Launch Configuration` icon (![New Launch Configuration icon](media/run_new_config_wn.png)), define the configuration details, and launch the application by clicking `Run`.

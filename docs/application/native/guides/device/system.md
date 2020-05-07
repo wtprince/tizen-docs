@@ -24,7 +24,10 @@ To obtain the information, query a feature or system key.
 
 - [Feature keys](#feature)
    - [Account](#account)
+<<<<<<< HEAD
    - [Accessibility](#accessibility)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
    - [Application history](#apphistory)
    - [Attach panel](#attachpanel)
    - [Battery](#battery)
@@ -59,9 +62,13 @@ To obtain the information, query a feature or system key.
    - [Shell](#shell)
    - [Sip](#sip)
    - [Speech](#speech)
+<<<<<<< HEAD
    - [Storage](#storage)
    - [System setting](#systemsetting)
    - [Thermistor](#thermistor)
+=======
+   - [System setting](#systemsetting)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
    - [USB](#usb)
    - [Vibration](#vibration)
    - [Vision](#vision)
@@ -70,7 +77,10 @@ To obtain the information, query a feature or system key.
 - [System keys](#system)
 
    - [Build](#build)
+<<<<<<< HEAD
    - [Device type](#devicetype)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
    - [Manufacturer](#manufacturer)
    - [Model name](#modelname)
    - [Platform](#platformsys)
@@ -158,6 +168,7 @@ The following table lists the account feature keys:
 | `http://tizen.org/feature/account`      | `bool` | The platform returns `true` for this key, if the device supports the Account Manager API. |
 | `http://tizen.org/feature/account.sync` | `bool` | The platform returns `true` for this key, if the device supports the Sync Manager API. |
 
+<<<<<<< HEAD
 The following table lists the accessibility feature keys:
 
 <a name="accessibility"></a>
@@ -169,6 +180,8 @@ The following table lists the accessibility feature keys:
 | `http://tizen.org/feature/accessibility.negative` | `bool` | The platform returns `true` for this key, if the device supports the accessibility negative feature. |
 
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 The following table lists the application history feature keys:
 
 <a name="apphistory"></a>
@@ -410,10 +423,13 @@ The following table lists the network feature keys:
 | `http://tizen.org/feature/network.bluetooth.hid.device` | `bool` | The platform returns `true` for this key, if the device supports the Bluetooth Human Interface Device (HID) device feature. |
 | `http://tizen.org/feature/network.bluetooth.le` | `bool` | The platform returns `true` for this key, if the device supports Bluetooth Low Energy (BLE). |
 | `http://tizen.org/feature/network.bluetooth.le.5_0` | `bool` | The platform returns `true` for this key, if the device supports Bluetooth 5 feature. |
+<<<<<<< HEAD
 | `http://tizen.org/feature/network.bluetooth.le.gatt.client` | `bool` | The platform returns `true` for this key, if the device supports the Bluetooth Generic Attribute Profile (GATT) Client. |
 | `http://tizen.org/feature/network.bluetooth.le.gatt.server` | `bool` | The platform returns `true` for this key, if the device supports the Bluetooth Generic Attribute Profile (GATT) Server. |
 | `http://tizen.org/feature/network.bluetooth.le.ipsp` | `bool` | The platform returns `true` for this key, if the device supports Bluetooth Internet Protocol Support Profile (IPSP). |
 | `http://tizen.org/feature/network.bluetooth.oob` | `bool` | The platform returns `true` for this key, if the device supports Bluetooth Out Of Band (OOB). |
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 | `http://tizen.org/feature/network.bluetooth.opp` | `bool` | The platform returns `true` for this key, if the device supports Bluetooth Object Push Profile (OPP). |
 | `http://tizen.org/feature/network.bluetooth.phonebook.client` | `bool` | The platform returns `true` for this key, if the device supports the Bluetooth Phone Book Access (PBAP) client feature. |
 | `http://tizen.org/feature/network.ethernet` | `bool` | The platform returns `true` for this key, if the device supports Ethernet. |
@@ -458,7 +474,10 @@ The following table lists the network feature keys:
 | `http://tizen.org/feature/network.wifi.direct.service_discovery` | `bool` | The platform returns `true` for this key and the `http://tizen.org/feature/network.wifi` key, if the device supports Wi-Fi Direct service discovery. |
 | `http://tizen.org/feature/network.wifi.tdls` | `bool` | The platform returns `true` for this key, if the device supports the Wi-Fi Tunneled Direct Link Setup (TDLS). |
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 The following table lists the OAuth 2.0 feature keys:
 
 <a name="oauth2"></a>
@@ -658,6 +677,7 @@ The following table lists the speech feature keys:
 | `http://tizen.org/feature/speech.recognition` | `bool` | The platform returns `true` for this key, if the device supports speech recognition (STT). |
 | `http://tizen.org/feature/speech.synthesis` | `bool` | The platform returns `true` for this key, if the device supports speech synthesis (TTS). |
 
+<<<<<<< HEAD
 The following table lists the external storage feature keys:
 
 <a name="storage"></a>
@@ -667,6 +687,8 @@ The following table lists the external storage feature keys:
 |-------------------------------------|--------|------------------------------------------|
 | `http://tizen.org/feature/storage.external` | `bool` | The platform returns `true` for this key, if the device supports external storage. |
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 The following table lists the system setting feature keys:
 
 <a name="systemsetting"></a>
@@ -680,6 +702,7 @@ The following table lists the system setting feature keys:
 | `http://tizen.org/feature/systemsetting.lock_screen` | `bool` | The platform returns `true` for this key and the `http://tizen.org/feature/systemsetting` key, if the device supports a way to change or get the lock screen wallpaper. |
 | `http://tizen.org/feature/systemsetting.notification_email` | `bool` | The platform returns `true` for this key and the `http://tizen.org/feature/systemsetting` key, if the device supports a way to change or get a ringtone for all email notifications. |
 
+<<<<<<< HEAD
 The following table lists the thermistor feature keys:
 
 <a name="thermistor"></a>
@@ -691,6 +714,8 @@ The following table lists the thermistor feature keys:
 | `http://tizen.org/feature/thermistor.cp` | `bool` | The platform returns `true` for this key, if the device supports a thermistor for the communications processor. |
 | `http://tizen.org/feature/thermistor.battery` | `bool` | The platform returns `true` for this key, if the device supports a thermistor for the battery. |
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 The following table lists the USB feature keys:
 
 <a name="usb"></a>
@@ -743,6 +768,7 @@ The following table lists the build system keys:
 | `http://tizen.org/system/build.variant`  | `String` | The platform returns the variant release information. The variant release information is made when the platform image is created. |
 | `http://tizen.org/system/build.release` | `String` | The platform returns the build version information. The build version information is made when the platform image is created. |
 
+<<<<<<< HEAD
 The following table lists the device type system keys:
 
 <a name="devicetype"></a>
@@ -752,6 +778,8 @@ The following table lists the device type system keys:
 |----------------------------------------|----------|------------------------------------------|
 | `http://tizen.org/system/device_type`  | `String` | The platform returns the device type name, which represents a device family the device belongs to. |
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 The following table lists the manufacturer keys:
 
 <a name="manufacturer"></a>

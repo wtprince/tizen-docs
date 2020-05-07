@@ -4,11 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>Content API</title>
+<<<<<<< HEAD
 <meta data-version="4.0" data-profile="wearable">
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::Content">
-<div class="supported-platforms"><img class="wearable-mandatory emulator" title="Mandatory, Supported by Tizen Wearable emulator" src="wearable_s_w.png"></div>
+ <div class="supported-platforms"><img class="wearable-mandatory emulator" title="Mandatory, Supported by Tizen Wearable emulator" src="wearable_s_w.png"></div>
 <div class="title"><h1>Content API</h1></div>
 <div class="brief">
  The Content API provides functionality to discover content such as images, videos, music, or others.
@@ -32,7 +35,11 @@ for accessing internal and external storage using this API, privileges (<a href=
 Storage privileges are privacy-related privileges and there is a need of asking user directly with proper pop-up. Please refer to <a href="ppm.html">Privacy Privilege API</a> for more details.          </li>
         </ul>
         <p>
+<<<<<<< HEAD
 For more information on the Content features, see <a href="/application/web/guides/data/stored-content">Stored Content Management</a>.
+=======
+For more information on the Content features, see <a href="https://developer.tizen.org/development/guides/web-application/data-storage-and-management/stored-content-management">Stored Content Management</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         </p>
         <p>
 Playlist functionality has been added in Tizen 2.3.
@@ -677,7 +684,11 @@ UnknownError: In any other error case.              </li>
             </p>
 <p><span class="remark">Remark: </span>
  Attributes available for <em>Content</em> objects filtering are listed in
+<<<<<<< HEAD
 <a href="/application/web/guides/data/data-filter#content-filter-attributes">Data Filtering and Sorting guide</a>.
+=======
+<a href="https://developer.tizen.org/development/guides/web-application/data-storage-and-management/data-filtering-and-sorting#content_filter">Data Filtering and Sorting guide</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </p>
 <div class="parameters">
 <p><span class="param">Parameters:</span></p>
@@ -3464,8 +3475,13 @@ It is used in <em>tizen.content.createPlaylist()</em>.
   enum ContentDirectoryStorageType { "INTERNAL", "EXTERNAL" };
   enum ContentType { "IMAGE", "VIDEO", "AUDIO", "OTHER" };
   enum AudioContentLyricsType { "SYNCHRONIZED", "UNSYNCHRONIZED" };
+<<<<<<< HEAD
   enum ImageContentOrientation { "NORMAL", "FLIP_HORIZONTAL", "ROTATE_180", "FLIP_VERTICAL", "TRANSPOSE", "ROTATE_90", "TRANSVERSE",
     "ROTATE_270" };
+=======
+  enum ImageContentOrientation { "NORMAL", "FLIP_HORIZONTAL", "ROTATE_180", "FLIP_VERTICAL", "TRANSPOSE", "ROTATE_90",
+    "TRANSVERSE", "ROTATE_270" };
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   <a href="tizen.html#Tizen">Tizen</a> implements <a href="#ContentManagerObject">ContentManagerObject</a>;
   [NoInterfaceObject] interface ContentManagerObject {
     readonly attribute <a href="#ContentManager">ContentManager</a> content;

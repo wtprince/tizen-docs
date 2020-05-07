@@ -12,11 +12,14 @@ The main features of the `Tizen.Applications.ApplicationManager` class include:
 -   Getting information on filtered applications
 
     For installed (but not necessarily running) applications, you can retrieve information with the [Tizen.Applications.ApplicationInfo](https://samsung.github.io/TizenFX/latest/api/Tizen.Applications.ApplicationInfo.html) class. You can also [retrieve information through a filter](#filter) with the [Tizen.Applications.ApplicationInfoFilter](https://samsung.github.io/TizenFX/latest/api/Tizen.Applications.ApplicationInfoFilter.html) class.
+<<<<<<< HEAD
 
 -   Getting information on the current application
 
     For current applications, you can [retrieve information](#manage_current) using the [Tizen.Applications](https://samsung.github.io/TizenFX/latest/api/Tizen.Applications.Application.html) class. You can use the retrieved information to manage the current application.
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 Iterator methods are used to travel through a list of applications. The `GetRunningApplicationsAsync()` method of the `Tizen.Applications.ApplicationManager` class is used for running applications and the `GetInstalledApplicationsAsync()` method is used for installed applications.
 
@@ -46,7 +49,11 @@ To manage the context of the currently running application, follow these steps:
 1.  Get the context of the currently running application.
 To get the context, create an instance of the [Tizen.Applications.ApplicationRunningContext](https://samsung.github.io/TizenFX/latest/api/Tizen.Applications.ApplicationRunningContext.html) class, with the ID of the application from which the context is being obtained as a parameter.
 
+<<<<<<< HEAD
     If you do not have the application ID, you can retrieve it as:
+=======
+1.  Get the context of the currently-running application by creating an instance of the [Tizen.Applications.ApplicationRunningContext](https://samsung.github.io/TizenFX/latest/api/Tizen.Applications.ApplicationRunningContext.html) class, with the ID of the application from which the context is being obtained as a parameter.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     ```
     string applicationId = ApplicationManager.GetAppId(Your PID);

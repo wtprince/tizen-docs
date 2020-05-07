@@ -17,14 +17,21 @@ The main features of the Media Controller API include:
 
   You can [send a request](#managing-requests) from the client to the server to modify various playback attributes. In the server, you can set up a listener to react to the client request and perform the requested task.
 
+<<<<<<< HEAD
 - Setting and getting the server icon URI
 
   You can [set the server icon URI](#setting-and-getting-server-icon-uri) and read it from the client.
+=======
+- Receiving notifications from the server
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Receiving notifications from the server
 
+<<<<<<< HEAD
   You can [receive notifications on changes made by the server](#receiving-notifications-from-server) by registering a listener with the `addPlaybackInfoChangeListener()` method.
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 - Sending custom commands
 
   You can [use the client to send commands](#send_custom_commands) with the `sendCommand()` method.
@@ -121,7 +128,11 @@ To manage the media controller features in your application, you must learn to s
 
 To manage the media controller features in your application, you must learn to handle requests from the client to the server:
 
+<<<<<<< HEAD
 1. Create a `MediaControllerChangeRequestPlaybackInfoCallback` object (in [mobile](../../api/latest/device_api/mobile/tizen/mediacontroller.html#MediaControllerChangeRequestPlaybackInfoCallback), [wearable](../../api/latest/device_api/wearable/tizen/mediacontroller.html#MediaControllerChangeRequestPlaybackInfoCallback), and [tv](../../api/latest/device_api/tv/tizen/mediacontroller.html#MediaControllerChangeRequestPlaybackInfoCallback) applications) to define listeners for getting the requests from a client.
+=======
+1. Create a `MediaControllerChangeRequestPlaybackInfoCallback` object (in [mobile](../../api/latest/device_api/mobile/tizen/mediacontroller.html#MediaControllerChangeRequestPlaybackInfoCallback) and [wearable](../../api/latest/device_api/wearable/tizen/mediacontroller.html#MediaControllerChangeRequestPlaybackInfoCallback) applications) to define listeners for getting the requests from a client.  
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   Each listener must invoke the appropriate function to perform the related update on the server and send an appropriate notification to the client. For example, the `onplaybackstaterequest` listener must use the `updatePlaybackState()` method to update the playback state.
 
    ```javascript
@@ -168,7 +179,11 @@ To manage the media controller features in your application, you must learn to h
    }
    ```
 
+<<<<<<< HEAD
 4. You can send a request from the client using the `sendPlaybackState()`, `sendPlaybackPosition()`, `sendShuffleMode()`, or `sendRepeatMode()` method of the `MediaControllerServerInfo` interface (in [mobile](../../api/latest/device_api/mobile/tizen/mediacontroller.html#MediaControllerServerInfo), [wearable](../../api/latest/device_api/wearable/tizen/mediacontroller.html#MediaControllerServerInfo), and [tv](../../api/latest/device_api/tv/tizen/mediacontroller.html#MediaControllerServerInfo) applications).
+=======
+4. You can send a request from the client using the `sendPlaybackState()`, `sendPlaybackPosition()`, `endShuffleMode()`, or `sendRepeatMode()` method of the `MediaControllerServerInfo` interface (in [mobile](../../api/latest/device_api/mobile/tizen/mediacontroller.html#MediaControllerServerInfo) and [wearable](../../api/latest/device_api/wearable/tizen/mediacontroller.html#MediaControllerServerInfo) applications).  
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
    In the following example, send a request for the changing the playback state to paused using the `sendPlaybackState()` method:
 
    ```javascript
@@ -282,7 +297,11 @@ To manage the media controller features in your application, you must learn to s
       var commandReceiveListener = function(client, command, data) {
           console.log('command: ' + command + ' client: ' + client + ' data: ' + JSON.stringify(data));
 
+<<<<<<< HEAD
           return new tizen.mediacontroller.RequestReply(new tizen.Bundle({reply: 'response from server'}), 7);
+=======
+          return {reply: 'response from server'};
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
       };
       ```
 

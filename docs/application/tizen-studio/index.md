@@ -1,6 +1,10 @@
 # Tizen Studio
 
+<<<<<<< HEAD
 **Tizen Studio 3.7 is now launched!**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Download](media/ic_docs_download.png)  **Download**](https://developer.tizen.org/development/tizen-studio/download)
+=======
+**Tizen Studio 3.3 is now launched!**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Download](media/ic_docs_download.png)  **Download**](https://developer.tizen.org/development/tizen-studio/download)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 The Tizen Studio platform is based on a new version of Eclipse, so you can experience a stable, lightweight, and consistent user interface that is unique to the Tizen development environment. With Tizen Studio, you can select and install only those platforms and profiles you need.
 
@@ -8,6 +12,7 @@ In Tizen Studio, you can perform all the same development activities that were p
 
 
 > **Note**
+<<<<<<< HEAD
 >
 > Support for Windows 32-bit and Ubuntu 32-bit will be deprecated from Tizen Studio 3.5.
 
@@ -19,6 +24,19 @@ To develop your applications, use the set of tools provided by Tizen Studio:
 
 - [Native Tools](native-tools/index.md)
 
+=======
+> 
+> Support for Windows 32-bit and Ubuntu 32-bit will be deprecated from the next version of Tizen Studio.
+
+To develop your applications, use the set of tools provided by the Tizen Studio:
+
+- [Setup](setup/install-sdk.md)
+
+  Learn about installing and updating the Tizen Studio. You may need to install additional packages to develop applications for various platforms.
+
+- [Native Tools](native-tools/index.md)
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   Learn about the available native application development tools. Native applications are developed using the C programming language. You can create an application project, edit the code to meet your needs, and run the application on the emulator or a target device.
 
 - [Web Tools](web-tools/index.md)
@@ -31,11 +49,19 @@ To develop your applications, use the set of tools provided by Tizen Studio:
 
 - [Tizen Studio for RT](rt-ide/overview.md)
 
+<<<<<<< HEAD
   Learn about Tizen Studio for RT and how you can develop lightweight RTOS-based applications.
 
 - [Configurable SDK](configurable-sdk/configurable-sdk.md)
 
   Learn about using Tizen Studio to develop applications in a customizable Tizen platform environment.
+=======
+  Learn about the Tizen Studio for RT and how you can develop lightweight RTOS-based applications.
+
+- [Configurable SDK](configurable-sdk/configurable-sdk.md)
+
+  Learn about using the Tizen Studio to develop applications in a customizable Tizen platform environment.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 
 Tizen Studio contains many tools familiar from the old Tizen SDK, but with some improvements. The following list describes the main changes:

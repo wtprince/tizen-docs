@@ -36,7 +36,11 @@ The device main menu does not contain any icons for service applications, becaus
 
 To enable your application to use the service application functionality:
 
+<<<<<<< HEAD
 1. To make your application visible in Tizen Store only for devices that support the Web service application, the application must specify the following feature in the `config.xml` file:
+=======
+1. To make your application visible in the Tizen Store only for devices that support the Web service application, the application must specify the following feature in the `config.xml` file:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    <widget>
@@ -226,7 +230,11 @@ You can use a selection of the following Tizen TV Web Device APIs to interact wi
 
 | API                                      | Description                              |
 | ---------------------------------------- | ---------------------------------------- |
+<<<<<<< HEAD
 | [Tizen](../../api/latest/device_api/tv/tizen/tizen.html) | The base object for accessing Tizen TV Web Device APIs. |
+=======
+| [Tizen](../../api/latest/device_api/tv/tizen/tizen.html) | The base object for accessing the Tizen TV Web Device APIs. |
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 | [Alarm](../../api/latest/device_api/tv/tizen/alarm.html) | This API provides methods for setting and unsetting alarms. |
 | [Application](../../api/latest/device_api/tv/tizen/application.html) | This API provides information about the currently-running and installed applications and ways to launch other applications.<br>Note that the `getRequestedAppControl()` method is only valid inside the `onRequest()` callback. |
 | [Package](../../api/latest/device_api/tv/tizen/package.html) | This API provides methods to install and uninstall Tizen packages and to get information about installed packages. |

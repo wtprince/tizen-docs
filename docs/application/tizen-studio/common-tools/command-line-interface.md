@@ -127,7 +127,11 @@ tizen create <sub-command> [options]
 
 | Sub-command                              | Description                              |
 |------------------------------------------|------------------------------------------|
+<<<<<<< HEAD
 | `native-project [options]` or `web-project [options]` | Create the Tizen Native or Web project.<br />Options are:<br />`-p`, `--profile`: Specifies the profile name.<br />`-t`, `--template`: Specifies the template name.<br />`-n`, `--name`: Specifies the project name.<br />`--`: Specifies the destination directory where the project is created. |
+=======
+| `native-project [options]` or `web-project [options]` | Create the Tizen native or Web project.<br />Options are:<br />`-p`, `--profile`: Specifies the profile name.<br />`-t`, `--template`: Specifies the template name.<br />`-n`, `--name`: Specifies the project name.<br />`--`: Specifies the destination directory where the project is created. |
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 **Examples:**
 

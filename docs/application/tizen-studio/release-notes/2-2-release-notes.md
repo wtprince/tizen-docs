@@ -38,7 +38,11 @@
 - Web and Native IDE
     -   Since Tizen Studio 2.0, the Connection Explorer has been replaced with the Device Manager, which can cause errors in the Connection Explorer view. You can fix this in two ways:
         -   Reset the perspective on UI - In the Tizen Studio menu, select **Window &gt; Perspective &gt; Reset Perspective**.
+<<<<<<< HEAD
         -   Run the command - Update to Tizen Studio version 2.0 and above, run the `eclipse.exe -clean -clearPersistedState` command. Launch Tizen Studio normally.
+=======
+        -   Run the command - Update to Tizen Studio version 2.0 and above, run the `eclipse.exe -clean -clearPersistedState` command. Launch the Tizen Studio normally.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     - You can create unit tests for Tizen 2.3.2 and higher version projects only. Tizen Studio currently does not support unit testing for all earlier versions.
     

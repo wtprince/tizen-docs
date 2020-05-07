@@ -21,6 +21,7 @@ The [Tizen.Multimedia.AudioPlayback](https://samsung.github.io/TizenFX/latest/ap
 Your application must define the following PCM data settings:
 
 -   Audio channels:
+<<<<<<< HEAD
     -   `Mono` : Mono (1 channel)
     -   `Stereo` : Stereo (2 channels)
     -   `MultiChannel3` : Multi channel (3 channels)
@@ -29,12 +30,20 @@ Your application must define the following PCM data settings:
     -   `MultiChannel6` : Multi channel (6 channels)
     -   `MultiChannel7` : Multi channel (7 channels)
     -   `MultiChannel8` : Multi channel (8 channels)
+=======
+    -   `1` : Mono (1 channel)
+    -   `2` : Stereo (2 channels)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 -   Audio sample type:
     -   `U8` : Unsigned 8-bit PCM
     -   `S16LE` : Signed 16-bit PCM, little endian
     -   `S24LE` : Signed 24-bit PCM, little endian
+<<<<<<< HEAD
     -   `S24Packed` : Signed 24 bit PCM in LSB of 32 bit words, little endian
     -   `S32LE` : Signed 32 bit PCM, little endian
+=======
+    -   `S24PackedIn32LE` : Signed 24 bit PCM in LSB of 32 bit words, little endian
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 -   Audio sample rate:
     -   8000 \~ 192000 Hz
 

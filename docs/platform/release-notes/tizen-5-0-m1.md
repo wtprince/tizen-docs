@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tizen 5.0 Public M1
 
 Release date: May 31, 2018
@@ -24,6 +25,16 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
 ### System (Kernel and System framework)
 
 #### New and changed features
+=======
+# Tizen 5.0 Public M1 Release Notes
+
+Release date: May. 31, 2018
+
+
+## System (Kernel and System framework)
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Security improvement on D-Bus
   - Default deny is applied to D-Bus/Cynara conf files.
@@ -46,7 +57,11 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
   - Usb-host
     - C# TCT is improved.
 
+<<<<<<< HEAD
 #### Fixes
+=======
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Deviced
   - Developed safe unmount on writable partitions.
@@ -55,14 +70,24 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
 - Dlog
   - Crash or blocking issues are fixed.
 
+<<<<<<< HEAD
 #### Known Issues
+=======
+### Known Issues
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - dbus-glib (deprecated library) is being removed.
 
 
+<<<<<<< HEAD
 ### System (Base)
 
 #### New and changed features
+=======
+## System (Base)
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Upgraded the following open source libraries:
   - augeas (1.10.1)
@@ -103,15 +128,25 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
     - system_settings_add_changed_cb()
     - system_settings_remove_changed_cb()
 
+<<<<<<< HEAD
 #### Fixes
+=======
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - upstream/json-c
   - The libjson package name has been changed to libjson4.
 
 
+<<<<<<< HEAD
 ### Application framework
 
 #### New and changed features
+=======
+## Application framework
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - TIDL (Tizen Interface Definition Language), rpc-port
   - Introduced a new app rpc-port to app IPC mechanism.
@@ -119,7 +154,11 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
   - Applications can expose RPC style service interface to other applications with TIDL.
   - Native code is generated from the TIDL with tidlc compiler.
   - C, C++, C# languages are supported.
+<<<<<<< HEAD
   - tidlc compiler will be released along with Tizen Studio.
+=======
+  - tidlc compiler will be released along with the Tizen Studio.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 - Watchface complication framework and stylize editable feature support:
   - Applications can provide custom complication data with the new watchface complication provider API.
   - Watchface applications can receive data from the complication providers.
@@ -127,14 +166,24 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
 - Widget framework refactoring:
   - Screen connector library is rewritten in object-oriented design.
 - Package Manager
+<<<<<<< HEAD
   - Added API for changing applications' icon.
+=======
+  - Added API for changing applications’ icon.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   - Changed some enum values for fixing errata.
   - Added new enum value for extended storage.
 
 
+<<<<<<< HEAD
 ### Window system
 
 #### New and changed features
+=======
+## Window system
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Wayland
   - Upgraded the opensource wayland to version 1.14.0.
@@ -198,7 +247,11 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
     - Added the SPIRV-Tools package.
     - Added the SPIRV-Headers package.
 
+<<<<<<< HEAD
 #### Fixes
+=======
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Enlightenment wayland display server
   - Fixed attempting to flush window buffer for the keyboard window.
@@ -207,9 +260,15 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
   - Fixed many code defects detected by the static analysis tool.
 
 
+<<<<<<< HEAD
 ### Graphics engine
 
 #### New and changed features
+=======
+## Graphics engine
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - DALi (3D UI Toolkit)
   - Common
@@ -245,7 +304,11 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
 - Evas Render Engine
   - Support tbm gl/sw rendering engine for EFL 1.20.
 
+<<<<<<< HEAD
 #### Fixes
+=======
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - DALi (3D UI Toolkit)
   - Loading of compressed texture formats bug is fixed.
@@ -254,16 +317,26 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
   - Bug of glGetString in EvasGL is fixed.
   - Resource leak in evas engines is fixed.
 
+<<<<<<< HEAD
 #### Known Issues
+=======
+### Known Issues
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 - DALi (3D UI Toolkit)
   - Indicator is not working properly.
 - Evas Render Engine
   - Multiple EvasGL Images are not working properly.
 
 
+<<<<<<< HEAD
 ### UI framework
  
 #### New and changed features
+=======
+## UI framework
+ 
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - EFL
   - Version 1.16 is upgraded to 1.20.
@@ -293,29 +366,47 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
   - Added TTS API for repeat function.
   - Added new APIs for supporting third party voice control engine.
 
+<<<<<<< HEAD
 #### Fixes
+=======
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 - Fixed bugs.
 - Added Thread-safety check.
 - Improved evas rendering performance.
 - Stabilized evas rendering mechanism.
 
+<<<<<<< HEAD
 #### Known Issues
+=======
+### Known Issues
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 - CBHM (Clip Board History Manager) is not work properly.
 - Ector supports only basic functionalities compared to Cairo.
 - SVG morphing animation supports only in EDC.
 - Elementary focus manager is disabled (Legacy focus mechanism is applied).
 
 
+<<<<<<< HEAD
 ### Multimedia framework
 
 #### New and changed features
+=======
+## Multimedia framework
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Media Player
   - Added support for spherical video playback.
   - Added support for ReplayGain.
   - Removed session based audio API.
   - Pre-condition of setting ROI area API is changed.
+<<<<<<< HEAD
   - The "player_set_display()" must be called in the main thread of application by restriction of upgraded EFL.
+=======
+  - The “player_set_display()” must be called in the main thread of application by restriction of upgraded EFL.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 - MediaCodec
   - Added H/W resource management.
   - Added the error enum for resource conflict.
@@ -327,6 +418,7 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
   - Increase the maximum camera number.(2 -> 10)
   - Added new APIs for hue.
   - A display ROI area can be set before display mode is set as ROI mode.
+<<<<<<< HEAD
   - The "camera_set_display()” must be called in main thread of application by restriction of upgraded EFL.
   - Added a dependency of libmm-display-interface.
     - Removed the dependencies of display related packages.
@@ -339,6 +431,25 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
     - To-Be: `<http://tizen.org/feature/media.audio_recording>`, `<http://tizen.org/feature/media.video_recording>`
   - New package is added to separate recorder API test program from capi-media-recorder package.
     - "capi-media-recorder-tool" must be installed to use "recorder_test".
+=======
+  - The “camera_set_display()” must be called in main thread of application by restriction of upgraded EFL.
+  - Added a dependency of libmm-display-interface.
+    - Removed the dependencies of display related packages.
+    - “libmm-display”  must be included in platform binary to use display related APIs.
+  - New package is added to separate camera API test program from “capi-media-camera” package.
+    - “capi-media-camera-tool” must be installed to use “camera_test”.
+- Recorder
+  - A related feature is changed.
+<<<<<<< HEAD
+    - As-Is: `<http://tizen.org/feature/camera>`, `<http://tizen.org/feature/microphone>`
+    - To-Be: `<http://tizen.org/feature/media.audio_recording>`, `<http://tizen.org/feature/media.video_recording>`
+=======
+    - As-Is: <http://tizen.org/feature/camera>, <http://tizen.org/feature/microphone>
+    - To-Be: <http://tizen.org/feature/media.audio_recording>, <http://tizen.org/feature/media.video_recording>
+>>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4
+  - New package is added to separate recorder API test program from capi-media-recorder package.
+    - “capi-media-recorder-tool” must be installed to use “recorder_test”.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 - Media Content
   - Added synchronous thumbnail creation API and old asynchronous API is deprecated.
   - Added support for contents moving among the internal, SD Card and USB Storage.
@@ -359,9 +470,15 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
   - Pulseaudio 5.0 -> 11.1
 
 
+<<<<<<< HEAD
 ### Network and connectivity
 
 #### New and changed features
+=======
+## Network and connectivity
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Network Firewall
   - Added support for in-bound/out-bound rule management.
@@ -406,7 +523,11 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
   - curl: 7.53.1 to 7.59.
   - bluez: 5.43 to 5.48.
 
+<<<<<<< HEAD
 #### Fixes
+=======
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Data Network
   - Removed a GDBus dependency in network related UGs (for example, ug-wifi-efl, ug-wifi-direct, download-manager).
@@ -414,9 +535,15 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
   - IoTivity is stabilized in multi-thread programming.
 
 
+<<<<<<< HEAD
 ### Security
 
 #### New and changed features
+=======
+## Security
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Security Event Collector
   - Added support for kernel level audit.
@@ -428,14 +555,24 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
   - Provide basic guides for developers.
 
 
+<<<<<<< HEAD
 ### Service framework
 
 #### New and changed features
+=======
+## Service framework
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Account
   - Account module is added in TV profile.
 
+<<<<<<< HEAD
 #### Fixes
+=======
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Phonenumber-util
   - Fixed D-Bus policies.
@@ -469,9 +606,15 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
   - Fixed memory leak and potential defects.
 
 
+<<<<<<< HEAD
 ### Web framework
 
 #### New and changed features
+=======
+## Web framework
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Web engine
   - Applying latest open source chromium(blink) : from M56 to M63
@@ -480,9 +623,15 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
     - Web performance enhancement (V8 : ES 6 performance enhancement, Web Assembly default enabling)
 
 
+<<<<<<< HEAD
 ### Tizen .NET
 
 #### New and changed features
+=======
+## Tizen .NET
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - .NET Runtime
   - Merged memory optimization patches.
@@ -507,15 +656,25 @@ The Tizen 5.0 Public M1 release provides developers with the Tizen kernel, devic
   - Tizen.Security.Privilege.GetPrivacyPrivilegeStatus() is deprecated.
   - Added 360 videos support in Tizen.Multimedia.Player.
 
+<<<<<<< HEAD
 #### Known Issues
+=======
+### Known Issues
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Xamarin.Forms
   - For more information on the list of limitations, see [here](../../application/dotnet/api/xamarin-forms-limitations.md).
 
 
+<<<<<<< HEAD
 ### Experimental
 
 #### New and changed features
+=======
+## Experimental
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - nnfw: Neural Network Runtime (Experimental Release)
   - CPU/GPU acceleration support based on ACL(Arm Compute Library) (currently there are six operators).

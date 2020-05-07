@@ -3,6 +3,7 @@
 
 <toc label="API References" topic="html/cover_page.htm">
 
+<<<<<<< HEAD
 	<!-- 5.5 -->
 	<tizen-api version="5.5">
 		<tizen-api profile="mobile">
@@ -4091,6 +4092,8 @@
 		</tizen-api>
 	</tizen-api>
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 	<!-- 5.0 -->
 	<tizen-api version="5.0">
 		<tizen-api profile="mobile">
@@ -4296,7 +4299,11 @@
 							</topic>
 							<topic href="https://www.w3.org/TR/2015/WD-webaudio-20151208/" label="Web Audio API (Partial)">
 							</topic>
+<<<<<<< HEAD
 							<topic href="https://wicg.github.io/speech-api/" label="Web Speech (Partial)">
+=======
+							<topic href="https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html" label="Web Speech (Partial)">
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 							</topic>
 							<topic href="http://www.w3.org/TR/2012/WD-html-media-capture-20120712/" label="HTML Media Capture">
 							</topic>
@@ -4588,7 +4595,11 @@
 								</topic>
 								<topic label="Face Detection" href="group__CAPI__CONTENT__MEDIA__FACE__DETECTION__MODULE.html">
 								</topic>
+<<<<<<< HEAD
 								<topic label="Image Metadata" href="group__CAPI__CONTENT__MEDIA__IMAGE__META__MODULE.html">
+=======
+								<topic label="Image Metadata" href="group__CAPI__CONTENT__MEDIA__IMAGE__MODULE.html">
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 								</topic>
 								<topic label="Video Metadata" href="group__CAPI__CONTENT__MEDIA__VIDEO__META__MODULE.html">
 								</topic>
@@ -6218,7 +6229,11 @@
 							</topic>
 							<topic href="http://dev.w3.org/2011/webrtc/editor/archives/20121212/getusermedia.html" label="getUserMedia">
 							</topic>
+<<<<<<< HEAD
 							<topic href="https://wicg.github.io/speech-api/" label="Web Speech (Partial)">
+=======
+							<topic href="https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html" label="Web Speech (Partial)">
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 							</topic>
 						</topic>
 						<topic href="html/w3c_api/w3c_api_w.html#communication" label="Communication">
@@ -6272,7 +6287,11 @@
 			</topic>
 
 			<!-- 5.0 wearable native -->
+<<<<<<< HEAD
 			<topic label="5.0 Native Application" href="../org.tizen.native.wearable.apireference/index.html" invisible-node="true">
+=======
+			<topic label="5.0 Native Application" href="../org.tizen.wearable.wearable.apireference/index.html" invisible-node="true">
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 				<topic label="Wearable Native" href="../org.tizen.native.wearable.apireference/modules.html" invisible-node="true">
 					<topic label="The Basics of Tizen Native API Reference" href="index.html"/>
 						<topic label="Account" href="group__CAPI__ACCOUNT__FRAMEWORK.html">
@@ -6482,7 +6501,11 @@
 									</topic>
 									<topic label="Face Detection" href="group__CAPI__CONTENT__MEDIA__FACE__DETECTION__MODULE.html">
 									</topic>
+<<<<<<< HEAD
 									<topic label="Image Metadata" href="group__CAPI__CONTENT__MEDIA__IMAGE__META__MODULE.html">
+=======
+									<topic label="Image Metadata" href="group__CAPI__CONTENT__MEDIA__IMAGE__MODULE.html">
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 									</topic>
 									<topic label="Video Metadata" href="group__CAPI__CONTENT__MEDIA__VIDEO__META__MODULE.html">
 									</topic>
@@ -7921,6 +7944,10 @@
 						</topic>
 						<topic href="html/device_api/tv/index.html#TV Controls" label="TV Control">
 							<topic href="html/device_api/tv/tizen/tvaudiocontrol.html" label="TV Audio Control" ></topic>
+<<<<<<< HEAD
+=======
+							<topic href="html/device_api/tv/tizen/tvchannel.html" label="TV Channel" ></topic>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 							<topic href="html/device_api/tv/tizen/tvdisplaycontrol.html" label="TV Display Control" ></topic>
 							<topic href="html/device_api/tv/tizen/tvinfo.html" label="TV Information" ></topic>
 							<topic href="html/device_api/tv/tizen/tvinputdevice.html" label="TV Input Device" ></topic>
@@ -7980,7 +8007,11 @@
 							<topic href="http://www.w3.org/TR/2014/REC-html5-20141028/embedded-content-0.html#the-audio-element" label="HTML5 The audio element"></topic>
 							<topic href="http://www.w3.org/TR/2015/WD-mediacapture-streams-20150414/" label="getUserMedia (Partial)"></topic>
 							<topic href="https://www.w3.org/TR/2015/WD-webaudio-20151208/" label="Web Audio API (Partial)"></topic>
+<<<<<<< HEAD
 							<topic href="https://wicg.github.io/speech-api/" label="Web Speech (Partial)"></topic>
+=======
+							<topic href="https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html" label="Web Speech (Partial)"></topic>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 						</topic>
 						<topic href="html/w3c_api/w3c_api_tv.html#communication" label="Communication">
 							<topic href="http://www.w3.org/TR/2012/CR-websockets-20120920" label="The WebSocket API"></topic>

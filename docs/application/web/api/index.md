@@ -20,7 +20,10 @@ The following API references provide descriptions of all the APIs that can be us
 
 ## Versions
 <ul>
+<<<<<<< HEAD
   <li><a href="5.5/device_api/mobile/index.html" target="_blank">5.5</a></li>
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   <li><a href="5.0/device_api/mobile/index.html" target="_blank">5.0</a></li>
   <li><a href="4.0/device_api/mobile/index.html" target="_blank">4.0</a></li>
   <li><a href="3.0/device_api/mobile/index.html" target="_blank">3.0</a></li>

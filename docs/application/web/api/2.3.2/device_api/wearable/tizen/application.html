@@ -4,11 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>Application API</title>
+<<<<<<< HEAD
 <meta data-version="2.3.2" data-profile="wearable">
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::Application">
 <div class="supported-platforms"><img class="wearable-mandatory emulator" title="Mandatory, Supported by Tizen Wearable emulator" src="wearable_s_w.png"></div>
+=======
+</head>
+<body id="page-content" onload="prettyPrint()">
+<div class="api" id="::Application">
+ <div class="supported-platforms"><img class="wearable-mandatory emulator" title="Mandatory, Supported by Tizen Wearable emulator" src="wearable_s_w.png"></div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="title"><h1>Application API</h1></div>
 <div class="brief">
  This API provides a way to launch other applications and access
@@ -33,7 +40,11 @@ the basic operations for the current application such as exit or hide.
 Since Tizen 3.0 the <em>Application</em> interface provides application event broadcasting and listening features. An application can broadcast user events to other listening applications and listen to broadcasted user events from other applications. In a future Tizen release, applications will also be able to receive pre-defined system events from the platform.
         </p>
         <p>
+<<<<<<< HEAD
 For more information on the Application features, see <a href="/application/web/guides/applications/overview">Application Guide</a>, <a href="/application/web/guides/app-management/app-group">Application Group Guide</a> or <a href="/application/web/guides/app-management/app-controls">Application Control Guide</a>.
+=======
+For more information on the Application features, see <a href="https://developer.tizen.org/development/guides/web-application/application-management/applications">Application Guide</a>, <a href="https://developer.tizen.org/development/guides/web-application/application-management/application-groups">Application Group Guide</a> or <a href="https://developer.tizen.org/development/guides/web-application/application-management/application-information-and-controls/application-controls">Application Control Guide</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         </p>
        </div>
 <p><span class="version">Since: </span>
@@ -1001,7 +1012,11 @@ for (var i = 0; i &lt; appCerts.length; i++)
 <div class="description">
             <p>
 The shared directory is used to export data to other applications. Its structure is described in
+<<<<<<< HEAD
 <a href="/application/native/tutorials/details/io-overview">File System Directory Hierarchy</a>.
+=======
+<a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/file-system-directory-hierarchy">File System Directory Hierarchy</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </p>
             <p>
 If the ID is set to <var>null</var> or not set at all, it returns the shared directory URI for the current application.
@@ -1625,6 +1640,7 @@ and launches the selected application.
 </div>
 <div class="constructors">
 <h4 id="ApplicationControl::constructor">Constructors</h4>
+<<<<<<< HEAD
 <dl>
 <dt class="method" id="">
 <a class="backward-compatibility-anchor" name=""></a><code><b><span class="methodName">Constructor (DOMString, DOMString?, DOMString?, DOMString?, <a href="#ApplicationControlData">ApplicationControlData</a>[]?, ?)</span></b></code>
@@ -1632,6 +1648,10 @@ and launches the selected application.
 <pre class="webidl prettyprint">ApplicationControl(DOMString operation, optional DOMString? uri, optional DOMString? mime, optional DOMString? category,
                    optional <a href="#ApplicationControlData">ApplicationControlData</a>[]? data, optional ? launchMode);</pre>
 </dl>
+=======
+<dl><pre class="webidl prettyprint">ApplicationControl(DOMString operation, optional DOMString? uri, optional DOMString? mime, optional DOMString? category,
+                   optional <a href="#ApplicationControlData">ApplicationControlData</a>[]? data, optional ? launchMode);</pre></dl>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <div class="attributes">
 <h4>Attributes</h4>
@@ -2295,9 +2315,13 @@ var watchId = tizen.application.addAppInfoEventListener(appEventCallback);
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>
@@ -2315,7 +2339,11 @@ To guarantee the running of the application on a device which has battery, decla
 <li class="feature">http://tizen.org/feature/battery</li>
 </div>
 <p></p>
+<<<<<<< HEAD
                     For more information, see <a href="/application/web/tutorials/app-filtering">Application Filtering.</a>
+=======
+                    For more information, see <a href="https://developer.tizen.org/development/training/web-application/understanding-tizen-programming/application-filtering">Application Filtering.</a>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <h2 id="full-webidl">4. Full WebIDL</h2>
 <pre class="webidl prettyprint">module Application {

@@ -25,11 +25,16 @@ There are 2 different ways to edit the `tizen-manifest.xml` file:
 
 > **Note**
 >
+<<<<<<< HEAD
 > The `tizen-manifest.xml` file must conform to both the standard XML file format and the Tizen Native application specification requirements. Editing the manifest file XML structure with the text editor is intended for advanced users only. If the file does not conform to the standard and the requirements, errors can occur during installation.
+=======
+> The `tizen-manifest.xml` file must conform to both the standard XML file format and the Tizen native application specification requirements. Editing the manifest file XML structure with the text editor is intended for advanced users only. If the file does not conform to the standard and the requirements, errors can occur during installation.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 <a name="hierarchy"></a>
 ## Manifest Element Hierarchy
 
+<<<<<<< HEAD
 The Tizen Native application manifest file consists of XML elements organized in a hierarchy. The following tree structure shows the relationship between the elements of the `tizen-manifest.xml` file.
 
 | `<manifest>` |                                  |                         |                  |
@@ -91,6 +96,54 @@ The Tizen Native application manifest file consists of XML elements organized in
 |              | `<privileges>`                   |                         |                  |
 |              |                                  | `<privilege>`           |                  |
 |              | `<feature>`                      |                         |                  |
+=======
+The Tizen native application manifest file consists of XML elements organized in a hierarchy. The following tree structure shows the relationship between the elements of the `tizen-manifest.xml` file.
+
+| `<manifest>` |                         |                         |                  |
+|--------------|-------------------------|-------------------------|------------------|
+|              | `<author>`              |                         |                  |
+|              | `<description>`         |                         |                  |
+|              | `<profile>`             |                         |                  |
+|              | `<ui-application>`      |                         |                  |
+|              |                         | `<label>`               |                  |
+|              |                         | `<icon>`                |                  |
+|              |                         | `<app-control>`         |                  |
+|              |                         | `<metadata>`            |                  |
+|              |                         | `<datacontrol>`         |                  |
+|              |                         | `<background-category>` |                  |
+|              |                         | `<splash-screens>`      |                  |
+|              |                         |                         | `<splash-screen>`|
+|              | `<service-application>` |                         |                  |
+|              |                         | `<label>`               |                  |
+|              |                         | `<icon>`                |                  |
+|              |                         | `<app-control>`         |                  |
+|              |                         | `<metadata>`            |                  |
+|              |                         | `<datacontrol>`         |                  |
+|              |                         | `<background-category>` |                  |
+|              | `<watch-application>`   |                         |                  |
+|              |                         | `<icon>`                |                  |
+|              |                         | `<label>`               |                  |
+|              | `<widget-application>`  |                         |                  |
+|              |                         | `<icon>`                |                  |
+|              |                         | `<label>`               |                  |
+|              |                         | `<support-size>`        |                  |
+|              |                         | `<widget-class>`        |                  |
+|              |                         |                         | `<icon>`         |
+|              |                         |                         | `<label>`        |
+|              |                         |                         | `<support-size>` |
+|              | `<shortcut-list>`       |                         |                  |
+|              |                         | `<shortcut>`            |                  |
+|              |                         |                         | `<icon>`         |
+|              |                         |                         | `<label>`        |
+|              | `<account>`             |                         |                  |
+|              |                         | `<account-provider>`    |                  |
+|              |                         |                         | `<icon>`         |
+|              |                         |                         | `<label>`        |
+|              |                         |                         | `<capability>`   |
+|              | `<privileges>`          |                         |                  |
+|              |                         | `<privilege>`           |                  |
+|              | `<feature>`             |                         |                  |
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 <a name="manifest"></a>
 ## Manifest Elements
@@ -109,6 +162,7 @@ For more information on the relationship between the elements, see the [element 
 
 **Expected children (in the following order):**
 
+<<<<<<< HEAD
 | Child element                   | Occurrences          |
 |---------------------------------|----------------------|
 | `<author>`                      | 1 (optional)         |
@@ -123,6 +177,21 @@ For more information on the relationship between the elements, see the [element 
 | `<account>`                     | 1 (optional)         |
 | `<privileges>`                  | 1 (optional)         |
 | `<feature>`                     | 1 or more (optional) |
+=======
+| Child element           | Occurrences          |
+|-----------------------|--------------------|
+| `<author>`              | 1 (optional)         |
+| `<description>`         | 1 or more (optional) |
+| `<profile>`             | 1 or more (optional) |
+| `<ui-application>`      | 1 (optional)         |
+| `<service-application>` | 1 (optional)         |
+| `<watch-application>`   | 1 (optional)         |
+| `<widget-application>`  | 1 (optional)         |
+| `<shortcut-list>`       | 1 (optional)         |
+| `<account>`             | 1 (optional)         |
+| `<privileges>`          | 1 (optional)         |
+| `<feature>`             | 1 or more (optional) |
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 **Figure: Editing the \<manifest\> element in the manifest editor**
 

@@ -117,7 +117,11 @@ To query audio device information:
 
     -   To receive a notification whenever the device state changes:
 
+<<<<<<< HEAD
         ```csharp
+=======
+        ```
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         void OnDeviceRunningChanged(object sender, AudioDeviceRunningChangedEventArgs args)
         {
             if (args.Device.Type == AudioDeviceType.BluetoothMedia)
@@ -137,6 +141,7 @@ To query audio device information:
         ```
 
 
+<<<<<<< HEAD
         > **Note**
         >
         > The initial running state of the connected device is `false`, which means the connected device is not running.
@@ -172,6 +177,10 @@ To query audio device information:
     -   To get the supported sample rates and to set the specific sample rate:
 
         1.  Retrieve the list of the currently supported sample rates with the `GetSupportedSampleRates()` method:
+=======
+        > **Note**   
+		> The initial running state of the connected device is `false`, which means the connected device is not running.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
             ```csharp
             IEnumerable<uint> supportedRates = usbOutputDevice.GetSupportedSampleRates();

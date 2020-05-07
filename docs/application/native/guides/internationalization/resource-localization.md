@@ -5,11 +5,19 @@ Tizen provides localized resources to make your application usable for different
 
 > **Note**
 >
+<<<<<<< HEAD
 > The `.po` files must be placed in the `res/po` directory of the application. The files can be edited using the [PO file editor](../../../tizen-studio/native-tools/po-file-editor.md) provided by Tizen Studio.
 >
 > The `.po` file is compiled into a `.mo` file, and the `.mo` file name is defined using the project name that you define when you create the project in Tizen Studio. The application ID is made based on the project name, and the framework finds the application `.mo` file based on the application ID.
 >
 > Be careful if you change the application ID in the Tizen Manifest Editor later, because the `.mo` file name is not automatically changed, and problems can occur when getting the string resources.
+=======
+> The `.po` files must be placed in the `res/po` directory of the application. The files can be edited using the [PO file editor](../../../tizen-studio/native-tools/po-file-editor.md) provided by the Tizen Studio.
+>
+> The `.po` file is compiled into a `.mo` file, and the `.mo` file name is defined using the project name that you define when you create the project in the Tizen Studio. The application ID is made based on the project name, and the framework finds the application `.mo` file based on the application ID.
+>
+> Be careful if you change the application ID in the Tizen manifest editor later, because the `.mo` file name is not automatically changed, and problems can occur when getting the string resources.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 The application must load the proper resource set depending on the current device locale. If no matching resource set is found for the current locale, the default resource set is used.
 
@@ -186,7 +194,11 @@ Take advantage of the following tips to smoothly internationalize your applicati
 
 - Use `_()` as shorthand for `i18n_get_text()`
 
+<<<<<<< HEAD
     Since the `i18n_get_text()` function calls are very common, Tizen Studio provides an abbreviation for this function. You can call it simply with `_()`.
+=======
+    Since the `i18n_get_text()` function calls are very common, the Tizen Studio provides an abbreviation for this function. You can call it simply with `_()`.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Sort properly with `strcoll()`
 

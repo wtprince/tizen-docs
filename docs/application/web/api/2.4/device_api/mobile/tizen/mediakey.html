@@ -4,11 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>MediaKey API</title>
+<<<<<<< HEAD
 <meta data-version="2.4" data-profile="mobile">
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::MediaKey">
-<div class="supported-platforms"><img class="mobile-optional" title="Optional, Not supported by Tizen Mobile emulator" src="mobile_s_w_optional.png"></div>
+ <div class="supported-platforms"><img class="mobile-optional" title="Optional, Not supported by Tizen Mobile emulator" src="mobile_s_w_optional.png"></div>
 <div class="title"><h1>MediaKey API</h1></div>
 <div class="brief">
  The Media Key API provides functions to get notified when a media key has been pressed or released.
@@ -18,7 +21,11 @@
 Media keys are the keys of a Bluetooth headset which control multimedia playback.
         </p>
         <p>
+<<<<<<< HEAD
 For more information on the Media Key features, see <a href="/application/web/guides/multimedia/media-key">Media Key Guide</a>.
+=======
+For more information on the Media Key features, see <a href="https://developer.tizen.org/development/guides/web-application/media-and-camera/media-key-events">Media Key Guide</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         </p>
        </div>
 <p><span class="version">Since: </span>
@@ -293,9 +300,13 @@ Calling this function has no effect if listener is not set.
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>
@@ -309,8 +320,13 @@ To guarantee that the Media Key application runs on a device with Bluetooth feat
 </div>
 <h2 id="full-webidl">4. Full WebIDL</h2>
 <pre class="webidl prettyprint">module MediaKey {
+<<<<<<< HEAD
   enum MediaKeyType { "MEDIA_PLAY", "MEDIA_STOP", "MEDIA_PAUSE", "MEDIA_PREVIOUS", "MEDIA_NEXT", "MEDIA_FAST_FORWARD", "MEDIA_REWIND",
     "MEDIA_PLAY_PAUSE" };
+=======
+  enum MediaKeyType { "MEDIA_PLAY", "MEDIA_STOP", "MEDIA_PAUSE", "MEDIA_PREVIOUS", "MEDIA_NEXT", "MEDIA_FAST_FORWARD",
+    "MEDIA_REWIND", "MEDIA_PLAY_PAUSE" };
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   <a href="tizen.html#Tizen">Tizen</a> implements <a href="#MediaKeyManagerObject">MediaKeyManagerObject</a>;
   [NoInterfaceObject] interface MediaKeyManagerObject {
     readonly attribute <a href="#MediaKeyManager">MediaKeyManager</a> mediakey;

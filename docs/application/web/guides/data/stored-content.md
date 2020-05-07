@@ -2,7 +2,11 @@
 
 You can search for content (such as images, videos, and music) located in the local device storage. You can also perform content management tasks, such as viewing and updating content attributes.
 
+<<<<<<< HEAD
 The Content API is mandatory for Tizen Mobile, Wearable, and TV profiles, which means that it is supported on all mobile, wearable, and TV devices. All mandatory APIs are supported on the Tizen emulators.
+=======
+The Content API is mandatory for Tizen mobile, wearable, and TV profiles, which means that it is supported on all mobile, wearable, and TV devices. All mandatory APIs are supported on the Tizen Emulators.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 The main features of Content API include:
 
@@ -93,7 +97,11 @@ To browse and search for content directories and content items in directories:
 You can manage content in many ways:
 
 - You can view content item details with the `find()` method.
+<<<<<<< HEAD
 - You can update some attributes of a content item, for example its isFavorite property, with the `update()` method.
+=======
+- You can update some attributes of a content item, for example its rating, with the `update()` method.  
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
    For more information on the content attributes, see the Content Full WebIDL Reference (in [mobile](../../api/latest/device_api/mobile/tizen/content.html#full-webidl), [wearable](../../api/latest/device_api/wearable/tizen/content.html#full-webidl), and [TV](../../api/latest/device_api/tv/tizen/content.html#full-webidl) applications).
 - If a content item is copied or moved, you cannot find it because a scan is not performed automatically. You can retrieve a copied or moved item with the `find()` method after calling the `scanFile()` method.
 - You can create a thumbnail for a content item using the `createThumbnail()` method.

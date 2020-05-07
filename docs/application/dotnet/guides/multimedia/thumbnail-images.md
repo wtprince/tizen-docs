@@ -32,6 +32,7 @@ using Tizen.Multimedia.Util;
 ## Extracting a Thumbnail
 
 To extract a thumbnail from a file, use the `ExtractAsync()` method of the [Tizen.Multimedia.Util.ThumbnailExtractor](https://samsung.github.io/TizenFX/latest/api/Tizen.Multimedia.Util.ThumbnailExtractor.html) class:
+<<<<<<< HEAD
 
 ```
 async Task ExtractAsync(string testImagePath, Size size)
@@ -54,6 +55,8 @@ void Extract(string testImagePath, Size size)
     Log.Info("Util", "Data size is " + result.RawData.Length);
 }
 ```
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 To extract a thumbnail synchronously from a file and save it to a file, use the `Extract(string path, Size size, string resultThumbnailPath)` or `Extract(string path, string resultThumbnailPath)` method of the [Tizen.Multimedia.Util.ThumbnailExtractor](https://samsung.github.io/TizenFX/latest/api/Tizen.Multimedia.Util.ThumbnailExtractor.html) class:
 ```

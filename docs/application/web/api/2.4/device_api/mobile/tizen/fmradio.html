@@ -4,11 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>FMRadio API</title>
+<<<<<<< HEAD
 <meta data-version="2.4" data-profile="mobile">
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::FMRadio">
 <div class="supported-platforms"><img class="mobile-optional emulator" title="Optional, Supported by Tizen Mobile emulator" src="mobile_s_w_optional.png"></div>
+=======
+</head>
+<body id="page-content" onload="prettyPrint()">
+<div class="api" id="::FMRadio">
+ <div class="supported-platforms"><img class="mobile-optional emulator" title="Optional, Supported by Tizen Mobile emulator" src="mobile_s_w_optional.png"></div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="title"><h1>FMRadio API</h1></div>
 <div class="brief">
  The FM Radio API provides interfaces and methods for accessing FM Radio.
@@ -31,7 +38,11 @@ FM radio works according to the following state table:
         <p>
 <em>tizen.fmradio.seekUp()</em> and <em>tizen.fmradio.seekDown()</em> work when the radio is in playing state. <em>InvalidStateError</em> is thrown when they are called in other states. <br>        </p>
         <p>
+<<<<<<< HEAD
 For more information about how to use FM Radio API, see <a href="/application/web/guides/multimedia/radio">FM Radio Guide</a>.
+=======
+For more information about how to use FM Radio API, see <a href="https://developer.tizen.org/development/guides/web-application/media-and-camera/radio">FM Radio Guide</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         </p>
        </div>
 <p><span class="version">Since: </span>
@@ -190,9 +201,12 @@ The tizen.fmradio object provides access to the functionality of the FM Radio AP
     void setAntennaChangeListener(<a href="#AntennaChangeCallback">AntennaChangeCallback</a> changeCallback) raises(<a href="tizen.html#WebAPIException">WebAPIException</a>);
     void unsetAntennaChangeListener() raises(<a href="tizen.html#WebAPIException">WebAPIException</a>);
   };</pre>
+<<<<<<< HEAD
 <p><span class="version">Since: </span>
  2.3
           </p>
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="attributes">
 <h4>Attributes</h4>
 <ul>
@@ -489,6 +503,7 @@ If a user call seekDown() while the radio is seeking, the errorCallback will be 
         </div>
 <div class="example">
 <span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">var radioState = tizen.fmradio.state;
+<<<<<<< HEAD
 
 function successCallback()
 {
@@ -500,6 +515,19 @@ function errorCallback(err)
   console.log("The following error occurred: " + err.name);
 }
 
+=======
+
+function successCallback()
+{
+  console.log("The radio find a new frequency successfully");
+}
+
+function errorCallback(err)
+{
+  console.log("The following error occurred: " + err.name);
+}
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 if (radioState == "PLAYING")
 {
   tizen.fmradio.seekDown(successCallback, errorCallback);
@@ -584,12 +612,21 @@ var radioScanCallback =
     }
   }
 };
+<<<<<<< HEAD
 
 function errorCallback(err)
 {
   console.log("The following error occurred: " + err.name);
 }
 
+=======
+
+function errorCallback(err)
+{
+  console.log("The following error occurred: " + err.name);
+}
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 if (radioState == "READY")
 {
   tizen.fmradio.scanStart(radioScanCallback, errorCallback);
@@ -645,6 +682,7 @@ UnknownError - If any other error occurs              </li>
         </div>
 <div class="example">
 <span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">var radioState = tizen.fmradio.state;
+<<<<<<< HEAD
 
 function successCallback()
 {
@@ -656,6 +694,19 @@ function errorCallback(err)
   console.log("The following error occurred: " + err.name);
 }
 
+=======
+
+function successCallback()
+{
+  console.log("The scanning stops");
+}
+
+function errorCallback(err)
+{
+  console.log("The following error occurred: " + err.name);
+}
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 if (radioState == "SCANNING")
 {
   tizen.fmradio.scanStop(successCallback, errorCallback);
@@ -981,9 +1032,13 @@ Note that after it is invoked, you can turn on FM radio by <em>tizen.fmradio.sta
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>
@@ -993,7 +1048,11 @@ To guarantee that the FM radio application runs on a device with FM radio, decla
 <li class="feature">http://tizen.org/feature/fmradio</li>
 </div>
 <p></p>
+<<<<<<< HEAD
                     For more information, see <a href="/application/web/tutorials/app-filtering">Application Filtering.</a>
+=======
+                    For more information, see <a href="https://developer.tizen.org/development/training/web-application/understanding-tizen-programming/application-filtering">Application Filtering.</a>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <h2 id="full-webidl">4. Full WebIDL</h2>
 <pre class="webidl prettyprint">module FMRadio {

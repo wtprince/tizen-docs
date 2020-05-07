@@ -142,6 +142,7 @@ To check whether an application has permission to use a privilege, and to reques
 
     If the decision is definitive, any subsequent `RequestPermission()` calls result in an immediate response with an appropriate result: `AllowForever` or `DenyForever`. However, the user can change the status of privacy-related privileges later by modifying the privacy settings on the device. For this reason, the application must always check the status of privacy-related privileges before using protected functionality.
 
+<<<<<<< HEAD
 ## Requesting Multiple Permissions
 
 This section describes how to check and request multiple privileges in a single API call.
@@ -227,6 +228,8 @@ To check whether an application has permission to use a privilege, and to reques
         }
       ```
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 > **Note**
 >
 > Since the privileges are grouped, the user's decision regarding 1 privilege applies to the whole group of related privileges. For example, if the user has granted permission to use the `http://tizen.org/privilege/account.read` privilege, permission is automatically granted to the `http://tizen.org/privilege/account.write` privilege also. Be aware that both privileges need to be declared in the application manifest file. If you declare only 1 of them, the above rule does not apply.

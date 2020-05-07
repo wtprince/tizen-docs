@@ -7,6 +7,7 @@ The main features of the Media Controller API include:
 
 - Retrieving application list
 
+<<<<<<< HEAD
   You can [retrieve the server and the client application list](#retrieving-application-list) to communicate with
 the applications you want.
   Additionally, the client can get the latest server information even though the application is not activated currently. The last server that changed the state to "MC_PLAYBACK_STATE_PLAYING" becomes the latest server.
@@ -18,11 +19,15 @@ the applications you want.
 - Updating and retrieving playback
 
   You can [update the playback information](#updating-and-retrieving-playback) on the server side, and then retrieve the playback information on the client side.
+=======
+  You can [update the metadata and playback information](#updating-and-retrieving-information) on the server side, and then retrieve the metadata and playback information on the client side.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
   The media controller server provides current information about the registered application that you can send to the client.
 
   When the client requests the information, the media controller server updates the state information of an active application before transferring the data. If the application is not running when the client request arrives, the media controller server transfers the latest information.
 
+<<<<<<< HEAD
 - Updating and retrieving metadata
 
   You can [update the metadata](#updating-and-retrieving-metadata) on the server side, and then retrieve the metadata on the client side.
@@ -58,6 +63,45 @@ the applications you want.
   You can [send a custom event](#sending-and-processing-a-custom-event) to the client from the server side, and then process the event on the client side.
 
   You can [send a reply of the custom event](#send_event_reply) to the server from the client side, and then receive the reply on the server side.
+=======
+- Updating and retrieving playlist
+
+  You can [update the playlist information](#updating-and-retrieving-playlist) on the server side, and then retrieve the playlist information on the client side.
+
+  The media controller server provides current information about the registered application that you can send to the client.
+
+  > **Note**
+  >
+  > This feature supports Tizen 4.0 and Higher for Mobile and Tizen 5.0 and Higher for Wearable.
+
+- Sending and processing commands to receive replies
+
+  You can [send a command](#sending-and-processing-commands-to-receive-replies) to the server from the client side, and then process the command on the server side.
+
+  You can [send a reply of the command](#send_command_reply) to the client from the server side, and then receive the reply on the client side.
+
+  > **Note**
+  >
+  > This feature supports Tizen 4.0 and Higher for Mobile and Tizen 5.0 and Higher for Wearable.
+
+- Sending and processing a custom event
+
+  You can [send a custom event](#sending-and-processing-a-custom-event) to the client from the server side, and then process the event on the client side.
+
+  You can [send a reply of the custom event](#send_event_reply) to the server from the client side, and then receive the reply on the server side.
+
+  > **Note**
+  >
+  > This feature supports Tizen 4.0 and Higher for Mobile and Tizen 5.0 and Higher for Wearable.
+
+- Sending and processing a search command
+
+  You can [send a search command](#sending-and-processing-a-search-command) to the server from the client side, and then process the command on the server side.
+
+  > **Note**
+  >
+  > This feature supports Tizen 5.0 and Higher for Mobile and Wearable.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
   > **Note**
   >
@@ -139,6 +183,11 @@ To enable your application to use the media controller functionality:
 
      This guide uses a global variable for the handle.
 
+<<<<<<< HEAD
+=======
+
+## Updating and Retrieving Information
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ## Retrieving Application List
 
@@ -217,15 +266,25 @@ To retrieve the client list on the server side, follow these steps:
 
 To update the playback information on the server side, follow these steps:
 
+<<<<<<< HEAD
 1. Create the media controller server handle using `mc_server_create()`:
+=======
+1. Create the media controller server handle using the `mc_server_create()`:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    ret = mc_server_create(&g_server_h);
    ```
 
+<<<<<<< HEAD
 2. Set the playback information to be updated using the corresponding `mc_server_set_XXX()` function, and then update the playback information using `mc_server_update_playback_info()`.
 
    For example, to update the playback state information, set the information to be updated using `mc_server_set_playback_state()`, and then update the information using `mc_server_update_playback_info()`:
+=======
+2. Set the metadata or playback information to be updated using the corresponding `mc_server_set_XXX()`, and then update the metadata or playback information using the corresponding `mc_server_update_XXX()`.
+
+   For example, to update the playback state information, set the information to be updated using the `mc_server_set_playback_state()`, and then update the information using the `mc_server_update_playback_info()`:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    /* The following APIs can be set at the same time */
@@ -243,7 +302,11 @@ To update the playback information on the server side, follow these steps:
    ret = mc_server_update_playback_info(g_mc_server);
    ```
 
+<<<<<<< HEAD
 3. Destroy the media controller server handle using `mc_server_destroy()`, when media controller server handle is no longer needed:
+=======
+3. Destroy the media controller server handle using the `mc_server_destroy()`, when media controller server handle is no longer needed:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    ret = mc_server_destroy(g_server_h);
@@ -251,17 +314,25 @@ To update the playback information on the server side, follow these steps:
 
 To retrieve the playback information on the client side, follow these steps:
 
+<<<<<<< HEAD
 1. Create the media controller client handle using `mc_client_create()`:
+=======
+1. Create the media controller client handle using the `mc_client_create()`:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    ret = mc_client_create(&g_client_h);
    ```
 
+<<<<<<< HEAD
 2. Retrieve the [server name.](#retrieving-application-list)
 
 3. Retrieve the playback information from the server using the corresponding `mc_client_get_server_XXX()` function. Use the server name retrieved in the previous step to identify the server.
 
    To retrieve the playback information from the server, use `mc_client_get_server_playback_info()`:
+=======
+2. Retrieve the server name using the `mc_client_get_latest_server_info()`:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    mc_playback_h playback = NULL;
@@ -291,12 +362,18 @@ To retrieve the playback information on the client side, follow these steps:
    mc_client_destroy(g_client_h);
    ```
 
+<<<<<<< HEAD
 
 ## Updating and Retrieving Metadata
   
 To update the metadata on the server side, follow these steps:
 
 1. Create the media controller server handle using `mc_server_create()`:
+=======
+3. Retrieve the metadata or playback information from the server using the corresponding `mc_client_get_server_XXX()`. Use the server name retrieved in the previous step to identify the server.
+
+   For example, to retrieve the playback information from the server, use the `mc_client_get_server_playback_info()`:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    ret = mc_server_create(&g_server_h);
@@ -351,6 +428,7 @@ To update the metadata on the server side, follow these steps:
    
 To retrieve the metadata on the client side, follow these steps:
 
+<<<<<<< HEAD
 1. Create the media controller client handle using `mc_client_create()`:
 
    ```
@@ -419,10 +497,131 @@ To retrieve the metadata on the client side, follow these steps:
    mc_metadata_destroy(metadata_h);
    ```
 5. Destroy the media controller client handle using `mc_client_destroy()`, when media controller client handle is no longer needed:
+=======
+   The `mc_client_get_playback_state()` retrieves the playback state from the playback information returned by the `mc_client_get_server_playback_info()`.
+
+4. Destroy the media controller client handle using the `mc_client_destroy()`, when media controller client handle is no longer needed:
 
    ```
    mc_client_destroy(g_client_h);
    ```
+
+
+## Updating and Retrieving Playlist
+
+To update the playlist and metadata information on the server side:
+
+1. Create the media controller server handle using the `mc_server_create()`:
+
+   ```
+   ret = mc_server_create(&g_server_h);
+   ```
+2. Create the playlist handle using the `mc_server_create_playlist()`:
+
+   ```
+   mc_playlist_h playlist_h = NULL;
+
+   ret = mc_server_create_playlist(g_server_h, "playlist", &playlist_h);
+   ```
+3. Set the metadata information in the playlist handle to be updated using the corresponding `mc_server_add_item_to_playlist()`, and then update the playlist using the corresponding `mc_server_update_playlist_done()`:
+
+   ```
+   mc_server_add_item_to_playlist(g_server_h, playlist_h, "1", MC_META_MEDIA_TITLE, "title_1");
+   mc_server_add_item_to_playlist(g_server_h, playlist_h, "1", MC_META_MEDIA_ARTIST, "artist_1");
+   mc_server_add_item_to_playlist(g_server_h, playlist_h, "1", MC_META_MEDIA_ALBUM, "album_1");
+   mc_server_add_item_to_playlist(g_server_h, playlist_h, "1", MC_META_MEDIA_AUTHOR, "author_1");
+   mc_server_add_item_to_playlist(g_server_h, playlist_h, "1", MC_META_MEDIA_GENRE, "genre_1");
+   mc_server_add_item_to_playlist(g_server_h, playlist_h, "1", MC_META_MEDIA_DURATION, "duration_1");
+   mc_server_add_item_to_playlist(g_server_h, playlist_h, "1", MC_META_MEDIA_DATE, "date_1");
+   mc_server_add_item_to_playlist(g_server_h, playlist_h, "1", MC_META_MEDIA_COPYRIGHT, "copyright_1");
+   mc_server_add_item_to_playlist(g_server_h, playlist_h, "1", MC_META_MEDIA_DESCRIPTION, "desc_1");
+   mc_server_add_item_to_playlist(g_server_h, playlist_h, "1", MC_META_MEDIA_TRACK_NUM, "tracknum_1");
+   mc_server_add_item_to_playlist(g_server_h, playlist_h, "1", MC_META_MEDIA_PICTURE, "picture_1");
+
+   ret = mc_server_update_playlist_done(g_server_h, playlist_h);
+   ```
+4. When no longer needed, destroy the playlist handle using the `mc_playlist_destroy()`:
+
+   ```
+   mc_playlist_destroy(playlist_h);
+   ```
+5. Destroy the media controller server handle using the `mc_server_destroy()`, when media controller server handle is no longer needed:
+
+   ```
+   mc_server_destroy(g_server_h);
+   ```
+
+To retrieve the playlist and metadata information on the client side:
+
+1. Create the media controller client handle using the `mc_client_create()`:
+
+   ```
+   ret = mc_client_create(&g_client_h);
+   ```
+2. Define the callback that is invoked when the client receives the playlist:
+
+   ```
+   void
+   playlist_updated_cb(const char *server_name, mc_playlist_update_mode_e mode, const char *playlist_name, mc_playlist_h playlist, void *user_data)
+   {
+       dlog_print(DLOG_DEBUG, LOG_TAG, "Server Name: %s, Playlist Update Mode: %d, Playlist Name: %s\n", server_name, mode, playlist_name);
+   }
+   ```
+
+   If you want to use playlist handle outside, make a copy using `mc_playlist_clone()`.
+
+3. Register the callback using the `mc_client_set_playlist_updated_cb()`:
+
+   ```
+   ret = mc_client_set_playlist_updated_cb(g_client_h, playlist_updated_cb, NULL);
+   ```
+4. Define the callback that retrieve the item from the playlist handle:
+
+   ```
+   bool
+   playlist_item_cb(const char *index, mc_metadata_h metadata, void *user_data)
+   {
+     dlog_print(DLOG_DEBUG, LOG_TAG, "Index: %s\n", index);
+   }
+   ```
+
+   If you want to use metadata handle outside, make a copy using `mc_metadata_clone()`.
+
+5. Register the callback using the `mc_playlist_foreach_item()`:
+
+   ```
+   ret = mc_playlist_foreach_item(playlist_h, playlist_item_cb, NULL);
+   ```
+
+6. Retrieve the metadata information from the metadata handle using the `mc_metadata_get()`:
+
+   ```
+   char *title = NULL;
+   ret = mc_metadata_get(metadata_h, MC_META_MEDIA_TITLE, &title);
+   ```
+
+7. When no longer needed, destroy the playlist handle using the `mc_playlist_destroy()`:
+
+   ```
+   mc_playlist_destroy(playlist_h);
+   ```
+
+8. Destroy the media controller client handle using the `mc_client_destroy()`, when media controller client handle is no longer needed:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
+
+   ```
+   mc_client_destroy(g_client_h);
+   ```
+<<<<<<< HEAD
+=======
+
+> **Note**
+>
+> This feature supports Tizen 4.0 and Higher for Mobile.
+
+
+## Sending and Processing Commands to Receive Replies
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
   > **Note**
   >
@@ -473,9 +672,13 @@ To update the playlist and item's metadata on the server side, follow these step
    ret = mc_server_destroy(g_server_h);
    ```
 
+<<<<<<< HEAD
 To retrieve the playlist and metadata on the client side, follow these steps:
 
 1. Create the media controller client handle using `mc_client_create()`:
+=======
+1. Create the media controller client handle using the `mc_client_create()`:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    ret = mc_client_create(&g_client_h);
@@ -490,9 +693,13 @@ To retrieve the playlist and metadata on the client side, follow these steps:
    }
    ```
 
+<<<<<<< HEAD
    If you want to use playlist handle outside, make a copy using `mc_playlist_clone()`.
 
 3. Register a callback using `mc_client_set_playlist_updated_cb()`:
+=======
+2. Retrieve the server name using the `mc_client_get_latest_server_info()`:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    ret = mc_client_set_playlist_updated_cb(g_client_h, playlist_updated_cb, NULL);
@@ -507,6 +714,7 @@ To retrieve the playlist and metadata on the client side, follow these steps:
    }
    ```
 
+<<<<<<< HEAD
    If you want to use metadata handle outside, make a copy using `mc_metadata_clone()`.
 
 5. Register a callback using `mc_playlist_foreach_item()`:
@@ -517,6 +725,17 @@ To retrieve the playlist and metadata on the client side, follow these steps:
 
 6. Retrieve the metadata from the metadata handle using `mc_metadata_get()`:
 
+=======
+3. Send the command to the server using the corresponding `mc_client_send_XXX_cmd()`. Use the server name retrieved in the previous step to identify the server.
+
+   For example, to send a playback action change command to the server, use the `mc_client_send_playback_action_cmd()` with the new action defined in the third parameter:
+
+   ```
+   mc_playback_action_e playback_action = MC_PLAYBACK_ACTION_PLAY;
+   char *request_id = NULL;
+
+   ret = mc_client_send_playback_action_cmd(g_client_h, server_name, playback_action, &request_id);
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
    ```
    char *title = NULL;
    ret = mc_metadata_get(metadata_h, MC_META_MEDIA_TITLE, &title);
@@ -524,11 +743,18 @@ To retrieve the playlist and metadata on the client side, follow these steps:
 
 7. When no longer needed, destroy the playlist handle using `mc_playlist_destroy()`:
 
+<<<<<<< HEAD
    ```
    mc_playlist_destroy(playlist_h);
    ```
 
 8. Destroy the media controller client handle using `mc_client_destroy()`, when media controller client handle is no longer needed:
+=======
+   If you want to define your own commands to send to the server, use the `mc_client_send_custom_cmd()`.
+   The request_id will be passed to the `mc_client_cmd_reply_recieved_cb()`.
+
+4. Destroy the media controller client handle using the `mc_client_destroy()`, when media controller client handle is no longer needed:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    mc_client_destroy(g_client_h);
@@ -541,6 +767,7 @@ To retrieve the playlist and metadata on the client side, follow these steps:
 
 ## Sending and Processing Commands
 
+<<<<<<< HEAD
 To send a command to the server from the client side, follow these steps:
 
 1. Create the media controller client handle using `mc_client_create()`:
@@ -613,6 +840,9 @@ To send a command to the server from the client side, follow these steps:
 To process the received command on the server side, follow these steps:
 
 1. Create the media controller server handle using `mc_server_create()`:
+=======
+1. Create the media controller server handle using the `mc_server_create()`:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    ret = mc_server_create(&g_server_h);
@@ -626,7 +856,11 @@ To process the received command on the server side, follow these steps:
    void
    playback_action_cmd_received_cb(const char* client_name, const char *request_id, mc_playback_action_e action, void *user_data)
    {
+<<<<<<< HEAD
        dlog_print(DLOG_DEBUG, LOG_TAG, "Client Name: %s, Request ID: %s, Playback action: %d\n", client_name, request_id, action);
+=======
+       dlog_print(DLOG_DEBUG, LOG_TAG, "Client Name: %s, Request Id: %s, Playback action: %d\n", client_name, request_id, action);
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
    }
    
    ret = mc_server_set_playback_action_cmd_received_cb(g_mc_server, playback_action_cmd_received_cb, NULL);
@@ -647,13 +881,45 @@ To process the received command on the server side, follow these steps:
    
 3. Destroy the media controller server handle using `mc_server_destroy()`, when media controller server handle is no longer needed:
 
+<<<<<<< HEAD
    ```
    ret = mc_server_destroy(g_server_h);
    ```
+=======
+   - To register a callback for playback state change commands, use the `mc_server_set_playback_action_cmd_received_cb()`.
+   - To register a callback for playback position change commands, use the `mc_server_set_playback_position_cmd_received_cb()`.
+   - To register a callback for shuffle mode change commands, use the `mc_server_set_shuffle_mode_cmd_received_cb()`.
+   - To register a callback for repeat mode change commands, use the `mc_server_set_repeat_mode_cmd_received_cb()`.
+   - To register a callback for played item, playback state and playback position change commands in playlist, use the `mc_server_set_playlist_cmd_received_cb()`.
+   - To register a callback for a custom command, use the `mc_server_set_custom_cmd_received_cb()`.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 To send the reply of completed command on the server side, follow these steps:
 
 1. Send the reply of completed command using `mc_server_send_cmd_reply()` with the request ID of the command as the third parameter, and the result of the command as the fourth parameter:
+
+   ```
+<<<<<<< HEAD
+   int result_code = 0;
+
+   ret = mc_server_send_cmd_reply(g_server_h, client_name, request_id, result_code, NULL);
+   ```
+
+<a name="send_command_reply"></a>
+To receive the reply of completed command on the client side, follow these steps:
+=======
+   ret = mc_server_set_playback_action_cmd_received_cb(g_mc_server, playback_action_cmd_received_cb, NULL);
+   ```
+
+4. Destroy the media controller server handle using the `mc_server_destroy()`, when media controller server handle is no longer needed:
+
+   ```
+   mc_server_destroy(g_server_h);
+   ```
+
+To send the reply of completed command on the server side:
+
+1. Send the reply of completed command using the `mc_server_send_cmd_reply()` with the request id of the command in the third parameter and the result of the command in fourth parameter:
 
    ```
    int result_code = 0;
@@ -662,7 +928,70 @@ To send the reply of completed command on the server side, follow these steps:
    ```
 
 <a name="send_command_reply"></a>
-To receive the reply of completed command on the client side, follow these steps:
+To receive the reply of completed command on the client side:
+
+1. Define the callback that is invoked when the client receives the reply:
+
+   ```
+   void
+   cmd_reply_received_cb(const char *server_name, const char *request_id, int result_code, bundle *data, void *user_data)
+   {
+       dlog_print(DLOG_DEBUG, LOG_TAG, "Server Name: %s, Request Id: %s, Result Code: %d\n", server_name, request_id, result_code);
+   }
+   ```
+
+2. Register the callback:
+
+   ```
+   ret = mc_client_set_cmd_reply_received_cb(g_client_h, cmd_reply_received_cb, NULL);
+   ```
+
+> **Note**
+>
+> This feature supports Tizen 4.0 and Higher for Mobile.
+
+
+## Sending and Processing a Custom Event
+
+To send a custom event to the client from the server side:
+
+1. Create the media controller server handle using the `mc_server_create()`:
+
+   ```
+   ret = mc_server_create(&g_server_h);
+   ```
+
+2. Retrieve the client name using the `mc_server_foreach_client()`:
+
+   ```
+   bool
+   activated_client_cb(const char *client_name, void *user_data)
+   {
+     GList **client_list = (GList **)user_data;
+
+     if (!client_list || !client_name) return FALSE;
+     *client_list = g_list_append(*client_list, g_strdup(client_name));
+
+     return TRUE;
+   }
+
+   GList *client_list = NULL;
+
+   ret = mc_server_foreach_client(g_mc_server, activated_client_cb, &client_list);
+   ```
+
+3. Send the event to the client using the corresponding `mc_server_send_custom_event()`. Use the client name retrieved in the previous step to identify the client.
+
+   For example, to send a your own event to the client, use the `mc_server_send_custom_event()` with the event in the third parameter:
+
+   ```
+   char *request_id = NULL;
+
+   ret = mc_server_send_custom_event(g_server_h, client_name, "evnet1", NULL, &request_id);
+   ```
+
+4. Destroy the media controller server handle using the `mc_server_destroy()`, when media controller server handle is no longer needed:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 1. Define and register the callback that is invoked when the client receives the reply:
 
@@ -688,6 +1017,7 @@ To send a custom event to the client from the server side, follow these steps:
 1. Create the media controller server handle using `mc_server_create()`:
 
    ```
+<<<<<<< HEAD
    ret = mc_server_create(&g_server_h);
    ```
 
@@ -729,6 +1059,12 @@ To send a custom event to the client from the server side, follow these steps:
 To process the received event on the client side, follow these steps:
 
 1. Create the media controller client handle using `mc_client_create()`:
+=======
+
+To process the received event on the client side:
+
+1. Create the media controller client handle using the `mc_client_create()`:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    ret = mc_client_create(&g_client_h);
@@ -742,6 +1078,7 @@ To process the received event on the client side, follow these steps:
    void
    event_received_cb(const char* server_name, const char *request_id, const char *event, bundle *data, void *user_data)
    {
+<<<<<<< HEAD
        dlog_print(DLOG_DEBUG, LOG_TAG, "Server Name: %s, Request ID: %s, Event: %s\n", server_name, request_id, event);
    }
    ```
@@ -753,6 +1090,23 @@ To process the received event on the client side, follow these steps:
    ```
 
 4. Destroy the media controller client handle using `mc_client_destroy()`, when media controller client handle is no longer needed:
+=======
+       dlog_print(DLOG_DEBUG, LOG_TAG, "Server Name: %s, Request id: %s, Event: %s\n", server_name, request_id, event);
+   }
+   ```
+
+3. Register the callback:
+
+   - To register a callback for a custom events, use the `mc_client_set_custom_event_received_cb()`.
+
+      For example, to register a callback for a custom event:
+
+      ```
+      ret = mc_client_set_custom_event_received_cb(g_client_h, event_received_cb, NULL);
+      ```
+
+4. Destroy the media controller client handle using the `mc_client_destroy()`, when media controller client handle is no longer needed:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    mc_client_destroy(g_client_h);
@@ -760,9 +1114,15 @@ To process the received event on the client side, follow these steps:
 
 
 <a name="send_event_reply"></a>
+<<<<<<< HEAD
 To send the reply of completed custom event on the client side, follow these steps:
 
 1. Send the reply of completed custom event using `mc_client_send_event_reply()` with the request ID of the custom event as the third parameter and the result of the custom event as the fourth parameter:
+=======
+To send the reply of completed custom event on the client side:
+
+1. Send the reply of completed custom event using the `mc_client_send_event_reply()` with the request id of the custom event in the third parameter and the result of the custom event in fourth parameter:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    int result_code = 0;
@@ -770,7 +1130,11 @@ To send the reply of completed custom event on the client side, follow these ste
    ret = mc_client_send_event_reply(g_server_h, server_name, request_id, result_code, NULL);
    ```
 
+<<<<<<< HEAD
 To receive the reply of processing command on the server side, follow these steps:
+=======
+To receive the reply of processing command on the server side:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 1. Define the callback that is invoked when the server receives the reply:
 
@@ -778,11 +1142,19 @@ To receive the reply of processing command on the server side, follow these step
    void
    event_reply_received_cb(const char *client_name, const char *request_id, int result_code, bundle *data, void *user_data)
    {
+<<<<<<< HEAD
        dlog_print(DLOG_DEBUG, LOG_TAG, "Client Name: %s, Request ID: %s, Result Code: %d\n", client_name, request_id, result_code);
    }
    ```
 
 2. Register a callback:
+=======
+       dlog_print(DLOG_DEBUG, LOG_TAG, "Client Name: %s, Request Id: %s, Result Code: %d\n", client_name, request_id, result_code);
+   }
+   ```
+
+2. Register the callback:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    ret = mc_server_set_event_reply_received_cb(g_server_h, event_reply_received_cb, NULL);
@@ -795,26 +1167,45 @@ To receive the reply of processing command on the server side, follow these step
 
 ## Sending and Processing a Search Command
 
+<<<<<<< HEAD
 To send a search command to the server from the client side, follow these steps:
 
 1. Create the media controller client handle using `mc_client_create()`:
+=======
+To send a search command to the server from the client side:
+
+1. Create the media controller client handle using the `mc_client_create()`:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    ret = mc_client_create(&g_client_h);
    ```
 
+<<<<<<< HEAD
 2. Retrieve the server name using `mc_client_foreach_server()`:
+=======
+2. Retrieve the server name using the `mc_client_foreach_server()`:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    bool
    activated_server_cb(const char *server_name, void *user_data)
    {
+<<<<<<< HEAD
        GList **server_list = (GList **)user_data;
 
        if (!server_list || !server_name) return FALSE;
        *server_list = g_list_append(*server_list, g_strdup(server_name));
 
        return TRUE;
+=======
+     GList **server_list = (GList **)user_data;
+
+     if (!server_list || !server_name) return FALSE;
+     *server_list = g_list_append(*client_list, g_strdup(server_name));
+
+     return TRUE;
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
    }
 
    GList *server_list = NULL;
@@ -822,20 +1213,33 @@ To send a search command to the server from the client side, follow these steps:
    ret = mc_client_foreach_server(g_client_h, activated_server_cb, &server_list);
    ```
 
+<<<<<<< HEAD
 3. Create the search handle using `mc_search_create()`:
+=======
+3. Create the search handle using the `mc_search_create()`:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    ret = mc_search_create(&g_search_h);
    ```
 
+<<<<<<< HEAD
 4. Set the condition with a [content type](#media-controller-content-type-attributes), a [search category](#media-controller-search-category-attributes), and a search keyword using `mc_search_set_condition()`:
+=======
+4. Set the condition with a [content type](#media-controller-content-type-attributes), a [search category](#media-controller-search-category-attributes) and a search keyword using the `mc_search_set_condition()`:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    ret = mc_search_set_condition(g_search_h, MC_CONTENT_TYPE_MUSIC, MC_SEARCH_TITLE, "keyword", NULL);
    ```
 
+<<<<<<< HEAD
 5. Send the search command to the server using `mc_client_send_search_cmd()`. Use the server name retrieved in the previous step to identify the server.
 For example, to send the search command to the server, use `mc_client_send_search_cmd()` with the search handle as the third parameter:
+=======
+5. Send the search command to the server using the corresponding `mc_client_send_search_cmd()`. Use the server name retrieved in the previous step to identify the server.
+For example, to send the search command to the server, use the `mc_client_send_search_cmd()` with the search handle in the third parameter:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    char *request_id = NULL;
@@ -843,21 +1247,35 @@ For example, to send the search command to the server, use `mc_client_send_searc
    ret = mc_client_send_search_cmd(g_client_h, server_name, g_search_h, &request_id);
    ```
 
+<<<<<<< HEAD
 6. Destroy the search handle using `mc_search_destroy()`, when search handle is no longer needed:
+=======
+6. Destroy the search handle using the `mc_search_destroy()`, when search handle is no longer needed:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    mc_search_destroy(g_search_h);
    ```
 
+<<<<<<< HEAD
 7. Destroy the media controller client handle using `mc_client_destroy()`, when media controller client handle is no longer needed:
+=======
+7. Destroy the media controller client handle using the `mc_client_destroy()`, when media controller client handle is no longer needed:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    mc_client_destroy(g_client_h);
    ```
 
+<<<<<<< HEAD
 To process the received search command on the server side, follow these steps:
 
 1. Create the media controller server handle using `mc_server_create()`:
+=======
+To process the received search command on the server side:
+
+1. Create the media controller server handle using the `mc_server_create()`:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    ret = mc_server_create(&g_server_h);
@@ -871,6 +1289,7 @@ To process the received search command on the server side, follow these steps:
    void
    search_command_received_cb(const char* client_name, const char *request_id, mc_search_h search, void *user_data)
    {
+<<<<<<< HEAD
        mc_search_h *get_search = mc_search_h *(user_data);
        dlog_print(DLOG_DEBUG, LOG_TAG, "Client Name: %s, Request ID: %s\n", client_name, request_id);
        ret = mc_search_clone(search, get_search);
@@ -885,29 +1304,66 @@ To process the received search command on the server side, follow these steps:
    ```
 
 4. Retrieve the search condition using `mc_search_foreach_condition()`:
+=======
+      mc_search_h *get_search = mc_search_h *(user_data);
+      dlog_print(DLOG_DEBUG, LOG_TAG, "Client Name: %s, Request id: %s\n", client_name, request_id);
+      ret = mc_search_clone(search, get_search);
+   }
+   ```
+
+3. Register the callback:
+
+   - To register a callback for a search command, use the `mc_server_set_search_cmd_received_cb()`.
+
+      For example, to register a callback for a search command:
+
+      ```
+      mc_search_h g_search_h = NULL;
+      ret = mc_server_set_search_cmd_received_cb(g_server_h, search_command_received_cb, &g_search);
+      ```
+
+4. Retrieve the search condition using the `mc_search_foreach_condition()`:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    bool
    search_condition_cb(mc_content_type_e content_type, mc_search_category_e category, const char *search_keyword, bundle *data, void *user_data)
    {
+<<<<<<< HEAD
        dlog_print(DLOG_DEBUG, LOG_TAG, "Content Type: %d, Search Category: %d, Search Keyword: %s\n", content_type, category, search_keyword);
 
        return TRUE;
+=======
+      dlog_print(DLOG_DEBUG, LOG_TAG, "Content Type: %d, Search Category: %d, Search Keyword: %s\n", content_type, category, search_keyword);
+
+      return TRUE;
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
    }
 
    ret = mc_search_foreach_condition(g_search_h, search_condition_cb, NULL);
    ```
 
+<<<<<<< HEAD
 5. Destroy the search handle using `mc_search_destroy()`, when search handle is no longer needed:
+=======
+5. Destroy the search handle using the `mc_search_destroy()`, when search handle is no longer needed:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ```
    mc_search_destroy(g_search_h);
    ```
 
+<<<<<<< HEAD
 6. Destroy the media controller server handle using `mc_server_destroy()`, when media controller server handle is no longer needed:
 
    ```
    ret = mc_server_destroy(g_server_h);
+=======
+6. Destroy the media controller server handle using the `mc_server_destroy()`, when media controller server handle is no longer needed:
+
+   ```
+   mc_server_destroy(g_server_h);
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
    ```
 
 > **Note**
@@ -915,6 +1371,7 @@ To process the received search command on the server side, follow these steps:
 > This feature supports Tizen 5.0 and Higher for Mobile and Wearable.
 
 
+<<<<<<< HEAD
 ## Updating and Retrieving Abilities
 To update the abilities on the server side, follow these steps:
 
@@ -996,6 +1453,8 @@ To retrieve the abilities on the client side, follow these steps:
 >
 > This feature supports Tizen 5.5 and Higher for Mobile and Wearable.
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 ## Media Controller Server State Attributes
 
 The following table lists all the server state attributes the client can receive:
@@ -1038,12 +1497,20 @@ The following table lists all the playback action attributes the client can send
 
 > **Note**
 >
+<<<<<<< HEAD
 > These attributes support Tizen 4.0 and Higher for Mobile.
+=======
+> This Attributes support Tizen 4.0 and Higher for Mobile.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 
 ## Media Controller Shuffle Mode Attributes
 
+<<<<<<< HEAD
 The following table lists all the shuffle mode attributes that the client can receive and send the command to:
+=======
+The following table lists all the shuffle mode attributes the client can receive and send command:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 **Table: Media controller shuffle mode attributes**
 
@@ -1056,7 +1523,11 @@ The following table lists all the shuffle mode attributes that the client can re
 
 ## Media Controller Repeat Mode Attributes
 
+<<<<<<< HEAD
 The following table lists all the repeat mode attributes that the client can receive and send the command to:
+=======
+The following table lists all the repeat mode attributes the client can receive and send command:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 **Table: Media controller repeat mode attributes**
 
@@ -1103,11 +1574,19 @@ The following table lists all the playlist update mode attributes the client can
 
 > **Note**
 >
+<<<<<<< HEAD
 > These attributes support Tizen 4.0 and Higher for Mobile.
 
 ## Media Controller Content Type Attributes
 
 The following table lists all the content type attributes that the server can receive:
+=======
+> This Attributes support Tizen 4.0 and Higher for Mobile.
+
+## Media Controller Content Type Attributes
+
+The following table lists all the content type attributes the server can receive:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 **Table: Media controller content type attributes**
 
@@ -1122,11 +1601,19 @@ The following table lists all the content type attributes that the server can re
 
 > **Note**
 >
+<<<<<<< HEAD
 > These attributes support Tizen 5.0 and Higher for Mobile and Wearable.
 
 ## Media Controller Search Category Attributes
 
 The following table lists all the search category attributes that the server can receive:
+=======
+> This Attributes support Tizen 5.0 and Higher for Mobile and Wearable.
+
+## Media Controller Search Category Attributes
+
+The following table lists all the search category attributes the server can receive:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 **Table: Media controller search category attributes**
 
@@ -1142,6 +1629,7 @@ The following table lists all the search category attributes that the server can
 
 > **Note**
 >
+<<<<<<< HEAD
 > These attributes support Tizen 5.0 and Higher for Mobile and Wearable.
 
 ## Media Controller Display Mode Attributes
@@ -1199,6 +1687,9 @@ The following table lists all the search category attributes that the server can
 > **Note**
 >
 > These attributes support Tizen 5.5 and Higher for Mobile and Wearable.
+=======
+> This Attributes support Tizen 5.0 and Higher for Mobile and Wearable.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ## Related Information
 - Dependencies

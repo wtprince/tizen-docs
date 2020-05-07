@@ -138,7 +138,11 @@ The feature keys have a hierarchy. For example, consider the
 
 To enable filtering for your Web application, add the feature list for
 the application `config.xml` file:
+<<<<<<< HEAD
 1.  To open the Web application configuration editor in Tizen
+=======
+1.  To open the Web application configuration editor in the Tizen
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     Studio, double-click the `config.xml` file in the **Project
     Explorer** view.
 2.  In the **Features** tab, click **+**.
@@ -169,7 +173,10 @@ application package.
 | `http://tizen.org/feature/contact`       | Specify this key, if the application requires the contact feature. | 4.0   |
 | `http://tizen.org/feature/database.encryption` | Specify this key, if the application requires the database encryption feature. | 2.2.1 |
 | `http://tizen.org/feature/datasync`      | Specify this key, if the application requires the DataSync feature. | 2.3   |
+<<<<<<< HEAD
 | `http://tizen.org/feature/display`       | Specify this key, if the application requires the display feature. | 5.5   |
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 | `http://tizen.org/feature/display.state` | Specify this key, if the application requires System Device API to control display state. | 5.0   |
 | `http://tizen.org/feature/fmradio`       | Specify this key, if the application requires an FM radio. | 2.2.1 |
 | `http://tizen.org/feature/humanactivitymonitor` | Specify this key, if the application requires any of the Human Activity Monitor features. | 2.3   |
@@ -249,7 +256,10 @@ Tizen 4.0.
 | `http://tizen.org/feature/calendar`      | Specify this key, if the application requires the calendar feature. | 4.0   |
 | `http://tizen.org/feature/contact`       | Specify this key, if the application requires the contact feature. | 4.0   |
 | `http://tizen.org/feature/database.encryption` | Specify this key, if the application requires the database encryption feature. | 2.2.1 |
+<<<<<<< HEAD
 | `http://tizen.org/feature/display`       | Specify this key, if the application requires the display feature. | 5.5   |
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 | `http://tizen.org/feature/display.state` | Specify this key, if the application requires System Device API to control display state. | 5.0   |
 | `http://tizen.org/feature/download`      | Specify this key, if the application requires the download feature. | 2.3   |
 | `http://tizen.org/feature/humanactivitymonitor` | Specify this key, if the application requires the [Human Activity Monitor](../api/latest/device_api/wearable/tizen/humanactivitymonitor.html) API.<br>If the key is declared in the `config.xml` file, the application can be installed on the device with any of the Human Activity Monitor features:<br><br> - HRM: `http://tizen.org/feature/sensor.heart_rate_monitor`<br> - PEDOMETER: `http://tizen.org/feature/sensor.pedometer`<br> - WRIST_UP: `http://tizen.org/feature/sensor.wrist_up`<br> - GPS: `http://tizen.org/feature/location.batch` | 2.3   |
@@ -333,9 +343,13 @@ Tizen 4.0.
 
 | Feature key                              | Description                              | Since |
 | ---------------------------------------- | ---------------------------------------- | ----- |
+<<<<<<< HEAD
 | `http://tizen.org/feature/display`       | Specify this key, if the application requires the display feature. | 5.5   |
 | `http://tizen.org/feature/display.state` | Specify this key, if the application requires System Device API to control display state. | 5.0   |
 | `http://tizen.org/feature/storage.external` | Specify this key, if the application requires the external storage feature. | 5.5   |
+=======
+| `http://tizen.org/feature/display.state` | Specify this key, if the application requires System Device API to control display state. | 5.0   |
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 | `http://tizen.org/feature/tv.audio`      | Specify this key, if the application requires the audio control functionality for using the [TV Audio Control](../api/latest/device_api/tv/tizen/tvaudiocontrol.html) API. | 3.0   |
 | `http://tizen.org/feature/tv.display`    | Specify this key, if the application requires the screen display functionality for using the [TV Display Control](../api/latest/device_api/tv/tizen/tvdisplaycontrol.html) API. | 3.0   |
 | `http://tizen.org/feature/tv.inputdevice` | Specify this key, if the application requires the input device event monitoring functionality for using the [TV Input Device](../api/latest/device_api/tv/tizen/tvinputdevice.html) API. | 3.0   |

@@ -4,11 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>Filesystem API</title>
+<<<<<<< HEAD
 <meta data-version="5.0" data-profile="wearable">
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::Filesystem">
 <div class="supported-platforms"><img class="wearable-mandatory emulator" title="Mandatory, Supported by Tizen Wearable emulator" src="wearable_s_w.png"></div>
+=======
+</head>
+<body id="page-content" onload="prettyPrint()">
+<div class="api" id="::Filesystem">
+ <div class="supported-platforms"><img class="wearable-mandatory emulator" title="Mandatory, Supported by Tizen Wearable emulator" src="wearable_s_w.png"></div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="title"><h1>Filesystem API</h1></div>
 <div class="brief">
  The Filesystem API provides access to a device's filesystem.
@@ -108,7 +115,11 @@ Storage privileges are privacy-related privileges and there is a need of asking 
 <b>Remark:</b> Methods, which names end with <var>NonBlocking</var> are asynchronous and are executed in background in the order in which they were called. Corresponding methods without <var>NonBlocking</var> at the end are synchronous and will block further instructions execution, until they are finished.
         </p>
         <p>
+<<<<<<< HEAD
 For more information on the Filesystem features, see <a href="/application/web/guides/data/file-system">File System Guide</a>.
+=======
+For more information on the Filesystem features, see <a href="https://developer.tizen.org/development/guides/web-application/data-storage-and-management/file-system">File System Guide</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         </p>
        </div>
 <p><span class="version">Since: </span>
@@ -2535,6 +2546,11 @@ The <em>ErrorCallback</em> is launched with these error types:
               <li>
 IOError, if any error related to file handle occurs.               </li>
             </ul>
+<<<<<<< HEAD
+=======
+           </div>
+<div class="description">
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             <p>
 Note, that current position indicator value, can be obtained in SeekSuccessCallback by calling <var>seekNonBlocking(0, "CURRENT")</var>.
 seekNonBlocking is executed in background and does not block further instructions.
@@ -3873,6 +3889,11 @@ The <em>ErrorCallback</em> is launched with these error types:
               <li>
 IOError, if flush fails or any error related to file handle occurs.              </li>
             </ul>
+<<<<<<< HEAD
+=======
+           </div>
+<div class="description">
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             <p>
 This method is asynchronous. Its execution will occur in background and after all previously commissioned background jobs will finish.
             </p>
@@ -4033,6 +4054,11 @@ The <em>ErrorCallback</em> is launched with these error types:
               <li>
 IOError, if sync fails or any error related to file handle occurs.              </li>
             </ul>
+<<<<<<< HEAD
+=======
+           </div>
+<div class="description">
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             <p>
 This method is asynchronous. Its execution will occur in background and after all previously commissioned background jobs will finish.
             </p>
@@ -4179,6 +4205,11 @@ The <em>ErrorCallback</em> is launched with these error types:
               <li>
 IOError, if close fails or any error related to file handle occurs.              </li>
             </ul>
+<<<<<<< HEAD
+=======
+           </div>
+<div class="description">
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             <p>
 This method is asynchronous. Its execution will occur in background and after all previously commissioned background jobs will finish.
             </p>

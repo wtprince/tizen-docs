@@ -340,6 +340,7 @@ Regardless of the launch request type, when the application launcher framework h
 2. The `ui_app_main()` function initializes the application and starts the main loop.
 
     It takes 4 parameters and uses them to initialize the application. The `argc` and `argv` parameters contain the values from the application framework, and you must never change their values. The third parameter is a state transition handler that is responsible for managing the state transitions the application goes through while it is running. The fourth parameter is application data to be passed to each state handler.
+<<<<<<< HEAD
 
 3. When the `ui_app_main()` is first invoked, the application moves from the ready state to the created state, and must initialize itself. During this transition, the application framework calls the application's `app_create_cb()` state transition callback just before the application enters the main loop. Within the registered callback, you must initialize the application resources and create the main window.
 
@@ -348,6 +349,16 @@ Regardless of the launch request type, when the application launcher framework h
 
 4. Just after the application enters the main loop, the application framework calls the application's `app_control_cb()` callback.
 
+=======
+
+3. When the `ui_app_main()` is first invoked, the application moves from the ready state to the created state, and must initialize itself. During this transition, the application framework calls the application's `app_create_cb()` state transition callback just before the application enters the main loop. Within the registered callback, you must initialize the application resources and create the main window.
+
+    If the `app_create_cb()` callback function returns `false`, the application moves to the terminated state. If it returns `true`, the application enters the main loop.
+
+
+4. Just after the application enters the main loop, the application framework calls the application's `app_control_cb()` callback.
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     The callback is passed to the `app_control` handle containing the reason why the application was launched. For example, the application can be launched to open a file to handle the request that has been sent by other application. The application is always responsible for checking the content of the `app_control` handle and responding appropriately. The content of the `app_control` handle can be empty, if the application is launched by the user from the launcher.
 
     If the application wants to return the result of the application control operation to the application that originally sent the launch request, the result can be sent with the `app_control_reply_to_launch_request()` function.

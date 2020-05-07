@@ -8,9 +8,18 @@ The following useful background knowledge enables you to use DALi more effective
   Enables you to take advantage of the handle/body pattern, which separates the implementation details from its interface.
 
 - [Properties: Accessing Properties of DALi Objects](properties.md)
+<<<<<<< HEAD
 
   Enabled you to manage properties that can be dynamically added to or removed from an existing object at runtime.
 
+=======
+
+  Enabled you to manage properties that can be dynamically added to or removed from an existing object at runtime.
+
+- [Multi-threaded Architecture: Secret of DALi High-Performance](multi-threaded.md)
+
+  Enables you to achieve the best performance and scalability.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ## Related Information
 - Dependencies

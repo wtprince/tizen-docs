@@ -4,11 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>TVAudioControl API</title>
+<<<<<<< HEAD
 <meta data-version="5.0" data-profile="tv">
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::TVAudioControl">
 <div class="supported-platforms"><img class="tv-optional" title="Optional, Not supported by Tizen Tv emulator" src="tv_s_w_optional.png"></div>
+=======
+</head>
+<body id="page-content" onload="prettyPrint()">
+<div class="api" id="::TVAudioControl">
+ <div class="supported-platforms"><img class="tv-optional" title="Optional, Not supported by Tizen Tv emulator" src="tv_s_w_optional.png"></div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="title"><h1>TVAudioControl API</h1></div>
 <div class="brief">
         </div>
@@ -824,9 +831,13 @@ This type of error is deprecated since Tizen 5.0.
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>
@@ -836,13 +847,22 @@ To guarantee the running of this application on a device with a TV audio control
 <li class="feature">http://tizen.org/feature/tv.audio</li>
 </div>
 <p></p>
+<<<<<<< HEAD
                     For more information, see <a href="/application/web/tutorials/app-filtering">Application Filtering.</a>
+=======
+                    For more information, see <a href="https://developer.tizen.org/development/training/web-application/understanding-tizen-programming/application-filtering">Application Filtering.</a>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <h2 id="full-webidl">4. Full WebIDL</h2>
 <pre class="webidl prettyprint">module TVAudioControl {
   enum AudioOutputMode { "PCM", "DOLBY", "DTS", "AAC" };
+<<<<<<< HEAD
   enum AudioBeepType { "UP", "DOWN", "LEFT", "RIGHT", "PAGE_LEFT", "PAGE_RIGHT", "BACK", "SELECT", "CANCEL", "WARNING", "KEYPAD",
     "KEYPAD_ENTER", "KEYPAD_DEL", "MOVE", "PREPARING" };
+=======
+  enum AudioBeepType { "UP", "DOWN", "LEFT", "RIGHT", "PAGE_LEFT", "PAGE_RIGHT", "BACK", "SELECT", "CANCEL", "WARNING",
+    "KEYPAD", "KEYPAD_ENTER", "KEYPAD_DEL", "MOVE", "PREPARING" };
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   <a href="tizen.html#Tizen">Tizen</a> implements <a href="#AudioControlManagerObject">AudioControlManagerObject</a>;
   [NoInterfaceObject] interface AudioControlManagerObject {
     readonly attribute <a href="#AudioControlManager">AudioControlManager</a> tvaudiocontrol;

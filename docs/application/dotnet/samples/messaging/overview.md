@@ -39,7 +39,11 @@ for TD:
 		<tr>
 			<td><img alt="" height="180" src="media/w74pushreceiver.png" width="180"/></td>
 			<td>
+<<<<<<< HEAD
 			<p><a href="https://github.com/Samsung/Tizen-CSharp-Samples/tree/master/Wearable/PushReceiver" target="_blank"><strong>(W) PushReceiver</strong></a></p>
+=======
+			<p><strong>(W) PushReceiver</strong> [In progress]</p>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 			<p>This sample application demonstrates how to receive a push notification from the application server using the push server and <a href="https://samsung.github.io/TizenFX/latest/api/Tizen.Messaging.Push.html" target="_blank">Tizen.Messaging.Push</a>.</p>
 			</td>
 		</tr>

@@ -16,10 +16,13 @@ You can use the following visual detection and recognition features in your nati
 - [Image Recognition and Tracking](image-recognition.md)
 
   You can extract features of an image object and recognize it from specific images. You can also track the image object within the camera preview stream.
+<<<<<<< HEAD
 
 - [Image Classification](image-classification.md)
 
   You can classify an image that belongs to corresponding labels.
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ## Related Information
 - Dependencies

@@ -14,7 +14,11 @@
 	-   C/C++ Development Tooling (CDT) is updated to 9.3.2 and Debugger is migrated from CDI to DSF to enable faster debugging and easier extension.
 -	Emulator Manager 
 	-   Emulator Manager is updated to support JAVA 9.
+<<<<<<< HEAD
 	-   [Intel&reg; HAXM](../setup/hardware-accelerated-execution-manager.md) is upgraded to 7.0.0 to support Tizen emulators on Windows 10 and Mac.
+=======
+	-   [Intel&reg; HAXM](../setup/hardware-accelerated-execution-manager.md) is upgraded to 7.0.0 to support Tizen Emulators on Windows 10 and Mac.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 -	Device Manager
 	-   Device Manager is updated to support JAVA 9.
 -	Profiling Tools
@@ -63,8 +67,13 @@
 	-   Playing sound is not supported on Windows&reg; or macOS.
 	-   The Component Designer crashes if an alias is selected as the source group of an added item.
 -	Emulator
+<<<<<<< HEAD
 	-   To use the Tizen Emulator, install an Intel VTx supported by the CPU, and the latest version of the graphic card driver provided by the vendor. To verify the prerequisites for the Tizen Emulator, see [Prerequisites for Tizen Studio](../setup/prerequisites.md).
 	    -   If the host machine is using NVIDIA&reg; Optimus&reg; technology on either Ubuntu or Windows&reg;, you must set the Tizen Emulator to run with your NVIDIA&reg; graphics card. For Ubuntu, verify the [bumblebee project](https://wiki.ubuntu.com/Bumblebee ). For Windows&reg;, select *High Speed NVIDIA&reg; Processor* as *Preferred Graphics processor* in the NVIDIA&reg; control panel.
+=======
+	-   To use the Tizen emulator, install an Intel VTx supported by the CPU, and the latest version of the graphic card driver provided by the vendor. To verify the prerequisites for the Tizen emulator, see [Prerequisites for Tizen Studio](../setup/prerequisites.md).
+	    -   If the host machine is using NVIDIA&reg; Optimus&reg; technology on either Ubuntu or Windows&reg;, you must set the Tizen emulator to run with your NVIDIA&reg; graphics card. For Ubuntu, verify the [bumblebee project](https://wiki.ubuntu.com/Bumblebee ). For Windows&reg;, select *High Speed NVIDIA&reg; Processor* as *Preferred Graphics processor* in the NVIDIA&reg; control panel.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 	    -   On Ubuntu, if the graphics driver is out-of-date, your Ubuntu desktop session occasionally logs out while launching Emulator Manager, or the emulator skin is displayed improperly. Verify the prerequisites and upgrade to the latest graphics driver.
 	-   On Ubuntu 14.04, a shortcut menu can sometimes appear transparent.
 	-   On Windows&reg;, depending on your OS theme (such as Non-Aero themes and Windows XP themes), a display surface can be erased for a while if the emulator window is covered with another window. If you click the emulator window, the display surface runs correctly again.
@@ -81,7 +90,11 @@
 	-   When analyzing applications on commercial devices running Tizen 3.0, newly-released or after a firmware update, the following problems exist:
 	    -   The Core Frequency information is not shown.
 	    -   The screenshots on scene transitions feature will not work.
+<<<<<<< HEAD
 	-   When analyzing applications on the Tizen 4.0 Emulator or reference device, the startup profiling information is not shown.
+=======
+	-   When analyzing applications on the Tizen 4.0 emulator or reference device, the startup profiling information is not shown.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 	-   The UI Hierarchy viewer feature and startup profiling are not performed simultaneously.
 	-   Dynamic Analyzer cannot perform Web application profiling with a commercial Tizen device, due to the security policy.
 	-   Dynamic Analyzer cannot show lifecycle information for Web applications.

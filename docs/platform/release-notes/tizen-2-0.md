@@ -1,16 +1,27 @@
 # Tizen 2.0
 
+<<<<<<< HEAD
 Release date: Feb. 18, 2013
 
 The Tizen 2.0 release provides developers with the Tizen kernel, device drivers, middleware subsystems, and Web/Native APIs, necessary to develop future Tizen compliant solutions.
 
+=======
+Release Date: 18 Feb, 2013
+
+
+
+The Tizen 2.0 release provides developers with the Tizen kernel, device drivers, middleware subsystems, and Web/Native APIs, necessary to develop future Tizen compliant solutions.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ## Release Details
 
 - [Getting binaries and images](http://download.tizen.org/releases/2.0/tizen-2.0_20130219.4/)
 - [Detailed application information](https://wiki.tizen.org/wiki/Porting_Guide#Application)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 ## Release Notes
 
 Tizen is an open source, standards-based software platform supported by leading mobile operators, device manufacturers, and chip suppliers for multiple device categories, including smartphones, tablets, netbooks, in-vehicle infotainment devices, and smart TVs.
@@ -42,7 +53,15 @@ The Tizen Software Development Kit (SDK) is a comprehensive set of tools for dev
 - Web Runtime
   - External storage installation capability for Web applications
   - New configuration extension:
+<<<<<<< HEAD
     - `<tizen:privilege>`: This tag is used to specify API permissions. (The `<feature>` tag is now be used to specify the required platform or hardware features.)
+=======
+<<<<<<< HEAD
+    - `<tizen:privilege>`: This tag is used to specify API permissions. (The `<feature>` tag is now be used to specify the required platform or hardware features.)
+=======
+    - <tizen:privilege>: This tag is used to specify API permissions. (The <feature> tag is now be used to specify the required platform or hardware features.)
+>>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   - NPRuntime plug-in support in Web applications:
     - In the 2.0 release, only the 3rd party libraries supported as public APIs, such as eglibc, can be used in NPRuntime plug-ins.
 
@@ -104,7 +123,15 @@ The Tizen Software Development Kit (SDK) is a comprehensive set of tools for dev
     - The "tizen-black" theme has been removed.
     - The "tizen-white" theme has been changed to a new UX style.
   - Widget
+<<<<<<< HEAD
     - The automatic footer generation feature has been removed. (`<div data-role="footer"/;>` needs to be specified.)
+=======
+<<<<<<< HEAD
+    - The automatic footer generation feature has been removed. (`<div data-role="footer"/;>` needs to be specified.)
+=======
+    - The automatic footer generation feature has been removed. (<div data-role="footer"/;> needs to be specified.)
+>>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     - The optionheader, nocontents, controlgroup, pagecontrol, colorselector, dayselector widgets are removed.
     - The image slider widget has been renamed as "gallery".
     - The shortcut scroll widget has been renamed as "fast scroll".

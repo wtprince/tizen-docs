@@ -125,6 +125,7 @@ Tizen is built to work on a wide variety of platforms with a focus on embedded d
 
 Both mobile and wearable profiles are supported in native and Web application types. The TV profile is supported in the Web application type only.
 
+<<<<<<< HEAD
 **Figure: Applications using the wearable profile**
 
 ![Applications using the wearable profile](media/profile_wearable.png)
@@ -136,6 +137,19 @@ Both mobile and wearable profiles are supported in native and Web application ty
 **Figure: Applications using the mobile profile**
 
 ![Applications using the mobile profile](media/profile_mobile.png)
+=======
+**Figure: Applications using the mobile profile**
+
+![Applications using the mobile profile](media/profile_mobile.png)
+
+**Figure: Applications using the wearable profile**
+
+![Applications using the wearable profile](media/profile_wearable.png)
+
+**Figure: Applications using the TV profile**
+
+![Applications using the TV profile](media/profile_tv.png)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 <a name="type"></a>
 ## Tizen Application Types

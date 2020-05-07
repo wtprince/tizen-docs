@@ -283,6 +283,7 @@ The basic principle of improving the launch time of a Web application is simply 
 - Keep only the first page elements in the `index.html` file.
 
   Take advantage of a useful technique called deferring loading. The UI component creation starts at the DOMContentLoad time, and at this time all the DOM elements in the first page (`index.html`) are constructed. Of course, images and other resources are not yet loaded at this stage.
+<<<<<<< HEAD
 
   Often the first page can contain unnecessary elements, and consequently slow down the DOM construction. To avoid the problem, construct the first page to contain only the necessary elements to show the first scene, and put the rest of the pages in another HTML file. Similarly, if you do not need some JavaScript functionality on the first page, load the related JavaScript files only after the first page is loaded.
 
@@ -296,6 +297,10 @@ The basic principle of improving the launch time of a Web application is simply 
   Therefore, it is recommended not to use web frameworks if your web application UX is simple and the launch time performance is important.
 
   Alternatively, avoid loading web frameworks until the web application displays the first page. You can create a simple first page that does not use web frameworks and load web frameworks asynchronously while the first page is displayed. Additionally, most frameworks have specific features to improve their loading performance, for example, lazy-loading. To improve the performance of your application, you can use one of the specific features in your web applications that are based on web frameworks.
+=======
+  
+  Often the first page can contain unnecessary elements, and consequently slow down the DOM construction. To avoid the problem, construct the first page to contain only the necessary elements to show the first scene, and put the rest of the pages in another HTML file. Similarly, if you do not need some JavaScript functionality on the first page, load the related JavaScript files only after the first page is loaded.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ## Related Information
 - Dependencies

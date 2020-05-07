@@ -4,11 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>HumanActivityMonitor API</title>
+<<<<<<< HEAD
 <meta data-version="5.0" data-profile="mobile">
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::HumanActivityMonitor">
 <div class="supported-platforms"><img class="mobile-optional emulator-partial" title="Optional, Supported by Tizen Mobile emulator - Emulator supports only HRM" src="mobile_s_w_optional.png"></div>
+=======
+</head>
+<body id="page-content" onload="prettyPrint()">
+<div class="api" id="::HumanActivityMonitor">
+ <div class="supported-platforms"><img class="mobile-optional emulator-partial" title="Optional, Supported by Tizen Mobile emulator - Emulator supports only HRM" src="mobile_s_w_optional.png"></div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="title"><h1>HumanActivityMonitor API</h1></div>
 <div class="brief">
  The Human Activity Monitor API defines interfaces and methods to manage human activity data from various sensors on the device.
@@ -34,7 +41,11 @@ The gesture recognition API allows applications to be notified and react when th
 The activity recognition API allows applications to be notified and react when a user activity is recognized, for example, the user starts to run, walk or is in moving vehicle.
         </p>
         <p>
+<<<<<<< HEAD
 For more information about how to use Human Activity Monitor API, see <a href="/application/web/guides/sensors/ham">Human Activity Monitor Guide</a>.
+=======
+For more information about how to use Human Activity Monitor API, see <a href="https://developer.tizen.org/development/guides/web-application/sensors/human-activity-monitor">Human Activity Monitor Guide</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         </p>
        </div>
 <p><span class="version">Since: </span>
@@ -479,7 +490,12 @@ GESTURE_WRIST_UP - The wearable device is moved and faced up            </li>
  Specifies the gesture events.
           </div>
 <pre class="webidl prettyprint">  enum GestureEvent { "GESTURE_EVENT_DETECTED", "GESTURE_SHAKE_DETECTED", "GESTURE_SHAKE_FINISHED", "GESTURE_SNAP_X_NEGATIVE",
+<<<<<<< HEAD
     "GESTURE_SNAP_X_POSITIVE", "GESTURE_SNAP_Y_NEGATIVE", "GESTURE_SNAP_Y_POSITIVE", "GESTURE_SNAP_Z_NEGATIVE", "GESTURE_SNAP_Z_POSITIVE" };</pre>
+=======
+    "GESTURE_SNAP_X_POSITIVE", "GESTURE_SNAP_Y_NEGATIVE", "GESTURE_SNAP_Y_POSITIVE", "GESTURE_SNAP_Z_NEGATIVE",
+    "GESTURE_SNAP_Z_POSITIVE" };</pre>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <p><span class="version">Since: </span>
  4.0
           </p>
@@ -2144,7 +2160,11 @@ The <em>interval</em> should be greater than or equal to zero.<br>For the PEDOME
 <li class="attribute" id="HumanActivityPedometerData::cumulativeCalorie">
 <span class="attrName"><span class="readonly">                readonly
 </span><span class="type">double </span><span class="name">cumulativeCalorie</span></span><div class="brief">
+<<<<<<< HEAD
  Cumulative calories burnt since the last <a href="#HumanActivityMonitorManager::start">start()</a> method call in kcal.
+=======
+ Cumulative calories burned since the last <a href="#HumanActivityMonitorManager::start">start()</a> method call in kcal.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </div>
 <p><span class="version">Since: </span>
  2.3
@@ -2198,7 +2218,11 @@ The value is the sum of <em>cumulativeWalkStepCount</em> and <em>cumulativeRunSt
 <div class="interface" id="HumanActivityAccumulativePedometerData">
 <a class="backward-compatibility-anchor" name="::HumanActivityMonitor::HumanActivityAccumulativePedometerData"></a><h3>2.8. HumanActivityAccumulativePedometerData</h3>
 <div class="brief">
+<<<<<<< HEAD
  The HumanActivityAccumulativePedometerData interface represents pedometer motion data since the device boot.
+=======
+ The HumanActivityAccumulativePedometerData interface represents pedometer motion data since the device is booted.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
           </div>
 <pre class="webidl prettyprint">  [NoInterfaceObject] interface HumanActivityAccumulativePedometerData : <a href="#HumanActivityData">HumanActivityData</a> {
     readonly attribute <a href="#PedometerStepStatus">PedometerStepStatus</a> stepStatus;
@@ -2248,7 +2272,11 @@ The value is the sum of <em>cumulativeWalkStepCount</em> and <em>cumulativeRunSt
 <li class="attribute" id="HumanActivityAccumulativePedometerData::accumulativeDistance">
 <span class="attrName"><span class="readonly">                readonly
 </span><span class="type">double </span><span class="name">accumulativeDistance</span></span><div class="brief">
+<<<<<<< HEAD
  Accumulative distance traveled since the device boot in meters.
+=======
+ Accumulative distance traveled since the device is booted in meters.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </div>
 <p><span class="version">Since: </span>
  2.3
@@ -2257,7 +2285,11 @@ The value is the sum of <em>cumulativeWalkStepCount</em> and <em>cumulativeRunSt
 <li class="attribute" id="HumanActivityAccumulativePedometerData::accumulativeCalorie">
 <span class="attrName"><span class="readonly">                readonly
 </span><span class="type">double </span><span class="name">accumulativeCalorie</span></span><div class="brief">
+<<<<<<< HEAD
  Accumulative calories burnt since the device boot in kcal.
+=======
+ Accumulative calories burnt since the device is booted in kcal.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </div>
 <p><span class="version">Since: </span>
  2.3
@@ -2266,7 +2298,11 @@ The value is the sum of <em>cumulativeWalkStepCount</em> and <em>cumulativeRunSt
 <li class="attribute" id="HumanActivityAccumulativePedometerData::accumulativeTotalStepCount">
 <span class="attrName"><span class="readonly">                readonly
 </span><span class="type">double </span><span class="name">accumulativeTotalStepCount</span></span><div class="brief">
+<<<<<<< HEAD
  Accumulative walking and running step count since the device boot.
+=======
+ Accumulative walking and running step count since the device is booted.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </div>
 <div class="description">
             <p>
@@ -2280,7 +2316,11 @@ The value is the sum of <em>accumulativeWalkStepCount</em> and <em>accumulativeR
 <li class="attribute" id="HumanActivityAccumulativePedometerData::accumulativeWalkStepCount">
 <span class="attrName"><span class="readonly">                readonly
 </span><span class="type">double </span><span class="name">accumulativeWalkStepCount</span></span><div class="brief">
+<<<<<<< HEAD
  Accumulative walking step count since the device boot.
+=======
+ Accumulative walking step count since the device is booted.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </div>
 <p><span class="version">Since: </span>
  2.3
@@ -2289,7 +2329,11 @@ The value is the sum of <em>accumulativeWalkStepCount</em> and <em>accumulativeR
 <li class="attribute" id="HumanActivityAccumulativePedometerData::accumulativeRunStepCount">
 <span class="attrName"><span class="readonly">                readonly
 </span><span class="type">double </span><span class="name">accumulativeRunStepCount</span></span><div class="brief">
+<<<<<<< HEAD
  Accumulative running step count since the device boot.
+=======
+ Accumulative running step count since the device is booted.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </div>
 <p><span class="version">Since: </span>
  2.3
@@ -2692,7 +2736,11 @@ It's a <a href="https://www.researchgate.net/publication/313837778_Microcontroll
 <li class="attribute" id="HumanActivityRecorderPedometerData::calorie">
 <span class="attrName"><span class="readonly">                readonly
 </span><span class="type">double </span><span class="name">calorie</span></span><div class="brief">
+<<<<<<< HEAD
  Calories burnt from <em>startTime</em> to <em>endTime</em> in kcal.
+=======
+ Calories burned from <em>startTime</em> to <em>endTime</em> in kcal.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </div>
 <p><span class="version">Since: </span>
  3.0
@@ -2907,12 +2955,16 @@ It's a <a href="https://www.researchgate.net/publication/313837778_Microcontroll
           </p>
 <div class="constructors">
 <h4 id="StressMonitorDataRange::constructor">Constructors</h4>
+<<<<<<< HEAD
 <dl>
 <dt class="method" id="">
 <a class="backward-compatibility-anchor" name=""></a><code><b><span class="methodName">Constructor (DOMString, unsigned long, unsigned long)</span></b></code>
 </dt>
 <pre class="webidl prettyprint">StressMonitorDataRange(optional DOMString label, optional unsigned long min, optional unsigned long max);</pre>
 </dl>
+=======
+<dl><pre class="webidl prettyprint">StressMonitorDataRange(optional DOMString label, optional unsigned long min, optional unsigned long max);</pre></dl>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <div class="attributes">
 <h4>Attributes</h4>
@@ -3099,9 +3151,13 @@ It's a <a href="https://www.researchgate.net/publication/313837778_Microcontroll
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>
@@ -3183,7 +3239,11 @@ To guarantee that the stress monitor vector sensor application runs on a device 
 <li class="feature">http://tizen.org/feature/sensor.stress_monitor</li>
 </div>
 <p></p>
+<<<<<<< HEAD
                     For more information, see <a href="/application/web/tutorials/app-filtering">Application Filtering.</a>
+=======
+                    For more information, see <a href="https://developer.tizen.org/development/training/web-application/understanding-tizen-programming/application-filtering">Application Filtering.</a>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <h2 id="full-webidl">4. Full WebIDL</h2>
 <pre class="webidl prettyprint">module HumanActivityMonitor {
@@ -3193,8 +3253,13 @@ To guarantee that the stress monitor vector sensor application runs on a device 
   enum ActivityRecognitionType { "STATIONARY", "WALKING", "RUNNING", "IN_VEHICLE" };
   enum ActivityAccuracy { "LOW", "MEDIUM", "HIGH" };
   enum SleepStatus { "ASLEEP", "AWAKE", "UNKNOWN" };
+<<<<<<< HEAD
   enum GestureType { "GESTURE_DOUBLE_TAP", "GESTURE_MOVE_TO_EAR", "GESTURE_NO_MOVE", "GESTURE_PICK_UP", "GESTURE_SHAKE", "GESTURE_SNAP",
     "GESTURE_TILT", "GESTURE_TURN_FACE_DOWN", "GESTURE_WRIST_UP" };
+=======
+  enum GestureType { "GESTURE_DOUBLE_TAP", "GESTURE_MOVE_TO_EAR", "GESTURE_NO_MOVE", "GESTURE_PICK_UP", "GESTURE_SHAKE",
+    "GESTURE_SNAP", "GESTURE_TILT", "GESTURE_TURN_FACE_DOWN", "GESTURE_WRIST_UP" };
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   enum GestureEvent { "GESTURE_EVENT_DETECTED", "GESTURE_SHAKE_DETECTED", "GESTURE_SHAKE_FINISHED", "GESTURE_SNAP_X_NEGATIVE",
     "GESTURE_SNAP_X_POSITIVE", "GESTURE_SNAP_Y_NEGATIVE", "GESTURE_SNAP_Y_POSITIVE", "GESTURE_SNAP_Z_NEGATIVE", "GESTURE_SNAP_Z_POSITIVE" };
   dictionary HumanActivityRecorderOption {

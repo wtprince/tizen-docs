@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # What is Tizen?
 ## [Overview](/platform/what-is-tizen/overview.md)
 ## Profiles
@@ -15,6 +16,12 @@
 ## [Development Workflow](/platform/get-started/work-flow.md)
 ## [Git Repository Structure](/platform/get-started/git-repo-structure.md)
 ## [Typographic Conventions](/platform/get-started/conventions.md)
+=======
+# Overview
+## [Development Workflow](/platform/about/work-flow.md)
+## [Git Repository Structure](/platform/about/git-repo-structure.md)
+## [Typographic Conventions](/platform/about/conventions.md)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 # Developing
 ## [Installing Development Tools](/platform/developing/installing.md)
@@ -38,7 +45,10 @@
 ## [Location](/platform/porting/location.md)
 ## [Telephony](/platform/porting/telephony.md)
 ## [Application](/platform/porting/application.md)
+<<<<<<< HEAD
 ## [Legacy Porting](/platform/porting/legacy-porting.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 # Reference
 ## [Gerrit](/platform/reference/gerrit-usage.md)
@@ -55,6 +65,7 @@
 ### [MIC Reference](/platform/reference/mic/mic-reference.md)
 ### [FAQ](/platform/reference/mic/mic-faq.md)
 
+<<<<<<< HEAD
 ## Tizen Studio
 ### [Overview](/platform/reference/tizen-studio/overview.md)
 ### [Contributing to Tizen Studio](/platform/reference/tizen-studio/contribute-gerrit.md)
@@ -69,6 +80,8 @@
 ### [Modifying Certificate Manager Texts](/platform/reference/tizen-studio/example-web-certi-ext.md)
 ### [Modifying Eclipse Themes](/platform/reference/tizen-studio/example-web-theme-ext.md)
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 # Release Notes
 ## [Tizen 5.5 Public M2](/platform/release-notes/tizen-5-5-m2.md)
 ## [Tizen 5.5 Public M1](/platform/release-notes/tizen-5-5-m1.md)
@@ -97,3 +110,27 @@
 ## [Tizen Compliance Program](/platform/compliance/compliance-program.md)
 ## [Tizen Compliance Specification](/platform/compliance/compliance-specification.md)
 ## [Tizen Compliance Test](/platform/compliance/compliance-test.md)
+<<<<<<< HEAD
+=======
+
+# Tizen RT
+## [Overview](/platform/tizen-rt/tizen-rt-overview.md)
+## [Getting Started](/platform/tizen-rt/rt-getting-started.md)
+## [API](/platform/tizen-rt/rt-api.md)
+## [1.0 Specification](/platform/tizen-rt/rt-specification-1-0.md)
+## [Long-term Goals](/platform/tizen-rt/rt-goal.md)
+## Release Notes
+### [Tizen RT 1.0 M1](/platform/tizen-rt/release-notes/tizen-rt-1-0-m1.md)
+
+# Tizen Studio
+## [Overview](/platform/tizen-studio/overview.md)
+## [Contributing to Tizen Studio](/platform/tizen-studio/contribute-gerrit.md)
+## Developing Extensions
+### [IDE Extension Development](/platform/tizen-studio/web-extension-guide.md)
+### [Emulator Extension Development](/platform/tizen-studio/emulator-extension-guide.md)
+### [Package File Description](/platform/tizen-studio/package-file-desc-guide.md)
+### [Metapackage File Description](/platform/tizen-studio/meta-package.md)
+## Building Tizen Studio Code
+### [Build Environment](/platform/tizen-studio/environment.md)
+### [Local Build Guide](/platform/tizen-studio/local-build.md)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5

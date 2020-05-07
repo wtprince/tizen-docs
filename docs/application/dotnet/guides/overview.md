@@ -10,13 +10,21 @@ Tizen.Wearable.CircularUI is a set of extension APIs of Xamarin.Forms. Tizen.Wea
 You can easily create your Tizen wearable applications with [Tizen.Wearable.CircularUI guides](https://samsung.github.io/Tizen.CircularUI/guide/Overview.html). For more information about these APIs, see [Tizen.Wearable.CircularUI GitHub](https://github.com/Samsung/Tizen.CircularUI).
 
 ## Tizen OpenTK
+<<<<<<< HEAD
 Tizen OpenTK provides a set of fast and low-level C# bindings for OpenGL&reg; ES APIs. From Tizen 5.0, it is integrated with Tizen Application Framework. Therefore, it allows Tizen app developer to use C# OpenGL&reg; ES APIs in .Net application.
+=======
+The Tizen OpenTK provides a set of fast and low-level C# bindings for OpenGL&reg; ES APIs. From Tizen 5.0, it is integrated with Tizen Application Framework. Therefore, it allows Tizen app developer to use C# OpenGL&reg; ES APIs in .Net application.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 Using these APIs, you can quickly create graphic applications with the OpenGL&reg; ES 2.0, such as, Ambient app, Game, Dynamic partial, Physics effect, and so on. For more information about these APIs, see [Tizen OpenTK GitHub](https://github.com/TizenAPI/opentk).
 
 ## TizenFX API
 
+<<<<<<< HEAD
 TizenFX API introduce various features for Tizen .NET applications. TizenFX API allows applications to call into platform-specific functionality from the shared code. This functionality enables Xamarin.Forms applications to do things a native application can do, without causing the portable part of the application to become littered with operating system-specific details.
+=======
+TizenFX API introduce various features for Tizen .NET applications. The TizenFX API allows applications to call into platform-specific functionality from the shared code. This functionality enables Xamarin.Forms applications to do things a native application can do, without causing the portable part of the application to become littered with operating system-specific details.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 You can use the following TizenFX features in your .NET applications:
 
@@ -57,10 +65,13 @@ You can use the following TizenFX features in your .NET applications:
 
   The connectivity features define how you can connect your application to the outside world, and send and receive data. You can create connections to various networks, servers, and other devices.
 
+<<<<<<< HEAD
 - [Machine Learning](machine-learning/overview.md)
 
   Machine learning (ML) feature introduces how you can easily invoke the neural network model and get the inference output result effortlessly and efficiently.
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 - [Messaging](messaging/overview.md)
 
   The messaging features introduce how you can send and receive text and multimedia messages, and manage emails. You can also create a push server to use the push messaging service to deliver push notifications to the application.

@@ -12,7 +12,11 @@ Tizen Studio provides the following set of tools to help you create and manage y
 
 - [Certificate Registration](../common-tools/certificate-registration.md) **(Working with the Certificate Profile)**
 
+<<<<<<< HEAD
    The Certificate Manager tool is used to create a certificate profile and register author and distributor certificates. Before installing your application on a device or submitting it to Tizen Store, you must sign it with a certificate profile while packaging your application.
+=======
+   The Certificate Manager tool is used to create a certificate profile and register author and distributor certificates. Before installing your application on a device or submitting it to the Tizen Store, you must sign it with a certificate profile while packaging your application.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - [Device Manager](../common-tools/device-manager.md) **(Monitoring Devices with the Device Manager)**
 

@@ -1,10 +1,17 @@
 # Tizen 3.0 Public M2
 
+<<<<<<< HEAD
 Release date: Jan. 18, 2017
 
 Tizen 3.0 adopts various new features, such as high-performance graphics, the latest Web technology, improved security, and multi-user support.
 
 
+=======
+Release Date: Jan 18, 2017
+
+Tizen 3.0 adopts various new features, such as high-performance graphics, the latest Web technology, improved security, and multi-user support.
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 ## Release Details
 
 - [Getting source code](http://review.tizen.org/git/) (Tizen 3.0 M2 source codes are under **tizen_3.0_m2** branch.)

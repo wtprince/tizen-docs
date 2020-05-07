@@ -551,7 +551,11 @@ To connect to other devices:
 
 To share data between devices after establishing a connection:
 
+<<<<<<< HEAD
 1.  To write data, use the `SendData()` method of the [Tizen.Network.Bluetooth.IBluetoothClientSocket](https://samsung.github.io/TizenFX/latest/api/Tizen.Network.Bluetooth.IBluetoothClientSocket.html) interface, which accepts the data as a byte[] parameter:
+=======
+1.  To write data, use the `SendData()` method of the [Tizen.Network.Bluetooth.IBluetoothClientSocket](https://samsung.github.io/TizenFX/latest/api/Tizen.Network.Bluetooth.IBluetoothClientSocket.html) interface, which accepts the data as a string parameter:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     ```
     private static byte[] dataFromClient = { 0xAB, 0xCD, 0xEF };
@@ -563,7 +567,11 @@ To share data between devices after establishing a connection:
 
     Register the event handler for the `DataReceived` event of the [Tizen.Network.Bluetooth.IBluetoothServerSocket](https://samsung.github.io/TizenFX/latest/api/Tizen.Network.Bluetooth.IBluetoothServerSocket.html) interface.
 
+<<<<<<< HEAD
     The received data is passed to the event handler as an instance of the [Tizen.Network.Bluetooth.SocketData](https://samsung.github.io/TizenFX/latest/api/Tizen.Network.Bluetooth.SocketData.html) class, which contains the socket file descriptor, the size of the received data in bytes, and the data itself as a byte[].
+=======
+    The received data is passed to the event handler as an instance of the [Tizen.Network.Bluetooth.SocketData](https://samsung.github.io/TizenFX/latest/api/Tizen.Network.Bluetooth.SocketData.html) class, which contains the socket file descriptor, the size of the received data in bytes, and the data itself as a string.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     ```
     public static IBluetoothServerSocket Socket = null;
@@ -604,7 +612,11 @@ To disconnect from a device:
 
 Before you can use the Bluetooth GATT functionalities, you must successfully connect to the BLE target.
 
+<<<<<<< HEAD
 Find the target device and connect to it with the `CreateClient()` and `ConnectAsync()` methods of the [Tizen.Network.Bluetooth.BluetoothGattClient](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Network.Bluetooth.BluetoothGattClient.html) class:
+=======
+Find the target device and connect to it with the `GattConnect()` method of the [Tizen.Network.Bluetooth.BluetoothLeDevice](https://samsung.github.io/TizenFX/latest/api/Tizen.Network.Bluetooth.BluetoothLeDevice.html) class:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ```
 public static BluetoothLeDevice leDevice = null;
@@ -631,7 +643,11 @@ await client.ConnectAsync(false);
 
 To perform GATT client operations:
 
+<<<<<<< HEAD
 1.  Define a connection state change event handler and register it for the `ConnectionStateChanged` event of the [Tizen.Network.Bluetooth.BluetoothGattClient](https://developer.tizen.org/dev-guide/csapi/api/Tizen.Network.Bluetooth.BluetoothGattClient.html) class:
+=======
+1.  Define a connection state change event handler and register it for the `GattConnectionStateChanged` event of the [Tizen.Network.Bluetooth.BluetoothLeDevice](https://samsung.github.io/TizenFX/latest/api/Tizen.Network.Bluetooth.BluetoothLeDevice.html) class:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     ```
     /// Register for GATT connection event handler

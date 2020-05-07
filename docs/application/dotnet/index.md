@@ -12,11 +12,19 @@ Managed runtime offers the following advantages to your application development:
 
 - **Faster development**
 
+<<<<<<< HEAD
   Application development is accelerated as the managed runtime handles many functions that otherwise have to be coded into the application.
 
 - **Safer code**
 
   Managed runtime can handle bound checking, type safety, garbage collection, memory protection services, and objects that are invoked directly. Tizen Web API already provides some of the mentioned benefits, but does not provide type safety as JavaScript is not a strongly typed language.
+=======
+  Application development is accelerated as the managed runtime handles many functions that otherwise have to be coded into the application. The Tizen Native API and Tizen Web API already provides this benefit.
+
+- **Safer code**
+
+  Managed runtime can handle bound checking, type safety, garbage collection, memory protection services, and objects that are invoked directly. The Tizen Web API already provides some of the benefits mentioned, but does not provide type safety, as JavaScript is not a strongly typed language.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - **Lower deployment costs**
 

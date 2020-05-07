@@ -9,6 +9,13 @@ The control of system software version includes:
 The update procedure and the server might be different according to the platform developer.
 Therefore, this API just offers general functions for update, and platform developers must develop the application using Update Control API properly.
 
+<<<<<<< HEAD
+=======
+> **Note**
+>
+> As a default, the update agent works with [SmartThings Device Manager](https://console.smartthingsdm.com/) is available.
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 ## Prerequisites
 
 To enable your application to use the update control functionality:

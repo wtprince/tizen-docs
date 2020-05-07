@@ -4,11 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>Application API</title>
+<<<<<<< HEAD
 <meta data-version="2.4" data-profile="mobile">
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::Application">
-<div class="supported-platforms"><img class="mobile-mandatory emulator" title="Mandatory, Supported by Tizen Mobile emulator" src="mobile_s_w.png"></div>
+ <div class="supported-platforms"><img class="mobile-mandatory emulator" title="Mandatory, Supported by Tizen Mobile emulator" src="mobile_s_w.png"></div>
 <div class="title"><h1>Application API</h1></div>
 <div class="brief">
  This API provides a way to launch other applications and access
@@ -1071,7 +1074,11 @@ for (var i = 0; i &lt; appCerts.length; i++)
 <div class="description">
             <p>
 The shared directory is used to export data to other applications. Its structure is described in
+<<<<<<< HEAD
 <a href="/application/native/tutorials/details/io-overview">File System Directory Hierarchy</a>.
+=======
+<a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/file-system-directory-hierarchy">File System Directory Hierarchy</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </p>
             <p>
 If the ID is set to <var>null</var> or not set at all, it returns the shared directory URI for the current application.
@@ -1954,6 +1961,7 @@ and launches the selected application.
 </div>
 <div class="constructors">
 <h4 id="ApplicationControl::constructor">Constructors</h4>
+<<<<<<< HEAD
 <dl>
 <dt class="method" id="">
 <a class="backward-compatibility-anchor" name=""></a><code><b><span class="methodName">Constructor (DOMString, DOMString?, DOMString?, DOMString?, <a href="#ApplicationControlData">ApplicationControlData</a>[]?, <a href="#ApplicationControlLaunchMode">ApplicationControlLaunchMode</a>?)</span></b></code>
@@ -1961,6 +1969,10 @@ and launches the selected application.
 <pre class="webidl prettyprint">ApplicationControl(DOMString operation, optional DOMString? uri, optional DOMString? mime, optional DOMString? category,
                    optional <a href="#ApplicationControlData">ApplicationControlData</a>[]? data, optional <a href="#ApplicationControlLaunchMode">ApplicationControlLaunchMode</a>? launchMode);</pre>
 </dl>
+=======
+<dl><pre class="webidl prettyprint">ApplicationControl(DOMString operation, optional DOMString? uri, optional DOMString? mime, optional DOMString? category,
+                   optional <a href="#ApplicationControlData">ApplicationControlData</a>[]? data, optional <a href="#ApplicationControlLaunchMode">ApplicationControlLaunchMode</a>? launchMode);</pre></dl>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <div class="attributes">
 <h4>Attributes</h4>
@@ -2800,9 +2812,13 @@ Must be at least 1 byte in length and not exceed the maximum name length of 127 
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>
@@ -2820,7 +2836,11 @@ To guarantee the running of the application on a device which has battery, decla
 <li class="feature">http://tizen.org/feature/battery</li>
 </div>
 <p></p>
+<<<<<<< HEAD
                     For more information, see <a href="/application/web/tutorials/app-filtering">Application Filtering.</a>
+=======
+                    For more information, see <a href="https://developer.tizen.org/development/training/web-application/understanding-tizen-programming/application-filtering">Application Filtering.</a>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <h2 id="full-webidl">4. Full WebIDL</h2>
 <pre class="webidl prettyprint">module Application {

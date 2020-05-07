@@ -4,11 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>Account API</title>
+<<<<<<< HEAD
 <meta data-version="4.0" data-profile="wearable">
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::Account">
-<div class="supported-platforms"><img class="wearable-optional emulator" title="Optional, Supported by Tizen Wearable emulator" src="wearable_s_w_optional.png"></div>
+ <div class="supported-platforms"><img class="wearable-optional emulator" title="Optional, Supported by Tizen Wearable emulator" src="wearable_s_w_optional.png"></div>
 <div class="title"><h1>Account API</h1></div>
 <div class="brief">
   The Account API provides functionality for using existing configured
@@ -35,7 +38,11 @@ instance bound to the account.          </li>
         </ul>
         <p>
 To use <em>add(), remove(), and update()</em> methods of AccountManager can be invoked only
+<<<<<<< HEAD
 by account provider application. A web application is an account provider when its <em>config.xml </em>contains <a href="/application/tizen-studio/web-tools/config-editor#mw_account">Account provider section</a>. For example:<br>&lt;tizen:account multiple-account-support="true"&gt;<br>      &lt;tizen:icon section="Account"&gt;icon.png&lt;/tizen:icon&gt;<br>      &lt;tizen:icon section="AccountSmall"&gt;icon.png&lt;/tizen:icon&gt;<br>      &lt;tizen:display-name xml:lang="en-gb"&gt;Test&lt;/tizen:display-name&gt;<br>      &lt;tizen:capability&gt;http://tizen.org/account/capability/contact&lt;/tizen:capability&gt;<br>&lt;/tizen:account&gt;
+=======
+by account provider application. A web application is an account provider when its <em>config.xml </em>contains <a href="https://developer.tizen.org/development/tizen-studio/web-tools/configuring-your-app/configuration-editor#mw_account">Account provider section</a>. For example:<br>&lt;tizen:account multiple-account-support="true"&gt;<br>      &lt;tizen:icon section="Account"&gt;icon.png&lt;/tizen:icon&gt;<br>      &lt;tizen:icon section="AccountSmall"&gt;icon.png&lt;/tizen:icon&gt;<br>      &lt;tizen:display-name xml:lang="en-gb"&gt;Test&lt;/tizen:display-name&gt;<br>      &lt;tizen:capability&gt;http://tizen.org/account/capability/contact&lt;/tizen:capability&gt;<br>&lt;/tizen:account&gt;
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         </p>
         <p>
 For more information about how to use Account API, see <a href="/application/web/guides/personal/account">Account Guide</a>.
@@ -1143,11 +1150,19 @@ If you want to get all the providers, omit the capability argument.
 <div class="synopsis"><pre class="signature prettyprint">void removeAccountListener(long accountListenerId);</pre></div>
 <p><span class="version">Since: </span>
  4.0
+<<<<<<< HEAD
             </p>
 <div class="description">
             <p>
 Calling this function has no effect if there is no listener with given id.
             </p>
+=======
+            </p>
+<div class="description">
+            <p>
+Calling this function has no effect if there is no listener with given id.
+            </p>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
            </div>
 <p><span class="privilegelevel">Privilege level: </span>
  public
@@ -1434,9 +1449,13 @@ tizen.account.removeAccountListener(watchId);
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>

@@ -4,7 +4,11 @@ Visual Studio Code Extension for Tizen (VS Code Extension for Tizen) is a Visual
 
 Before installing VS Code Extension for Tizen, check [Prerequisites of Visual Studio Code Extension for Tizen](index.md).
 
+<<<<<<< HEAD
 ## Install from Marketplace
+=======
+## Install from the Marketplace
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 To install VS Code Extension for Tizen from the Visual Studio Code Marketplace:
 
@@ -15,12 +19,17 @@ To install VS Code Extension for Tizen from the Visual Studio Code Marketplace:
 2. In the **Extensions** view's **Search Extensions in Marketplace** field, enter **Tizen**.
 3. Locate **Visual Studio Code Extension for Tizen** in the search results and click **Install**.
 4. After the installation is complete, activate the extension by clicking **Reload**.
+<<<<<<< HEAD
 5. Once the extension has been activated, it asks whether you want to use an existing Tizen Baseline SDK installation or install a new one:
+=======
+5. Once the extension has been activated, it asks whether you want to use an existing Tizen baseline SDK installation or install a new one:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ![Visual Studio Code Marketplace](media/vscode_baselinesdk_exists.png)
 
    - To perform a fresh installation, click **NO**.
 
+<<<<<<< HEAD
      The extension suggests the path where to install the Tizen Baseline SDK. Click **YES** to proceed.
 
      > [!NOTE]
@@ -30,6 +39,19 @@ To install VS Code Extension for Tizen from the Visual Studio Code Marketplace:
 
 
 ## Install using VSIX file
+=======
+     The extension suggests the path where to install the Tizen baseline SDK. Click **YES** to proceed.
+
+     > **Note**
+     >
+     > If you click **NO**, you must finish the Tizen baseline SDK installation before you can use the extension.
+
+
+   - To use a previously-installed instance of the Tizen baseline SDK or Tizen Studio with the VS Code Extension for Tizen, click **YES** and see [Setting Tizen Baseline SDK Configuration](#setting-baseline-config).
+
+
+## Install from a VSIX File
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 To install VS Code Extension for Tizen from a VSIX file:
 
@@ -40,12 +62,17 @@ To install VS Code Extension for Tizen from a VSIX file:
 
 3. Select the VSIX file in the file browser and click **Install**.
 4. After the installation is complete, activate the extension by clicking **Reload**.
+<<<<<<< HEAD
 5. Once the extension has been activated, it asks whether you want to use an existing Tizen Baseline SDK installation or install a new one:
+=======
+5. Once the extension has been activated, it asks whether you want to use an existing Tizen baseline SDK installation or install a new one:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ![Baseline SDK installation query](media/vscode_baselinesdk_exists.png)
 
    - To perform a fresh installation, click **NO**.
 
+<<<<<<< HEAD
      The extension suggests the path where to install the Tizen Baseline SDK. Click **YES** to proceed.
 
      > [!NOTE]
@@ -63,6 +90,26 @@ If you have a previously-installed Tizen Baseline SDK or Tizen Studio instance, 
    ![Baseline SDK installation query](media/vscode_baselinesdk_exists.png)
 
 2. Enter the existing Tizen Baseline SDK path.
+=======
+     The extension suggests the path where to install the Tizen baseline SDK. Click **YES** to proceed.
+
+     > **Note**
+     >
+     > If you click **NO**, you must finish the Tizen baseline SDK installation before you can use the extension.
+
+   - To use a previously-installed instance of the Tizen baseline SDK or Tizen Studio with the VS Code Extension for Tizen, click **YES** and see [Setting Tizen Baseline SDK Configuration](#setting-baseline-config).
+
+
+<a name="setting-baseline-config"></a>
+## Set Tizen Baseline SDK Configuration
+If you have a previously-installed Tizen baseline SDK or Tizen Studio instance, you can reuse it for VS Code Extension for Tizen:
+
+1. Once the extension has been activated, it asks if you want to use an existing Tizen baseline SDK installation or install a new one. If you want to use the existing SDK, click **YES** (if you click **NO**, a new instance of the Tizen baseline SDK is installed automatically).
+
+   ![Baseline SDK installation query](media/vscode_baselinesdk_exists.png)
+
+2. Enter the existing Tizen baseline SDK path.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
    ![Baseline SDK path](media/vscode_baselinesdk_path.png)
 
@@ -73,9 +120,15 @@ If you have a previously-installed Tizen Baseline SDK or Tizen Studio instance, 
 4. Wait as the Package Manager built into the VS Code Extension for Tizen installs or updates the required files. During this process, the extension remains deactivated.
 
 
+<<<<<<< HEAD
 ## Install emulator images
 
 If you do not have a real device, you can run applications in the Tizen Emulator.
+=======
+## Install Emulator Images
+
+If you do not have a real device, you can run applications in the Tizen emulator.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 To download emulator images, you can use the Tizen Package Manager or the Tizen Emulator Manager.
 
@@ -88,7 +141,12 @@ To download emulator images, you can use the Tizen Package Manager or the Tizen 
 
 - To use the Tizen Emulator Manager:
 
+<<<<<<< HEAD
   > [!NOTE]
+=======
+  > **Note**
+  >
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   > The Tizen Emulator Manager shows the emulator images installation window only when no images are installed on your computer.
 
   1. Open the **Command Palette** and enter **tizen emulator**.
@@ -98,11 +156,19 @@ To download emulator images, you can use the Tizen Package Manager or the Tizen 
      ![Emulator Manager](media/howtoinstall-emulatormanager.png)
 
 
+<<<<<<< HEAD
 ## Develop applications
 
 The following sections explain how to use Visual Studio Code Extension for Tizen to develop your applications.
 
 ### Create Tizen .NET project
+=======
+## Develop Applications
+
+The following sections explain how to use Visual Studio Code Extension for Tizen to develop your applications.
+
+### Create a Tizen .NET Project
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 To create a Tizen .NET project:
 
@@ -114,7 +180,11 @@ To create a Tizen .NET project:
 6. Enter the project name.
 7. For a building target, select a solution file with the `.sln` extension or a project file with the `.csproj` extension.
 
+<<<<<<< HEAD
 ### Build your project
+=======
+### Build Your Project
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 To build your project:
 
@@ -122,17 +192,31 @@ To build your project:
 2. Select **Tizen .NET: Build a Tizen .NET project**.
 3. Review the build results in the **Output** window, and check the location of the package file (`.tpk`).
 
+<<<<<<< HEAD
 > [!NOTE]
 > If you have a Tizen device and want to deploy the application to it, you must create a certificate profile using the Tizen Certificate Manager or Tizen CLI before building your project. For more information, see [Certificate Manager](../vstools/tools/certificate-manager.md).
 
 <a name="emulator-run"></a>
 ### Deploy and run your application in emulator
+=======
+> **Note**
+>
+> If you have a Tizen device and want to deploy the application to it, you must create a certificate profile using the Tizen Certificate Manager or Tizen CLI before building your project. For more information, see [Certificate Manager](../vstools/tools/certificate-manager.md).
+
+<a name="emulator-run"></a>
+### Deploy and Run Your Application in the Emulator
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 To deploy and run your application:
 
 1. To launch the Tizen Emulator Manager, open the **Command Palette** and enter **tizen run**.
 
+<<<<<<< HEAD
    > [!NOTE]
+=======
+   > **Note**
+   >
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
    > You cannot launch an emulator directly from Visual Studio Code. Instead, you must launch the Tizen Emulator Manager and use it to launch the emulator you need.
 
 2. Select **Tizen .NET: Launch Tizen Emulator Manager**.
@@ -140,7 +224,11 @@ To deploy and run your application:
 4. To deploy your application to the target, enter **tizen install** in the **Command Palette** and select **Tizen .NET: Install a Tizen .NET application on the Tizen device**.
 5. To run the application on the emulator, enter **tizen run** in the **Command Palette** and select **Tizen .NET: Run a Tizen .NET application on the Tizen device**.
 
+<<<<<<< HEAD
 ### Debug your application in emulator
+=======
+### Debug Your Application in the Emulator
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 To debug your application:
 
@@ -150,7 +238,12 @@ To debug your application:
 4. Select **Tizen LLDB** in the list of configurations.
 5. Start the debugging session by pressing **F5**.
 
+<<<<<<< HEAD
 > [!NOTE]
+=======
+> **Note**
+>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 > The LLDB RPM packages are automatically installed on the device as a part of the debugging process. If you want to install them at a custom location, see [Manual LLDB Package Installation](#manual-lldb).
 
 
@@ -158,6 +251,7 @@ To debug your application:
 
 This section contains instructions for common problems with the VS Code Extension for Tizen.
 
+<<<<<<< HEAD
 ### Failed Baseline SDK installation
 
 If the Tizen Baseline SDK installation fails:
@@ -168,6 +262,18 @@ If the Tizen Baseline SDK installation fails:
 
 <a name="manual-lldb"></a>
 ### Manual LLDB package installation
+=======
+### Failed Baseline SDK Installation
+
+If the Tizen baseline SDK installation fails:
+
+1. In the **Command Palette**, enter **tizen set**.
+2. Select **Tizen .NET: Set the Tizen baseline SDK path or install a new Tizen baseline SDK**.
+3. The extension asks if you want to use an existing baseline SDK installation or install a new one. Proceed as described in [Setting Tizen Baseline SDK Configuration](#setting-baseline-config).
+
+<a name="manual-lldb"></a>
+### Manual LLDB Package Installation
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 Normally, the following LLDB packages are installed automatically when debugging:
 

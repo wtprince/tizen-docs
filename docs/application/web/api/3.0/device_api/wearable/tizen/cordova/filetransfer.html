@@ -4,11 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../../scripts/snippet.js"></script><title>FileTransfer API</title>
+<<<<<<< HEAD
 <meta data-version="3.0" data-profile="wearable">
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::FileTransfer">
-<div class="supported-platforms"><img class="wearable-mandatory emulator" title="Mandatory, Supported by Tizen Wearable emulator" src="../wearable_s_w.png"></div>
+ <div class="supported-platforms"><img class="wearable-mandatory emulator" title="Mandatory, Supported by Tizen Wearable emulator" src="../wearable_s_w.png"></div>
 <div class="title"><h1>FileTransfer API</h1></div>
 <div class="brief">
  This module allows you to upload and download files.
@@ -215,6 +218,7 @@ Sent = 1024
 <div class="constructors">
 <h4 id="FileUploadOptions::constructor">Constructors</h4>
 <dl>
+<<<<<<< HEAD
 <dt class="method" id="">
 <a class="backward-compatibility-anchor" name=""></a><code><b><span class="methodName">Constructor (DOMString, DOMString, DOMString, <a href="#FileUploadParams">FileUploadParams</a>, <a href="#HeaderFields">HeaderFields</a>, DOMString)</span></b></code>
 </dt>
@@ -223,6 +227,10 @@ Sent = 1024
 <p><span class="version">Since: </span>
  3.0
               </p>
+=======
+<pre class="webidl prettyprint">FileUploadOptions(DOMString fileKey, DOMString fileName, DOMString mimeType, <a href="#FileUploadParams">FileUploadParams</a> params, <a href="#HeaderFields">HeaderFields</a> headers,
+                  DOMString httpMethod);</pre>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="example">
 <span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">/* Creates a FileUploadOptions objects */
 var options = new FileUploadOptions("file", "doc.txt", "text/plain", null, null, "POST");

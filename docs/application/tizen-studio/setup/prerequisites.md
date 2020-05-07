@@ -1,13 +1,21 @@
 # Prerequisites for Tizen Studio
 
+<<<<<<< HEAD
 Check the following prerequisites before attempting to install Tizen Studio.
+=======
+Check the following prerequisites before attempting to install the Tizen Studio.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ## Java Development Kit (JDK) Requirements
 > **Note**
 >
 > There is no JDK prerequisite for Tizen Studio 3.7 and higher.
 
+<<<<<<< HEAD
 You must install Oracle Java Development Kit (JDK) 8 or OpenJDK 12 for Tizen Studio 3.5 and Tizen Studio 3.6.
+=======
+You must install Oracle Java Development Kit (JDK) 8, or OpenJDK 10 to use the Tizen Studio.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 Follow these instructions to install the appropriate JDK version for your system:
 
@@ -25,6 +33,7 @@ Follow these instructions to install the appropriate JDK version for your system
 
   Go to the [Ubuntu Web site](https://help.ubuntu.com/community/Java) for detailed instructions for installing the Oracle&reg; JDK version 8. The raw binaries can be downloaded directly from Oracle ([Oracle Java download page](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)).
 
+<<<<<<< HEAD
   > **Note**
   >
   > For RT IDE use Oracle Java Development Kit (JDK) 8 only.
@@ -34,6 +43,13 @@ You can also use Oracle's OpenJDK. For more installation details, see [OpenJDK 1
 ## OS and System Requirements
 
 The following table lists the supported operating systems and hardware requirements for Tizen Studio.
+=======
+You can also use Oracle's OpenJDK. For more installation details, see [OpenJDK 10 and OpenJFX Installation Guide](openjdk.md).
+
+## OS and System Requirements
+
+The following table lists the supported operating systems and hardware requirements for the Tizen Studio.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 **Table: OS and system requirements**
 
@@ -58,9 +74,15 @@ The following table lists the supported operating systems and hardware requireme
 </tr>
 <tr>
 <th>Bit</th>
+<<<<<<< HEAD
 <td>64 bit only</td>
 <td>64 bit only</td>
 <td>64 bit only</td>
+=======
+<td>64 bit / 32 bit</td>
+<td>64 bit only</td>
+<td>64 bit / 32 bit</td>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </tr>
 <tr>
 <th rowspan="4">HW</th>
@@ -71,9 +93,15 @@ The following table lists the supported operating systems and hardware requireme
 </tr>
 <tr>
 <th>Architecture</th>
+<<<<<<< HEAD
 <td>x64 (64 bit)</td>
 <td>x64 only</td>
 <td>x64 (64 bit)</td>
+=======
+<td>x64 (64 bit) / x86 (32 bit)</td>
+<td>x64 only</td>
+<td>x64 / x86</td>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </tr>
 <tr>
 <th>Memory</th>
@@ -109,7 +137,11 @@ The following table lists the CPU, screen resolution, graphic card, driver, and 
 <tbody>
 <tr>
 <td>CPU</td>
+<<<<<<< HEAD
 <td colspan="3">Recommended: Support for Intel&reg; VTx (Virtualization Technology)</td>
+=======
+<td colspan="3">Recommended: Support for Intel VTx (Virtualization Technology)</td>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </tr>
 <tr>
 <td>Screen resolution</td>
@@ -133,7 +165,11 @@ The following table lists the CPU, screen resolution, graphic card, driver, and 
 </tr>
 </tbody>
 </table>
+<<<<<<< HEAD
 <strong>Note</strong
+=======
+<strong>Note</strong>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <ul>
 <li>If the host machine is using the NVIDIA&reg; Optimus&reg; technology, the emulator works with the on-board graphics card. To prevent this, either disable the Optimus&reg; technology, or set the emulator to run with the external NVIDIA graphics card.</li>
 </ul>
@@ -215,7 +251,11 @@ To use Python conveniently at the command prompt, set the <code>%PATH%</code> en
 </td>
 <td>At the terminal prompt, enter the following commands:
 <pre><code>$ brew install gettext
+<<<<<<< HEAD
 $ brew link gettext --force
+=======
+$ brew link gettext -force
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 $ which msgfmt
 /usr/local/bin/msgfmt
 </code></pre>

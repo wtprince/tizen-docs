@@ -4,11 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>Account API</title>
+<<<<<<< HEAD
 <meta data-version="3.0" data-profile="mobile">
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::Account">
-<div class="supported-platforms"><img class="mobile-mandatory emulator" title="Mandatory, Supported by Tizen Mobile emulator" src="mobile_s_w.png"></div>
+ <div class="supported-platforms"><img class="mobile-mandatory emulator" title="Mandatory, Supported by Tizen Mobile emulator" src="mobile_s_w.png"></div>
 <div class="title"><h1>Account API</h1></div>
 <div class="brief">
   The Account API provides functionality for using existing configured
@@ -35,10 +38,17 @@ instance bound to the account.          </li>
         </ul>
         <p>
 To use <em>add(), remove(), and update()</em> methods of AccountManager can be invoked only
+<<<<<<< HEAD
 by account provider application. A web application is an account provider when its <em>config.xml </em>contains <a href="/application/tizen-studio/web-tools/config-editor#mw_account">Account provider section</a>. For example:<br>&lt;tizen:account multiple-account-support="true"&gt;<br>      &lt;tizen:icon section="Account"&gt;icon.png&lt;/tizen:icon&gt;<br>      &lt;tizen:icon section="AccountSmall"&gt;icon.png&lt;/tizen:icon&gt;<br>      &lt;tizen:display-name xml:lang="en-gb"&gt;Test&lt;/tizen:display-name&gt;<br>      &lt;tizen:capability&gt;http://tizen.org/account/capability/contact&lt;/tizen:capability&gt;<br>&lt;/tizen:account&gt;
         </p>
         <p>
 For more information about how to use Account API, see <a href="/application/web/guides/personal/account">Account Guide</a>.
+=======
+by account provider application. A web application is an account provider when its <em>config.xml </em>contains <a href="https://developer.tizen.org/development/tizen-studio/web-tools/configuring-your-app/configuration-editor#mw_account">Account provider section</a>. For example:<br>&lt;tizen:account multiple-account-support="true"&gt;<br>      &lt;tizen:icon section="Account"&gt;icon.png&lt;/tizen:icon&gt;<br>      &lt;tizen:icon section="AccountSmall"&gt;icon.png&lt;/tizen:icon&gt;<br>      &lt;tizen:display-name xml:lang="en-gb"&gt;Test&lt;/tizen:display-name&gt;<br>      &lt;tizen:capability&gt;http://tizen.org/account/capability/contact&lt;/tizen:capability&gt;<br>&lt;/tizen:account&gt;
+        </p>
+        <p>
+For more information about how to use Account API, see <a href="https://developer.tizen.org/development/guides/web-application/personal-data/account-management">Account Guide</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         </p>
        </div>
 <p><span class="version">Since: </span>
@@ -654,7 +664,11 @@ If the account is added successfully, an accountId and provider are newly assign
             <p>
 This method can be used only by an account provider application.<br>If the application is registered as provider, it will be launched to authenticate the account.
 You should implement the appcontrol for the account provider.<br>For more details, see
+<<<<<<< HEAD
 <a href="/application/web/guides/personal/account#retrieving-providers">Account Provider</a>            </p>
+=======
+<a href="https://developer.tizen.org/development/guides/web-application/personal-data/account-management#get_providers">Account Provider</a>            </p>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
            </div>
 <p><span class="privilegelevel">Privilege level: </span>
  public
@@ -955,7 +969,11 @@ If you want to get all accounts, omit the applicationId argument.
 <div class="description">
             <p>
 You can register your application as an account provider by writing account related information in <var>config.xml</var>.<br>For more details, see
+<<<<<<< HEAD
 <a href="/application/web/guides/personal/account#retrieving-providers">Account Provider</a>            </p>
+=======
+<a href="https://developer.tizen.org/development/guides/web-application/personal-data/account-management#get_providers">Account Provider</a>            </p>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
            </div>
 <p><span class="privilegelevel">Privilege level: </span>
  public
@@ -1434,9 +1452,13 @@ tizen.account.removeAccountListener(watchId);
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>
@@ -1446,7 +1468,11 @@ To guarantee the running of the application on a device with Account feature, de
 <li class="feature">http://tizen.org/feature/account</li>
 </div>
 <p></p>
+<<<<<<< HEAD
                     For more information, see <a href="/application/web/tutorials/app-filtering">Application Filtering.</a>
+=======
+                    For more information, see <a href="https://developer.tizen.org/development/training/web-application/understanding-tizen-programming/application-filtering">Application Filtering.</a>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <h2 id="full-webidl">4. Full WebIDL</h2>
 <pre class="webidl prettyprint">module Account {

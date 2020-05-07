@@ -6,7 +6,11 @@ If you have already installed Tizen Studio 3.0 and installed the **5.0 Mobile** 
 
 Otherwise, to install Tizen Studio and the required profiles for IoT development:
 
+<<<<<<< HEAD
 1.  Download and install the correct version of Tizen Studio 3.0 (or later) for your operating system from [Tizen developer site](https://developer.tizen.org/development/tizen-studio/download){:target="_blank"}.
+=======
+1.  Download and install the correct version of Tizen Studio 3.0 (or later) for your operating system from [Tizen developer site](https://developer.tizen.org/development/tizen-studio/download).
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 2.  Open the **Tizen Studio Package Manager**, select the **Main SDK** tab, and install the **5.0 Mobile** profile:
 
     ![Install the mobile profile](media/package_manager_mobile_5.0.png)
@@ -231,7 +235,11 @@ To configure the Raspberry Pi 3 board:
 
 ### Installing Drivers
 
+<<<<<<< HEAD
 1.  Connect Smart Development Bridge (SDB) as described in [Connecting the board to the PC](#connecting-the-board-to-the-pc).
+=======
+1.  Connect Smart Development Bridge (SDB) as described in [Connecting the board to the PC](#Connecting-the-board-to-the-PC).
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 2.  Install the connectivity drivers for each board:
     -   **Raspberry Pi 3**
         1.  Download the plugin zip file from the **Raspberry Pi 3(5.0) Plugin** section at <http://developer.samsung.com/tizendevice/firmware> and follow the instructions.
@@ -307,7 +315,11 @@ sudo apt-get install package-name
 
 #### Installing IoT Setup Manager
 
+<<<<<<< HEAD
 Ensure that you have installed [Tizen Studio](#installing-tizen-studio).
+=======
+Ensure that you have installed [Tizen Studio](#Installing-Tizen-Studio).
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 To install the IoT Setup Manager using the Package Manager available in Tizen Studio:
 
@@ -472,7 +484,11 @@ To flash the SD card for Raspberry Pi 3 without IoT setup Manager:
         $ sudo ./flash-sdcard.sh /dev/sdb
         ```
 
+<<<<<<< HEAD
 3.  Open the Smart Development Bridge (SDB) connection. For more information, see [Setting up Raspberry Pi 3](#setting-up-raspberry-pi-3).
+=======
+3.  Open the Smart Development Bridge (SDB) connection. For more information, see [Setting up Raspberry Pi 3](#Setting-up-Raspberry-Pi-3).
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     > **Note**
     >

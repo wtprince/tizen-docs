@@ -7,7 +7,11 @@ Before you implement the actual application functionality, define all the necess
 
 > **Note**
 >
+<<<<<<< HEAD
 > Only modify the manifest file by using the manifest editor in Tizen Studio. If you create or edit the `tizen-manifest.xml` file using any other text editor, your application may not work as expected.
+=======
+> Only modify the manifest file by using the manifest editor in the Tizen Studio. If you create or edit the `tizen-manifest.xml` file using any other text editor, your application may not work as expected.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 After you have finished setting the project properties, you are ready to [design the UI and implement the application code](app-dev-process.md#designing).
 

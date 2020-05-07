@@ -4,11 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>TVDisplayControl API</title>
+<<<<<<< HEAD
 <meta data-version="3.0" data-profile="tv">
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::TVDisplayControl">
 <div class="supported-platforms"><img class="tv-optional" title="Optional, Not supported by Tizen Tv emulator" src="tv_s_w_optional.png"></div>
+=======
+</head>
+<body id="page-content" onload="prettyPrint()">
+<div class="api" id="::TVDisplayControl">
+ <div class="supported-platforms"><img class="tv-optional" title="Optional, Not supported by Tizen Tv emulator" src="tv_s_w_optional.png"></div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="title"><h1>TVDisplayControl API</h1></div>
 <div class="brief">
         </div>
@@ -448,9 +455,13 @@ catch (error)
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>
@@ -464,8 +475,13 @@ To guarantee the running of this application on a device with a TV display contr
 </div>
 <h2 id="full-webidl">4. Full WebIDL</h2>
 <pre class="webidl prettyprint">module TVDisplayControl {
+<<<<<<< HEAD
   enum Display3DEffectMode { "OFF", "TOP_BOTTOM", "SIDE_BY_SIDE", "LINE_BY_LINE", "VERTICAL_STRIPE", "FRAME_SEQUENCE", "CHECKER_BD",
     "FROM_2D_TO_3D" };
+=======
+  enum Display3DEffectMode { "OFF", "TOP_BOTTOM", "SIDE_BY_SIDE", "LINE_BY_LINE", "VERTICAL_STRIPE", "FRAME_SEQUENCE",
+    "CHECKER_BD", "FROM_2D_TO_3D" };
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   enum Display3DModeState { "NOT_CONNECTED", "NOT_SUPPORTED", "READY" };
   <a href="tizen.html#Tizen">Tizen</a> implements <a href="#DisplayControlManagerObject">DisplayControlManagerObject</a>;
   [NoInterfaceObject] interface DisplayControlManagerObject {

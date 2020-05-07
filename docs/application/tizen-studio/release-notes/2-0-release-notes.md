@@ -64,7 +64,11 @@
 
 -   Common
     -   The Java Development Kit (JDK) 9 is not supported.
+<<<<<<< HEAD
     -   If you install Tizen Studio in a directory that requires administrator privileges for access, such as `C:\Program Files`, administrator privileges are required to run the Tizen SDK tools. The Tizen Installer and Baseline SDK Installer alert you if you try to install into such a directory.
+=======
+    -   If you install the Tizen Studio in a directory that requires administrator privileges for access, such as `C:\Program Files`, administrator privileges are required to run the Tizen SDK tools. The Tizen Installer and Baseline SDK Installer alert you if you try to install into such a directory.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     -   If you meet unexpected error on opening Tizen Studio, please change your workspace folder.
     -   DALi template is not supported for Tizen 4.0. It will be added in the next official version.
 - Web and Native IDE
@@ -117,4 +121,8 @@
 - Device Manager
     -   If you install Tizen Studio 2.0 or update it from the previous version, you do not have the Device Manager.
 
+<<<<<<< HEAD
         The issue will be fixed on the next release.
+=======
+        The issue will be fixed on the next release.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5

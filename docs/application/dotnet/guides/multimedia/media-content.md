@@ -400,7 +400,10 @@ To use newly created media files, insert them into the database. To add informat
     ```
 
 The difference between the 2 options is that the `Add()` method returns the [Tizen.Content.MediaContent.MediaInfo](https://samsung.github.io/TizenFX/latest/api/Tizen.Content.MediaContent.MediaInfo.html) instance of the media file after inserting the file in the database, whereas the `ScanFile()` method only inserts the file.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ## Scanning a Media Folder
 
@@ -553,6 +556,13 @@ To delete a tag, use the `Delete()` method of the [Tizen.Content.MediaContent.Ta
 tagCmd.Delete(tag.Id);
 ```
 
+<<<<<<< HEAD
+=======
+<a name="storage_list"></a>
+## Retrieving Storage Information
+
+To find the media storages, use the `Select()` method of the [Tizen.Content.MediaContent.StorageCommand](https://samsung.github.io/TizenFX/latest/api/Tizen.Content.MediaContent.StorageCommand.html) class:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ## Finding Media Item Groups
 
@@ -643,7 +653,13 @@ The following tables list the available media file information.
 | `Rating`         | Rating of the media content              |
 | `IsFavorite`     | Favorite status of the media content     |
 | `Title`          | Title of the media content               |
+<<<<<<< HEAD
 | `IsDrm`          | The media is DRM-protected or not        |
+=======
+| `StorageId`      | The storage Id of the storage that the media is stored on          |
+| `IsDrm`          | The media is DRM-protected or not        |
+| `StorageType`    | The storage type of the storage that the media is stored on        |
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 **Table: Audio metadata (only for audio files)**
 

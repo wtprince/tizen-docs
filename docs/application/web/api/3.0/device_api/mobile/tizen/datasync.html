@@ -4,15 +4,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>DataSynchronization API</title>
+<<<<<<< HEAD
 <meta data-version="3.0" data-profile="mobile">
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::DataSynchronization">
-<div class="supported-platforms"><img class="mobile-optional" title="Optional, Not supported by Tizen Mobile emulator" src="mobile_s_w_optional.png"></div>
+ <div class="supported-platforms"><img class="mobile-optional" title="Optional, Not supported by Tizen Mobile emulator" src="mobile_s_w_optional.png"></div>
 <div class="title"><h1>DataSynchronization API</h1></div>
 <div class="brief">
  This API provides methods to synchronize contact and event data to the server using the OMA DS 1.2 protocol.
+<<<<<<< HEAD
 To know the details of this specification, visit <a href="http://www.openmobilealliance.org">OMA web page</a>. And for more information on the Data Synchronization features, see <a href="/application/web/guides/personal/sync">Data Synchronization Guide</a>.
+=======
+To know the details of this specification, visit <a href="http://www.openmobilealliance.org">OMA web page</a>. And for more information on the Data Synchronization features, see <a href="https://developer.tizen.org/development/guides/web-application/personal-data/data-synchronization">Data Synchronization Guide</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         </div>
 <p><span class="version">Since: </span>
  2.1
@@ -423,6 +430,7 @@ This attribute is used when the sync mode is set to the <em>PERIODIC</em> option
           </p>
 <div class="constructors">
 <h4 id="SyncServiceInfo::constructor">Constructors</h4>
+<<<<<<< HEAD
 <dl>
 <dt class="method" id="">
 <a class="backward-compatibility-anchor" name=""></a><code><b><span class="methodName">Constructor (boolean, <a href="#SyncServiceType">SyncServiceType</a>, DOMString, DOMString?, DOMString?)</span></b></code>
@@ -430,6 +438,10 @@ This attribute is used when the sync mode is set to the <em>PERIODIC</em> option
 <pre class="webidl prettyprint">SyncServiceInfo(boolean enable, <a href="#SyncServiceType">SyncServiceType</a> serviceType, DOMString serverDatabaseUri, optional DOMString? id,
                 optional DOMString? password);</pre>
 </dl>
+=======
+<dl><pre class="webidl prettyprint">SyncServiceInfo(boolean enable, <a href="#SyncServiceType">SyncServiceType</a> serviceType, DOMString serverDatabaseUri, optional DOMString? id,
+                optional DOMString? password);</pre></dl>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <div class="attributes">
 <h4>Attributes</h4>
@@ -1391,9 +1403,13 @@ Normally the packet size from a server affects it, that is, if the server sends 
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>
@@ -1403,7 +1419,11 @@ To guarantee that data synch application runs on a device, declare the following
 <li class="feature">http://tizen.org/feature/datasync</li>
 </div>
 <p></p>
+<<<<<<< HEAD
                     For more information, see <a href="/application/web/tutorials/app-filtering">Application Filtering.</a>
+=======
+                    For more information, see <a href="https://developer.tizen.org/development/training/web-application/understanding-tizen-programming/application-filtering">Application Filtering.</a>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <h2 id="full-webidl">4. Full WebIDL</h2>
 <pre class="webidl prettyprint">module DataSynchronization {

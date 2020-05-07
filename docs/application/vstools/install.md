@@ -41,8 +41,15 @@ The Tizen Emulator for Visual Studio has the same requirements as the emulator i
 - Make sure **Hyper-V** is disabled (in Windows 10 or higher):
   1. Input **Control Panel** on the **Search** box in Windows 10.
 
+<<<<<<< HEAD
   2. Click **Control Panel > Programs and Features > Turn Windows features on or off**.
 
+=======
+     ![Programs and Features](media/cs_prerequisite01-250x401.png)
+
+  2. Select **Turn Windows features on or off**.
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   3. Disable **Hyper-V** and click **OK**.
 
      ![Disable Hyper-V](media/cs_prerequisite-disable-hiperv.png)

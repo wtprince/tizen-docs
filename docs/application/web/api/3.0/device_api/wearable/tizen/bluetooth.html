@@ -4,11 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>Bluetooth API</title>
+<<<<<<< HEAD
 <meta data-version="3.0" data-profile="wearable">
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::Bluetooth">
-<div class="supported-platforms"><img class="wearable-optional" title="Optional, Not supported by Tizen Wearable emulator" src="wearable_s_w_optional.png"></div>
+ <div class="supported-platforms"><img class="wearable-optional" title="Optional, Not supported by Tizen Wearable emulator" src="wearable_s_w_optional.png"></div>
 <div class="title"><h1>Bluetooth API</h1></div>
 <div class="brief">
  The Bluetooth API defines interfaces and methods to manage Bluetooth.
@@ -1612,6 +1615,7 @@ Instead, use <em>http://tizen.org/privilege/bluetooth</em>.
 var bluetoothSwitchAppControl = new tizen.ApplicationControl(
     "http://tizen.org/appcontrol/operation/edit", null, "application/x-bluetooth-on-off");
 function launchSuccess()
+<<<<<<< HEAD
 {
   console.log("Bluetooth Settings application is successfully launched");
 }
@@ -1620,6 +1624,16 @@ function launchError(error)
   alert("An error occurred: " + error.name +
         ". Please enable Bluetooth through the Settings application");
 }
+=======
+{
+  console.log("Bluetooth Settings application is successfully launched");
+}
+function launchError(error)
+{
+  alert("An error occurred: " + error.name +
+        ". Please enable Bluetooth through the Settings application");
+}
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 var serviceReply =
 {
   /* Called when the launched application reports success. */
@@ -6993,9 +7007,13 @@ After that, this device is no longer visible.
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>

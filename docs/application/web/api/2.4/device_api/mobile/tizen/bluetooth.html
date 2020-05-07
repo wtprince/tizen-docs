@@ -4,11 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>Bluetooth API</title>
+<<<<<<< HEAD
 <meta data-version="2.4" data-profile="mobile">
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::Bluetooth">
-<div class="supported-platforms"><img class="mobile-optional" title="Optional, Not supported by Tizen Mobile emulator" src="mobile_s_w_optional.png"></div>
+ <div class="supported-platforms"><img class="mobile-optional" title="Optional, Not supported by Tizen Mobile emulator" src="mobile_s_w_optional.png"></div>
 <div class="title"><h1>Bluetooth API</h1></div>
 <div class="brief">
  The Bluetooth API defines interfaces and methods to manage Bluetooth.
@@ -1284,7 +1287,11 @@ if (capability === true)
 For most Bluetooth actions, the Bluetooth adapter must be powered on.
             </div>
 <p class="deprecated"><b>Deprecated.</b>
+<<<<<<< HEAD
  It is deprecated since Tizen 2.3. Instead, let the user turn on/off Bluetooth through the Settings application. See <a href="/application/web/guides/connectivity/bluetooth#managing-the-local-bluetooth-adapter">Managing Bluetooth Tutorial</a>.
+=======
+ It is deprecated since Tizen 2.3. Instead, let the user turn on/off Bluetooth through the Settings application. See <a href="https://developer.tizen.org/development/guides/web-application/connectivity-and-wireless/bluetooth#Managing_BT_Adapter">Managing Bluetooth Tutorial</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </p>
 <div class="synopsis"><pre class="signature prettyprint">void setPowered(boolean state, optional <a href="tizen.html#SuccessCallback">SuccessCallback</a>? successCallback, optional <a href="tizen.html#ErrorCallback">ErrorCallback</a>? errorCallback);</pre></div>
 <p><span class="version">Since: </span>
@@ -1406,7 +1413,11 @@ else
  Sets the local device visibility by sending a request to a Bluetooth hardware to change the device visible state to <em>mode</em>.
             </div>
 <p class="deprecated"><b>Deprecated.</b>
+<<<<<<< HEAD
  It is deprecated since Tizen 2.3. Instead, let the user change the Bluetooth visibility through the Settings application. See the <a href="/application/web/guides/connectivity/bluetooth#managing-the-local-bluetooth-adapter">Managing Bluetooth</a> Tutorial.
+=======
+ It is deprecated since Tizen 2.3. Instead, let the user change the Bluetooth visibility through the Settings application. See the <a href="https://developer.tizen.org/development/guides/web-application/connectivity-and-wireless/bluetooth#Managing_BT_Adapter">Managing Bluetooth</a> Tutorial.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </p>
 <div class="synopsis"><pre class="signature prettyprint">void setVisible(boolean mode, optional <a href="tizen.html#SuccessCallback">SuccessCallback</a>? successCallback, optional <a href="tizen.html#ErrorCallback">ErrorCallback</a>? errorCallback,
                 optional unsigned short? timeout);</pre></div>
@@ -4971,6 +4982,7 @@ function onSocketConnected(socket)
   {
     console.log("Socket closed with " + socket.peer.name);
   };
+<<<<<<< HEAD
 
   /* Sends data to peer. */
   var textmsg = "Test";
@@ -4998,6 +5010,35 @@ function onDeviceReady(device)
   }
 }
 
+=======
+
+  /* Sends data to peer. */
+  var textmsg = "Test";
+  var sendtextmsg = new Array();
+  for (var i = 0; i &lt; textmsg.length; i++)
+  {
+    sendtextmsg[i] = textmsg.charCodeAt(i);
+  }
+  socket.writeData(sendtextmsg);
+}
+
+function onSocketError(e)
+{
+  console.log("Error connecting to service. Reason: " + e.message);
+}
+
+function onDeviceReady(device)
+{
+  /* Validates device and service uuid. */
+  if (device.uuids.indexOf("5BCE9431-6C75-32AB-AFE0-2EC108A30860") != -1)
+  {
+    /* Opens socket. */
+    device.connectToServiceByUUID(
+        "5BCE9431-6C75-32AB-AFE0-2EC108A30860", onSocketConnected, onSocketError);
+  }
+}
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 /* Execution. */
 
 if (adapter.powered)
@@ -5138,9 +5179,15 @@ function onDeviceReady(device)
         "5BCE9431-6C75-32AB-AFE0-2EC108A30860", onSocketConnected, onError);
   }
 }
+<<<<<<< HEAD
 
 /* Execution. */
 
+=======
+
+/* Execution. */
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 if (adapter.powered)
 {
   console.log("Bluetooth is already enabled");
@@ -5341,12 +5388,21 @@ function evaluateDevice(address)
         {
           /* Shows computer icon for this device. */
           console.log("Device is computer");
+<<<<<<< HEAD
         }
         else if (device.deviceClass.major == tizen.bluetooth.deviceMajor.PHONE)
         {
           /* Shows phone icon. */
           console.log("Device is a Phone");
         }
+=======
+        }
+        else if (device.deviceClass.major == tizen.bluetooth.deviceMajor.PHONE)
+        {
+          /* Shows phone icon. */
+          console.log("Device is a Phone");
+        }
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
       },
       function(e)
       {
@@ -7151,9 +7207,13 @@ After that, this device is no longer visible.
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>

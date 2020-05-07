@@ -165,7 +165,10 @@ package:
 | `http://tizen.org/feature/contact`       | Specify this key, if the application requires the contact service. | 4.0   |
 | `http://tizen.org/feature/contextual_trigger` | Specify this key, if the application requires the contextual trigger feature. | 4.0   |
 | `http://tizen.org/feature/database.encryption` | Specify this key, if the application requires the database encryption feature. | 2.2.1 |
+<<<<<<< HEAD
 | `http://tizen.org/feature/display`       | Specify this key, if the application requires the display feature. | 5.5   |
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 | `http://tizen.org/feature/display.state` | Specify this key, if the application requires System Device API to control display state. | 5.0   |
 | `http://tizen.org/feature/download`      | Specify this key, if the application requires the download feature. | 4.0   |
 | `http://tizen.org/feature/email`         | Specify this key, if the application requires the email feature. | 3.0   |
@@ -190,7 +193,10 @@ package:
 | `http://tizen.org/feature/multi_point_touch.pinch_zoom` | Specify this key, if the application requires a pinch-zoom gesture feature. | 2.2.1 |
 | `http://tizen.org/feature/multi_point_touch.point_count` | Specify this key with a specific number (`int` type), if the application requires the minimum of specified number of simultaneous touches in a multi-point touch. | 2.2.1 |
 | `http://tizen.org/feature/multimedia.media_codec`     | Specify this key, if the application requires the media codec feature. | 4.0   |
+<<<<<<< HEAD
 | `http://tizen.org/feature/multimedia.player.audio_offload` | Specify this key, if the application requires the hardware-offloaded audio processing feature. | 5.5   |
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 | `http://tizen.org/feature/multimedia.player.spherical_video` | Specify this key, if the application requires the 360-degree video playback feature. | 5.0   |
 | `http://tizen.org/feature/multimedia.transcoder` | Specify this key, if the application requires the multimedia transcoder feature. | 2.3   |
 | `http://tizen.org/feature/network.bluetooth` | Specify this key, if the application requires the Bluetooth feature. | 2.2.1 |
@@ -201,10 +207,13 @@ package:
 | `http://tizen.org/feature/network.bluetooth.hid` | Specify this key, if the application requires the Bluetooth Human Input Device feature (HID). | 2.3   |
 | `http://tizen.org/feature/network.bluetooth.le` | Specify this key, if the application requires the Bluetooth LE feature. | 2.3   |
 | `http://tizen.org/feature/network.bluetooth.le.5_0` | Specify this key, if the application requires the Bluetooth 5 feature. | 5.0   |
+<<<<<<< HEAD
 | `http://tizen.org/feature/network.bluetooth.le.gatt.client` | Specify this key, if the application requires the Bluetooth Generic Attribute Profile (GATT) Client. | 4.0   |
 | `http://tizen.org/feature/network.bluetooth.le.gatt.server` | Specify this key, if the application requires the Bluetooth Generic Attribute Profile (GATT) Server. | 4.0   |
 | `http://tizen.org/feature/network.bluetooth.le.ipsp` | Specify this key, if the application requires the Bluetooth Internet Protocol Support Profile (IPSP). | 4.0   |
 | `http://tizen.org/feature/network.bluetooth.oob` | Specify this key, if the application requires Bluetooth Out Of Band (OOB). | 4.0   |
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 | `http://tizen.org/feature/network.bluetooth.opp` | Specify this key, if the application requires the Bluetooth Object Push feature (OPP). | 2.3   |
 | `http://tizen.org/feature/network.ethernet` | Specify this key, if the application requires the Ethernet connection. | 2.4   |
 | `http://tizen.org/feature/network.mtp`   | Specify this key, if the application requires the Media Transfer Protocol (MTP) Host (Initiator) feature. | 3.0   |
@@ -353,7 +362,10 @@ Reference](../../api/overview.md).
 | `http://tizen.org/feature/contact`       | Specify this key, if the application requires the contact service. | 4.0   |
 | `http://tizen.org/feature/contextual_trigger` | Specify this key, if the application requires the contextual trigger feature. | 4.0   |
 | `http://tizen.org/feature/database.encryption` | Specify this key, if the application requires the database encryption feature. | 2.2.1 |
+<<<<<<< HEAD
 | `http://tizen.org/feature/display`       | Specify this key, if the application requires the display feature. | 5.5   |
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 | `http://tizen.org/feature/display.state` | Specify this key, if the application requires System Device API to control display state. | 5.0   |
 | `http://tizen.org/feature/download`      | Specify this key, if the application requires the download feature. | 4.0   |
 | `http://tizen.org/feature/feedback.vibration` | Specify this key, if the application requires the vibration feedback feature. | 5.0   |
@@ -376,10 +388,16 @@ Reference](../../api/overview.md).
 | `http://tizen.org/feature/microphone`    | Specify this key, if the application requires a microphone. | 2.2.1 |
 | `http://tizen.org/feature/multi_point_touch.pinch_zoom` | Specify this key, if the application requires a pinch-zoom gesture feature. | 2.2.1 |
 | `http://tizen.org/feature/multi_point_touch.point_count` | Specify this key with a specific number (`int` type), if the application requires the minimum of specified number of simultaneous touches in a multi-point touch. | 2.2.1 |
+<<<<<<< HEAD
 | `http://tizen.org/feature/multimedia.transcoder` | Specify this key, if the application requires the multimedia transcoder feature. | 2.3   |
 | `http://tizen.org/feature/multimedia.media_codec`     | Specify this key, if the application requires the media codec feature. | 4.0   |
 | `http://tizen.org/feature/multimedia.player.audio_offload` | Specify this key, if the application requires the hardware-offloaded audio processing feature. | 5.5   |
 | `http://tizen.org/feature/multimedia.player.spherical_video` | Specify this key, if the application requires the 360-degree video playback feature. | 5.0   |
+=======
+| `http://tizen.org/feature/multimedia.media_codec`     | Specify this key, if the application requires the media codec feature. | 4.0   |
+| `http://tizen.org/feature/multimedia.player.spherical_video` | Specify this key, if the application requires the 360-degree video playback feature. | 5.0   |
+| `http://tizen.org/feature/multimedia.transcoder` | Specify this key, if the application requires the multimedia transcoder feature. | 2.3   |
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 | `http://tizen.org/feature/network.bluetooth` | Specify this key, if the application requires the Bluetooth feature. | 2.2.1 |
 | `http://tizen.org/feature/network.bluetooth.audio.call` | Specify this key, if the application requires the Bluetooth hands-free feature (HFP). | 2.3   |
 | `http://tizen.org/feature/network.bluetooth.audio.controller` | Specify this key, if the application requires the Bluetooth Advanced Audio Distribution (A2DP) sink feature and the Bluetooth Audio Video Remote Control (AVRCP) controller feature. | 3.0   |
@@ -389,10 +407,13 @@ Reference](../../api/overview.md).
 | `http://tizen.org/feature/network.bluetooth.hid.device` | Specify this key, if the application requires the Bluetooth Human Interface Device (HID) device feature. | 3.0   |
 | `http://tizen.org/feature/network.bluetooth.le` | Specify this key, if the application requires the Bluetooth LE feature. | 2.3   |
 | `http://tizen.org/feature/network.bluetooth.le.5_0` | Specify this key, if the application requires the Bluetooth 5 feature. | 5.0   |
+<<<<<<< HEAD
 | `http://tizen.org/feature/network.bluetooth.le.gatt.client` | Specify this key, if the application requires the Bluetooth Generic Attribute Profile (GATT) Client. | 4.0   |
 | `http://tizen.org/feature/network.bluetooth.le.gatt.server` | Specify this key, if the application requires the Bluetooth Generic Attribute Profile (GATT) Server. | 4.0   |
 | `http://tizen.org/feature/network.bluetooth.le.ipsp` | Specify this key, if the application requires the Bluetooth Internet Protocol Support Profile (IPSP). | 4.0   |
 | `http://tizen.org/feature/network.bluetooth.oob` | Specify this key, if the application requires Bluetooth Out Of Band (OOB). | 4.0   |
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 | `http://tizen.org/feature/network.bluetooth.opp` | Specify this key, if the application requires the Bluetooth Object Push feature (OPP). | 2.3   |
 | `http://tizen.org/feature/network.bluetooth.phonebook.client` | Specify this key, if the application requires the Bluetooth Phone Book Access (PBAP) client feature. | 3.0   |
 | `http://tizen.org/feature/network.ethernet` | Specify this key, if the application requires the Ethernet connection. | 2.4   |

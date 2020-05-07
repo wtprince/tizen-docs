@@ -25,7 +25,11 @@ for TD:
 		<tr>
 			<td><img alt="" height="267" src="media/m24calendar.png" width="150"/></td>
 			<td>
+<<<<<<< HEAD
 			<p><a href="https://github.com/Samsung/Tizen-CSharp-Samples/tree/master/Mobile/Calendar" target="_blank"><strong>(M) Calendar</strong></a></p>
+=======
+			<p><strong>(M) Calendar</strong> [In progress]</p>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 			<p>This sample application demonstrates how to implement a calendar provider, which can add and configure an event.</p>
 			</td>
 		</tr>
@@ -39,7 +43,11 @@ for TD:
 		<tr>
 			<td><img alt="" height="267" src="media/m25contacts.png" width="150"/></td>
 			<td>
+<<<<<<< HEAD
 			<p><a href="https://github.com/Samsung/Tizen-CSharp-Samples/tree/master/Mobile/Contacts" target="_blank"><strong>(M) Contacts</strong></a></p>
+=======
+			<p><strong>(M) Contacts</strong> [In progress]</p>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 			<p>This sample application demonstrates how to implement a contacts provider, which can add and configure a contact.</p>
 			</td>
 		</tr>

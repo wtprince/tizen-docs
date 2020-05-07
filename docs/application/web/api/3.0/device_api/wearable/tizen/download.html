@@ -4,11 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>Download API</title>
+<<<<<<< HEAD
 <meta data-version="3.0" data-profile="wearable">
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::Download">
-<div class="supported-platforms"><img class="wearable-optional emulator" title="Optional, Supported by Tizen Wearable emulator" src="wearable_s_w_optional.png"></div>
+ <div class="supported-platforms"><img class="wearable-optional emulator" title="Optional, Supported by Tizen Wearable emulator" src="wearable_s_w_optional.png"></div>
 <div class="title"><h1>Download API</h1></div>
 <div class="brief">
  This API provides methods to asynchronously download the contents of a URL to a storage.
@@ -211,6 +214,7 @@ The <em>tizen.download </em>object allows access to the functionality of the Dow
           </p>
 <div class="constructors">
 <h4 id="DownloadRequest::constructor">Constructors</h4>
+<<<<<<< HEAD
 <dl>
 <dt class="method" id="">
 <a class="backward-compatibility-anchor" name=""></a><code><b><span class="methodName">Constructor (DOMString, DOMString?, DOMString?, <a href="#DownloadNetworkType">DownloadNetworkType</a>?, <a href="#DownloadHTTPHeaderFields">DownloadHTTPHeaderFields</a>?)</span></b></code>
@@ -218,6 +222,10 @@ The <em>tizen.download </em>object allows access to the functionality of the Dow
 <pre class="webidl prettyprint">DownloadRequest(DOMString url, optional DOMString? destination, optional DOMString? fileName,
                 optional <a href="#DownloadNetworkType">DownloadNetworkType</a>? networkType, optional <a href="#DownloadHTTPHeaderFields">DownloadHTTPHeaderFields</a>? httpHeader);</pre>
 </dl>
+=======
+<dl><pre class="webidl prettyprint">DownloadRequest(DOMString url, optional DOMString? destination, optional DOMString? fileName,
+                optional <a href="#DownloadNetworkType">DownloadNetworkType</a>? networkType, optional <a href="#DownloadHTTPHeaderFields">DownloadHTTPHeaderFields</a>? httpHeader);</pre></dl>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <div class="attributes">
 <h4>Attributes</h4>
@@ -970,9 +978,13 @@ If the same file name already exists in the destination, it is changed according
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>
@@ -998,7 +1010,11 @@ DownloadNetworkType <em>CELLULAR</em> can be available on a cellular-enabled dev
 <li class="feature">http://tizen.org/feature/network.telephony</li>
 </div>
 <p></p>
+<<<<<<< HEAD
                     For more information, see <a href="/application/web/tutorials/app-filtering">Application Filtering.</a>
+=======
+                    For more information, see <a href="https://developer.tizen.org/development/training/web-application/understanding-tizen-programming/application-filtering">Application Filtering.</a>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <h2 id="full-webidl">4. Full WebIDL</h2>
 <pre class="webidl prettyprint">module Download {

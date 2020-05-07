@@ -4,11 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>NFC API</title>
+<<<<<<< HEAD
 <meta data-version="4.0" data-profile="wearable">
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::NFC">
 <div class="supported-platforms"><img class="wearable-optional emulator" title="Optional, Supported by Tizen Wearable emulator" src="wearable_s_w_optional.png"></div>
+=======
+</head>
+<body id="page-content" onload="prettyPrint()">
+<div class="api" id="::NFC">
+ <div class="supported-platforms"><img class="wearable-optional emulator" title="Optional, Supported by Tizen Wearable emulator" src="wearable_s_w_optional.png"></div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="title"><h1>NFC API</h1></div>
 <div class="brief">
   The NFC API provides a protocol for simple wireless interconnection of
@@ -272,8 +279,13 @@ UTF16 - Corresponds to UTF16 NDEF record text encoding.            </li>
 <div class="brief">
  Specifies the type of an NFC tag.
           </div>
+<<<<<<< HEAD
 <pre class="webidl prettyprint">  enum NFCTagType { "GENERIC_TARGET", "ISO14443_A", "ISO14443_4A", "ISO14443_3A", "MIFARE_MINI", "MIFARE_1K", "MIFARE_4K", "MIFARE_ULTRA",
     "MIFARE_DESFIRE", "ISO14443_B", "ISO14443_4B", "ISO14443_BPRIME", "FELICA", "JEWEL", "ISO15693", "UNKNOWN_TARGET" };</pre>
+=======
+<pre class="webidl prettyprint">  enum NFCTagType { "GENERIC_TARGET", "ISO14443_A", "ISO14443_4A", "ISO14443_3A", "MIFARE_MINI", "MIFARE_1K", "MIFARE_4K",
+    "MIFARE_ULTRA", "MIFARE_DESFIRE", "ISO14443_B", "ISO14443_4B", "ISO14443_BPRIME", "FELICA", "JEWEL", "ISO15693", "UNKNOWN_TARGET" };</pre>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <p><span class="version">Since: </span>
  2.3.1
           </p>
@@ -4122,9 +4134,13 @@ catch (err)
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>
@@ -4166,14 +4182,24 @@ To guarantee that the NFC host-based card emulation application runs on a device
 <li class="feature">http://tizen.org/feature/network.nfc.card_emulation.hce</li>
 </div>
 <p></p>
+<<<<<<< HEAD
                     For more information, see <a href="/application/web/tutorials/app-filtering">Application Filtering.</a>
+=======
+                    For more information, see <a href="https://developer.tizen.org/development/training/web-application/understanding-tizen-programming/application-filtering">Application Filtering.</a>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <h2 id="full-webidl">4. Full WebIDL</h2>
 <pre class="webidl prettyprint">module NFC {
   typedef DOMString AID;
   enum NDEFRecordTextEncoding { "UTF8", "UTF16" };
+<<<<<<< HEAD
   enum NFCTagType { "GENERIC_TARGET", "ISO14443_A", "ISO14443_4A", "ISO14443_3A", "MIFARE_MINI", "MIFARE_1K", "MIFARE_4K", "MIFARE_ULTRA",
     "MIFARE_DESFIRE", "ISO14443_B", "ISO14443_4B", "ISO14443_BPRIME", "FELICA", "JEWEL", "ISO15693", "UNKNOWN_TARGET" };
+=======
+  enum NFCTagType { "GENERIC_TARGET", "ISO14443_A", "ISO14443_4A", "ISO14443_3A", "MIFARE_MINI", "MIFARE_1K", "MIFARE_4K",
+    "MIFARE_ULTRA", "MIFARE_DESFIRE", "ISO14443_B", "ISO14443_4B", "ISO14443_BPRIME", "FELICA", "JEWEL", "ISO15693",
+    "UNKNOWN_TARGET" };
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   enum CardEmulationMode { "ALWAYS_ON", "OFF" };
   enum SecureElementType { "ESE", "UICC", "HCE" };
   enum CardEmulationCategoryType { "PAYMENT", "OTHER" };

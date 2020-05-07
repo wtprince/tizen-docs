@@ -104,7 +104,10 @@ The following table provides detailed information regarding removed functions an
 | Content - Media Content - Media Information | media_info_set_album(), media_info_set_artist(), media_info_set_genre(), media_info_set_recorded_date() | Mobile, Wearable | Since 4.0 | 5.5 | No longer available | - |
 | Content - Media Content - Media Storage | media_storage_get_name() | Mobile, Wearable | Since 4.0 | 5.5 | No longer available | - |
 | Content - Media Content - Media Information | video_meta_update_to_db() | Mobile, Wearable | Since 4.0 | 5.5 | No longer available | - |
+<<<<<<< HEAD
 | Multimedia - Thumbnail Util | thumbnail_util_cancel_all() | Mobile, Wearable | Since 4.0 | 5.5 | No longer available | - |
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 | Multimedia - Media Controller Client | mc_client_set_server_update_cb() | Mobile, Wearable | Since 4.0 | 5.5 | Better alternative | mc_client_set_server_updated_cb() |
 | Multimedia - Media Controller Client | mc_client_unset_server_update_cb() | Mobile, Wearable | Since 4.0 | 5.5 | Better alternative | mc_client_unset_server_updated_cb() |
 | Multimedia - Media Controller Client | mc_client_set_playback_update_cb() | Mobile, Wearable | Since 4.0 | 5.5 | Better alternative | mc_client_set_playback_updated_cb() |
@@ -192,6 +195,7 @@ The following table provides detailed information regarding removed functions an
 | UI - DALi | Dali::Toolkit::Control::GetBackgroundColor() const | Mobile, Wearable | Since 3.0 | 5.5 | Better alternative | Dali::Toolkit::Control::Property::BACKGROUND |
 | UI - DALi | Dali::Toolkit::Control::SetBackgroundImage(Image image) | Mobile, Wearable | Since 3.0 | 5.5 | Better alternative | Dali::Toolkit::Control::Property::BACKGROUND |
 | UI - DALi | Dali::Toolkit::ImageView::Property::RESOURCE_URL | Mobile, Wearable | Since 3.0 | 5.5 | Better alternative | Dali::Toolkit::ImageView::Property::IMAGE |
+<<<<<<< HEAD
 | Network - Wi-Fi | wifi_initialize() | Mobile, Wearable | Since 3.0 | 5.5 | Better alternative | wifi_manager_initialize() |
 | Network - Wi-Fi | wifi_deinitialize() | Mobile, Wearable | Since 3.0 | 5.5 | Better alternative | wifi_manager_deinitialize() |
 | Network - Wi-Fi | wifi_activate() | Mobile, Wearable | Since 3.0 | 5.5 | Better alternative | wifi_manager_activate() |
@@ -295,6 +299,8 @@ The following table provides detailed information regarding removed functions an
 | Network - Wi-Fi | wifi_tdls_get_connected_peer() | Mobile, Wearable | Since 3.0 | 5.5 | Better alternative | wifi_manager_tdls_get_connected_peer() |
 | Network - Wi-Fi | wifi_tdls_set_state_changed_cb() | Mobile, Wearable | Since 3.0 | 5.5 | Better alternative | wifi_manager_tdls_set_state_changed_cb() |
 | Network - Wi-Fi | wifi_tdls_unset_state_changed_cb() | Mobile, Wearable | Since 3.0 | 5.5 | Better alternative | wifi_manager_tdls_unset_state_changed_cb() |
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ## Related information
 

@@ -1,9 +1,15 @@
 
 # OpenTK
 
+<<<<<<< HEAD
 Tizen OpenTK provides a set of fast and low-level C# bindings for OpenGL&reg; ES 2.0 APIs. From Tizen 5.0, it is integrated with Tizen Application Framework.
 
 For developing the OpenGL&reg; app using C# on the Tizen platform, an app developer uses TizenFX APIs, .NET Standard 2.0 APIs, and OpenTK APIs based on their needs.
+=======
+The Tizen OpenTK provides a set of fast and low-level C# bindings for OpenGL&reg; ES 2.0 APIs. From Tizen 5.0, it is integrated with Tizen Application Framework.
+
+For developing the OpenGL&reg; app using C# on the Tizen platform, an app developer uses the TizenFX APIs, the .NET Standard 2.0 APIs, and the OpenTK APIs based on their needs.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 Besides the OpenGL&reg; ES APIs, OpenTK also provides several utility libraries including a math or linear algebra package, windowing system, and input handling for application developers.
 
@@ -24,7 +30,11 @@ To use OpenTK in your application, understand the following OpenTK key concepts:
 
 -   `TizenGameApplication`: The application lifecycle manager and base class of OpenTK app for Tizen.
 
+<<<<<<< HEAD
     `TizenGameApplication` is integrated with the Tizen Application framework. Therefore, you can get the events from the Tizen Application framework. The OpenTK app implements virtual lifecycle functions to customize their own app flow.  For example, `OnCreate`, `OnPause`, `OnResume`, `OnTerminate`, `OnAppControlReceived`, `OnDeviceOrientationChanged`, and so on.
+=======
+    `TizenGameApplication` is integrated with the Tizen Application Framework. Therefore, you can get the events from the Tizen Application Framework. The OpenTK app implements virtual lifecycle functions to customize their own app flow.  For example, `OnCreate`, `OnPause`, `OnResume`, `OnTerminate`, `OnAppControlReceived`, `OnDeviceOrientationChanged`, and so on.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     For more information, see [Applications](../applications/ui-app.md).
 

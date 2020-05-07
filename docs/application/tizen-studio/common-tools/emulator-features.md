@@ -289,7 +289,11 @@ To create your own skin layout:
 
 > **Note**
 > 
+<<<<<<< HEAD
 > If you reinstall Tizen Studio, the custom skin folders are reset.
+=======
+> If you reinstall the Tizen Studio, the custom skin folders are reset.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 <a name="eventcast"></a>
 ## Using EventCast

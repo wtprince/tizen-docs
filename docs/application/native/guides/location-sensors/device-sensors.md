@@ -35,6 +35,7 @@ The main features of the Sensor API include:
 
   **Table: Supported sensor types**
 
+<<<<<<< HEAD
   | Supported sensor types                                        |                                                  |                                                  |
   |---------------------------------------------------------------|--------------------------------------------------|--------------------------------------------------|
   | [Accelerometer](#accelerometer)                               | [Heart Rate Monitor LED IR Sensor](#hrm_ir)      | [Proximity Sensor](#proximity)                   |
@@ -46,6 +47,19 @@ The main features of the Sensor API include:
   | [Heart Rate Monitor Batch Sensor](#hrm_batch)                 | [Orientation Sensor](#orientation)               | [Uncalibrated Gyroscope](#uncal_gyro)            |
   | [Heart Rate Monitor LED Green Sensor](#hrm_green)             | [Pedometer](#pedometer)                          | [Uncalibrated Magnetic Sensor](#uncal_magnetic)  |
   | [Heart Rate Monitor LED Green Batch Sensor](#hrm_green_batch) | [Pressure Sensor](#pressure)                     |                                                  |
+=======
+  | Supported sensor types                   |                                          |                                          |
+  |------------------------------------------|------------------------------------------|------------------------------------------|
+  | [Accelerometer](#accelerometer)          | [Heart Rate Monitor Sensor](#hrm)        | [Proximity Sensor](#proximity)           |
+  | [Geomagnetic Rotation Vector Sensor](#mag_rotation) | [Humidity Sensor](#humidity)             | [Rotation Vector Sensor](#rotation)      |
+  | [Gravity Sensor](#gravity)               | [Light Sensor](#light)                   | [Significant Motion Sensor](#significant_motion) |
+  | [Gyroscope](#gyro)                       | [Linear Acceleration Sensor](#lin_accelerometer) | [Sleep Monitor](#sleep_monitor)          |
+  | [Gyroscope Rotation Vector Sensor](#gyro_rotation) | [Magnetic Sensor](#magnetic)             | [Temperature Sensor](#temperature)       |
+  | [Heart Rate Monitor LED Green Sensor](#hrm_green) | [Orientation Sensor](#orientation)       | [Ultraviolet Sensor](#ultraviolet)       |
+  | [Heart Rate Monitor LED IR Sensor](#hrm_ir) | [Pedometer](#pedometer)                  | [Uncalibrated Gyroscope](#uncal_gyro)    |
+  | [Heart Rate Monitor LED Red Sensor](#hrm_red) | [Pressure Sensor](#pressure)             | [Uncalibrated Magnetic Sensor](#uncal_magnetic) |
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 -   Sensor URI
 
     A sensor URI is in the form `http://<vendor>/sensor/<category>/<sensor-type>/<sensor-name>`. The `/<sensor-name>` element of the URI can be omitted.

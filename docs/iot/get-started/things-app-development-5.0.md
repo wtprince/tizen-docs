@@ -35,7 +35,11 @@ To create a new application project using SmartThings&trade; (ST) SDK API:
 
 8.  Edit the source code. The code is composed of a device definition JSON file (in the `res/` directory) and code implementation C files.
 
+<<<<<<< HEAD
     For more information, see [Things SDK API](../guides/things-api-5.0.md). For more information on the JSON file, see [Device Definition](../guides/things-api-device-5.0.md), and for C APIs and callbacks, see [API Usage](../guides/things-api-guide-5.0.md).
+=======
+    For more information, see [Things SDK API](../guides/things-api.md). For more information on the JSON file, see [Device Definition](../guides/things-api-device-5.0.md), and for C APIs and callbacks, see [API Usage](../guides/things-api-guide.md).
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
     > **Note**
     >

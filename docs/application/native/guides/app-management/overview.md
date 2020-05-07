@@ -24,10 +24,13 @@ You can use the following application information and controls features in your 
 
   The common application introduces the required parameters, such as a specific operation, URI, MIME type, and extra data when the application launches other applications with App Control API.
 
+<<<<<<< HEAD
 - [Component Manager](component-manager.md)
 
   You can retrieve information about the components installed on the device. You can also get information about the currently running components.
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 - [Application Manager](app-manager.md)
 
   You can retrieve information about the applications installed on the device. You can also get information about the currently-running application.
@@ -62,6 +65,7 @@ You can use the following application data exchange features in your native appl
 
   You can define interface with TIDL, which is a programming language to define interfaces for communicating among applications in Tizen.
 
+<<<<<<< HEAD
 - [Sticker](sticker.md)
 
   You can provide sticker information to an application that wants to read the sticker information, as a standard method. You can also retrieve the sticker information stored by the provider application.
@@ -69,6 +73,8 @@ You can use the following application data exchange features in your native appl
 - [Widget Viewer](widget-viewer.md)
 
   You can display Tizen widget applications, manage life-cycle of its instances, and retrieve widget information.
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ## Related Information
 - Dependencies

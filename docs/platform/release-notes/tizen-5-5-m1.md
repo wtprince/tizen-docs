@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tizen 5.5 Public M1
 
 Release date: May 31, 2019
@@ -21,6 +22,16 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
 ### System (Kernel and System framework)
 
 #### New and changed features
+=======
+# Tizen 5.5 Public M1 Release Notes
+
+Release Date: May. 31, 2019
+
+
+## System (Kernel and System framework)
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Kernel upgrade
   - Kernel for Raspberry Pi 3 and ODROID-XU3 has been upgraded to version 4.14.
@@ -45,7 +56,11 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
   - Network flashing
     - Flashing platform image through network has been developed.
 
+<<<<<<< HEAD
 #### Fixes
+=======
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - System core modules
   - Deviced
@@ -58,9 +73,15 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
     - Race condition on libdbuspolicy has been fixed.
 
 
+<<<<<<< HEAD
 ### System (IoT System)
 
 #### New and changed features
+=======
+## System (IoT System)
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Memory management for long-lived process like background-locked application has been enhanced.
   - Separated memory cgroup for long-lived process has been added. When system goes to idle state, it proactively reclaims the long-lived memory of the process to provide better memory usage environment for devices with limited memory.
@@ -69,9 +90,15 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
 - System-dump supports extension mechanism to dump vendor-specific information. In addition, system-dump dumps installed-package list for checking installed-app version as default behaviors.
 
 
+<<<<<<< HEAD
 ### System (Base)
 
 #### New and changed features
+=======
+## System (Base)
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Open source upgrade
   - icu (63.1)
@@ -106,7 +133,11 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
     - http://tizen.org/feature/accessibility.grayscale
     - http://tizen.org/feature/accessibility.negative
 
+<<<<<<< HEAD
 #### Fixes
+=======
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - CVE patches
   - libxslt : CVE-2019-11068
@@ -115,9 +146,15 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
   - file : CVE-2019-8906
 
 
+<<<<<<< HEAD
 ### Application framework
 
 #### New and changed features
+=======
+## Application framework
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - New notification API set
   - Various types of notifications have been provided to represent various information.
@@ -133,9 +170,15 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
   - C# API set for application events has been provided.
 
 
+<<<<<<< HEAD
 ### Window System
 
 #### New and changed features
+=======
+## Window System
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Wayland
   - The open source wayland-protocols has been upgraded to version 1.16.
@@ -190,7 +233,11 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
     - Vulkan-Tools
     - Vulkan-ValidationLayers
 
+<<<<<<< HEAD
 #### Fixes
+=======
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - libxkbcommon
   - Security vulnerabilities (CVE-2018-15858, CVE-2018-15859, CVE-2018-15861, CVE-2018-15863, CVE-2018-15862, and CVE-2018-15864) have been fixed.
@@ -214,9 +261,15 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
   - The timeout function to wait for the dequeue buffer has been added in order to fix the dequeue deadlock.
 
 
+<<<<<<< HEAD
 ### Graphics Engine
 
 #### New and changed features
+=======
+## Graphics Engine
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - DALi (3D UI Toolkit)
   - Actor and Renderer
@@ -248,7 +301,11 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
     - Interop classes are added to NUI.
     - Layout implementation has been moved from DALi to NUI.
 
+<<<<<<< HEAD
 #### Fixes
+=======
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - DALi (3D UI Toolkit)
   - Image
@@ -270,9 +327,15 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
     - Transition, DynamicResource, and Style related issues of NUI XAML have been fixed.
 
 
+<<<<<<< HEAD
 ### UI framework
 
 #### New and changed features
+=======
+## UI framework
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - EFL
   - Version 1.21 is upgraded to version 1.22.
@@ -294,16 +357,26 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
 - rlottie
   - Lottie file support has been added.
 
+<<<<<<< HEAD
 #### Known Issues
+=======
+### Known Issues
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Accessibility toolkit packages support meson build system only:
   - Atk, At-spi2-core, and At-spi2-atk
 - Elementary uses legacy focus policy rather than the recent focus manager for compatibility issue.
 
 
+<<<<<<< HEAD
 ### Interaction Framework
 
 #### New and changed features
+=======
+## Interaction Framework
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Multi-assistant framework
   - Tizen now supports multi-assistant framework that supports multiple assistants at the same time.
@@ -314,9 +387,15 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
   - IME API set that gets the key code and the visibility state of a candidate has been added.
 
 
+<<<<<<< HEAD
 ### Multimedia framework
 
 #### New and changed features
+=======
+## Multimedia framework
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - MediaTool
   - API set to support audio channel mask has been added.
@@ -370,7 +449,11 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
   - Metadata
     - API to set composer has been added.
 
+<<<<<<< HEAD
 #### Fixes
+=======
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Media Content
   - media_info_insert_to_db() returns the updated media information. Earlier, this API returned the media information without verifying whether it was up-to-date.
@@ -395,9 +478,15 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
     - The busy loop issue caused for high CPU usage has been fixed.
 
 
+<<<<<<< HEAD
 ### Network and Connectivity
 
 #### New and changed features
+=======
+## Network and Connectivity
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - User awareness framework
   - A framework for user detection based on multiple sensors has been added.
@@ -435,9 +524,15 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
     - Wi-Fi - Exceptions to provide accurate error information has been added.
 
 
+<<<<<<< HEAD
 ### Security
 
 #### New and changed features
+=======
+## Security
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Security-manager
   - Smack rules will be loaded directly from security-manager DB. All rule files have been removed.
@@ -449,9 +544,15 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
     - Getting several privilege information as list.
 
 
+<<<<<<< HEAD
 ### Service framework
 
 #### Fixes
+=======
+## Service framework
+
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Account-Manager
   - Unwanted D-Bus API calls have been removed.
@@ -477,9 +578,15 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
   - Potential defects have been fixed.
 
 
+<<<<<<< HEAD
 ### Web framework
 
 #### New and changed features
+=======
+## Web framework
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Web Engine
   - Web Engine Upgrade Framework has been added.
@@ -528,9 +635,15 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
   - The IntelliSense function for Tizen WebApp SDK has been enhanced.
 
 
+<<<<<<< HEAD
 ### Lightweight Web Solution
 
 #### New and changed features
+=======
+## Lightweight Web Solution
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Security modules
   - Content Security Policy (CSP) has been added.
@@ -547,7 +660,11 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
   - Animation performance (transition) has been improved.
   - Type conversion performance in JS has been improved.
 
+<<<<<<< HEAD
 #### Fixes
+=======
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Bug fixes
   - Many layout bugs, including flex layout have been fixed.
@@ -555,9 +672,15 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
   - Crashes have been fixed.
 
 
+<<<<<<< HEAD
 ### Tizen .NET
 
 #### New and changed features
+=======
+## Tizen .NET
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - .NET Core (Runtime)
   - .NETCore has been upgraded from 2.1.4 to 3.0.0 preview 2.
@@ -607,6 +730,7 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
   - New InputMethod API set to update the input panel event has been added.
   - New Application API set to add CurrentDeviceOrientation property for CoreUIApplication has been added.
 
+<<<<<<< HEAD
 #### Known Issues
 
 - Xamarin.Forms
@@ -616,6 +740,17 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
 ### Toolchain
 
 #### New and changed features
+=======
+### Known Issues
+
+- Xamarin.Forms
+  - For more information on the list of limitations, see [here](https://developer.tizen.org/development/api-reference/.net-application/current-xamarin.forms-limitations).
+
+
+## Toolchain
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - ASan heap profile flags have been added to libsanitizer.
 - ASan __libc_siglongjmp/__libc_longjmp interceptors have been added.
@@ -623,18 +758,31 @@ The Tizen 5.5 Public M1 release provides developers with the Tizen kernel, devic
   - asan-runtime-env package has been added to pre-installation list of mic.
   - ASan report description on stack traces has been improved.
 
+<<<<<<< HEAD
 #### Fixes
+=======
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - CVE patchset (CVE-2017-16997, CVE-2018-6485, CVE-2018-19591, CVE-2019-9169, CVE-2019-6488, and CVE-2019-7309) for glibc have been applied.
 - Bugfix patchset (#21081 and #22442) on glibc have been back-ported.
 
 
+<<<<<<< HEAD
 ### Experimental
 
 #### New and changed features
 
 - nnfw: Neural Network Runtime (Experimental Release)
   - Support for new architecture design named 'neurun' for CPU/GPU mixed inference has been added.
+=======
+## Experimental
+
+### New and changed features
+
+- nnfw: Neural Network Runtime (Experimental Release)
+  - Support for new architecture design named ‘neurun’ for CPU/GPU mixed inference has been added.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   - Support for mixed acceleration for InceptionV3 and MobileNet model by manual planning has been added.
   - Android NN API compatible (Supports major operations selected carefully.)
 

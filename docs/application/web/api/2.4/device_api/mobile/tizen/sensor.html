@@ -4,11 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>Sensor API</title>
+<<<<<<< HEAD
 <meta data-version="2.4" data-profile="mobile">
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::Sensor">
 <div class="supported-platforms"><img class="mobile-optional emulator" title="Optional, Supported by Tizen Mobile emulator" src="mobile_s_w_optional.png"></div>
+=======
+</head>
+<body id="page-content" onload="prettyPrint()">
+<div class="api" id="::Sensor">
+ <div class="supported-platforms"><img class="mobile-optional emulator" title="Optional, Supported by Tizen Mobile emulator" src="mobile_s_w_optional.png"></div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="title"><h1>Sensor API</h1></div>
 <div class="brief">
  The Sensor API defines interfaces and methods to manage sensor data from various sensors on the device.
@@ -326,6 +333,11 @@ The supported sensor types are hardware-dependent. <br><br>To check if the given
  ULTRAVIOLET - tizen.systeminfo.getCapability(<em>"http://tizen.org/feature/sensor.ultraviolet"</em>)               </li>
             </ul>
            </div>
+<<<<<<< HEAD
+=======
+<div class="description">
+           </div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="parameters">
 <p><span class="param">Parameters:</span></p>
 <ul>
@@ -459,6 +471,11 @@ console.log("Capable sensor: " + sensorCapabilities[0]);
             <p>
 The <em>SuccessCallback</em> will be invoked when the first event from the sensor is fired.
             </p>
+<<<<<<< HEAD
+=======
+           </div>
+<div class="description">
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             <p>
 The <em>ErrorCallback</em> method is launched with these error types:
             </p>
@@ -714,6 +731,7 @@ The <em>ErrorCallback</em> method is launched with these error types:
         </div>
 <div class="example">
 <span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">var HRMrawsensor = tizen.sensorservice.getDefaultSensor("HRM_RAW");
+<<<<<<< HEAD
 
 function onGetSuccessCB(sensorData)
 {
@@ -731,6 +749,25 @@ function onsuccessCB()
   HRMrawsensor.getHRMRawSensorData(onGetSuccessCB, onerrorCB);
 }
 
+=======
+
+function onGetSuccessCB(sensorData)
+{
+  console.log("HRMRaw light intensity: " + sensorData.lightIntensity);
+}
+
+function onerrorCB(error)
+{
+  console.log("Error occurred");
+}
+
+function onsuccessCB()
+{
+  console.log("HRMRaw sensor start");
+  HRMrawsensor.getHRMRawSensorData(onGetSuccessCB, onerrorCB);
+}
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 HRMrawsensor.start(onsuccessCB);
 </pre>
 </div>
@@ -887,6 +924,7 @@ The <em>ErrorCallback</em> method is launched with these error types:
         </div>
 <div class="example">
 <span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">var magneticSensor = tizen.sensorservice.getDefaultSensor("MAGNETIC");
+<<<<<<< HEAD
 
 function onGetSuccessCB(sensorData)
 {
@@ -906,6 +944,27 @@ function onsuccessCB()
   magneticSensor.getMagneticSensorData(onGetSuccessCB, onerrorCB);
 }
 
+=======
+
+function onGetSuccessCB(sensorData)
+{
+  console.log("Magnetic field of the X axis: " + sensorData.x);
+  console.log("Magnetic field of the Y axis: " + sensorData.y);
+  console.log("Magnetic field of the Z axis: " + sensorData.z);
+}
+
+function onerrorCB(error)
+{
+  console.log("Error occurred");
+}
+
+function onsuccessCB()
+{
+  console.log("Sensor start");
+  magneticSensor.getMagneticSensorData(onGetSuccessCB, onerrorCB);
+}
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 magneticSensor.start(onsuccessCB);
 </pre>
 </div>
@@ -976,6 +1035,7 @@ The <em>ErrorCallback</em> method is launched with these error types:
         </div>
 <div class="example">
 <span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">var pressureSensor = tizen.sensorservice.getDefaultSensor("PRESSURE");
+<<<<<<< HEAD
 
 function onGetSuccessCB(sensorData)
 {
@@ -993,6 +1053,25 @@ function onsuccessCB()
   pressureSensor.getPressureSensorData(onGetSuccessCB, onerrorCB);
 }
 
+=======
+
+function onGetSuccessCB(sensorData)
+{
+  console.log("Pressure: " + sensorData.pressure);
+}
+
+function onerrorCB(error)
+{
+  console.log("Error occurred");
+}
+
+function onsuccessCB()
+{
+  console.log("Sensor start");
+  pressureSensor.getPressureSensorData(onGetSuccessCB, onerrorCB);
+}
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 pressureSensor.start(onsuccessCB);
 </pre>
 </div>
@@ -1063,6 +1142,7 @@ The <em>ErrorCallback</em> method is launched with these error types:
         </div>
 <div class="example">
 <span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">var proximitySensor = tizen.sensorservice.getDefaultSensor("PROXIMITY");
+<<<<<<< HEAD
 
 function onGetSuccessCB(sensorData)
 {
@@ -1080,6 +1160,25 @@ function onsuccessCB()
   proximitySensor.getProximitySensorData(onGetSuccessCB, onerrorCB);
 }
 
+=======
+
+function onGetSuccessCB(sensorData)
+{
+  console.log("Proximity state: " + sensorData.proximityState);
+}
+
+function onerrorCB(error)
+{
+  console.log("Error occurred");
+}
+
+function onsuccessCB()
+{
+  console.log("Proximity sensor start");
+  proximitySensor.getProximitySensorData(onGetSuccessCB, onerrorCB);
+}
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 proximitySensor.start(onsuccessCB);
 </pre>
 </div>
@@ -1150,6 +1249,7 @@ The <em>ErrorCallback</em> method is launched with these error types:
         </div>
 <div class="example">
 <span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">var ultravioletSensor = tizen.sensorservice.getDefaultSensor("ULTRAVIOLET");
+<<<<<<< HEAD
 
 function onGetSuccessCB(sensorData)
 {
@@ -1167,6 +1267,25 @@ function onsuccessCB()
   ultravioletSensor.getUltravioletSensorData(onGetSuccessCB, onerrorCB);
 }
 
+=======
+
+function onGetSuccessCB(sensorData)
+{
+  console.log("Ultraviolet level: " + sensorData.ultravioletLevel);
+}
+
+function onerrorCB(error)
+{
+  console.log("Error occurred");
+}
+
+function onsuccessCB()
+{
+  console.log("Ultraviolet sensor start");
+  ultravioletSensor.getUltravioletSensorData(onGetSuccessCB, onerrorCB);
+}
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 ultravioletSensor.start(onsuccessCB);
 </pre>
 </div>
@@ -1443,9 +1562,13 @@ The ultraviolet index is an international standard measurement of the strength o
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>
@@ -1495,7 +1618,11 @@ To guarantee that the UV sensor application runs on a device with a UV sensor, d
 <li class="feature">http://tizen.org/feature/sensor.ultraviolet</li>
 </div>
 <p></p>
+<<<<<<< HEAD
                     For more information, see <a href="/application/web/tutorials/app-filtering">Application Filtering.</a>
+=======
+                    For more information, see <a href="https://developer.tizen.org/development/training/web-application/understanding-tizen-programming/application-filtering">Application Filtering.</a>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <h2 id="full-webidl">4. Full WebIDL</h2>
 <pre class="webidl prettyprint">module Sensor {

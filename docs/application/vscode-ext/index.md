@@ -6,7 +6,11 @@ Visual Studio Code Extension for Tizen enables you to develop Tizen .NET and Tiz
 
   VS Code Extension for Tizen supports the following operating systems:
 
+<<<<<<< HEAD
   - Windows 10 (64 bit)
+=======
+  - Windows&reg; 10 (64 bit)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   - Ubuntu 16.04/18.04 (64 bit)
   - macOS 10.12, 10.13 (Sierra)
 
@@ -43,6 +47,12 @@ Visual Studio Code Extension for Tizen enables you to develop Tizen .NET and Tiz
 The Tizen Emulator for VS Code Extension for Tizen has the same requirements as the emulator in Tizen Studio. To check the detailed hardware and software requirements for the Tizen Emulator, see [Emulator Requirements](../tizen-studio/setup/prerequisites.md#emulator).
 
 - Intel&reg; Hardware Acceleration Execution Manager (Intel&reg; HAXM) speeds up the Tizen emulation on Intel-VT-enabled systems. For more information, see [Hardware Accelerated Execution Manager](../tizen-studio/setup/hardware-accelerated-execution-manager.md).
+<<<<<<< HEAD
+=======
+
+- Make sure **Hyper-V** is disabled (in Windows&reg; 10 or higher):
+  1. In the **Start** menu, select **Programs and Features**.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Make sure **Hyper-V** is disabled (in Windows 10 or higher):
   1. Input **Control Panel** on the **Search** box in Windows 10.

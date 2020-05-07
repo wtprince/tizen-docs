@@ -61,8 +61,13 @@ The following instructions and examples help you to use the Dynamic Analyzer eff
 
 You can launch the Dynamic Analyzer in Tizen Studio or as a standalone application from the Tizen Studio submenu.
 
+<<<<<<< HEAD
 - To launch the Dynamic Analyzer in Tizen Studio:
   1. Right-click your project in Tizen Studio **Project Explorer** view.
+=======
+- To launch the Dynamic Analyzer in the Tizen Studio:
+  1. Right-click your project in the Tizen Studio **Project Explorer** view.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   2. Select **Profile As > Profile with Dynamic Analyzer**.
 
   The selected project is built, packaged, and installed on the target device. The Dynamic Analyzer is launched and the profiling starts automatically.

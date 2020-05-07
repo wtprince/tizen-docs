@@ -4,11 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>Messaging API</title>
+<<<<<<< HEAD
 <meta data-version="3.0" data-profile="mobile">
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::Messaging">
-<div class="supported-platforms"><img class="mobile-optional emulator-partial" title="Optional, Supported by Tizen Mobile emulator - Emulator supports only e-mail" src="mobile_s_w_optional.png"></div>
+ <div class="supported-platforms"><img class="mobile-optional emulator-partial" title="Optional, Supported by Tizen Mobile emulator - Emulator supports only e-mail" src="mobile_s_w_optional.png"></div>
 <div class="title"><h1>Messaging API</h1></div>
 <div class="brief">
  The Messaging API provides interfaces and methods for managing SMS, MMS, and email messages.
@@ -2697,6 +2700,20 @@ messageStorage.findFolders(filter, folderArrayCB);
 <p><span class="version">Since: </span>
  1.0
             </p>
+<<<<<<< HEAD
+=======
+<div class="description">
+            <p>
+The errorCallback is launched with these error types:
+            </p>
+            <ul>
+              <li>
+ InvalidValuesError - If any of the input parameters contains an invalid value.              </li>
+              <li>
+ UnknownError - If any other error occurs.               </li>
+            </ul>
+           </div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <p><span class="privilegelevel">Privilege level: </span>
  public
             </p>
@@ -2774,6 +2791,20 @@ messageStorage.addMessagesChangeListener(messageChangeCallback);
 <p><span class="version">Since: </span>
  1.0
             </p>
+<<<<<<< HEAD
+=======
+<div class="description">
+            <p>
+The errorCallback is launched with these error types:
+            </p>
+            <ul>
+              <li>
+ InvalidValuesError - If any of the input parameters contains an invalid value.              </li>
+              <li>
+ UnknownError - If any other error occurs.              </li>
+            </ul>
+           </div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <p><span class="privilegelevel">Privilege level: </span>
  public
             </p>
@@ -2850,6 +2881,20 @@ messageStorage.addConversationsChangeListener(conversationChangeCB);
 <p><span class="version">Since: </span>
  1.0
             </p>
+<<<<<<< HEAD
+=======
+<div class="description">
+            <p>
+The errorCallback is launched with these error types:
+            </p>
+            <ul>
+              <li>
+ InvalidValuesError - If any of the input parameters contains an invalid value.              </li>
+              <li>
+ UnknownError - If any other error occurs.              </li>
+            </ul>
+           </div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <p><span class="privilegelevel">Privilege level: </span>
  public
             </p>
@@ -2929,6 +2974,12 @@ messageStorage.addFoldersChangeListener(folderChangeCB);
 <div class="description">
             <p>
 Calling this function has no effect if there is no listener with given id.
+<<<<<<< HEAD
+=======
+            </p>
+            <p>
+The errorCallback is launched with these error types:
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </p>
             <p>
 If the <em>subscriptionId</em> argument is valid and corresponds to a subscription already in place, the subscription process must stop immediately and further <em>MessagingStorage </em>change notifications must not be invoked.
@@ -3741,9 +3792,13 @@ This attribute affects the behavior of the MessageService.sync() method.
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>
@@ -3761,7 +3816,11 @@ To guarantee that the mms application runs on a device with MMS feature, define 
 <li class="feature">http://tizen.org/feature/network.telephony.mms</li>
 </div>
 <p></p>
+<<<<<<< HEAD
                     For more information, see <a href="/application/web/tutorials/app-filtering">Application Filtering.</a>
+=======
+                    For more information, see <a href="https://developer.tizen.org/development/training/web-application/understanding-tizen-programming/application-filtering">Application Filtering.</a>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <h2 id="full-webidl">4. Full WebIDL</h2>
 <pre class="webidl prettyprint">module Messaging {

@@ -4,11 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>Iotcon API</title>
+<<<<<<< HEAD
 <meta data-version="4.0" data-profile="tv">
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::Iotcon">
 <div class="supported-platforms"><img class="tv-optional emulator" title="Optional, Supported by Tizen Tv emulator" src="tv_s_w_optional.png"></div>
+=======
+</head>
+<body id="page-content" onload="prettyPrint()">
+<div class="api" id="::Iotcon">
+ <div class="supported-platforms"><img class="tv-optional emulator" title="Optional, Supported by Tizen Tv emulator" src="tv_s_w_optional.png"></div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="title"><h1>Iotcon API</h1></div>
 <div class="brief">
  The Iotcon API provides functions for IoT connectivity.
@@ -18,7 +25,11 @@
 It allows to register, discover and access to resources via RESTful API.
         </p>
         <p>
+<<<<<<< HEAD
 For more information on the IoT features, see <a href="/application/web/guides/connectivity/iotcon">IoT Guide</a>.
+=======
+For more information on the IoT features, see <a href="https://developer.tizen.org/development/guides/web-application/connectivity-and-wireless/iot-connectivity">IoT Guide</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         </p>
        </div>
 <p><span class="version">Since: </span>
@@ -2418,6 +2429,7 @@ function foundSuccess(resource)
     {
       doorResource = resource;
       try
+<<<<<<< HEAD
       {
         doorResource.startObserving("IGNORE_OUT_OF_ORDER", onchanged);
       }
@@ -2425,6 +2437,15 @@ function foundSuccess(resource)
       {
         console.log(err.name + ": " + err.message);
       }
+=======
+      {
+        doorResource.startObserving("IGNORE_OUT_OF_ORDER", onchanged);
+      }
+      catch (err)
+      {
+        console.log(err.name + ": " + err.message);
+      }
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     }
   }
 }
@@ -2666,6 +2687,7 @@ function foundSuccess(resource)
     if (resource.uriPath == "/door")
     {
       try
+<<<<<<< HEAD
       {
         resource.setResourceStateChangeListener(onchanged);
       }
@@ -2673,6 +2695,15 @@ function foundSuccess(resource)
       {
         console.log(err.name + ": " + err.message);
       }
+=======
+      {
+        resource.setResourceStateChangeListener(onchanged);
+      }
+      catch (err)
+      {
+        console.log(err.name + ": " + err.message);
+      }
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     }
   }
 }
@@ -4779,9 +4810,13 @@ for <em>Client.findResource()</em>.
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>

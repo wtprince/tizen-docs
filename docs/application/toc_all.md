@@ -15,11 +15,18 @@
 ## Get Started
 
 ### [Overview](/application/dotnet/get-started/overview.md)
+<<<<<<< HEAD
 ### [Create Wearable .NET Application](/application/dotnet/get-started/wearable/first-app.md)
 ### [Create Wearable XAML Application](/application/dotnet/get-started/wearable/first-xaml-app.md)
 ### [Create TV .NET Application](/application/dotnet/get-started/tv/first-app.md)
 ### [Create Mobile .NET Application](/application/dotnet/get-started/mobile/first-app.md)
 ### [Create NUI .NET Application](/application/dotnet/get-started/nui/quickstart.md)
+=======
+### [Create Mobile .NET Application](/application/dotnet/get-started/mobile/first-app.md)
+### [Create Wearable .NET Application](/application/dotnet/get-started/wearable/first-app.md)
+### [Create TV .NET Application](/application/dotnet/get-started/tv/first-app.md)
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ## Tutorials
 
@@ -38,7 +45,11 @@
 
 ### [Third Party Libraries for Tizen .NET Application](/application/dotnet/tutorials/library-list.md)
 
+<<<<<<< HEAD
 ### [Application Filtering](/application/dotnet/tutorials/app-filtering.md)
+=======
+### [Application Filtering](/application/native/tutorials/details/app-filtering.md)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ### [Security and API Privileges](/application/dotnet/tutorials/sec-privileges.md)
 
@@ -59,6 +70,7 @@
 #### [Application Icons](/application/dotnet/guides/app-management/app-icons.md)
 #### [Application Controls](/application/dotnet/guides/app-management/app-controls.md)
 #### [Application Manager](/application/dotnet/guides/app-management/app-manager.md)
+<<<<<<< HEAD
 #### [Event Manager](/application/dotnet/guides/app-management/event.md)
 #### [Component Manager](/application/dotnet/guides/app-management/component-manager.md)
 #### [Package Manager](/application/dotnet/guides/app-management/package-manager.md)
@@ -76,10 +88,23 @@
 ##### [Flex Layout](/application/dotnet/guides/nui/flex-layout.md)
 ##### [Create Custom Layout](/application/dotnet/guides/nui/custom-layout.md)
 #### Components
+=======
+#### [Package Manager](/application/dotnet/guides/app-management/package-manager.md)
+#### [Message Port](/application/dotnet/guides/app-management/message-port.md)
+#### [Data Control](/application/dotnet/guides/app-management/data-control.md)
+
+### Natural User Interface
+#### [Overview](/application/dotnet/guides/nui/overview.md)
+#### [Setting Up the NUI Development Environment on Ubuntu](/application/dotnet/guides/nui/setup-ubuntu.md)
+#### [Getting Started](/application/dotnet/guides/nui/hello-world.md)
+#### [Layer](/application/dotnet/guides/nui/layer.md)
+#### UI Components
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 ##### [Overview](/application/dotnet/guides/nui/ui-components.md)
 ##### [Styling UI Components](/application/dotnet/guides/nui/styling-controls-with-JSON.md)
 ##### [Visuals](/application/dotnet/guides/nui/visuals.md)
 ##### [View](/application/dotnet/guides/nui/view.md)
+<<<<<<< HEAD
 ##### [CustomView](/application/dotnet/guides/nui/customview.md)
 ##### [FlexContainer](/application/dotnet/guides/nui/flexcontainer.md)
 ##### [ImageView](/application/dotnet/guides/nui/imageview.md)
@@ -95,13 +120,29 @@
 ##### [Switch](/application/dotnet/guides/nui/nui-components/Switch.md)
 ##### [Tab](/application/dotnet/guides/nui/nui-components/Tab.md)
 ##### [Toast](/application/dotnet/guides/nui/nui-components/Toast.md)
+=======
+##### [CustomView](/application/dotnet/guides/nui/creating-custom-view-controls.md)
+##### [Buttons](/application/dotnet/guides/nui/button.md)
+##### [FlexContainer](/application/dotnet/guides/nui/flexcontainer.md)
+##### [ImageView](/application/dotnet/guides/nui/imageview.md)
+##### [ScrollView](/application/dotnet/guides/nui/scrollview.md)
+##### [Slider](/application/dotnet/guides/nui/slider.md)
+##### [TableView](/application/dotnet/guides/nui/tableview.md)
+##### [TextLabel](/application/dotnet/guides/nui/textlabel.md)
+##### [TextField](/application/dotnet/guides/nui/textfield.md)
+##### [TextEditor](/application/dotnet/guides/nui/texteditor.md)
+##### [VideoView](/application/dotnet/guides/nui/videoview.md)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 #### Animation
 ##### [Overview](/application/dotnet/guides/nui/animation.md)
 ##### [Animation Types](/application/dotnet/guides/nui/animation-types.md)
 #### [Resources](/application/dotnet/guides/nui/resources.md)
+<<<<<<< HEAD
 #### XAML
 ##### [XAML Support for Tizen.NUI](/application/dotnet/guides/nui/xaml/xaml-support-for-tizen-nui.md)
 ##### [Layout Define Example](/application/dotnet/guides/nui/xaml/layout-define-example.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ### OpenTK
 #### [Overview](/application/dotnet/guides/opentk/overview.md)
@@ -154,6 +195,7 @@
 #### [Bluetooth](/application/dotnet/guides/connectivity/bluetooth.md)
 #### [NFC](/application/dotnet/guides/connectivity/nfc.md)
 #### [Smart Card](/application/dotnet/guides/connectivity/smartcard.md)
+<<<<<<< HEAD
 #### [Smart Traffic Control (STC)](/application/dotnet/guides/connectivity/stc.md)
 #### [IoT Connectivity](/application/dotnet/guides/connectivity/iotcon.md)
 #### [Telephony Information](/application/dotnet/guides/connectivity/telephony.md)
@@ -162,6 +204,11 @@
 #### [Overview](/application/dotnet/guides/machine-learning/overview.md)
 #### [Single Shot](/application/dotnet/guides/machine-learning/singleshot.md)
 
+=======
+#### [IoT Connectivity](/application/dotnet/guides/connectivity/iotcon.md)
+#### [Telephony Information](/application/dotnet/guides/connectivity/telephony.md)
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 ### Messaging
 #### [Overview](/application/dotnet/guides/messaging/overview.md)
 #### [Email](/application/dotnet/guides/messaging/email.md)
@@ -214,7 +261,10 @@
 #### [Privilege Information](/application/dotnet/guides/security/privilege.md)
 #### [Privacy-related Permissions](/application/dotnet/guides/security/requesting-permissions.md)
 #### [TEE Communication](/application/dotnet/guides/security/tee-client.md)
+<<<<<<< HEAD
 #### [Device Policy Management](/application/dotnet/guides/security/dpm.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ### [Natural Language Processing](/application/dotnet/guides/nlp/nlp.md)
 
@@ -242,6 +292,7 @@
 ### [Watch](/application/dotnet/samples/watch/overview.md)
 
 
+<<<<<<< HEAD
 
 # Web Application
 
@@ -258,10 +309,26 @@
 ### [Create Samsung Smart TV Web Application](/application/web/get-started/tv/first-samsung-tv-app.md)
 ### [Create Mobile Web Application](/application/web/get-started/mobile/first-app.md)
 ### [Create Web Application Addon](/application/web/get-started/addon/first-addon.md)
+=======
+# Native Application
+
+
+## [Overview](/application/native/index.md)
+
+
+## Get Started
+
+### [Overview](/application/native/get-started/overview.md)
+### [Create Mobile Native Application](/application/native/get-started/mobile/first-app.md)
+### [Create Wearable Native Application](/application/native/get-started/wearable/first-app.md)
+### [Create Wearable Native Watch Application](/application/native/get-started/wearable-watch/first-app-watch.md)
+### [Create Wearable Native Widget Application](/application/native/get-started/wearable-widget/first-app-widget.md)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 
 ## Tutorials
 
+<<<<<<< HEAD
 ### [Overview](/application/web/tutorials/overview.md)
 ### [Application Development Process](/application/web/tutorials/process/app-dev-process.md)
 #### [Creating the Application Project](/application/web/tutorials/process/creating-app-project.md)
@@ -625,6 +692,112 @@
 ### User Interface
 
 #### [Overview](/application/native/guides/ui/overview.md)
+=======
+### [Overview](/application/native/tutorials/overview.md)
+
+### Application Development Process
+#### [Overview](/application/native/tutorials/process/app-dev-process.md)
+#### [Creating the Application Project](/application/native/tutorials/process/creating-app-project.md)
+#### [Setting Project Properties](/application/native/tutorials/process/setting-properties.md)
+#### [Building Applications](/application/native/tutorials/process/building-app.md)
+#### [Running Applications](/application/native/tutorials/process/running-app.md)
+#### [Debugging Applications](/application/native/tutorials/process/debugging-app.md)
+#### [Optimizing Application Performance](/application/native/tutorials/process/performance.md)
+
+### Understanding Tizen Programming
+#### [Overview](/application/native/tutorials/details/details.md)
+#### [Application Filtering](/application/native/tutorials/details/app-filtering.md)
+#### [Security and API Privileges](/application/native/tutorials/details/sec-privileges.md)
+#### [Security and API Privileges for Apps with API Version 4.0 or Earlier](/application/native/tutorials/details/old-versioned-sec-privileges.md)
+#### [Event Handling](/application/native/tutorials/details/event-handling.md)
+#### [Error Handling](/application/native/tutorials/details/error-handling.md)
+#### [File System Directory Hierarchy](/application/native/tutorials/details/io-overview.md)
+#### [Application Signing and Certificates](/application/native/tutorials/details/sign-certificate.md)
+#### [API Versioning and Deprecation Policy of the Tizen Platform](/application/native/tutorials/details/deprecation-policy.md)
+#### [Removed functions and enumerations of Tizen Native API](/application/native/tutorials/details/native-removed-history.md)
+
+### Tizen UI Development
+#### [Overview](/application/native/tutorials/ui-builder/ui-builder-overview.md)
+#### [Designing Your Native Application](/application/native/tutorials/ui-builder/ui-builder-app-design.md)
+
+### Creating Applications with Connectivity and Network
+#### [Overview](/application/native/tutorials/feature/app-connectivity.md)
+#### [Network Operations](/application/native/tutorials/feature/app-connectivity-operation.md)
+#### [Network Usage](/application/native/tutorials/feature/app-connectivity-usage.md)
+#### [P2P Connections with Wi-Fi Direct&reg;](/application/native/tutorials/feature/app-connectivity-p2p.md)
+
+### Creating Applications with Contacts
+#### [Overview](/application/native/tutorials/feature/app-contacts.md)
+#### [Basic Concepts](/application/native/tutorials/feature/app-contacts-basic.md)
+#### [Contact Management](/application/native/tutorials/feature/app-contacts-management.md)
+#### [Group Management](/application/native/tutorials/feature/app-contacts-group.md)
+
+### Creating Applications with Content Sharing
+#### [Overview](/application/native/tutorials/feature/app-contentshare.md)
+#### [Sending Content to Other Applications](/application/native/tutorials/feature/app-contentshare-send.md)
+#### [Receiving Content from Other Applications](/application/native/tutorials/feature/app-contentshare-receive.md)
+#### [Sharing through NFC](/application/native/tutorials/feature/app-contentshare-nfc.md)
+
+### Creating Applications with Graphics and Animation
+#### [Overview](/application/native/tutorials/feature/app-graphics.md)
+#### [Squares on the Canvas](/application/native/tutorials/feature/app-graphics-square.md)
+#### [Polygons on the Canvas](/application/native/tutorials/feature/app-graphics-polygon.md)
+#### [Animations](/application/native/tutorials/feature/app-graphics-animation.md)
+
+### Creating Applications with Multimedia
+#### [Overview](/application/native/tutorials/feature/app-multimedia.md)
+#### [Audio Playback and Recording](/application/native/tutorials/feature/app-multimedia-audio.md)
+#### [Video Playback and Recording](/application/native/tutorials/feature/app-multimedia-video.md)
+#### [Image Capturing with the Camera](/application/native/tutorials/feature/app-multimedia-camera.md)
+
+### Creating Applications with Sensors
+#### [Overview](/application/native/tutorials/feature/app-sensor.md)
+#### [Accelerator Sensor Usage](/application/native/tutorials/feature/app-sensor-accelerator.md)
+#### [Proximity Sensor Usage](/application/native/tutorials/feature/app-sensor-proximity.md)
+
+### [Best Practices for Location](/application/native/tutorials/feature/best-practice-battery.md)
+
+
+## Guides
+
+### [Overview](/application/native/guides/index.md)
+
+### Applications
+#### [Overview](/application/native/guides/applications/overview.md)
+#### UI Applications
+##### [Overview](/application/native/guides/applications/ui-app.md)
+##### EFL Applications
+###### [Overview](/application/native/guides/applications/efl-app.md)
+###### [Basic UI Application](/application/native/guides/applications/efl-ui-app.md)
+###### [Watch Application](/application/native/guides/applications/watch-app.md)
+###### [Widget Application](/application/native/guides/applications/widget-app.md)
+##### DALi Applications
+###### [Overview](/application/native/guides/applications/dali-app.md)
+###### [Basic UI Application](/application/native/guides/applications/dali-basic-app.md)
+###### [Watch Application](/application/native/guides/applications/dali-watch-app.md)
+###### [Widget Application](/application/native/guides/applications/dali-widget-app.md)
+#### [Service Applications](/application/native/guides/applications/service-app.md)
+
+### Application Management
+#### [Overview](/application/native/guides/app-management/overview.md)
+#### [Application Resources](/application/native/guides/app-management/app-resources.md)
+#### [Application Preferences](/application/native/guides/app-management/app-preferences.md)
+#### [Application Icons](/application/native/guides/app-management/app-icons.md)
+#### [Application Controls](/application/native/guides/app-management/app-controls.md)
+#### [Common Application Controls](/application/native/guides/app-management/common-appcontrols.md)
+#### [Application Manager](/application/native/guides/app-management/app-manager.md)
+#### [Package Manager](/application/native/guides/app-management/package-manager.md)
+#### [Event Broadcast and Subscription](/application/native/guides/app-management/event.md)
+#### [Message Port](/application/native/guides/app-management/message-port.md)
+#### [Data Control](/application/native/guides/app-management/data-control.md)
+#### [Data Bundle](/application/native/guides/app-management/data-bundles.md)
+#### [RPC Port](/application/native/guides/app-management/rpc-port.md)
+#### [TIDL](/application/native/guides/app-management/tidl.md)
+
+### User Interface
+
+#### [Overview](/application/native/guides/ui/overview.md)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 #### EFL
 ##### [Introduction](/application/native/guides/ui/efl/index.md)
@@ -643,6 +816,7 @@
 ###### [Table](/application/native/guides/ui/efl/container-table.md)
 ##### UI Components
 ###### [Overview](/application/native/guides/ui/efl/ui-components.md)
+<<<<<<< HEAD
 ###### Wearable UI Components
 ####### [Overview](/application/native/guides/ui/efl/wearable/ui-components.md)
 ####### [Background](/application/native/guides/ui/efl/wearable/component-background.md)
@@ -674,6 +848,8 @@
 ####### [Circle Surface](/application/native/guides/ui/efl/wearable/component-circle-surface.md)
 ####### [Rotary Selector](/application/native/guides/ui/efl/wearable/component-circle-rotary.md)
 ####### [More Option](/application/native/guides/ui/efl/wearable/component-circle-option.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 ###### Mobile UI Components
 ####### [Overview](/application/native/guides/ui/efl/mobile/ui-components.md)
 ####### [Background](/application/native/guides/ui/efl/mobile/component-background.md)
@@ -710,6 +886,40 @@
 ####### [Toolbar](/application/native/guides/ui/efl/mobile/component-toolbar.md)
 ####### [Tooltip](/application/native/guides/ui/efl/mobile/component-tooltip.md)
 ####### [Win](/application/native/guides/ui/efl/mobile/component-win.md)
+<<<<<<< HEAD
+=======
+###### Wearable UI Components
+####### [Overview](/application/native/guides/ui/efl/wearable/ui-components.md)
+####### [Background](/application/native/guides/ui/efl/wearable/component-background.md)
+####### [Button](/application/native/guides/ui/efl/wearable/component-button.md)
+####### [Check](/application/native/guides/ui/efl/wearable/component-check.md)
+####### [Ctxpopup](/application/native/guides/ui/efl/wearable/component-ctxpopup.md)
+####### [Datetime](/application/native/guides/ui/efl/wearable/component-datetime.md)
+####### [Entry](/application/native/guides/ui/efl/wearable/component-entry.md)
+####### [Genlist](/application/native/guides/ui/efl/wearable/component-genlist.md)
+####### [GLView](/application/native/guides/ui/efl/wearable/component-glview.md)
+####### [Icon](/application/native/guides/ui/efl/wearable/component-icon.md)
+####### [Image](/application/native/guides/ui/efl/wearable/component-image.md)
+####### [Index](/application/native/guides/ui/efl/wearable/component-index.md)
+####### [Label](/application/native/guides/ui/efl/wearable/component-label.md)
+####### [List](/application/native/guides/ui/efl/wearable/component-list.md)
+####### [Plug](/application/native/guides/ui/efl/wearable/component-plug.md)
+####### [Popup](/application/native/guides/ui/efl/wearable/component-popup.md)
+####### [Progressbar](/application/native/guides/ui/efl/wearable/component-progressbar.md)
+####### [Radio](/application/native/guides/ui/efl/wearable/component-radio.md)
+####### [Slider](/application/native/guides/ui/efl/wearable/component-slider.md)
+####### [Win](/application/native/guides/ui/efl/wearable/component-win.md)
+####### [Circle Datetime](/application/native/guides/ui/efl/wearable/component-circle-datetime.md)
+####### [Circle Genlist](/application/native/guides/ui/efl/wearable/component-circle-genlist.md)
+####### [Circle Object](/application/native/guides/ui/efl/wearable/component-circle-object.md)
+####### [Circle Progressbar](/application/native/guides/ui/efl/wearable/component-circle-progressbar.md)
+####### [Circle Scroller](/application/native/guides/ui/efl/wearable/component-circle-scroller.md)
+####### [Circle Slider](/application/native/guides/ui/efl/wearable/component-circle-slider.md)
+####### [Circle Spinner](/application/native/guides/ui/efl/wearable/component-circle-spinner.md)
+####### [Circle Surface](/application/native/guides/ui/efl/wearable/component-circle-surface.md)
+####### [Rotary Selector](/application/native/guides/ui/efl/wearable/component-circle-rotary.md)
+####### [More Option](/application/native/guides/ui/efl/wearable/component-circle-option.md)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 ###### [Customizing UI Components](/application/native/guides/ui/efl/component-custom.md)
 ###### [Managing UI Component Focus](/application/native/guides/ui/efl/component-focus.md)
 ###### [Configuring UI Components](/application/native/guides/ui/efl/configuring.md)
@@ -802,17 +1012,27 @@
 ###### [Constraints](/application/native/guides/ui/dali/constraints.md)
 ##### [Resources](/application/native/guides/ui/dali/resources.md)
 ##### Rendering and Effects
+<<<<<<< HEAD
 ###### [Overview](/application/native/guides/ui/dali/dali-rendering.md)
+=======
+###### [Overview](/application/native/guides/ui/dali/rendering-effects.md)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 ###### [Shape Drawing](/application/native/guides/ui/dali/rendering-tutorial.md)
 ###### [SVG Rendering](/application/native/guides/ui/dali/svg-rendering.md)
 ##### Background Knowledge
 ###### [Handle/Body Pattern](/application/native/guides/ui/dali/handle.md)
 ###### [Properties](/application/native/guides/ui/dali/properties.md)
+<<<<<<< HEAD
 
 #### Tizen Window System Shell
 ##### [Overview](/application/native/guides/ui/tizen-ws-shell/index.md)
 ##### [TZSH-Quickpanel](/application/native/guides/ui/tizen-ws-shell/tzsh-quickpanel.md)
 ##### [TZSH-Softkey](/application/native/guides/ui/tizen-ws-shell/tzsh-softkey.md)
+=======
+###### [Multi-threaded Architecture](/application/native/guides/ui/dali/multi-threaded.md)
+
+#### [Tizen Window System Shell](/application/native/guides/ui/tizen-ws-shell.md)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ### Localization
 #### [Overview](/application/native/guides/internationalization/overview.md)
@@ -844,7 +1064,10 @@
 ### Notifications and Content Sharing
 #### [Overview](/application/native/guides/notification/overview.md)
 #### [Notifications](/application/native/guides/notification/notifications.md)
+<<<<<<< HEAD
 #### [Expandable Notifications](/application/native/guides/notification/notification-ex.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 #### [Attach Panel](/application/native/guides/notification/attach-panel.md)
 #### [Minicontrol Window](/application/native/guides/notification/minicontrol.md)
 
@@ -853,10 +1076,13 @@
 #### [Alarms](/application/native/guides/alarm/alarms.md)
 #### [Contextual System Event Trigger](/application/native/guides/alarm/trigger.md)
 
+<<<<<<< HEAD
 ### Machine Learning
 #### [Overview](/application/native/guides/machine-learning/overview.md)
 #### [Machine Learning Inference](/application/native/guides/machine-learning/machine-learning-inference.md)
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 ### Multimedia
 #### [Overview](/application/native/guides/multimedia/overview.md)
 #### Media Content and Metadata
@@ -868,7 +1094,10 @@
 ##### [Barcode Detection and Generation](/application/native/guides/multimedia/image-barcode.md)
 ##### [Face Detection, Recognition, and Tracking](/application/native/guides/multimedia/face-detection.md)
 ##### [Image Recognition and Tracking](/application/native/guides/multimedia/image-recognition.md)
+<<<<<<< HEAD
 ##### [Image Classification](/application/native/guides/multimedia/image-classification.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 #### [Media Playback](/application/native/guides/multimedia/media-playback.md)
 #### [Media Recording](/application/native/guides/multimedia/media-recording.md)
 #### [Media Controller](/application/native/guides/multimedia/media-controller.md)
@@ -898,11 +1127,22 @@
 #### [Telephony Information](/application/native/guides/connectivity/telephony.md)
 #### [USB Host](/application/native/guides/connectivity/usb-host.md)
 #### Internet and Content Downloads
+<<<<<<< HEAD
 ##### [Overview](/application/native/guides/connectivity/internet-download.md)
 ##### [Connection Management](/application/native/guides/connectivity/connection.md)
 ##### [Download](/application/native/guides/connectivity/download.md)
 ##### [Curl](/application/native/guides/connectivity/curl.md)
 ##### [HTTP](/application/native/guides/connectivity/http-api.md)
+=======
+<<<<<<< HEAD
+##### [Overview](/application/native/guides/connectivity/internet-download.md)
+=======
+>>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4
+##### [Connection Management](/application/native/guides/connectivity/connection.md)
+##### [Download](/application/native/guides/connectivity/download.md)
+##### [Curl](/application/native/guides/connectivity/curl.md)
+##### [HTTP](/application/native/guides/connectivity/http.md)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 ##### [Web View](/application/native/guides/connectivity/web-view.md)
 #### [File Transfer with MTP](/application/native/guides/connectivity/mtp.md)
 #### [VPN Connections](/application/native/guides/connectivity/vpn.md)
@@ -930,9 +1170,12 @@
 ### Text Input and Voice
 #### [Overview](/application/native/guides/text-input/overview.md)
 #### [Input Method](/application/native/guides/text-input/input-method.md)
+<<<<<<< HEAD
 #### [Autofill](/application/native/guides/text-input/autofill.md)
 #### [Autofill Service](/application/native/guides/text-input/autofill-service.md)
 #### [Autofill Manager](/application/native/guides/text-input/autofill-manager.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 #### [Speech-to-text](/application/native/guides/text-input/stt.md)
 #### [Text-to-speech](/application/native/guides/text-input/tts.md)
 #### [Voice Control](/application/native/guides/text-input/voice-control.md)
@@ -963,7 +1206,10 @@
 #### [System Information](/application/native/guides/device/system.md)
 #### [System Settings](/application/native/guides/device/settings.md)
 #### [Sound and Vibration Feedback](/application/native/guides/device/feedback.md)
+<<<<<<< HEAD
 #### [Battery Monitor](/application/native/guides/device/battery-monitor.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ### Security
 #### [Overview](/application/native/guides/security/overview.md)
@@ -986,9 +1232,15 @@
 #### [Tracepoints](/application/native/guides/performance/tracepoints.md)
 
 ### Watchface Complication
+<<<<<<< HEAD
 #### [Overview](/application/native/guides/complications/overview.md)
 #### [Watchface Complication](/application/native/guides/complications/watchface-complication.md)
 #### [Complication Provider](/application/native/guides/complications/watchface-complication-provider.md)
+=======
+#### [Overview](/application/native/guides/compliations/overview.md)
+#### [Watchface Complication](/application/native/guides/compliations/watchface-complication.md)
+#### [Complication Provider](/application/native/guides/compliations/watchface-complication-provider.md)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ### [Migration Guide](/application/native/guides/migration-guide.md)
 
@@ -997,6 +1249,7 @@
 
 ### [Overview](/application/native/api/overview.md)
 
+<<<<<<< HEAD
 ### Wearable
 #### [5.5](/application/native/api/wearable/5.5/index.html){:target="_blank"}
 #### [5.0](/application/native/api/wearable/5.0/index.html){:target="_blank"}
@@ -1006,15 +1259,287 @@
 
 ### Mobile
 #### [5.5](/application/native/api/mobile/5.5/index.html){:target="_blank"}
+=======
+### Mobile
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 #### [5.0](/application/native/api/mobile/5.0/index.html){:target="_blank"}
 #### [4.0](/application/native/api/mobile/4.0/index.html){:target="_blank"}
 #### [3.0](/application/native/api/mobile/3.0/index.html){:target="_blank"}
 #### [2.4](/application/native/api/mobile/2.4/index.html){:target="_blank"}
 
+<<<<<<< HEAD
+=======
+### Wearable
+#### [5.0](/application/native/api/wearable/5.0/index.html){:target="_blank"}
+#### [4.0](/application/native/api/wearable/4.0/index.html){:target="_blank"}
+#### [3.0](/application/native/api/wearable/3.0/index.html){:target="_blank"}
+#### [2.3.2](/application/native/api/wearable/2.3.2/index.html){:target="_blank"}
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ## [Samples](/development/sample/native)
 
 
+<<<<<<< HEAD
+=======
+
+# Web Application
+
+
+## [Overview](/application/web/index.md)
+
+## Get Started
+
+### [Overview](/application/web/get-started/overview.md)
+### [Create Mobile Web Application](/application/web/get-started/mobile/first-app.md)
+### [Create Wearable Web Application](/application/web/get-started/wearable/first-app.md)
+### [Create Wearable Web Watch Application](/application/web/get-started/wearable-watch/first-app-watch.md)
+### [Create Wearable Web Widget Application](/application/web/get-started/wearable-widget/first-app-widget.md)
+### [Create TV Web Application](/application/web/get-started/tv/first-app.md)
+### [Create Samsung Smart TV Web Application](/application/web/get-started/tv/first-samsung-tv-app.md)
+
+
+
+## Tutorials
+
+### [Overview](/application/web/tutorials/overview.md)
+### [Application Development Process](/application/web/tutorials/process/app-dev-process.md)
+#### [Creating the Application Project](/application/web/tutorials/process/creating-app-project.md)
+#### [Setting Project Properties](/application/web/tutorials/process/setting-properties.md)
+#### [Coding Applications](/application/web/tutorials/process/coding-app.md)
+#### [Running and Debugging Applications](/application/web/tutorials/process/run-debug-app.md)
+### [Application Filtering](/application/web/tutorials/app-filtering.md)
+### [Security and API Privileges](/application/web/tutorials/sec-privileges.md)
+### [Security and API Privileges for Apps with API Version 4.0 or Earlier](/application/web/tutorials/old-versioned-sec-privileges.md)
+### [Web Runtime](/application/web/tutorials/web-runtime.md)
+### [Event Handling](/application/web/tutorials/event-handling.md)
+### [Application Signing and Certificates](/application/web/tutorials/sign-certificate.md)
+### [API Versioning and Deprecation Policy](/application/web/tutorials/deprecation-policy.md)
+
+
+## Guides
+
+### [Overview](/application/web/guides/index.md)
+
+### Applications
+#### [Overview](/application/web/guides/applications/overview.md)
+#### UI Application
+##### [Watch Application](/application/web/guides/applications/watch-app.md)
+##### [Widget Application](/application/web/guides/applications/web-widget.md)
+#### [Service Application](/application/web/guides/applications/service-app.md)
+
+### Application Management
+#### [Overview](/application/web/guides/app-management/overview.md)
+#### [Application Groups](/application/web/guides/app-management/app-group.md)
+#### [Application Preferences](/application/web/guides/app-management/preference.md)
+#### [Application Icons](/application/web/guides/app-management/app-icons.md)
+#### [Application Controls](/application/web/guides/app-management/app-controls.md)
+#### [Common Application Controls](/application/web/guides/app-management/common-appcontrols.md)
+#### [Widget Information](/application/web/guides/app-management/widget-info.md)
+#### [Package Information](/application/web/guides/app-management/packages.md)
+#### [Message Port](/application/web/guides/app-management/message-port.md)
+#### [Data Control](/application/web/guides/app-management/data-control.md)
+
+### Cordova
+#### [Overview](/application/web/guides/cordova/cordova.md)
+#### [Common Cordova](/application/web/guides/cordova/core.md)
+#### [Console Logging](/application/web/guides/cordova/console.md)
+#### [Device Information](/application/web/guides/cordova/device.md)
+#### [Device Motions](/application/web/guides/cordova/devicemotion.md)
+#### [Event Handling](/application/web/guides/cordova/events.md)
+#### [File Management](/application/web/guides/cordova/file.md)
+#### [File Transfers](/application/web/guides/cordova/filetransfer.md)
+#### [Globalization](/application/web/guides/cordova/globalization.md)
+#### [Media Playback and Recording](/application/web/guides/cordova/media.md)
+#### [Network Information](/application/web/guides/cordova/network-information.md)
+#### [Notification Dialogs](/application/web/guides/cordova/dialogs.md)
+
+### Tizen Advanced UI
+#### [Overview](/application/web/guides/tau/tau.md)
+#### [Downloading TAU](/application/web/guides/tau/download-tau.md)
+#### [Hello World](/application/web/guides/tau/helloworld.md)
+#### [Managing Pages](/application/web/guides/tau/managing-page.md)
+#### [Event Handling](/application/web/guides/tau/event-handling.md)
+#### [UI Components](/application/web/guides/tau/ui-component.md)
+#### [Creating a Notepad UI Application](/application/web/guides/tau/notepad.md)
+#### [Applications for Circular UI](/application/web/guides/tau/circular-ui.md)
+#####  [Handling Rotary Events](/application/web/guides/tau/tau-rotary.md)
+#####  [Using the Helper Script](/application/web/guides/tau/helper.md)
+#####  [Creating Snap Lists](/application/web/guides/tau/list.md)
+#####  [Creating Expandable Headers](/application/web/guides/tau/header.md)
+#####  [Creating Circle-shaped Progress Bars](/application/web/guides/tau/circle-progressbar.md)
+#####  [Creating Full Size Processing Components](/application/web/guides/tau/processing.md)
+#####  [Creating Footer Buttons](/application/web/guides/tau/footerbutton.md)
+#####  [Creating Thumbnails](/application/web/guides/tau/thumbnail.md)
+#####  [Creating Popup Buttons](/application/web/guides/tau/popup.md)
+#####  [Creating Index Scroll Bars](/application/web/guides/tau/indexscrollbar.md)
+#####  [Implementing More Options](/application/web/guides/tau/moreoptions.md)
+#### [Accessibility](/application/web/guides/tau/accessibility.md)
+#### [Globalization](/application/web/guides/tau/globalization.md)
+#### Animation
+##### [Overview](/application/web/guides/tau/animation.md)
+##### [Creating Applications with Animation](/application/web/guides/tau/creating-animation.md)
+#### [2.4 Porting Guide](/application/web/guides/tau/tau-porting.md)
+
+### [Localization](/application/web/guides/localization/localization.md)
+
+### [Notifications](/application/web/guides/notification/notification.md)
+
+### [Alarms](/application/web/guides/alarm/alarms.md)
+
+### Media and Camera
+#### [Ovierview](/application/web/guides/multimedia/overview.md)
+#### [JPEG File EXIF Information](/application/web/guides/multimedia/jpeg-exif.md)
+#### [Audio Management](/application/web/guides/multimedia/audio.md)
+#### [Audio Latency](/application/web/guides/multimedia/player-util.md)
+#### [Media Controller](/application/web/guides/multimedia/media-controller.md)
+#### [Media Key Events](/application/web/guides/multimedia/media-key.md)
+#### [Radio](/application/web/guides/multimedia/radio.md)
+#### [Camera](/application/web/guides/multimedia/camera.md)
+
+### Connectivity and Wireless
+#### [Overview](/application/web/guides/connectivity/connectivity.md)
+#### [Bluetooth](/application/web/guides/connectivity/bluetooth.md)
+#### [IoT Connectivity](/application/web/guides/connectivity/iotcon.md)
+#### [NFC](/application/web/guides/connectivity/nfc.md)
+#### [Secure Element Access](/application/web/guides/connectivity/secure-element.md)
+#### [Content Downloads](/application/web/guides/connectivity/download.md)
+
+### Messaging
+#### [Overview](/application/web/guides/messaging/overview.md)
+#### [Messages](/application/web/guides/messaging/messages.md)
+#### [Push Notification](/application/web/guides/messaging/push.md)
+
+### Sensors
+#### [Overview](/application/web/guides/sensors/sensors.md)
+#### [Human Activity Monitor](/application/web/guides/sensors/ham.md)
+#### [Device Sensors](/application/web/guides/sensors/device-sensors.md)
+
+### Text Input
+#### [Overview](/application/web/guides/text-input/text-input.md)
+#### [IME Application](/application/web/guides/text-input/input-method.md)
+#### [Input Device](/application/web/guides/text-input/input-device.md)
+
+### Personal Data
+#### [Overview](/application/web/guides/personal/personal.md)
+#### [Account Management](/application/web/guides/personal/account.md)
+#### [Bookmarks](/application/web/guides/personal/bookmarks.md)
+#### [Calendar](/application/web/guides/personal/calendar.md)
+#### [Call History](/application/web/guides/personal/call-history.md)
+#### [Contacts](/application/web/guides/personal/contacts.md)
+#### [Data Synchronization](/application/web/guides/personal/sync.md)
+
+### Data Storage and Management
+#### [Overview](/application/web/guides/data/data.md)
+#### [Data Filtering and Sorting](/application/web/guides/data/data-filter.md)
+#### [File System](/application/web/guides/data/file-system.md)
+#### [Stored Content Management](/application/web/guides/data/stored-content.md)
+#### [File Archiving](/application/web/guides/data/file-archiving.md)
+
+### Device Settings and Systems
+#### [Overview](/application/web/guides/device/device.md)
+#### [Power States](/application/web/guides/device/power.md)
+#### [System Information](/application/web/guides/device/system-information.md)
+#### [System Settings](/application/web/guides/device/system-setting.md)
+#### [Time and Date Management](/application/web/guides/device/time.md)
+#### [Web View Settings](/application/web/guides/device/web-view.md)
+#### [Sound and Vibration Feedback](/application/web/guides/device/feedback.md)
+
+### Security
+#### [Secure Key Management](/application/web/guides/security/secure-key.md)
+#### [TEE Communication](/application/web/guides/security/tee-client.md)
+#### [Privacy-related Permissions](/application/web/guides/security/privacy-related-permissions.md)
+
+### [Error Handling](/application/web/guides/error/error.md)
+
+### W3C/HTML5/Supplementary Features
+#### [Overview](/application/web/guides/w3c/w3c-overview.md)
+#### Device
+##### [Overview](/application/web/guides/w3c/device/device-guide.md)
+##### [Battery Status](/application/web/guides/w3c/device/battery.md)
+##### [DeviceOrientation Event Specification](/application/web/guides/w3c/device/device-orientation.md)
+##### [Touch Events](/application/web/guides/w3c/device/touch.md)
+##### [Vibration](/application/web/guides/w3c/device/vibration.md)
+##### [HTML5 Browser state](/application/web/guides/w3c/device/browser-state.md)
+##### [Screen Orientation](/application/web/guides/w3c/device/screen-orientation.md)
+#### Graphics
+##### [Overview](/application/web/guides/w3c/graphics/graphics-guide.md)
+##### [HTML5 Canvas](/application/web/guides/w3c/graphics/canvas.md)
+##### [SVG](/application/web/guides/w3c/graphics/svg.md)
+#### MultiMedia
+##### [Overview](/application/web/guides/w3c/multimedia/media-guide.md)
+##### [getUserMedia](/application/web/guides/w3c/multimedia/getusermedia.md)
+##### [HTML5 video and audio element](/application/web/guides/w3c/multimedia/video-audio.md)
+##### [HTML Media Capture](/application/web/guides/w3c/multimedia/media-capture.md)
+##### [Web Audio](/application/web/guides/w3c/multimedia/webaudio.md)
+##### [Tizen WebKit Tap Sound Policy](/application/web/guides/w3c/multimedia/sound-policy.md)
+#### Communication
+##### [Overview](/application/web/guides/w3c/communication/comm-guide.md)
+##### [HTML5 Web Messaging](/application/web/guides/w3c/communication/web-messaging.md)
+##### [WebSocket](/application/web/guides/w3c/communication/websocket.md)
+##### [XMLHttpRequest](/application/web/guides/w3c/communication/xmlhttprequest.md)
+##### [Server-Sent Events](/application/web/guides/w3c/communication/server-sent.md)
+#### Storage
+##### [Overview](/application/web/guides/w3c/storage/storage-guide.md)
+##### [File](/application/web/guides/w3c/storage/file.md)
+##### [Indexed Database](/application/web/guides/w3c/storage/indexdb.md)
+##### [Web Storage](/application/web/guides/w3c/storage/web-storage.md)
+##### [HTML5 Application caches](/application/web/guides/w3c/storage/appcache.md)
+##### [Web SQL Database](/application/web/guides/w3c/storage/websql.md)
+#### Security
+##### [Overview](/application/web/guides/w3c/security/security-guide.md)
+##### [Cross-Origin Resource Sharing](/application/web/guides/w3c/security/cors.md)
+##### [HTML5 iframe element](/application/web/guides/w3c/security/iframe.md)
+#### Performance and Optimization
+##### [Overview](/application/web/guides/w3c/perf-opt/performance-guide.md)
+##### [Page Visibility](/application/web/guides/w3c/perf-opt/page.md)
+##### [Timing control for script-based animations](/application/web/guides/w3c/perf-opt/timing-control.md)
+##### [Performance Improvement](/application/web/guides/w3c/perf-opt/performance-improvement.md)
+##### [Web Workers](/application/web/guides/w3c/perf-opt/web-workers.md)
+##### [JavaScript Performance Improvement](/application/web/guides/w3c/perf-opt/js-performance-improvement.md)
+##### [JavaScript and CSS Minification](/application/web/guides/w3c/perf-opt/minify-js-css.md)
+##### [jQuery Performance Improvement](/application/web/guides/w3c/perf-opt/jquery-performance-improvement.md)
+#### Location
+##### [Geolocation API Specification](/application/web/guides/w3c/location/geolocation.md)
+#### Supplementary Features
+##### [Overview](/application/web/guides/w3c/supplement/supplement-guide.md)
+##### [Typed Array - Khronos](/application/web/guides/w3c/supplement/typedarray.md)
+##### [WebGL - Khronos](/application/web/guides/w3c/supplement/webgl.md)
+##### [FullScreen API - Mozilla](/application/web/guides/w3c/supplement/fullscreen.md)
+##### [Camera API (Tizen Extension)](/application/web/guides/w3c/supplement/camera.md)
+#### User Interface
+##### [Overview](/application/web/guides/w3c/ui/ui-guide.md)
+##### [HTML Priorities](/application/web/guides/w3c/ui/html-priority.md)
+##### [HTML5 Forms](/application/web/guides/w3c/ui/html5forms.md)
+##### [Selectors API (Level 1 and 2)](/application/web/guides/w3c/ui/selector.md)
+##### [Media Queries](/application/web/guides/w3c/ui/media-query.md)
+##### [Multiple Screen Support](/application/web/guides/w3c/ui/multiple-screens.md)
+##### [Multiple UI Layouts](/application/web/guides/w3c/ui/ui-layout.md)
+##### [Frame Flattening](/application/web/guides/w3c/ui/frame-flattening.md)
+##### [HTML5 Session History](/application/web/guides/w3c/ui/session-history.md)
+##### [Clipboard API and events](/application/web/guides/w3c/ui/clipboard.md)
+##### [HTML5 Drag and Drop](/application/web/guides/w3c/ui/drag-drop.md)
+##### [CSS Transforms](/application/web/guides/w3c/ui/transform.md)
+##### [CSS Animations Module (Level 3)](/application/web/guides/w3c/ui/animation.md)
+##### [CSS Transitions Module (Level 3)](/application/web/guides/w3c/ui/transition.md)
+##### [CSS Color Module (Level 3)](/application/web/guides/w3c/ui/color.md)
+##### [CSS Backgrounds and Borders Module (Level 3)](/application/web/guides/w3c/ui/background.md)
+##### [CSS Flexible Box Layout Module](/application/web/guides/w3c/ui/flexible.md)
+##### [CSS Multi-column Layout Module](/application/web/guides/w3c/ui/multi.md)
+##### [CSS Text Module (Level 3)](/application/web/guides/w3c/ui/text-module.md)
+##### [CSS Basic User Interface Module (Level 3)](/application/web/guides/w3c/ui/basic-ui.md)
+##### [CSS Fonts Module (Level 3)](/application/web/guides/w3c/ui/font.md)
+##### [WOFF File Format (1.0 and 2.0)](/application/web/guides/w3c/ui/woff.md)
+
+
+## [API Reference](/application/web/api/index.md)
+
+
+## [Samples](/development/sample/web)
+
+
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 # Tizen Studio
 
 
@@ -1024,8 +1549,13 @@
 ## Set up
 
 ### Install
+<<<<<<< HEAD
 #### [Prerequisites](/application/tizen-studio/setup/prerequisites.md)
 #### [Install Tizen Studio](/application/tizen-studio/setup/install-sdk.md)
+=======
+#### [Install Tizen Studio](/application/tizen-studio/setup/install-sdk.md)
+#### [Prerequisites](/application/tizen-studio/setup/prerequisites.md)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 #### [Update Tizen Studio](/application/tizen-studio/setup/update-sdk.md)
 #### [Hardware Accelerated Execution Manager](/application/tizen-studio/setup/hardware-accelerated-execution-manager.md)
 ### [Configure the Package Manager](/application/tizen-studio/setup/advanced-configuration.md)
@@ -1037,13 +1567,19 @@
 ### [Overview](/application/tizen-studio/native-tools/index.md)
 
 ### Manage Projects
+<<<<<<< HEAD
 #### [Overview](/application/tizen-studio/native-tools/managing-projects.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 #### [Project Creation Wizard](/application/tizen-studio/native-tools/project-wizard.md)
 #### [Project Explorer View](/application/tizen-studio/native-tools/project-explorer-view.md)
 #### [Certificate Registration](/application/tizen-studio/common-tools/certificate-registration.md)
 #### [Device Manager](/application/tizen-studio/common-tools/device-manager.md)
 ### Write and Edit Code
+<<<<<<< HEAD
 #### [Overview](/application/tizen-studio/native-tools/coding.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 #### [Content Assist](/application/tizen-studio/native-tools/content-assist.md)
 #### [API and Privilege Checker](/application/tizen-studio/native-tools/api-checker.md)
 #### UI Builder
@@ -1058,14 +1594,20 @@
 #### [EDC Editor](/application/tizen-studio/native-tools/edc-editor.md)
 
 ### Configure Your App
+<<<<<<< HEAD
 #### [Overview](/application/tizen-studio/native-tools/configuring.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 #### [Manifest Text Editor](/application/tizen-studio/native-tools/manifest-text-editor.md)
 #### [Additional Manifest Elements](/application/tizen-studio/native-tools/manifest-elements.md)
 #### [Resource Manager](/application/tizen-studio/native-tools/resource-manager.md)
 #### [PO File Localization Editor](/application/tizen-studio/native-tools/po-file-editor.md)
 
 ### Debug Your App
+<<<<<<< HEAD
 #### [Overview](/application/tizen-studio/native-tools/debugging.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 #### [Log View](/application/tizen-studio/common-tools/log-view.md)
 #### Dynamic Analyzer
 ##### [Overview](/application/tizen-studio/common-tools/dynamic-analyzer/overview.md)
@@ -1085,7 +1627,10 @@
 #### [Code Coverage](/application/tizen-studio/native-tools/code-coverage.md)
 
 ### Run and Test Your App
+<<<<<<< HEAD
 #### [Overview](/application/tizen-studio/native-tools/running-testing.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 #### [SDB](/application/tizen-studio/common-tools/smart-development-bridge.md)
 #### Emulator
 ##### [Overview](/application/tizen-studio/common-tools/emulator.md)
@@ -1106,14 +1651,20 @@
 ### [Overview](/application/tizen-studio/web-tools/index.md)
 
 ### Manage Projects
+<<<<<<< HEAD
 #### [Overview](/application/tizen-studio/web-tools/managing-projects.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 #### [Project Creation Wizard](/application/tizen-studio/web-tools/project-wizard.md)
 #### [Project Explorer View](/application/tizen-studio/web-tools/project-explorer-view.md)
 #### [Certificate Registration](/application/tizen-studio/common-tools/certificate-registration.md)
 #### [Device Manager](/application/tizen-studio/common-tools/device-manager.md)
 
 ### Write and Edit Code
+<<<<<<< HEAD
 #### [Overview](/application/tizen-studio/web-tools/coding.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 #### [Web Editor](/application/tizen-studio/web-tools/web-editor.md)
 #### [Live Edit](/application/tizen-studio/web-tools/live-editing.md)
 #### [Content Assist](/application/tizen-studio/web-tools/content-assist.md)
@@ -1124,11 +1675,15 @@
 #### [Tizen Studio Web Preferences](/application/tizen-studio/web-tools/ide-preferences.md)
 
 ### Configure Your App
+<<<<<<< HEAD
 #### [Overview](/application/tizen-studio/web-tools/configuring.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 #### [Configuration Editor](/application/tizen-studio/web-tools/config-editor.md)
 #### [Web Localization](/application/tizen-studio/web-tools/web-localization.md)
 
 ### Debug Your App
+<<<<<<< HEAD
 #### [Overview](/application/tizen-studio/web-tools/debugging.md)
 #### [Log View](/application/tizen-studio/common-tools/log-view.md)
 #### [Web Inspector](/application/tizen-studio/web-tools/web-inspector.md)
@@ -1136,16 +1691,27 @@
 
 ### Run and Test Your App
 #### [Overview](/application/tizen-studio/web-tools/running-testing.md)
+=======
+#### [Log View](/application/tizen-studio/common-tools/log-view.md)
+
+### Run and Test Your App
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 #### [SDB](/application/tizen-studio/common-tools/smart-development-bridge.md)
 #### Emulator
 ##### [Overview](/application/tizen-studio/common-tools/emulator.md)
 ##### [Emulator Manager](/application/tizen-studio/common-tools/emulator-manager.md)
 ##### [Emulator Control Panel](/application/tizen-studio/common-tools/emulator-control-panel.md)
 ##### [Extended Emulator Features](/application/tizen-studio/common-tools/emulator-features.md)
+<<<<<<< HEAD
 #### Web Simulator
 ##### [Overview](/application/tizen-studio/web-tools/web-simulator.md)
 ##### [Entended Web Simulator Features](/application/tizen-studio/web-tools/web-simulator-features.md)
 #### [Web Unit Test Tool](/application/tizen-studio/web-tools/web-unit-test-tool.md)
+=======
+#### [Web Unit Test Tool](/application/tizen-studio/web-tools/web-unit-test-tool.md)
+#### [Use the Web Simulator](/application/tizen-studio/web-tools/web-simulator.md)
+#### [Web Simulator Features](/application/tizen-studio/web-tools/web-simulator-features.md)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ### [CLI](/application/tizen-studio/common-tools/command-line-interface.md)
 
@@ -1162,6 +1728,12 @@
 ## Extension SDK
 
 ### [Overview](/application/tizen-studio/extension-sdk/overview.md)
+<<<<<<< HEAD
+=======
+### [In-App Purchase Program Guide](/application/tizen-studio/extension-sdk/in-app-purchase.md)
+### [InMobi Tizen Ad SDK Program Guide](/application/tizen-studio/extension-sdk/inmobi.md)
+### [VMAX Tizen Ad SDK Integration Guide](/application/tizen-studio/extension-sdk/vmax.md)
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ## RT IDE
 
@@ -1175,9 +1747,12 @@
 #### [Debug the Project](/application/tizen-studio/rt-ide/get-started/debug.md)
 
 ## Release Notes
+<<<<<<< HEAD
 ### [3.7 (Apr 6, 2020)](/application/tizen-studio/release-notes/3-7-release-notes.md)
 ### [3.6 (Dec 10, 2019)](/application/tizen-studio/release-notes/3-6-release-notes.md)
 ### [3.5 (Oct 30, 2019)](/application/tizen-studio/release-notes/3-5-release-notes.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 ### [3.3 (Jul 24, 2019)](/application/tizen-studio/release-notes/3-3-release-notes.md)
 ### [3.2 (Mar 18, 2019)](/application/tizen-studio/release-notes/3-2-release-notes.md)
 ### [3.1 (Jan 17, 2019)](/application/tizen-studio/release-notes/3-1-release-notes.md)
@@ -1227,8 +1802,11 @@
 ## [Prerequisites](/application/vscode-ext/index.md)
 ## [Tizen .NET](/application/vscode-ext/dotnet.md)
 ## [Tizen Web](/application/vscode-ext/web.md)
+<<<<<<< HEAD
 
 
 # Visual Studio for Mac Extension for Tizen
 
 ## [Overview](/application/vstools-mac/overview.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5

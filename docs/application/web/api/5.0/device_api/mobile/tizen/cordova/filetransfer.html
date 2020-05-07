@@ -4,11 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../../scripts/snippet.js"></script><title>FileTransfer API</title>
+<<<<<<< HEAD
 <meta data-version="5.0" data-profile="mobile">
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::FileTransfer">
 <div class="supported-platforms"><img class="mobile-mandatory emulator" title="Mandatory, Supported by Tizen Mobile emulator" src="../mobile_s_w.png"></div>
+=======
+</head>
+<body id="page-content" onload="prettyPrint()">
+<div class="api" id="::FileTransfer">
+ <div class="supported-platforms"><img class="mobile-mandatory emulator" title="Mandatory, Supported by Tizen Mobile emulator" src="../mobile_s_w.png"></div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="title"><h1>FileTransfer API</h1></div>
 <div class="brief">
  This module allows you to upload and download files.
@@ -30,7 +37,15 @@ for accessing only external storage using this API, a privilege <a href="http://
           <li>
 for accessing internal and external storage using this API, privileges (<a href="http://tizen.org/privilege/mediastorage">http://tizen.org/privilege/mediastorage</a> and <a href="http://tizen.org/privilege/externalstorage">http://tizen.org/privilege/externalstorage</a>) must be provided.          </li>
           <li>
+<<<<<<< HEAD
 Storage privileges are privacy-related privileges and there is a need of asking user directly with proper pop-up. Please refer to <a href="../ppm.html">Privacy Privilege API</a> for more details.          </li>
+=======
+<<<<<<< HEAD
+Storage privileges are privacy-related privileges and there is a need of asking user directly with proper pop-up. Please refer to <a href="../ppm.html">Privacy Privilege API</a> for more details.          </li>
+=======
+Storage privileges are privacy-related privileges and there is a need of asking user directly with proper pop-up. Please refer to <a href="ppm.html">Privacy Privilege API</a> for more details.          </li>
+>>>>>>> 91de73004daf608ab4f922ce8925b49c8d93c3b4
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         </ul>
        </div>
 <p><span class="version">Since: </span>
@@ -228,6 +243,7 @@ Sent = 1024
 <div class="constructors">
 <h4 id="FileUploadOptions::constructor">Constructors</h4>
 <dl>
+<<<<<<< HEAD
 <dt class="method" id="">
 <a class="backward-compatibility-anchor" name=""></a><code><b><span class="methodName">Constructor (DOMString, DOMString, DOMString, <a href="#FileUploadParams">FileUploadParams</a>, <a href="#HeaderFields">HeaderFields</a>, DOMString)</span></b></code>
 </dt>
@@ -236,6 +252,10 @@ Sent = 1024
 <p><span class="version">Since: </span>
  3.0
               </p>
+=======
+<pre class="webidl prettyprint">FileUploadOptions(DOMString fileKey, DOMString fileName, DOMString mimeType, <a href="#FileUploadParams">FileUploadParams</a> params, <a href="#HeaderFields">HeaderFields</a> headers,
+                  DOMString httpMethod);</pre>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="example">
 <span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">/* Creates a FileUploadOptions objects */
 var options = new FileUploadOptions("file", "doc.txt", "text/plain", null, null, "POST");
@@ -624,6 +644,7 @@ var options = new FileUploadOptions("file", "doc.txt", "text/plain", null, null,
 <div class="constructors">
 <h4 id="FileTransfer::constructor">Constructors</h4>
 <dl>
+<<<<<<< HEAD
 <dt class="method" id="">
 <a class="backward-compatibility-anchor" name=""></a><code><b><span class="methodName">Constructor ()</span></b></code>
 </dt>
@@ -631,6 +652,9 @@ var options = new FileUploadOptions("file", "doc.txt", "text/plain", null, null,
 <p><span class="version">Since: </span>
  3.0
               </p>
+=======
+<pre class="webidl prettyprint">FileTransfer();</pre>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="example">
 <span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">/* Creates a FileTransfer object. */
 var file_transfer = new FileTransfer();
@@ -945,9 +969,12 @@ Upload error target http://some.server.com/file.txt
 <pre class="webidl prettyprint">  [Callback=FunctionOnly, NoInterfaceObject] interface FileDownloadSuccessCallback {
     void onsuccess(<a href="file.html#FileEntry">FileEntry</a> file);
   };</pre>
+<<<<<<< HEAD
 <p><span class="version">Since: </span>
  3.0
           </p>
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="methods">
 <h4>Methods</h4>
 <dl>
@@ -986,9 +1013,12 @@ Upload error target http://some.server.com/file.txt
 <pre class="webidl prettyprint">  [Callback=FunctionOnly, NoInterfaceObject] interface FileTransferErrorCallback {
     void onerror(<a href="#FileTransferError">FileTransferError</a> error);
   };</pre>
+<<<<<<< HEAD
 <p><span class="version">Since: </span>
  3.0
           </p>
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="methods">
 <h4>Methods</h4>
 <dl>

@@ -36,7 +36,11 @@ To install Tizen Studio:
 
    > **Note**
    >
+<<<<<<< HEAD
    > If you install Tizen Studio in a directory that requires administrator privileges for access, such as `C:\Program Files`, administrator privileges are required to run the Tizen SDK tools.
+=======
+   > If you install the Tizen Studio in a directory that requires administrator privileges for access, such as `C:\Program Files`, administrator privileges are required to run the Tizen SDK tools.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 
 ## Using the CLI Installer
@@ -68,7 +72,11 @@ To install Tizen Studio using the CLI installer:
 
    | Parameter        | Description                              |
    |------------------|------------------------------------------|
+<<<<<<< HEAD
    | `directory path` | Specifies the installation directory path.<br/> If you do not enter the path, Tizen Studio is installed in the default directory (`/home/{user}/tizen-studio`). |
+=======
+   | `directory path` | Specifies the installation directory path.<br/> If you do not enter the path, the Tizen Studio is installed in the default directory (`/home/{user}/tizen-studio`). |
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 3. If you agree to the software license and the license terms, enter **Y(yes)** for the conditions.
 

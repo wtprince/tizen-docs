@@ -24,7 +24,11 @@ Using the location received from GPS is potentially one of your application's mo
 
 ### Application Life-cycle
 
+<<<<<<< HEAD
 The Tizen Native application can be in one of several different states.  Typically, the application is launched by the user from the Launcher, or by another application. As the application is starting, the `app_create_cb()` callback is executed and the main event loop starts. The application now normally becomes the frontmost window, with focus.  When the application loses the frontmost or focus status, the `app_pause_cb()` callback is invoked and the application goes into a pause state. The pause state means that the application is not terminated, but is running in the background. When your application becomes visible again, the `app_resume_cb()` callback is invoked. When your application starts exiting, the `app_terminate_cb()` callback is invoked.
+=======
+The Tizen native application can be in one of several different states.  Typically, the application is launched by the user from the Launcher, or by another application. As the application is starting, the `app_create_cb()` callback is executed and the main event loop starts. The application now normally becomes the frontmost window, with focus.  When the application loses the frontmost or focus status, the `app_pause_cb()` callback is invoked and the application goes into a pause state. The pause state means that the application is not terminated, but is running in the background. When your application becomes visible again, the `app_resume_cb()` callback is invoked. When your application starts exiting, the `app_terminate_cb()` callback is invoked.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 The application state changes are managed by the underlying framework. The following figure illustrates the application states.
 

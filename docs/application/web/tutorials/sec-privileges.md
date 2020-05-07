@@ -18,7 +18,11 @@ Since Tizen platform 3.0, some privileges are categorized as privacy-related and
 >
 > Since Tizen 4.0, the status of privacy-related privileges can be [resolved at runtime](../guides/security/privacy-related-permissions.md) using the Privacy Privilege API (in [mobile](../api/latest/device_api/mobile/tizen/ppm.html) and [wearable](../api/latest/device_api/wearable/tizen/ppm.html) applications).
 
+<<<<<<< HEAD
 Tizen Studio also provides privilege checker tools to check whether the Tizen application source code contains any privilege violations. For more information, see [Verifying Privilege Usage](../../tizen-studio/web-tools/privilege-checker.md).
+=======
+The Tizen Studio also provides privilege checker tools to check whether the Tizen application source code contains any privilege violations. For more information, see [Verifying Privilege Usage](../../tizen-studio/web-tools/privilege-checker.md).
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 The API version restriction of privileges are deprecated since platform version 5.0. So, if you are develeoping an app with an earlier API version and need information about supported version, see [this page](./old-versioned-sec-privileges.md). The page does not include privileges issued after 4.0.
 
@@ -93,6 +97,10 @@ The following tables list the API privileges, which you must declare when using 
 | `http://tizen.org/privilege/tee.client` | partner |  | The application can call security related functions running inside a Trusted Execution Environment (TEE), which ensures that sensitive data is stored, processed, and protected in an isolated, trusted environment. |
 | `http://tizen.org/privilege/telephony` | public |  | The application can retrieve telephony information, such as the network and SIM card used, the IMEI, and the statuses of calls. |
 | `http://tizen.org/privilege/tv.audio` | public |  | The application can change the volume, enable and disable silent mode, detect volume changes, and play beeps. Deprecated since 5.0. |
+<<<<<<< HEAD
+=======
+| `http://tizen.org/privilege/tv.channel` | public |  | The application can change the TV channel, read information about TV channels and programmes, and receive notifications when the TV channel has been changed. |
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 | `http://tizen.org/privilege/tv.display` | public |  | The application can check whether a device supports 3D and read information about 3D mode. Deprecated since 5.0. |
 | `http://tizen.org/privilege/tv.inputdevice` | public |  | The application can capture the key events of an input device, for example, TV remote control, and release key grabbing. |
 | `http://tizen.org/privilege/tv.window` | public |  | The application can embed the display of a video source, specify the size, and show or hide the embedded display. |

@@ -1060,9 +1060,15 @@ To access media item information:
 
                    dlog_print(DLOG_DEBUG, LOG_TAG, "This is a video");
                    dlog_print(DLOG_DEBUG, LOG_TAG,
+<<<<<<< HEAD
                               "Title: %s, Album: %s, Artist: %s, Album_artist: %s \n
                                Duration: %d",
                                title, album, artist, album_artist, duration);
+=======
+                               "Title: %s, Album: %s, Artist: %s, Album_artist: %s \n
+                               Duration: %d, Played time: %d",
+                               title, album, artist, album_artist, duration, time_played);
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                }
 
                free(artist);

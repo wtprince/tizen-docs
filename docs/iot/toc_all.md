@@ -27,6 +27,7 @@
 ## [Tizen Update Control Native API](/iot/guides/update-control-api.md)
 
 # API Reference
+<<<<<<< HEAD
 ## [Overview](/iot/api/overview.md)
 ## 5.0
 ### [Tizen Common Headed API Reference](/iot/api/5.0/tizen-iot-headed/index.html){:target="_blank"}
@@ -34,9 +35,18 @@
 ## 4.0
 ### [Tizen Common Headed API Reference](/iot/api/4.0/tizen-iot-headed/index.html){:target="_blank"}
 ### [Tizen Common Headless API Reference](/iot/api/4.0/tizen-iot-headless/index.html){:target="_blank"}
+=======
+## [Things SDK API Reference](https://developer.tizen.org/dev-guide/things-sdk/latest){:target="_blank"}
+## Peripheral I/O API
+### [Tizen Common Headed API Reference](https://developer.tizen.org/dev-guide/tizen-iot-headed/latest){:target="_blank"}
+### [Tizen Common Headless API Reference](https://developer.tizen.org/dev-guide/tizen-iot-headless/latest){:target="_blank"}
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 # IoT Partners
 ## [Nubison Cloud](/iot/iot-partners/nubison.md)
 ## [thingspark Cloud](/iot/iot-partners/thingspark.md)
 ## [SDT SOM](/iot/iot-partners/sdt_som.md)
+<<<<<<< HEAD
 ## [Anchor SoM](/iot/iot-partners/anchor/anchor.md)
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5

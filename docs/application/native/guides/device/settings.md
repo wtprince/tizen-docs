@@ -176,8 +176,11 @@ The following table lists the available system setting keys.
 |------------------------------------------|----------|-------------------------|------------------------------------------|
 | `SYSTEM_SETTINGS_KEY_3G_DATA_NETWORK_ENABLED` | `bool`   | `GETTER, NOTIFIER`      | Indicates whether the 3G data network is enabled. |
 | `SYSTEM_SETTINGS_KEY_ACCESSIBILITY_TTS`  | `bool`   | `GETTER, NOTIFIER`      | Indicates whether the accessibility TTS is enabled on the device. |
+<<<<<<< HEAD
 | `SYSTEM_SETTINGS_KEY_ACCESSIBILITY_GRAYSCALE` | `bool` | `GETTER, NOTIFIER`      | Indicates whether accessibility grayscale is enabled on the device. |
 | `SYSTEM_SETTINGS_KEY_ACCESSIBILITY_NEGATIVE_COLOR` | `bool` | `GETTER, NOTIFIER`      | Indicates whether accessibility negative color is enabled on the device. |
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 | `SYSTEM_SETTINGS_KEY_ADS_ID`             | `string` | `GETTER, NOTIFIER`      | Advertisement ID for each device.                  |
 | `SYSTEM_SETTINGS_KEY_AUTOMATIC_TIME_UPDATE`  | `bool` | `GETTER, NOTIFIER`      | Updates device time automatically.           |
 | `SYSTEM_SETTINGS_KEY_DEFAULT_FONT_TYPE`  | `string` | `GETTER`                | Current system default font type.        |

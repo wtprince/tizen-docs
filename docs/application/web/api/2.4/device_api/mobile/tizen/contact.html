@@ -4,11 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>Contact API</title>
+<<<<<<< HEAD
 <meta data-version="2.4" data-profile="mobile">
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::Contact">
-<div class="supported-platforms"><img class="mobile-mandatory emulator" title="Mandatory, Supported by Tizen Mobile emulator" src="mobile_s_w.png"></div>
+ <div class="supported-platforms"><img class="mobile-mandatory emulator" title="Mandatory, Supported by Tizen Mobile emulator" src="mobile_s_w.png"></div>
 <div class="title"><h1>Contact API</h1></div>
 <div class="brief">
  The Contact API provides functionality for managing address books.
@@ -6020,10 +6023,17 @@ var watcher =
     console.log(ids.length + " contacts were removed");
   }
 };
+<<<<<<< HEAD
 
 /* Registers to be notified when the address book changes. */
 watcherId = addressbook.addChangeListener(watcher);
 
+=======
+
+/* Registers to be notified when the address book changes. */
+watcherId = addressbook.addChangeListener(watcher);
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 /* Adds a new contact to invoke an oncontactsadded call:. */
 try
 {
@@ -6084,6 +6094,7 @@ var watcher =
 
 /* Registers to be notified when the address book changes. */
 watcherId = addressbook.addChangeListener(watcher);
+<<<<<<< HEAD
 
 /* Updates a contact to invoke an oncontactsupdated call:. */
 function errorCB(error)
@@ -6091,6 +6102,15 @@ function errorCB(error)
   console.log(error.name + ": " + error.message);
 }
 
+=======
+
+/* Updates a contact to invoke an oncontactsupdated call:. */
+function errorCB(error)
+{
+  console.log(error.name + ": " + error.message);
+}
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 function contactsFoundCB(contacts)
 {
   contacts[0].name.firstName = "Stanley";
@@ -6156,6 +6176,7 @@ var watcher =
     console.log(ids.length + " contacts were removed");
   }
 };
+<<<<<<< HEAD
 
 /* Registers to be notified when the address book changes. */
 watcherId = addressbook.addChangeListener(watcher);
@@ -6167,6 +6188,19 @@ function onErrorCB(err)
   console.log("An error occurred: " + err.name);
 }
 
+=======
+
+/* Registers to be notified when the address book changes. */
+watcherId = addressbook.addChangeListener(watcher);
+
+/* Removes a first contact whose name is "Doe". */
+/* to invoke oncontactsremoved call. */
+function onErrorCB(err)
+{
+  console.log("An error occurred: " + err.name);
+}
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 function onContactsFoundCB(contacts)
 {
   if (contacts.length &gt; 0)
@@ -6367,10 +6401,17 @@ watcherId = tizen.contact.addChangeListener(watcher);
   typedef DOMString PersonId;
   typedef DOMString ContactGroupId;
   enum ContactTextFormat { "VCARD_30" };
+<<<<<<< HEAD
   enum ContactRelationshipType { "OTHER", "ASSISTANT", "BROTHER", "CHILD", "DOMESTIC_PARTNER", "FATHER", "FRIEND", "MANAGER", "MOTHER",
     "PARENT", "PARTNER", "REFERRED_BY", "RELATIVE", "SISTER", "SPOUSE", "CUSTOM" };
   enum ContactInstantMessengerType { "OTHER", "GOOGLE", "WLM", "YAHOO", "FACEBOOK", "ICQ", "AIM", "QQ", "JABBER", "SKYPE", "IRC",
     "CUSTOM" };
+=======
+  enum ContactRelationshipType { "OTHER", "ASSISTANT", "BROTHER", "CHILD", "DOMESTIC_PARTNER", "FATHER", "FRIEND",
+    "MANAGER", "MOTHER", "PARENT", "PARTNER", "REFERRED_BY", "RELATIVE", "SISTER", "SPOUSE", "CUSTOM" };
+  enum ContactInstantMessengerType { "OTHER", "GOOGLE", "WLM", "YAHOO", "FACEBOOK", "ICQ", "AIM", "QQ", "JABBER",
+    "SKYPE", "IRC", "CUSTOM" };
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   dictionary ContactInit {
     <a href="#ContactName">ContactName</a> name;
     <a href="#ContactAddress">ContactAddress</a>[] addresses;

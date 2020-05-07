@@ -40,7 +40,11 @@ Visual Studio Tools for Tizen provides Tizen-specific tools to improve your prod
 
 - [Memory Profiler](tools/memory-profiler-user-manual.md)
 
+<<<<<<< HEAD
   This is a utility which collects memory profiling data and saves them to a file, this part of the Memory Profiler runs on the target side. Also, it analyzes the resulting data, the command-line one and the GUI-based one, these analyzing tools run on the host side.
+=======
+  This is a utility which collects memory profiling data and save them to a file, this part of the Memory Profiler runs on the target side. Also it analyzes the resulting data, the command-line one and the GUI-based one, these analyzing tools run on the host side.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 If you prefer a command line interface to the graphical Visual Studio window, you can use the [Command Line Interface (CLI) tool](tools/dotnet-cli-ext.md) during the entire development process.
 

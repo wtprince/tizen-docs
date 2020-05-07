@@ -4,11 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>Application API</title>
+<<<<<<< HEAD
 <meta data-version="4.0" data-profile="tv">
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::Application">
 <div class="supported-platforms"><img class="tv-mandatory emulator" title="Mandatory, Supported by Tizen Tv emulator" src="tv_s_w.png"></div>
+=======
+</head>
+<body id="page-content" onload="prettyPrint()">
+<div class="api" id="::Application">
+ <div class="supported-platforms"><img class="tv-mandatory emulator" title="Mandatory, Supported by Tizen Tv emulator" src="tv_s_w.png"></div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="title"><h1>Application API</h1></div>
 <div class="brief">
  This API provides a way to launch other applications and access
@@ -383,7 +390,13 @@ The <em>tizen.application </em>object allows access to the Application API's fun
     <a href="#ApplicationCertificate">ApplicationCertificate</a>[] getAppCerts(optional <a href="#ApplicationId">ApplicationId</a>? id) raises(<a href="tizen.html#WebAPIException">WebAPIException</a>);
     DOMString getAppSharedURI(optional <a href="#ApplicationId">ApplicationId</a>? id) raises(<a href="tizen.html#WebAPIException">WebAPIException</a>);
     <a href="#ApplicationMetaData">ApplicationMetaData</a>[] getAppMetaData(optional <a href="#ApplicationId">ApplicationId</a>? id) raises(<a href="tizen.html#WebAPIException">WebAPIException</a>);
+<<<<<<< HEAD
     long addAppStatusChangeListener(<a href="#StatusEventCallback">StatusEventCallback</a> eventCallback, optional <a href="#ApplicationId">ApplicationId</a>? appId) raises(<a href="tizen.html#WebAPIException">WebAPIException</a>);
+=======
+<span class="nocode deprecated">    long addAppInfoEventListener( eventCallback) raises(<a href="tizen.html#WebAPIException">WebAPIException</a>);
+</span><span class="nocode deprecated">    void removeAppInfoEventListener(long watchId) raises(<a href="tizen.html#WebAPIException">WebAPIException</a>);
+</span>    long addAppStatusChangeListener(<a href="#StatusEventCallback">StatusEventCallback</a> eventCallback, optional <a href="#ApplicationId">ApplicationId</a>? appId) raises(<a href="tizen.html#WebAPIException">WebAPIException</a>);
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     void removeAppStatusChangeListener(long watchId) raises(<a href="tizen.html#WebAPIException">WebAPIException</a>);
   };</pre>
 <p><span class="version">Since: </span>
@@ -541,9 +554,12 @@ UnknownError - If any other error occurs.              </li>
 <p><span class="remark">Remark: </span>
  Since Tizen 2.4, the launch request of the service application from other package is restricted by the platform.
             </p>
+<<<<<<< HEAD
 <p><span class="remark">Remark: </span>
  Use this method for proper case only, for example to launch your own app. Do not abuse the API for other app(s) launch without business consideration.
             </p>
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="parameters">
 <p><span class="param">Parameters:</span></p>
 <ul>
@@ -638,9 +654,12 @@ UnknownError: If any other error occurs.              </li>
  Since Tizen 2.4, the launch request of the service application from other package is restricted by the platform.
 Also, implicit launch requests are NOT delivered to service applications since 2.4. To launch a service application, an explicit launch request with <em>ApplicationId id</em> MUST be sent.
             </p>
+<<<<<<< HEAD
 <p><span class="remark">Remark: </span>
  Use this method for proper case only, for example to launch your own app. Do not abuse the API for other app(s) launch without business consideration.
             </p>
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 <div class="parameters">
 <p><span class="param">Parameters:</span></p>
 <ul>
@@ -1117,7 +1136,11 @@ for (var i = 0; i &lt; appCerts.length; i++)
 <div class="description">
             <p>
 The shared directory is used to export data to other applications. Its structure is described in
+<<<<<<< HEAD
 <a href="/application/native/tutorials/details/io-overview">File System Directory Hierarchy</a>.
+=======
+<a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/file-system-directory-hierarchy">File System Directory Hierarchy</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </p>
            </div>
 <div class="description">
@@ -1127,7 +1150,11 @@ If the ID is set to <var>null</var> or not set at all, it returns the shared dir
            </div>
 <p><span class="remark">Remark: </span>
  Since Tizen 3.0, <var>shared/data</var> directory is not created for web applications. For other applications it will be not created by default and should be considered as optional
+<<<<<<< HEAD
 (refer to <a href="/application/native/tutorials/details/io-overview">table about shared/data</a> for more details).
+=======
+(refer to <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/file-system-directory-hierarchy">table about shared/data</a> for more details).
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </p>
 <div class="parameters">
 <p><span class="param">Parameters:</span></p>
@@ -1220,6 +1247,304 @@ an empty array is returned
 <div class="example">
 <span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">var metaDataArray = tizen.application.getAppMetaData(null);
 console.log("Size of metadata: " + metaDataArray.length);
+</pre>
+</div>
+</dd>
+<<<<<<< HEAD
+<dt class="method" id="ApplicationManager::addAppStatusChangeListener">
+<a class="backward-compatibility-anchor" name="::Application::ApplicationManager::addAppStatusChangeListener"></a><code><b><span class="methodName">addAppStatusChangeListener</span></b></code>
+</dt>
+<dd>
+<div class="brief">
+ Adds a listener for receiving any notification for status changes of the installed applications on a device.
+            </div>
+<div class="synopsis"><pre class="signature prettyprint">long addAppStatusChangeListener(<a href="#StatusEventCallback">StatusEventCallback</a> eventCallback, optional <a href="#ApplicationId">ApplicationId</a>? appId);</pre></div>
+<p><span class="version">Since: </span>
+ 4.0
+            </p>
+<div class="parameters">
+<p><span class="param">Parameters:</span></p>
+<ul>
+          <li class="param">
+<span class="name">eventCallback</span>:
+ The method to call when status of the installed applications is changed.
+                </li>
+          <li class="param">
+<span class="name">appId</span><span class="optional"> [optional]</span><span class="optional"> [nullable]</span>:
+ The id of the application which status changes should be monitored. If the application id is ommitted or it is equal to <var>null</var>, all applications status changes will be monitored.
+                </li>
+        </ul>
+</div>
+<div class="returntype">
+<p><span class="return">Return value:</span></p>
+<ul>
+<span class="return">long:</span>
+ Listener id that can be used to remove the listener later.
+              </ul>
+</div>
+<div class="exceptionlist">
+<p><span class="except">Exceptions:</span></p>
+          <ul class="exception"><li>WebAPIException<ul>
+<li class="list"><p>
+ with error type TypeMismatchError, if any input parameter is not compatible with the expected type for that parameter.
+                </p></li>
+<li class="list"><p>
+ with error type InvalidValuesError, if the application id parameter is an empty string.
+                </p></li>
+<li class="list"><p>
+ with error type AbortError, if it fails to add a listener.
+                </p></li>
+</ul>
+</li></ul>
+        </div>
+<div class="example">
+<span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">function appStatusEventCallback(appId, isActive)
+{
+  console.log("The application " + appId + " has been " + (isActive ? "activated" : "deactivated"));
+}
+
+var watchId = tizen.application.addAppStatusChangeListener(appStatusEventCallback);
+</pre>
+</div>
+<div class="output">
+<span class="title"><p>Output example:</p></span><pre>The application testAppId has been activated
+</pre>
+</div>
+</dd>
+<dt class="method" id="ApplicationManager::removeAppStatusChangeListener">
+<a class="backward-compatibility-anchor" name="::Application::ApplicationManager::removeAppStatusChangeListener"></a><code><b><span class="methodName">removeAppStatusChangeListener</span></b></code>
+</dt>
+<dd>
+<div class="brief">
+ Removes the listener to stop receiving notifications for status changes of the installed applications on a device.
+            </div>
+<div class="synopsis"><pre class="signature prettyprint">void removeAppStatusChangeListener(long watchId);</pre></div>
+<p><span class="version">Since: </span>
+ 4.0
+            </p>
+<div class="description">
+            <p>
+Calling this function has no effect if there is no listener with given id.
+            </p>
+           </div>
+<div class="parameters">
+<p><span class="param">Parameters:</span></p>
+<ul>
+          <li class="param">
+<span class="name">watchId</span>:
+ An ID that identifies the listener.
+                </li>
+        </ul>
+</div>
+<div class="exceptionlist">
+<p><span class="except">Exceptions:</span></p>
+          <ul class="exception"><li>WebAPIException<ul><li class="list"><p>
+ with error type AbortError, if it fails to remove listener.
+                </p></li></ul>
+</li></ul>
+        </div>
+<div class="example">
+<span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">function appStatusEventCallback(appId, isActive)
+{
+  console.log("The application " + appId + " has been " + (isActive ? "activated" : "deactivated"));
+}
+
+try
+{
+  var watchId = tizen.application.addAppStatusChangeListener(appStatusEventCallback);
+  tizen.application.removeAppStatusChangeListener(watchId);
+  console.log("Listener with id " + watchId + " has been removed");
+}
+catch (err)
+{
+  console.log("Exception: " + err.name);
+}
+</pre>
+</div>
+<div class="output">
+<span class="title"><p>Output example:</p></span><pre>Listener with id 1 has been removed
+</pre>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="dictionary" id="ApplicationUsageFilter">
+<a class="backward-compatibility-anchor" name="::Application::ApplicationUsageFilter"></a><h3>2.3. ApplicationUsageFilter</h3>
+<div class="brief">
+ This interface represents filter for defining period of time, which will be used as a condition in <em>getAppsUsageInfo</em> method.
+          </div>
+<pre class="webidl prettyprint">  dictionary ApplicationUsageFilter {
+    long? timeSpan;
+    Date? startTime;
+    Date? endTime;
+  };</pre>
+<p><span class="version">Since: </span>
+ 4.0
+          </p>
+<div class="description">
+          <p>
+The maximum retention period is 90 days.
+          </p>
+         </div>
+<div class="attributes">
+<h4>Dictionary members</h4>
+<dl>
+<dt class="member" id="ApplicationUsageFilter::timeSpan"><span class="attrName">long? timeSpan</span></dt>
+<dd>
+=======
+<dt class="deprecated method" id="ApplicationManager::addAppInfoEventListener">
+<a class="backward-compatibility-anchor" name="::Application::ApplicationManager::addAppInfoEventListener"></a><code><b><span class="methodName">addAppInfoEventListener</span></b></code>
+</dt>
+<dd class="deprecated">
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
+<div class="brief">
+ The attribute to store period of time, from which data is accumulated, in days.
+The  period of time begins <em>timeSpan</em> days ago and ends with current date.
+            </div>
+<<<<<<< HEAD
+=======
+<p class="deprecated"><b>Deprecated.</b>
+ Deprecated since 2.4. Instead, <a href="./package.html#PackageManager::setPackageInfoEventListener">tizen.package.setPackageInfoEventListener()</a> allows the app developers to set a listener for getting notified for the changes(add/remove/update) of applications on a device.
+            </p>
+<div class="synopsis"><pre class="signature prettyprint">long addAppInfoEventListener( eventCallback);</pre></div>
+<p><span class="version">Since: </span>
+ 2.0
+            </p>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
+<div class="description">
+            <p>
+If the attribute is given, the attributes <em>startTime</em> and <em>endTime</em> of this interface are not taken into an account.
+If <em>timeSpan</em> is greater than <var>90</var>, <var>90</var> will be used instead.
+            </p>
+           </div>
+<p><span class="version">Since: </span>
+ 4.0
+            </p>
+</dd>
+<dt class="member" id="ApplicationUsageFilter::startTime"><span class="attrName">Date? startTime</span></dt>
+<dd>
+<div class="brief">
+ The attribute to store the date, which is used as a lower bound for selecting data.
+            </div>
+<div class="description">
+            <p>
+If only <em>startTime</em> attribute is given, by default <em>endTime</em> is equal to the current date.
+If <em>startTime</em> date predates the 90 days from the current time, data will be accumulated from last 90 days.
+            </p>
+           </div>
+<<<<<<< HEAD
+<p><span class="version">Since: </span>
+ 4.0
+            </p>
+=======
+<div class="parameters">
+<p><span class="param">Parameters:</span></p>
+<ul>
+          <li class="param">
+<span class="name">eventCallback</span>:
+ The method to call when a change on the installed applications is made
+                </li>
+        </ul>
+</div>
+<div class="returntype">
+<p><span class="return">Return value:</span></p>
+<ul>
+<span class="return">long:</span>
+ ID of the listener that can be used to remove the listener later.
+              </ul>
+</div>
+<div class="exceptionlist">
+<p><span class="except">Exceptions:</span></p>
+          <ul class="exception"><li>WebAPIException<ul>
+<li class="list"><p>
+ with error type TypeMismatchError, if any input parameter is not compatible with the expected type for that parameter.
+                </p></li>
+<li class="list"><p>
+ with error type UnknownError, if it fails to add a listener because of an unknown error.
+                </p></li>
+</ul>
+</li></ul>
+        </div>
+<div class="example">
+<span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">var appEventCallback =
+{
+  oninstalled: function(appInfo)
+  {
+    console.log("The application " + appInfo.name + " is installed");
+  },
+  onupdated: function(appInfo)
+  {
+    console.log("The application " + appInfo.name + " is updated");
+  },
+  onuninstalled: function(appid)
+  {
+    console.log("The application " + appid + " is uninstalled");
+  }
+};
+var watchId = tizen.application.addAppInfoEventListener(appEventCallback);
+</pre>
+</div>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
+</dd>
+<dt class="member" id="ApplicationUsageFilter::endTime"><span class="attrName">Date? endTime</span></dt>
+<dd>
+<div class="brief">
+<<<<<<< HEAD
+ The attribute to store the date, which is used as an upper bound for selecting data.
+=======
+ Removes the listener to stop receiving notifications for changes on the list of installed applications on a device.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
+            </div>
+<div class="description">
+            <p>
+If only <em>endTime</em> attribute is given, data will be accumulated from 90 days ago to <em>endTime</em> date.
+            </p>
+<<<<<<< HEAD
+=======
+<div class="synopsis"><pre class="signature prettyprint">void removeAppInfoEventListener(long watchId);</pre></div>
+<p><span class="version">Since: </span>
+ 2.0
+            </p>
+<div class="parameters">
+<p><span class="param">Parameters:</span></p>
+<ul>
+          <li class="param">
+<span class="name">watchId</span>:
+ An ID that identifies the listener
+                </li>
+        </ul>
+</div>
+<div class="exceptionlist">
+<p><span class="except">Exceptions:</span></p>
+          <ul class="exception"><li>WebAPIException<ul>
+<li class="list"><p>
+ with error type NotFoundError, if the listener is not found with the specified ID.
+                </p></li>
+<li class="list"><p>
+ with error type UnknownError, if it fails to remove a listener because of an unknown error.
+                </p></li>
+</ul>
+</li></ul>
+        </div>
+<div class="example">
+<span class="example"><p>Code example:</p></span><pre name="code" class="examplecode prettyprint">var appEventCallback =
+{
+  oninstalled: function(appInfo)
+  {
+    console.log("The application " + appInfo.name + " is installed");
+  },
+  onupdated: function(appInfo)
+  {
+    console.log("The application " + appInfo.name + " is updated");
+  },
+  onuninstalled: function(appid)
+  {
+    console.log("The application " + appid + " is uninstalled");
+  }
+};
+var watchId = tizen.application.addAppInfoEventListener(appEventCallback);
+tizen.application.removeAppInfoEventListener(watchId);
 </pre>
 </div>
 </dd>
@@ -1402,6 +1727,7 @@ If <em>startTime</em> date predates the 90 days from the current time, data will
             <p>
 If only <em>endTime</em> attribute is given, data will be accumulated from 90 days ago to <em>endTime</em> date.
             </p>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
            </div>
 <p><span class="version">Since: </span>
  4.0
@@ -2145,6 +2471,7 @@ and launches the selected application.
 </div>
 <div class="constructors">
 <h4 id="ApplicationControl::constructor">Constructors</h4>
+<<<<<<< HEAD
 <dl>
 <dt class="method" id="">
 <a class="backward-compatibility-anchor" name=""></a><code><b><span class="methodName">Constructor (DOMString, DOMString?, DOMString?, DOMString?, <a href="#ApplicationControlData">ApplicationControlData</a>[]?, <a href="#ApplicationControlLaunchMode">ApplicationControlLaunchMode</a>?)</span></b></code>
@@ -2152,6 +2479,10 @@ and launches the selected application.
 <pre class="webidl prettyprint">ApplicationControl(DOMString operation, optional DOMString? uri, optional DOMString? mime, optional DOMString? category,
                    optional <a href="#ApplicationControlData">ApplicationControlData</a>[]? data, optional <a href="#ApplicationControlLaunchMode">ApplicationControlLaunchMode</a>? launchMode);</pre>
 </dl>
+=======
+<dl><pre class="webidl prettyprint">ApplicationControl(DOMString operation, optional DOMString? uri, optional DOMString? mime, optional DOMString? category,
+                   optional <a href="#ApplicationControlData">ApplicationControlData</a>[]? data, optional <a href="#ApplicationControlLaunchMode">ApplicationControlLaunchMode</a>? launchMode);</pre></dl>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <div class="attributes">
 <h4>Attributes</h4>
@@ -2930,9 +3261,13 @@ Must be at least 1 byte in length and not exceed the maximum name length of 127 
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>
@@ -2942,7 +3277,11 @@ To guarantee the running of the application on a device which has battery, decla
 <li class="feature">http://tizen.org/feature/battery</li>
 </div>
 <p></p>
+<<<<<<< HEAD
                     For more information, see <a href="/application/web/tutorials/app-filtering">Application Filtering.</a>
+=======
+                    For more information, see <a href="https://developer.tizen.org/development/training/web-application/understanding-tizen-programming/application-filtering">Application Filtering.</a>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <h2 id="full-webidl">4. Full WebIDL</h2>
 <pre class="webidl prettyprint">module Application {

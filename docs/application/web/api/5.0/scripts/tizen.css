@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+@import "/css/navbar-api-reference.css";
+@import "/css/api-reference.css";
+@import "/css/api-reference-lnb.css";
+
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 .attribute
 {
     padding-bottom:15px;
@@ -799,7 +806,10 @@ dt.method
 .optional
 {
     font-style: italic;
+<<<<<<< HEAD
     font-weight: normal;
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 }
 
 
@@ -918,7 +928,11 @@ a[href].status:hover{
 {
     margin-bottom: 2px;
 }
+<<<<<<< HEAD
 .version, .defaultValue, span.param, .except, .example, .return, .privilege, .remark, .privilegelevel, .output > .title
+=======
+.version, span.param, .except, .example, .return, .privilege, .remark, .privilegelevel, .output > .title
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 {
     font-weight: bold;
 }

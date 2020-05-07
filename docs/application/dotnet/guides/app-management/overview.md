@@ -28,10 +28,13 @@ You can use the following application management features in your .NET applicati
 
   You can retrieve information about the packages installed on the device. You can also monitor for changes in the device packages.
 
+<<<<<<< HEAD
 - [Widget Control](widget-control.md)
 
   You can send update requests to the widget applications. You can also listen widget lifecycle events, and retrieve details of running instance for the same package widget applications.
 
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 The application can communicate with other applications in various ways. You can exchange data between applications through message ports and data controls.
 
 You can use the following application data exchange features in your .NET applications:

@@ -4,11 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../scripts/tizen.css" media="screen">
 <script type="text/javascript" src="../../../scripts/snippet.js"></script><title>Sensor API</title>
+<<<<<<< HEAD
 <meta data-version="4.0" data-profile="wearable">
+=======
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </head>
 <body id="page-content" onload="prettyPrint()">
 <div class="api" id="::Sensor">
-<div class="supported-platforms"><img class="wearable-optional emulator" title="Optional, Supported by Tizen Wearable emulator" src="wearable_s_w_optional.png"></div>
+ <div class="supported-platforms"><img class="wearable-optional emulator" title="Optional, Supported by Tizen Wearable emulator" src="wearable_s_w_optional.png"></div>
 <div class="title"><h1>Sensor API</h1></div>
 <div class="brief">
  The Sensor API defines interfaces and methods to manage sensor data from various sensors on the device.
@@ -2821,7 +2824,11 @@ PROXIMITY - None              </li>
 ULTRAVIOLET - UV index (ultraviolet index)              </li>
             </ul>
             <p>
+<<<<<<< HEAD
 For more information about sensor, see <a href="/application/web/guides/sensors/device-sensors">Sensor Guide</a>.
+=======
+For more information about sensor, see <a href="https://developer.tizen.org/development/guides/web-application/sensors/device-sensors">Sensor Guide</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </p>
            </div>
 <p><span class="version">Since: </span>
@@ -2862,7 +2869,11 @@ PROXIMITY - None              </li>
 ULTRAVIOLET - UV index (ultraviolet index)              </li>
             </ul>
             <p>
+<<<<<<< HEAD
 For more information about sensor, see <a href="/application/web/guides/sensors/device-sensors">Sensor Guide</a>.
+=======
+For more information about sensor, see <a href="https://developer.tizen.org/development/guides/web-application/sensors/device-sensors">Sensor Guide</a>.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
             </p>
            </div>
 <p><span class="version">Since: </span>
@@ -3010,9 +3021,13 @@ For more information about sensor, see <a href="/application/web/guides/sensors/
 </div>
 <h2 id="api-features">3. Related Feature</h2>
 <div id="def-api-features" class="def-api-features">
+<<<<<<< HEAD
             Method
             <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a>
          can be used in application runtime to check whether this API is supported.
+=======
+        Method <a href="systeminfo.html#SystemInfo::getCapability">tizen.systeminfo.getCapability()</a> can be used in application runtime to check whether this API is supported.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
                     <div class="def-api-feature">
 <p><div class="description">
             <p>
@@ -3118,14 +3133,23 @@ To guarantee that the UV sensor application runs on a device with a UV sensor, d
 <li class="feature">http://tizen.org/feature/sensor.ultraviolet</li>
 </div>
 <p></p>
+<<<<<<< HEAD
                     For more information, see <a href="/application/web/tutorials/app-filtering">Application Filtering.</a>
+=======
+                    For more information, see <a href="https://developer.tizen.org/development/training/web-application/understanding-tizen-programming/application-filtering">Application Filtering.</a>
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 </div>
 <h2 id="full-webidl">4. Full WebIDL</h2>
 <pre class="webidl prettyprint">module Sensor {
   enum MagneticSensorAccuracy { "ACCURACY_UNDEFINED", "ACCURACY_BAD", "ACCURACY_NORMAL", "ACCURACY_GOOD", "ACCURACY_VERYGOOD" };
   enum ProximityState { "FAR", "NEAR" };
+<<<<<<< HEAD
   enum SensorType { "ACCELERATION", "GRAVITY", "GYROSCOPE", "GYROSCOPE_ROTATION_VECTOR", "GYROSCOPE_UNCALIBRATED", "HRM_RAW", "LIGHT",
     "LINEAR_ACCELERATION", "MAGNETIC", "MAGNETIC_UNCALIBRATED", "PRESSURE", "PROXIMITY", "ULTRAVIOLET" };
+=======
+  enum SensorType { "ACCELERATION", "GRAVITY", "GYROSCOPE", "GYROSCOPE_ROTATION_VECTOR", "GYROSCOPE_UNCALIBRATED",
+    "HRM_RAW", "LIGHT", "LINEAR_ACCELERATION", "MAGNETIC", "MAGNETIC_UNCALIBRATED", "PRESSURE", "PROXIMITY", "ULTRAVIOLET" };
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   <a href="tizen.html#Tizen">Tizen</a> implements <a href="#SensorServiceManagerObject">SensorServiceManagerObject</a>;
   [NoInterfaceObject] interface SensorServiceManagerObject {
     readonly attribute <a href="#SensorService">SensorService</a> sensorservice;

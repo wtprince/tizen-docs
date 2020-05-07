@@ -6,7 +6,11 @@ You can install VS Code Extension for Tizen Web in one of the following ways:
 - Install from Marketplace 
 - Install using a VSIX file
 
+<<<<<<< HEAD
 Before installing VS Code Extension for Tizen Web, see [Prerequisites of Visual Studio Code Extension for Tizen](index.md).
+=======
+Before installing VS Code Extension for Tizen Web, check [Prerequisites of Visual Studio Code Extension for Tizen](index.md).
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ## Install from Marketplace 
 
@@ -22,7 +26,11 @@ To install VS Code Extension for Tizen Web from the Visual Studio Code Marketpla
 
     After the extension is active, **Tizen Web** installation is complete.
 
+<<<<<<< HEAD
 ## Install using VSIX file
+=======
+## Install using VSIX File
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 To install VS Code extension for Tizen Web from a VSIX file, follow these steps:
 
@@ -36,6 +44,7 @@ To install VS Code extension for Tizen Web from a VSIX file, follow these steps:
 
     After the extension is active, **Tizen Web** installation is complete.
 
+<<<<<<< HEAD
 ## Install emulator images
 
 If you do not have a real device, you can run your application in a virtual environment using Tizen Emulator. To download the emulator images, you can use Tizen Package Manager or Tizen Emulator Manager.
@@ -43,21 +52,40 @@ If you do not have a real device, you can run your application in a virtual envi
 - To use Tizen Package Manager, follow these steps:
   1. In VS Code, click **View** > **Command Palette**.
   2. In the input field of the **Command Palette** that appears, type **Tizen Web: Run Package-Manager** and press **Enter**.
+=======
+## Install Emulator Images
+
+If you do not have a real device, you can run your application in a virtual environment using Tizen emulator. To download the emulator images, you can use Tizen Package Manager or Tizen Emulator Manager.
+
+- To use Tizen Package Manager, follow these steps:
+  1. In VS Code, click **View** > **Command Palette**.
+  2. In the input field of the **Command Palette** that appears, type **Run Package-Manager** and press **Enter**.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   3. Select the profiles and versions for your project, and click **install**.
 
      ![Package Manager](media/tizen_package_manager.png)
 
 - To use Tizen Emulator Manager, follow these steps:
 
+<<<<<<< HEAD
   > [!NOTE]
   > Tizen Emulator Manager shows the emulator images installation window only when no images are installed on your computer.
 
   1. In VS Code, click **View** > **Command Palette**.
   2. In the input field of the **Command Palette** that appears, type **Tizen Web: Run Emulator-Manager** and press **Enter**.
+=======
+  > **Note**  
+  >
+  > Tizen Emulator Manager shows the emulator images installation window only when no images are installed on your computer.
+
+  1. In VS Code, click **View** > **Command Palette**.
+  2. In the input field of the **Command Palette** that appears, type **Run Emulator-Manager** and press **Enter**.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   3. Select the profiles and versions for your project, and click **Ok**.
 
      ![Emulator Manager](media/howtoinstall-emulatormanager.png)
 
+<<<<<<< HEAD
 ## Develop applications
 
 This section explains how to use VS Code Extension for Tizen Web to develop applications.
@@ -146,10 +174,18 @@ To change a Chrome browser path, follow these steps:
     ![Change Chrome Path](media/tizen_web26.png)
 
 ### Create Tizen Web project
+=======
+## Develop Applications
+
+This section explains how to use VS Code Extension for Tizen Web to develop applications.
+
+### Create Tizen Web Project
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 To create a Tizen Web project, follow these steps:
 
 1. In VS Code, click **View** > **Command Palette**.
+<<<<<<< HEAD
 2. In the input field of the **Command Palette** that appears, type **Tizen Web: Create Wizard Project** and press **Enter**.
 
 3. Click **New Project**.
@@ -167,16 +203,46 @@ To create a Tizen Web project, follow these steps:
 6. Select the application template, for example **Basic UI**, and click **Next**.
 
     > [!NOTE]
+=======
+2. In the input field of the **Command Palette** that appears, type **Create Wizard Project** and press **Enter**.
+3. The installation notification appears. To perform a fresh installation and begin the Tizen Baseline SDK installation, click **YES**. If **NO** is clicked, it is assumed that you have already done the installation and the project is created.
+
+   ![Yes or No option](media/tizen_web1.png)
+
+4. Click **New Project**.
+
+   ![Create Wizard Project](media/tizen_web7.png)
+
+5. Select the project type and click **Next**.
+
+   ![Select the type of project](media/tizen_web8.png)
+
+6. Select the application profile, the version from the drop-down list, and click **Next**.
+
+   ![Select the profile and version](media/tizen_web9.png)
+
+7. Select the application template, for example **Basic UI**, and click **Next**.
+
+    > **Note**
+    >
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     > The application template options that appear will differ based on the type and profile of the previously selected project.
 
     ![Select the project](media/tizen_web10.png)
 
+<<<<<<< HEAD
 7. To complete the project creation in workspace, enter **Project name** and click **Finish**.
     > [!NOTE]
+=======
+8. To complete the project creation in workspace, enter **Project name** and click **Finish**.
+    > **Note**
+    >
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     > **Package ID** is an optional field and the details are generated automatically.
 
     ![Enter the name of project](media/tizen_web11.png)
 
+<<<<<<< HEAD
 ### Create and add Tizen certificate
 
 To create and add Tizen Certificate, follow these steps:
@@ -203,15 +269,61 @@ If you want to change the Certificate, you need to remove the added Certificate.
       > To view the **Tizen Certificate Manager** window, type **Tizen Web: Run Certificate-Manager** in Command Palette.
 
 ### Build your project
+=======
+### Create Tizen Certificate
+
+To create Tizen Certificate, follow these steps:
+
+  1. In VS Code, click **View** > **Command Palette**.
+  2. In the input field of the **Command Palette** that appears, type **Create Tizen Certificate** and press **Enter**.
+  3. Enter the name of the certificate.
+  4. Enter the password of the certificate.
+  5. Enter the profile name of the certificate. (Extension is .p12)
+      > **Note**
+      > 
+      > profilename.p12 will be created in tizen-studio/keystore/author.
+
+### Add Tizen Certificate
+
+To add Tizen Certificate, follow these steps:
+
+  1. In VS Code, click **View** > **Command Palette**.
+  2. In the input field of the **Command Palette** that appears, type **Add Tizen Certificate** and press **Enter**.
+  3. Enter the name of the certificate.
+  4. Enter the password of the certificate.
+  5. Enter the profile name of the certificate. (Extension is .p12)
+      > **Note**
+      > 
+      > To view the added certificate, type **Run Certificate-Manager** in **Command Palette**.
+
+### Remove Tizen Certificate
+
+If you want to change the Certificate, you need to remove the added Certificate. To remove Tizen Certificate, follow these steps:
+
+  1. In VS Code, click **View** > **Command Palette**.
+  2. In the input field of the **Command Palette** that appears, type **Remove Tizen Certificate** and press **Enter**.
+  3. Enter the name of the certificate.
+  4. The certificate is now removed from the **Tizen Certificate Manager** window.
+      > **Note**
+      >
+      > To view the **Tizen Certificate Manager** window, type **Run Certificate-Manager** in Command Palette.
+
+### Build Project
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 To build project, follow these steps:
 
   1. In VS Code, click **View** > **Command Palette**.
+<<<<<<< HEAD
   2. In the input field of the **Command Palette** that appears, type **Tizen Web: Build Tizen App** and press **Enter**.
+=======
+  2. In the input field of the **Command Palette** that appears, type **Build Tizen App** and press **Enter**.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   3. Enter the folder name of the project you want to build. For example, type only `basic` to enter the `c:\workspace\basic` path.
 
       ![Building your project](media/tizen_web13.png)
 
+<<<<<<< HEAD
       > [!NOTE] 
       > If you have a Tizen device and want to build the application into it, then you must first generate a certificate and add it.
 
@@ -231,10 +343,18 @@ To build the project after removing unwanted files, follow these steps:
       ![Exclude Build List](media/tizen_web30.png)
 
 ### Deploy and run your application in emulator
+=======
+      > **Note**  
+      > 
+      > If you have a Tizen device and want to build the application into it, then you must first generate a certificate and add it.
+
+### Deploy and Run Application in Emulator
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 To deploy and run application, follow these steps:
 
 1. In VS Code, click **View** > **Command Palette**.
+<<<<<<< HEAD
 2. In the input field of the **Command Palette** that appears, type **Tizen Web: Run Emulator-Manager** and press **Enter**.
 
    > [!NOTE]
@@ -243,10 +363,22 @@ To deploy and run application, follow these steps:
 3. Create and launch an emulator instance in the Emulator Manager.
 4. To deploy your application to the target, in the **Command Palette** type **Tizen Web: Install Tizen App**.
 5. To run the application on the emulator, in the **Command Palette** type **Tizen Web: Run Tizen App**.
+=======
+2. In the input field of the **Command Palette** that appears, type **Run Emulator-Manager** and press **Enter**.
+
+   > **Note**  
+   >
+   > To launch an emulator in VS Code, you must launch Tizen Emulator Manager and select the emulator you want to launch.
+
+3. Create and launch an emulator instance in the Emulator Manager.
+4. To deploy your application to the target, type **Install Tizen App** in the **Command Palette**.
+5. To run the application on the emulator, type **Run Tizen App** in the **Command Palette**.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 To install project:
 
 1. In VS Code, click **View** > **Command Palette**.
+<<<<<<< HEAD
 2. In the input field of the **Command Palette** that appears, type **Tizen Web: Install Tizen App** and press **Enter**.
 3. Enter the folder name of the project you want to install.
     > [!NOTE]
@@ -265,13 +397,39 @@ To run project if your app is already installed, follow these steps:
   2. In the input field of the **Command Palette** that appears, type **Tizen Web: Run Tizen App** and press **Enter**.
   3. Enter the folder name of the project that you want to run. 
       > [!NOTE]
+=======
+2. In the input field of the **Command Palette** that appears, type **Install Tizen App** and press **Enter**.
+3. Enter the folder name of the project you want to install.
+    > **Note**
+    >
+    > Ensure that you enter the name of the folder and not the path.
+
+    ![Install your tizen app](media/tizen_web14.png)
+
+    > **Note** 
+    > 
+    > If you have a Tizen device and want to deploy the application into it, then you must first generate a certificate and add it.
+
+To run project:
+
+  1. In VS Code, click **View** > **Command Palette**.
+  2. In the input field of the **Command Palette** that appears, type **Run Tizen App** and press **Enter**.
+  3. Enter the folder name of the project that you want to run. 
+      > **Note**
+      >
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
       > Ensure that you enter the name of the folder and not the path.
   
       When the installation is successfully completed, an install successful notification appears. Also, you will see a build success log in the terminal at the bottom of the vscode.
   
       ![Run Your Tizen App](media/tizen_web15.png)
 
+<<<<<<< HEAD
         > [!NOTE]
+=======
+        > **Note**  
+        >
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
         > If you have a Tizen device and want to deploy the application into it, then you must first generate a certificate and add it.
         >
         > In addition, `vscode` terminal displays successful launch log messages:
@@ -279,10 +437,17 @@ To run project if your app is already installed, follow these steps:
         > - debug `0` means normal launch.
         > - debug `1` means launching an inspector available from command line.
 
+<<<<<<< HEAD
 ### Debug your application in emulator
 
 1. In VS Code, click **View** > **Command Palette**.
 2. In the input field of the **Command Palette** that appears, type **Tizen Web: Debug Tizen App** and press **Enter**.
+=======
+### Debug Application in Emulator
+
+1. In VS Code, click **View** > **Command Palette**.
+2. In the input field of the **Command Palette** that appears, type **Debug Tizen App** and press **Enter**.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 3. Enter the name of the Tizen Web App you want to run. 
 
     A successful notification appears and the app is launched. Also, you will see a successful launch log in the terminal on the vscode.
@@ -294,11 +459,17 @@ To run project if your app is already installed, follow these steps:
 
     ![Debugging you application](media/tizen_web16.png)
 
+<<<<<<< HEAD
     > [!NOTE]
+=======
+    > **Note**
+    >
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
     > Ensure the following:
     > - Emulator is launched, or device is connected to the PC
     > - Chrome browser is installed
 
+<<<<<<< HEAD
 4. In Chrome browser, the **Inspector** automatically launches and associates with the launched app.
 ![Debugging you application](media/tizen_web17.png)
 
@@ -306,15 +477,33 @@ To run project if your app is already installed, follow these steps:
     > If you have a Tizen device and want to deploy the application into it, then you must first generate a certificate and add it.
 
 ### Debug your application in Web simulator
+=======
+4. Connect **Debug Tizen App** with **Inspector**.
+5. Open **Command Palette** and type **Run Inspector**.
+6. Enter the port number to be used on the local computer. For example, 9999.
+7. In Chrome browser, the **Inspector** automatically launches and associates with the launched app.
+![Debugging you application](media/tizen_web17.png)
+
+    > **Note** 
+    > 
+    > If you have a Tizen device and want to deploy the application into it, then you must first generate a certificate and add it.
+
+### Debug Application in Web Simulator
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 To debug application, follow these steps:
 
 1. In VS Code, click **View** > **Command Palette**.
+<<<<<<< HEAD
 2. In the input field of the **Command Palette** that appears, type **Tizen Web: Run Web Simulator** and press **Enter**.
+=======
+2. In the input field of the **Command Palette** that appears, type **Run Web Simulator** and press **Enter**.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 3. After the **Web Simulator** is launched, enter the path of the file in the box. For example, file:///C://Workspace/basic/index.html.
 
     ![Debugging you application in the Web Simulator](media/tizen_web18.png)
 
+<<<<<<< HEAD
 ### Quick action execution
 Right-click on the **project folder** to use the extension function in the menu.
 
@@ -422,6 +611,11 @@ Following are the WYSIWYG Design Editor features:
 ## Tizen Web with code IntelliSense
 
 VS Code Extension for Tizen Web supports IntelliSense. You can use these features to easily develop application using TAU.
+=======
+## Tizen Web with Code IntelliSense
+
+VS Code Extension for Tizen Web supports intelliSense. You can use these features to easily develop application using TAU.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 ### Features
 

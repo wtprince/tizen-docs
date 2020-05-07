@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tizen 4.0 Public M3
 
 Release date: Aug. 31, 2018
@@ -22,14 +23,30 @@ The Tizen 4.0 Public M3 release provides developers with the Tizen kernel, devic
 ### System (Kernel and System Framework)
 
 #### Fixes
+=======
+# Tizen 4.0 Public M3 Release Notes
+
+Release Date: Aug. 31, 2018
+
+
+## System (Kernel and System Framework)
+
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Security improvement
   - Systemd patch has been applied for CVE-2018-1049.
 
 
+<<<<<<< HEAD
 ### System (Base)
 
 #### New and changed features
+=======
+## System (Base)
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - The following Open-source libraries have been upgraded:
   - file (5.32)
@@ -47,21 +64,36 @@ The Tizen 4.0 Public M3 release provides developers with the Tizen kernel, devic
   - vim (8.0.586)
 
 
+<<<<<<< HEAD
 ### Application Framework
 
 #### New and changed features
+=======
+## Application Framework
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - TIDL (Tizen Interface Definition Language) has been added (Mobile profile).
   - TIDL supports app-to-app RPC style IPC.
   - rpc-port API has been added to support TIDL.
 
 
+<<<<<<< HEAD
 ### Window System
 
 #### New and changed features
 
 - Extended Wayland Protocols
   - The 'event_surface' event has been added to tizen_keyrouter protocol for sending the surface information before sending the key to client(s).
+=======
+## Window System
+
+### New and changed features
+
+- Extended Wayland Protocols
+  - The ‘event_surface’ event has been added to tizen_keyrouter protocol for sending the surface information before sending the key to client(s).
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 - Enlightenment Wayland Display Server
   - A D-Bus policy has been updated to enhance security regarding D-Bus interface.
   - A new layer has been added for e_desk_object.
@@ -70,13 +102,21 @@ The Tizen 4.0 Public M3 release provides developers with the Tizen kernel, devic
   - Add the tbm_dummy_display.
   - Add the tbm_surface_internal_set/get_damage.
 
+<<<<<<< HEAD
 #### Fixes
+=======
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Enlightenment Wayland Display Server
   - The bugs regarding sending pre-unobscured visibility event have been fixed.
   - The bugs related to uniconify_render have been fixed.
   - The bug not returning to the default screen mode has been fixed.
+<<<<<<< HEAD
   - The error that the quick panel doesn't disappear has been fixed.
+=======
+  - The error that the quick panel doesn’t disappear has been fixed.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
   - The bugs related with pending position move request have been fixed.
   - The bugs related with hwc cancel condition have been fixed.
   - E_Desk smart object disorder has been fixed while zooming and maximizing member object.
@@ -84,9 +124,15 @@ The Tizen 4.0 Public M3 release provides developers with the Tizen kernel, devic
   - The error of not sending axis event during a touchdown operation has been fixed.
 
 
+<<<<<<< HEAD
 ### Graphics Engine
 
 #### New and changed features
+=======
+## Graphics Engine
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - DALi (3D UI Toolkit)
   - Actor and Stage
@@ -140,9 +186,15 @@ The Tizen 4.0 Public M3 release provides developers with the Tizen kernel, devic
   - Support for EvasGL thread separation on direct rendering mode has been added.
   - The pre-compiled shader list has been optimized for boot time enhancement.
   - Support for the Evas GL capability test has been added.
+<<<<<<< HEAD
   - EGL Sync is added for EvasGL's EGLImage.
 
 #### Fixes
+=======
+  - EGL Sync is added for EvasGL’s EGLImage.
+
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - DALi (3D UI Toolkit)
   - The blending factor of premultiplied alpha format has been fixed.
@@ -158,9 +210,15 @@ The Tizen 4.0 Public M3 release provides developers with the Tizen kernel, devic
   - The resource sharing issue is fixed in Evas TBM backend.
 
 
+<<<<<<< HEAD
 ### UI Framework
 
 #### New and changed features
+=======
+## UI Framework
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - EFL
   - Assist-panel is added.
@@ -169,9 +227,15 @@ The Tizen 4.0 Public M3 release provides developers with the Tizen kernel, devic
   - Voice engine model is changed to a service app for supporting download (only for mobile and TV profile).
 
 
+<<<<<<< HEAD
 ### Multimedia Framework
 
 #### New and changed features
+=======
+## Multimedia Framework
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Camera
   - New API set for hue setting have been added.
@@ -182,6 +246,7 @@ The Tizen 4.0 Public M3 release provides developers with the Tizen kernel, devic
     - http://tizen.org/feature/content.scanning.others for scanning OTHERS-type files which are not included in the media content types such as IMAGE, VIDEO, SOUND or MUSIC.
     - http://tizen.org/feature/content.filter.pinyin for supporting the Pinyin Filter. 
 - Media Controller
+<<<<<<< HEAD
   - In the Mobile profile, repeat mode on for one media enumeration has been added.
   - In the Mobile profile, new API set for supporting playlist have been added.
   - In the Mobile profile, new API set for sending command and receiving command reply have been added.
@@ -190,6 +255,16 @@ The Tizen 4.0 Public M3 release provides developers with the Tizen kernel, devic
   - In the Mobile profile, the API set for sending custom command and receiving custom reply have been changed.
   - In the Mobile profile, the callbacks for receiving update information have been changed.
   - In the Mobile profile, some playback states enumerations have been changed.
+=======
+  - In the mobile profile, repeat mode on for one media enumeration has been added.
+  - In the mobile profile, new API set for supporting playlist have been added.
+  - In the mobile profile, new API set for sending command and receiving command reply have been added.
+  - In the mobile profile, new API set for sending custom event and receiving event reply have been added.
+  - In the mobile profile, the API set for supporting metadata have been changed.
+  - In the mobile profile, the API set for sending custom command and receiving custom reply have been changed.
+  - In the mobile profile, the callbacks for receiving update information have been changed.
+  - In the mobile profile, some playback states enumerations have been changed.
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 - Player
   - Pre-condition of setting ROI area API has been changed.
 - Muse
@@ -198,9 +273,15 @@ The Tizen 4.0 Public M3 release provides developers with the Tizen kernel, devic
   - Update message IPC mechanism.
 
 
+<<<<<<< HEAD
 ### Network and Connectivity
 
 #### Fixes
+=======
+## Network and Connectivity
+
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Data Network
   - A memory leak in the stc-manager has been fixed.
@@ -223,9 +304,15 @@ The Tizen 4.0 Public M3 release provides developers with the Tizen kernel, devic
   - The native API reference errors have been fixed.
 
 
+<<<<<<< HEAD
 ### Security
 
 #### New and changed features
+=======
+## Security
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Security-manager
   - Support application update between wen application and hybrid application.
@@ -239,9 +326,15 @@ The Tizen 4.0 Public M3 release provides developers with the Tizen kernel, devic
   - Change nether rule to use raw table for UDP packets.
 
 
+<<<<<<< HEAD
 ### Service Framework
 
 #### Fixes
+=======
+## Service Framework
+
+### Fixes
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Context
   - Removed critical information from logs.
@@ -262,9 +355,15 @@ The Tizen 4.0 Public M3 release provides developers with the Tizen kernel, devic
   - Fixed potential defects.
 
 
+<<<<<<< HEAD
 ### Tizen .NET
 
 #### New and changed features
+=======
+## Tizen .NET
+
+### New and changed features
+>>>>>>> 9b69ef98c4468c79bcc386c40b15e9707d0c6ab5
 
 - Xamarin.Forms
   - Xamarin.Forms version 3.1.0 Service Release 2 is supported.
